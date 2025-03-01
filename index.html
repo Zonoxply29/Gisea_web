@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="./css/aos/aos.css">
+    <title>Gisea Agency</title>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg estilos-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo_final.png" alt="Gisea" class="gisea-logo">
+                </a>
+                <!--MENU DE HAMBURGESA-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
+                    <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                    <svg class="icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
+                    </svg>
+                </button>
+                <!--NAVBAR-->
+                <div class="collapse navbar-collapse estilos-navbar" id="navbarNav">
+                    <ul class="navbar-nav estilos-navbar nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                SERVICES
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Diseño Web</a></li>
+                                <li><a class="dropdown-item" href="#">Recursos Humanos</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CARRERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BLOG</a>
+                        </li>
+                        <li>
+                            <!--Dropdown btn de idioma-->
+                            <div class="dropdown">
+                                <button id="languageButton" class="btn-cambio-idioma">
+                                    <img src="icons/bandera_mex.png" alt="Idioma" id="languageIcon" width="40px">
+                                    <span id="selectedLanguage">SPA</span>
+                                    <i id="dropdownIcon" class="fa-solid fa-angle-down"></i>
+                                </button>
+                                <div id="languageDropdown" class="dropdown-content">
+                                    <a href="#" data-lang="SPA" data-flag="icons/bandera_mex.png">SPA</a>
+                                    <a href="#" data-lang="ENG" data-flag="icons/bandera_usa.png">ENG</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="header-container">
+                                <div class="header-social-links">
+                                    <a href="" alt="instagram" class="red-social instagram">
+                                        <i class="fa-brands fa-instagram fa-xl"></i>
+                                    </a>
+                                    <a href="" alt="linkedin" class="red-social linkedin">
+                                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                                    </a>
+                                    <a href="" alt="facebook" class="red-social facebook">
+                                        <i class="fa-brands fa-facebook fa-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--CAROUSEL DE INICIO -->
+    <section class="carousel">
+        <div id="carousel-Inicio" class="carousel slide carousel-fade carousel-height" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="img/slide/Slider2_Inicio.jpg" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/slide/Slider3_Web-Development.jpg" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/slide/Slider_4_Developer_Training.jpg" class="d-block w-100 img img-fluid" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/slide/Slider_5_Human_Resourcers.jpg" class="d-block w-100 img-fluid" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-Inicio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                            d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                    </svg>
+                </span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-Inicio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                    </svg>
+                </span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!--ABOUT US - MID-SECTION-->
+    <section>
+        <div class="container-lg">
+            <div class="section-title">
+                <h1>Sobre Nosotros</h1>
+            </div>
+            <h3 class="about-alineacion">
+                "We are an international digital agency with a presence in Mexico and the United States,
+                with a team of expert members in areas like graphic design, software development,
+                and audio visual media development"
+            </h3>
+        </div>
+    </section>
+    <!--SERVICES - CARDS-->
+    <section>
+        <div class="container-lg">
+            <div class="section-title">
+                <h1>Servicios</h1>
+            </div>
+        </div>
+        <div class="container text-center my-5">
+            <div class="row services-cards">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <a href="index.html" class="card service-card">
+                        <img src="img/card-img/imagen_desarollo_web.jpg" class="card-img-top" alt="Desarrollo Web">
+                        <div class="card-body">
+                            <div class="title-icon-container">
+                                <h5 class="card-title">Desarrollo Web</h5>
+                                <i class="fa-solid fa-desktop fa-2xl icon-background" style="color:#c49c3c;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <a href="" class="card service-card">
+                        <img src="img/card-img/img_recursos_humanos.jpeg" class="card-img-top" alt="Recursos Humanos">
+                        <div class="card-body">
+                            <div class="title-icon-container">
+                                <h5 class="card-title">Recursos Humanos</h5>
+                                <i class="fa-solid fa-users fa-2xl icon-background" style="color:#c49c3c;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <a href="" class="card service-card">
+                        <img src="img/card-img/imagen_cap_programadores.jpg" class="card-img-top"
+                            alt="Capacitación Programadores">
+                        <div class="card-body">
+                            <div class="title-icon-container">
+                                <h5 class="card-title">Capacitación IT</h5>
+                                <i class="fa-solid fa-chalkboard-user fa-2xl icon-background"
+                                    style="color:#c49c3c;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CLIENTES - SECTION-->
+    <section>
+        <div class="container-lg">
+            <div class="section-title">
+                <h1>Clientes</h1>
+            </div>
+            <div class="container text-center my-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="clients-container">
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo persianas.png" alt="Venta de Persianas">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/myob.png" alt="myob">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-aohom.png" alt="Aohom">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/belimo.png" alt="Belimo">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-aquapro.png" alt="AquaPro">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/lilly.png" alt="Lilly">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-darwin.png" alt="Darwin">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/life_groups.png" alt="Life Groups">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-arq.png" alt="Arquitecto Osiel Beltran">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/citrus.png" alt="Citrus">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-azteca.png" alt="Villas y Suites Real Azteca">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/grabyo.png" alt="Grabyo">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-dilan.png" alt="Ventas en Redes">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/trustly.png" alt="trustly">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-centro-de-idiomas.png" alt="Centro de Idiomas">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-teca.png" alt="Teca Market">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/oldendorff.png" alt="oldendorff">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/strider.png" alt="Strider">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-ih.png" alt="international House">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/infocus.png" alt="Infocus">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-paraiso.png" alt="Villas y Suites Paraiso del Sur">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/runtastic.png" alt="runtastic">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/cadent.png" alt="cadent">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-tudiseno.png" alt="Tu diseño">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-talent.png" alt="Talent English">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/edit_share.png" alt="Edit Share">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/gategroup.png" alt="gategroup">
+                            </div>
+                        </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="container-fluid p-0">
+            <div class="footer-top text-center" data-aos="fade-right">
+                <img src="img/logo_final.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-bottom d-flex justify-content-between align-items-center">
+                <div class="footer-contact">
+                    <p>@giseamex@gmail.com</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#clientes">Contacto</a></li>
+                    <li><a href="#contacto">Carrers</a></li>
+                    <li><a href="#contacto">Blog</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="" alt="instagram" class="red-social-footer">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="" alt="linkedin" class="red-social-footer">
+                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                    </a>
+                    <a href="" alt="facebook" class="red-social-footer">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <script src="js/index.js"></script>
+        <script src="js/aos/aos.js"></script>
+        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="js/fontawesome/all.min.js"></script>
+        <script> AOS.init(); </script>
+</body>
+
+</html>

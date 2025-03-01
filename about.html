@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontawesome/all.min.css">
+    <link rel="stylesheet" href="./css/aos/aos.css">
+    <title>About</title>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg estilos-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo_final.png" alt="Gisea" class="gisea-logo">
+                </a>
+                <!--MENU DE HAMBURGESA-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
+                    <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                    <svg class="icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
+                    </svg>
+                </button>
+                <!--NAVBAR-->
+                <div class="collapse navbar-collapse estilos-navbar" id="navbarNav">
+                    <ul class="navbar-nav estilos-navbar nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                SERVICES
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Diseño Web</a></li>
+                                <li><a class="dropdown-item" href="#">Recursos Humanos</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CARRERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BLOG</a>
+                        </li>
+                        <li>
+                            <!--Dropdown btn de idioma-->
+                            <div class="dropdown">
+                                <button id="languageButton" class="btn-cambio-idioma">
+                                    <img src="icons/bandera_mex.png" alt="Idioma" id="languageIcon" width="40px">
+                                    <span id="selectedLanguage">SPA</span>
+                                    <i id="dropdownIcon" class="fa-solid fa-angle-down"></i>
+                                </button>
+                                <div id="languageDropdown" class="dropdown-content">
+                                    <a href="#" data-lang="SPA" data-flag="icons/bandera_mex.png">SPA</a>
+                                    <a href="#" data-lang="ENG" data-flag="icons/bandera_usa.png">ENG</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="header-container">
+                                <div class="header-social-links">
+                                    <a href="" alt="instagram" class="red-social instagram">
+                                        <i class="fa-brands fa-instagram fa-xl"></i>
+                                    </a>
+                                    <a href="" alt="linkedin" class="red-social linkedin">
+                                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                                    </a>
+                                    <a href="" alt="facebook" class="red-social facebook">
+                                        <i class="fa-brands fa-facebook fa-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="about-header-container">
+        <div class="about-header-image">
+            <img src="img/Header-About Us.png" class="img-fluid" alt="About us Imagen">
+            <div class="about-header-text" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
+                data-aos-duration="1500">
+                <h1>About Us</h1>
+                <h1>Conoce nuestro stack de Tecnologias</h1>
+            </div>
+        </div>
+    </div>
+    <!--CARDS DE Tecnologias-->
+    <section class="tech-cards-section">
+        <!--CARD DE HTML-->
+        <div class="container">
+            <div class="row card-container">
+                <div class="col-md-5 mb-4" data-aos="zoom-in">
+                    <div class="tech-card html-card" onclick="showTooltip(this)">
+                        <!-- Logo Circle -->
+                        <div class="logo-circle">
+                            <svg width="73" height="107" viewBox="0 0 95 107" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.326416 0L8.91317 96.3L47.4465 107L86.0802 96.2866L94.6804 0H0.326416ZM75.9888 31.4981H30.7947L31.8714 43.5958H74.9188L71.6754 79.8554L47.4465 86.5697L23.2512 79.8554L21.5994 61.3043H33.4563L34.2989 70.7337L47.4532 74.2781L47.48 74.2714L60.641 70.7203L62.0052 55.4059H21.071L17.8878 19.688H77.0521L75.9888 31.4981Z"
+                                    fill="#C43C3C" />
+                            </svg>
+                        </div>
+                        <!-- Usage Circle -->
+                        <div class="usage-section">
+                            <h3 class="section-title-card-tech">Uso Mundial</h3>
+                            <div class="usage-circle">
+                                <span class="usage-text">100%</span>
+                            </div>
+                        </div>
+
+                        <!-- Title -->
+                        <h2 class="card-title">HTML</h2>
+
+                        <!-- Used By Section -->
+                        <div class="used-by-section">
+                            <h3 class="section-title-card-tech">Usado en:</h3>
+                            <div class="brand-icons">
+                                <!-- Replace with actual icon paths -->
+                                <img src="svgs/google-Logo.svg" alt="Google" class="brand-icon">
+                                <img src="svgs/apple.svg" alt="Apple" class="brand-icon">
+                                <img src="svgs/netflix-logo.svg" alt="Netflix" class="brand-icon">
+                                <img src="svgs/facebok-Logo.svg" alt="Facebook" class="brand-icon">
+                                <img src="svgs/Youtube-Logo.svg" alt="YouTube" class="brand-icon">
+                                <img src="svgs/linkedin-Logo.svg" alt="LinkedIn" class="brand-icon">
+                            </div>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="tooltip-card">
+                            <p>Información adicional sobre HTML</p>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD DE JS-->
+                <div class="col-md-5 mb-4" data-aos="zoom-in">
+                    <div class="tech-card js-card" onclick="showTooltip(this)">
+                        <!-- Logo Circle -->
+                        <div class="logo-circle">
+                            <img src="svgs/logo_javascript.svg" alt="Javascript-logo" class="brand-icon"
+                                style="width:77px; height:77px;">
+                        </div>
+                        <!-- Usage Circle -->
+                        <div class="usage-section">
+                            <h3 class="section-title-card-tech">Uso Mundial</h3>
+                            <div class="usage-circle">
+                                <span class="usage-text">100%</span>
+                            </div>
+                        </div>
+
+                        <!-- Title -->
+                        <h2 class="card-title">JavaScript</h2>
+
+                        <!-- Used By Section -->
+                        <div class="used-by-section">
+                            <h3 class="section-title-card-tech">Usado en:</h3>
+                            <div class="brand-icons">
+                                <!-- Replace with actual icon paths -->
+                                <img src="svgs/Spotify.Logo.svg" alt="Spotify" class="brand-icon">
+                                <img src="svgs/apple.svg" alt="Apple" class="brand-icon">
+                                <img src="svgs/Uber-Icono.svg" alt="Uber" class="brand-icon">
+                                <img src="svgs/facebok-Logo.svg" alt="Facebook" class="brand-icon">
+                                <img src="svgs/amazon-Logo.svg" alt="Amazon" class="brand-icon">
+                                <img src="svgs/microsoft-logo.svg" alt="Microsoft" class="brand-icon">
+                            </div>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="tooltip-card">
+                            <p>Información adicional sobre JS</p>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD DE CSS3 Y SASS-->
+                <div class="col-md-5 mb-4" data-aos="zoom-in">
+                    <div class="tech-card css3-card" onclick="showTooltip(this)">
+                        <!-- Logo Circle -->
+                        <div class="logo-circle">
+                            <img src="svgs/logo_css3_saas.svg" alt="Sass y CSS3" class="brand-icon"
+                                style=" height:100px;">
+                        </div>
+                        <!-- Usage Circle -->
+                        <div class="usage-section">
+                            <h3 class="section-title-card-tech">Uso Mundial</h3>
+                            <div class="usage-circle-css3">
+                                <span class="usage-text">100%</span>
+                            </div>
+                        </div>
+                        <!-- Title -->
+                        <h2 class="card-title">CSS3 Y SASS</h2>
+                        <!-- Used By Section -->
+                        <div class="used-by-section">
+                            <h3 class="section-title-card-tech">Usado en:</h3>
+                            <div class="brand-icons">
+                                <!-- Replace with actual icon paths -->
+                                <img src="svgs/microsoft-logo.svg" alt="Microsoft" class="brand-icon">
+                                <img src="svgs/apple.svg" alt="Apple" class="brand-icon">
+                                <img src="svgs/netflix-logo.svg" alt="Netflix" class="brand-icon">
+                                <img src="svgs/facebok-Logo.svg" alt="Facebook" class="brand-icon">
+                                <img src="svgs/logo_airbnb.svg" alt="Airbnb" class="brand-icon">
+                                <img src="svgs/logo_IBM.svg" alt="IBM" class="brand-icon">
+                            </div>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="tooltip-card">
+                            <p>Información adicional sobre CSS3 y SASS.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD DE BOOTSTRAP -->
+                <div class="col-md-5 mb-4" data-aos="zoom-in">
+                    <div class="tech-card bootstrap-card" onclick="showTooltip(this)">
+                        <!-- Logo Circle-->
+                        <div class="logo-circle">
+                            <img src="svgs/icono_bootstrap.svg" alt="Sass y CSS3" class="brand-icon"
+                                style=" height:80px;">
+                        </div>
+                        <!-- Usage Circle -->
+                        <div class="usage-section">
+                            <h3 class="section-title-card-tech">Uso Mundial</h3>
+                            <div class="usage-circle-bootstrap">
+                                <span class="usage-text">60%</span>
+                            </div>
+                        </div>
+                        <!-- Title -->
+                        <h2 class="card-title">Bootstrap</h2>
+                        <!-- Used By Section -->
+                        <div class="used-by-section">
+                            <h3 class="section-title-card-tech">Usado en:</h3>
+                            <div class="brand-icons">
+                                <!-- Replace with actual icon paths-->
+                                <img src="svgs/logo_nasa.svg" alt="NASA" class="brand-icon" style="width: 40px;">
+                                <img src="svgs/twitter_logo.svg" alt="X" class="brand-icon">
+                                <img src="svgs/linkedin-Logo.svg" alt="LinkedIn" class="brand-icon">
+                                <img src="svgs/netflix-logo.svg" alt="Netflix" class="brand-icon">
+                                <img src="svgs/Spotify.Logo.svg" alt="Spotify" class="brand-icon">
+                                <img src="svgs/lyft_logo.svg" alt="lyft" class="brand-icon">
+                                <img src="svgs/logo_alibaba.svg" alt="alibaba" class="brand-icon">
+                            </div>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="tooltip-card">
+                            <p>Información adicional sobre bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD DE GIT Y GITHUB -->
+                <div class="col-md-5 mb-4" data-aos="zoom-in">
+                    <div class="tech-card git-github-card" onclick="showTooltip(this)">
+                        <!-- Logo Circle-->
+                        <div class="logo-circle">
+                            <img src="svgs/Git_github_logo.svg" alt="Git y Github" class="brand-icon"
+                                style=" height:95px;">
+                        </div>
+                        <!-- Usage Circle -->
+                        <div class="usage-section">
+                            <h3 class="section-title-card-tech">Uso Mundial</h3>
+                            <div class="usage-circle-git-github">
+                                <span class="usage-text">95%</span>
+                            </div>
+                        </div>
+                        <!-- Title -->
+                        <h2 class="card-title">Git y Github</h2>
+                        <!-- Used By Section -->
+                        <div class="used-by-section">
+                            <h3 class="section-title-card-tech">Usado en:</h3>
+                            <div class="brand-icons">
+                                <!-- Replace with actual icon paths-->
+                                <img src="svgs/microsoft-logo.svg" alt="Microsoft" class="brand-icon" style="width: 40px;">
+                                <img src="svgs/google-Logo.svg" alt="Google" class="brand-icon">
+                                <img src="svgs/netflix-logo.svg" alt="Netflix" class="brand-icon">
+                                <img src="svgs/facebok-Logo.svg" alt="Facebook" class="brand-icon">
+                                <img src="svgs/logo_airbnb.svg" alt="Airbnb" class="brand-icon">
+                                <img src="svgs/logo_IBM.svg" alt="IBM" class="brand-icon">
+                            </div>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="tooltip-card">
+                            <p>Información adicional sobre Git y github</p>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD DE LARAVEL CON MYSQL Y PHP-->
+                <div class="col-md-5 mb-4" data-aos="zoom-in">
+                    <div class="tech-card laravel-card" onclick="showTooltip(this)">
+                        <!-- Logo Circle -->
+                        <div class="logo-rectangle">
+                            <img src="svgs/Laravel-Icono.svg" alt="Laravel" class="brand-icon" style="height: 71px;">
+                            <img src="svgs/logo_mysql.svg" alt="MySQL" class="brand-icon">
+                            <img src="svgs/logo_php.svg" alt="PHP" class="brand-icon">
+                        </div>
+                         <!-- Title -->
+                         <h2 class="card-title">Laravel con MySQL Y PHP</h2>
+                        
+                         <!-- Usage Circle -->
+                        <div class="usage-section">
+                            <h3 class="section-title-card-tech">Uso Mundial</h3>
+                            <div class="usage-circle-laravel">
+                                <span class="usage-text">80%</span>
+                            </div>
+                        </div>
+                        <!-- Used By Section -->
+                        <div class="used-by-section">
+                            <h3 class="section-title-card-tech">Usado en:</h3>
+                            <div class="brand-icons">
+                                <!-- Replace with actual icon paths -->
+                                <img src="svgs/logo_BBC.svg" alt="BBC News" class="brand-icon">
+                                <img src="svgs/facebok-Logo.svg" alt="Facebook" class="brand-icon">
+                                <img src="svgs/logo_wordpress.svg" alt="Wordpress" class="brand-icon">
+                                <img src="svgs/twitter_logo.svg" alt="X" class="brand-icon">
+                                <img src="svgs/logo_yahoo.svg" alt="Yahoo" class="brand-icon">
+                                <img src="svgs/logo_paypal.svg" alt="Paypal" class="brand-icon">
+                            </div>
+                        </div>
+                        <!-- Tooltip -->
+                        <div class="tooltip-card">
+                            <p>Información adicional sobre Laravel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--NUESTROS VALORES -->
+    <section>
+        <div class="container-lg">
+            <div class="section-title valores-title">
+                <h1>Nuestros Valores Fundamentales</h1>
+            </div>
+            <div class="valores-container" data-aos="zoom-in-up">
+                <div class="valor-title">
+                    <h2>Honestidad</h2>
+                    <img src="svgs/about_us_icons/honestidad_logo.svg" alt="Honestidad" class="valor-icon honestidad-icon">
+                </div>
+                <div class="valor-title">
+                    <h2>Respeto</h2>
+                    <img src="svgs/about_us_icons/respeto_logo.svg" alt="Respeto" class="valor-icon">
+                </div>
+                <div class="valor-title">
+                    <h2>Calidad</h2>
+                    <img src="svgs/about_us_icons/calidad_logo.svg" alt="Calidad" class="valor-icon">
+                </div>
+                <div class="valor-title">
+                    <h2>Responsabilidad</h2>
+                    <img src="svgs/about_us_icons/responsabilidad_logo.svg" alt="Responsabilidad" class="valor-icon responsabilidad-icon">
+                </div>
+        </div>
+        <!---MISION Y VISION -->
+        <div class="mision-vision-container" data-aos="fade-up">
+            <div class="mision-card">
+                <h2>MISIÓN</h2>
+                <p>Desarrollar productos y servicios de calidad, prestando atención a los resultados precisos que nuestro cliente pretende obtener para ganarse su confianza.</p>
+            </div>
+            <div class="vision-card">
+                <h2>VISIÓN</h2>
+                <p>Queremos ser una marca reconocida por hacer crecer las marcas de nuestros clientes, no sólo en ventas sino también acompañándoles en la transformación tecnológica que evoluciona día a día en las empresas de cualquier tipo y al mismo tiempo ser una marca reconocida en todo el mundo por ello.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--CLIENTES - SECTION-->
+    <section>
+        <div class="container-lg">
+            <div class="section-title">
+                <h1>Clientes</h1>
+            </div>
+            <div class="container text-center my-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="clients-container">
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo persianas.png" alt="Venta de Persianas">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/myob.png" alt="myob">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-aohom.png" alt="Aohom">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/belimo.png" alt="Belimo">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-aquapro.png" alt="AquaPro">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/lilly.png" alt="Lilly">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-darwin.png" alt="Darwin">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/life_groups.png" alt="Life Groups">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-arq.png" alt="Arquitecto Osiel Beltran">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/citrus.png" alt="Citrus">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-azteca.png" alt="Villas y Suites Real Azteca">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/grabyo.png" alt="Grabyo">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-dilan.png" alt="Ventas en Redes">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/trustly.png" alt="trustly">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-centro-de-idiomas.png" alt="Centro de Idiomas">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-teca.png" alt="Teca Market">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/oldendorff.png" alt="oldendorff">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/strider.png" alt="Strider">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-ih.png" alt="international House">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/infocus.png" alt="Infocus">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-paraiso.png" alt="Villas y Suites Paraiso del Sur">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/runtastic.png" alt="runtastic">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/cadent.png" alt="cadent">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-tudiseno.png" alt="Tu diseño">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/logo-talent.png" alt="Talent English">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/edit_share.png" alt="Edit Share">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/gategroup.png" alt="gategroup">
+                            </div>
+                        </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="container-fluid p-0">
+            <div class="footer-top text-center" data-aos="fade-right">
+                <img src="img/logo_final.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-bottom d-flex justify-content-between align-items-center">
+                <div class="footer-contact">
+                    <p>@giseamex@gmail.com</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#clientes">Contacto</a></li>
+                    <li><a href="#contacto">Carrers</a></li>
+                    <li><a href="#contacto">Blog</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="" alt="instagram" class="red-social-footer">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="" alt="linkedin" class="red-social-footer">
+                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                    </a>
+                    <a href="" alt="facebook" class="red-social-footer">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/aos/aos.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome/all.min.js"></script>
+    <script> AOS.init(); </script>
+</body>
+
+</html>
