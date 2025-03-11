@@ -531,7 +531,7 @@ a.red-social-footer:hover {
     justify-content: center;
     box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: -40px;
+    top: -65px;
     left: 20px;
     z-index: 1;
 }
@@ -1009,6 +1009,7 @@ a.red-social-footer:hover {
     position: relative;
     background: url('/img/header_desarollo_web.jpg') no-repeat center center/cover;
     height: 95vh; 
+    width: 100%;
     color: white; 
     display: flex;
     align-items: center;
@@ -1162,13 +1163,37 @@ li .icon-check {
     width: 40px; 
     height: auto; 
     vertical-align: middle; 
-    margin-left: 50px; 
+    margin-left: 70px; 
 }
 li .icon-check-hospedaje{
     width: 40px; 
     height: auto; 
     vertical-align: middle; 
     margin-left: 26px;
+}
+li .icon-check-empgrandes-hospedaje{
+    width: 40px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 64px;
+}
+li .icon-check-mdnpequeña{
+    width: 40px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 50px;
+}
+li .icon-check-mdnfuncional{
+    width: 40px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 50px;
+}
+li .icon-check-multibilingue{
+    width: 40px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 50px;
 }
 li .icon-check-info{
     width: 40px; 
@@ -1195,6 +1220,24 @@ li .icon-check-info{
     padding: 5px;
 }
 /* CARD DE EMPRESAS GRANDES O CORPORATIVOS */
+li .icon-check-empgrandes{
+    width: 40px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 70px;
+}
+li .icon-check-empgrandes-bilingue{
+    width: 40px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 124px;
+}
+li .icon-check-empgrnd{
+    width: 40px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 20px;
+}
 #empresas-grandes{
     width: 800px;
 }
@@ -1487,8 +1530,10 @@ li .icon-check-info{
     /*-----------FIN ESTILOS ABOUT US  -----------*/
     
     /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
-    .desarrollo-web-header .header-content{
+    .desarrollo-web-header{
         height: 90vh;
+    }
+    .desarrollo-web-header .header-content{
         display: flex;
         flex-direction: column; 
         align-items: center; 
@@ -1501,7 +1546,7 @@ li .icon-check-info{
     .text-left h1{
         text-align: center;
         padding-left: 0px;
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
     .text-left p{
         text-align: center;
@@ -1522,6 +1567,128 @@ li .icon-check-info{
     .text-right ul li{
         font-size: 1rem;
         padding-left: 10px;
+    }
+    .pricing-card {
+        width: 100%;
+        margin: 10px 0; 
+        padding: 15px; 
+    }
+
+    .pricing-card h2 {
+        font-size: 2rem; 
+    }
+
+    .pricing-card .price {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    .pricing-card ul {
+        list-style: none;
+        padding: 0;
+        text-align: left; /* Asegura que el texto quede alineado a la izquierda */
+    }
+    
+    .pricing-card ul li {
+        display: flex;
+        align-items: center; /* Alinea verticalmente el texto e ícono */
+        justify-content: center;
+        padding: 10px 0; /* Espaciado entre elementos */
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    /* Asegurar que los iconos se posicionen correctamente */
+    .pricing-card ul li img {
+        width: 30px; /* Tamaño uniforme del icono */
+        height: auto;
+    }
+    
+    /* Separador con espacio */
+    .separator-container {
+        border-top: 4px solid #C49C3C;
+        margin: 15px 0;
+        padding-top: 10px;
+    }
+    
+    /* Ajuste del botón */
+    .pricing-card .cta-button {
+        display: block;
+        width: 100%;
+        background-color: #343a40;
+        padding: 12px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 2px;
+    }
+    
+    .pricing-card .cta-button:hover {
+        background: #1f2333;
+    }
+    #negocios-pequeños .icon-check-mdnpequeña{
+        margin-left: 41px;
+    }
+    #e
+    #empresas-medianas h2{
+        font-size: 2rem;
+    }
+    #empresas-medianas .icon-check{
+        margin-left: 54px;
+    }
+    #empresas-grandes {
+        width: 100%;
+    }
+    #empresas-grandes .price{
+        font-size: 2rem;
+    }
+    #empresas-grandes h2{
+        font-size: 2rem;
+    }
+    #empresas-grandes li{
+        font-size: 1.2rem;
+    }
+    #empresas-grandes .cta-button{
+        font-size: 1.9rem;
+    }
+    #empresas-grandes .icon-check-empgrandes-hospedaje{
+        margin-left: 12px;
+    }
+    #empresas-grandes .icon-check-empgrandes{
+        margin-left: 12px;
+    }
+    #empresas-grandes .icon-check-empgrandes-bilingue{
+        margin-left: 43px;
+    }
+    #empresas-grandes .icon-check-empgrnd{
+        margin-left: 25px;
+    }
+    li .icon-check-hospedaje{
+        margin-left: 20px;
+    }
+    li .icon-check-multibilingue{
+        margin-left: 37px;
+    }
+    li .icon-check-moderna{
+        margin-left: 37px;
+    }
+    li .icon-check-mdnfuncional{
+        margin-left: 38px;
+    }
+    li .icon-check-empmedianas{
+        margin-right: 35px;
+    }
+    li .icon-check-bilingue{
+        margin-right: 34px;
+        margin-left: 7px;
+    }
+    li .icon-check-empgrnd{
+        margin-right: 3px;
+        margin-left: 20px;
+    }
+    .portafolio-container{
+        gap: 60px;
     }
 
 }
