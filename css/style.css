@@ -1163,7 +1163,7 @@ li .icon-check {
     width: 40px; 
     height: auto; 
     vertical-align: middle; 
-    margin-left: 70px; 
+    margin-left: 51px; 
 }
 li .icon-check-hospedaje{
     width: 40px; 
@@ -1175,7 +1175,7 @@ li .icon-check-empgrandes-hospedaje{
     width: 40px; 
     height: auto; 
     vertical-align: middle; 
-    margin-left: 64px;
+    margin-left: 213px;
 }
 li .icon-check-mdnpequeña{
     width: 40px; 
@@ -1219,18 +1219,21 @@ li .icon-check-info{
 #empresas-medianas .price{
     padding: 5px;
 }
+#empresas-medianas .alinear-texto{
+    margin-left: 21px;
+}
 /* CARD DE EMPRESAS GRANDES O CORPORATIVOS */
 li .icon-check-empgrandes{
     width: 40px; 
     height: auto; 
     vertical-align: middle; 
-    margin-left: 70px;
+    margin-left: 66px;
 }
 li .icon-check-empgrandes-bilingue{
     width: 40px; 
     height: auto; 
     vertical-align: middle; 
-    margin-left: 124px;
+    margin-left: 140px;
 }
 li .icon-check-empgrnd{
     width: 40px; 
@@ -1258,6 +1261,9 @@ li .icon-check-empgrnd{
 }
 
 /*--------PORTAFOLIO WEB--------*/
+.a-color{
+    color: #000;
+}
 .portafolio-container {
     display: flex;
     justify-content: center;
@@ -1292,7 +1298,7 @@ li .icon-check-empgrnd{
     list-style: none;
     padding: 0;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
   }
   
   .portfolio-filters li {
