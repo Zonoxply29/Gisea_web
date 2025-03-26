@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/swiper/swiper-bundle.min.css">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -74,13 +75,21 @@
                             <!--Dropdown btn de idioma-->
                             <div class="dropdown">
                                 <button id="languageButton" class="btn-cambio-idioma">
-                                    <img src="icons/bandera_mex.png" alt="Idioma" id="languageIcon" width="40px">
+                                    <img src="icons/bandera_mex.png" alt="Idioma" id="languageIcon" width="30px">
                                     <span id="selectedLanguage">SPA</span>
                                     <i id="dropdownIcon" class="fa-solid fa-angle-down"></i>
                                 </button>
                                 <div id="languageDropdown" class="dropdown-content">
-                                    <a href="#" data-lang="SPA" data-flag="icons/bandera_mex.png">SPA</a>
-                                    <a href="#" data-lang="ENG" data-flag="icons/bandera_usa.png">ENG</a>
+                                    <a href="#" data-lang="SPA" data-flag="icons/bandera_mex.png">
+                                        <img src="icons/bandera_mex.png" alt="SPA" style="width: 40px; height:40px;">
+                                        SPA
+                                    </a>
+                                    <a href="#" data-lang="ENG" data-flag="icons/bandera_usa.png">
+                                        <img src="icons/bandera_usa.png" alt="SPA" style="width: 40px; height:40px;">
+                                        ENG</a>
+                                    <a href="#" data-lang="JPN" data-flag="icons/bandera_jpn.png">
+                                        <img src="icons/bandera_jpn.png" alt="JPN" style="width: 40px; height:40px;">
+                                        JPN</a>
                                 </div>
                             </div>
                         </li>
@@ -130,20 +139,24 @@
             </div>
             <div class="row justify-content-center mt-1">
 
-                <!-- NEGOCIOS PEQUEÑOS--> 
+                <!-- NEGOCIOS PEQUEÑOS-->
                 <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center">
                     <div class="pricing-card" id="negocios-pequeños">
                         <img src="/img/web-service/negocios_pequeños.png" alt="Paquete Negocios Pequeños">
                         <h2>NEGOCIOS PEQUEÑOS</h2>
                         <div class="price">DESDE $10,000 MXN</div>
                         <ul>
-                            <li>Hospedaje por 2 AÑOS <img src="icons/check_icon.svg" alt="" class="icon-check-hospedaje"></li>
-                            <li>Sin Sitio<br> Multibilingüe Simple <img src="icons/ban_icon.svg" alt="" class="icon-check-multibilingue"></li>
-                            <li>Plataforma Moderna <br> y Funcional <img src="icons/check_icon.svg" class="icon-check-mdnpequeña"></li>
+                            <li>Hospedaje por 2 AÑOS <img src="icons/check_icon.svg" alt=""
+                                    class="icon-check-hospedaje"></li>
+                            <li>Sin Sitio<br> Multibilingüe Simple <img src="icons/ban_icon.svg" alt=""
+                                    class="icon-check-multibilingue"></li>
+                            <li>Plataforma Moderna <br> y Funcional <img src="icons/check_icon.svg"
+                                    class="icon-check-mdnpequeña"></li>
                         </ul>
                         <div class="separator-container">
                             <ul>
-                                <li>Sitio de 1 Sola Página <img src="icons/paginas_web.svg" alt="" class="icon-check-info"></li>
+                                <li>Sitio de 1 Sola Página <img src="icons/paginas_web.svg" alt=""
+                                        class="icon-check-info"></li>
                             </ul>
                         </div>
                         <div class="btn-centro">
@@ -158,13 +171,17 @@
                         <h2>EMPRESAS MEDIANAS</h2>
                         <div class="price">DESDE $20,000 a $40,000 MXN</div>
                         <ul>
-                            <li>Hospedaje por 2 AÑOS <img src="icons/check_icon.svg" alt="" class="icon-check-hospedaje"></li>
-                            <li>Plataforma Moderna <br> y Funcional <img src="icons/check_icon.svg" class="icon-check-mdnfuncional"></li>
-                            <li class="alinear-texto">Sin Sitio <br> Multilingüe Simple <img src="icons/info_icon.svg" class="icon-check" data-bs-toggle="tooltip" title="Costo Extra"></li>
+                            <li>Hospedaje por 2 AÑOS <img src="icons/check_icon.svg" alt=""
+                                    class="icon-check-hospedaje"></li>
+                            <li>Plataforma Moderna <br> y Funcional <img src="icons/check_icon.svg"
+                                    class="icon-check-mdnfuncional"></li>
+                            <li class="alinear-texto">Sin Sitio <br> Multilingüe Simple <img src="icons/info_icon.svg"
+                                    class="icon-check" data-bs-toggle="tooltip" title="Costo Extra"></li>
                         </ul>
                         <div class="separator-container">
                             <ul>
-                                <li>Sitio de 4 a 8 Páginas <img src="icons/info_icon.svg" alt="" class="icon-check-info" data-bs-toggle="tooltip" title="+8 páginas costo extra"></li>
+                                <li>Sitio de 4 a 8 Páginas <img src="icons/info_icon.svg" alt="" class="icon-check-info"
+                                        data-bs-toggle="tooltip" title="+8 páginas costo extra"></li>
                             </ul>
                         </div>
                         <div class="btn-centro">
@@ -172,7 +189,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- EMPRESAS GRANDES-->
                 <div class="col-lg-12 col-md-12 col-12 d-flex justify-content-center">
                     <div class="pricing-card" id="empresas-grandes">
@@ -180,13 +197,19 @@
                         <h2>EMPRESAS GRANDES O CORPORATIVOS</h2>
                         <div class="price">DESDE $50,000 a $140,000 MXN</div>
                         <ul>
-                            <li>Hospedaje por 2 AÑOS <img src="icons/check_icon.svg" alt="" class="icon-check-empgrandes-hospedaje"></li>
-                            <li>Plataforma Moderna y Funcional <img src="icons/check_icon.svg" alt="" class="icon-check-empgrandes"></li>
-                            <li>Sin Sitio Multilingüe Simple <img src="icons/info_icon.svg" class="icon-check-empgrandes-bilingue" data-bs-toggle="tooltip" title="Costo Extra"></li>
+                            <li>Hospedaje por 2 AÑOS <img src="icons/check_icon.svg" alt=""
+                                    class="icon-check-empgrandes-hospedaje"></li>
+                            <li>Plataforma Moderna y Funcional <img src="icons/check_icon.svg" alt=""
+                                    class="icon-check-empgrandes"></li>
+                            <li>Sin Sitio Multilingüe Simple <img src="icons/info_icon.svg"
+                                    class="icon-check-empgrandes-bilingue" data-bs-toggle="tooltip" title="Costo Extra">
+                            </li>
                         </ul>
                         <div class="separator-container">
                             <ul>
-                                <li>Más de 8 Páginas <br>en el Sitio <img src="icons/info_icon.svg" alt="" class="icon-check-empgrnd" data-bs-toggle="tooltip" title="Personalizacion Extra"></li>
+                                <li>Más de 8 Páginas <br>en el Sitio <img src="icons/info_icon.svg" alt=""
+                                        class="icon-check-empgrnd" data-bs-toggle="tooltip"
+                                        title="Personalizacion Extra"></li>
                             </ul>
                         </div>
                         <div class="btn-centro">
@@ -194,8 +217,8 @@
                         </div>
                     </div>
                 </div>
-    
-            </div>    
+
+            </div>
         </div>
     </section>
     <!----------PORTAFOLIO WEB-------->
@@ -213,12 +236,26 @@
                     <h2>10</h2>
                     <h3>Años de <br>Experiencia</h3>
                 </div>
-                <div class="portafolio-title">
-                    <h2>3</h2>
+                <div class="portafolio-title idioma-hover">
+                    <div class="number">
+                        <h2>3</h2>
+                        <img src="icons/bandera_mex.png" class="idioma-flag flag-esp animate__animated"
+                            data-animation="animate__fadeInLeft" />
+                        <img src="icons/bandera_usa.png" class="idioma-flag flag-eng animate__animated"
+                            data-animation="animate__fadeInDown" />
+                        <img src="icons/bandera_jpn.png" class="idioma-flag flag-jpn animate__animated"
+                            data-animation="animate__fadeInRight" />
+                    </div>
                     <h3>Idiomas</h3>
                 </div>
-                <div class="portafolio-title">
-                    <h2>4</h2>
+                <div class="portafolio-title country-hover">
+                    <div class="number">
+                        <h2>4</h2>
+                        <img src="icons/bandera_usa.png" class="flag flag-usa animate__animated" />
+                        <img src="icons/bandera_venezuela.png" class="flag flag-venezuela animate__animated" />
+                        <img src="icons/bandera_mex.png" class="flag flag-mexico animate__animated" />
+                        <img src="icons/bandera_jpn.png" class="flag flag-japan animate__animated" />
+                    </div>
                     <h3>Paises</h3>
                 </div>
             </div>
@@ -245,7 +282,8 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-barberia">
                     <img src="img/portafolio-img/barberia_shop.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/BarberShops/razor/index.html" class="a-color" data-bs-toggle="tooltip" title="Haz clic para conocer el sitio">Barbershop</a></h4>
+                        <h4><a href="https://giseamex.com/web/BarberShops/razor/index.html" class="a-color"
+                                data-bs-toggle="tooltip" title="Haz clic para conocer el sitio">Barbershop</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/barberia_shop.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -259,7 +297,9 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-seguridad">
                     <img src="img/portafolio-img/eco_seguridad.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://rych182.github.io/wero/"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">ECO 5-0</a><h4>
+                        <h4><a href="https://rych182.github.io/wero/" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">ECO 5-0</a>
+                            <h4>
                                 <div class="portfolio-icons">
                                     <a href="img/portafolio-img/eco_seguridad.png" class="glightbox preview-link"><i
                                             class="bi bi-zoom-in"></i></a>
@@ -274,10 +314,12 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arquitectura">
                     <img src="img/portafolio-img/arcade_arquitectura.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="service_desarollo_web.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Arcade Arquitectura</a><h4>
+                        <h4><a href="service_desarollo_web.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Arcade Arquitectura</a>
+                            <h4>
                                 <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/arcade_arquitectura.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
+                                    <a href="img/portafolio-img/arcade_arquitectura.png"
+                                        class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                     <a href="portfolio-details.html" class="dsetails-link"><i
                                             class="bi bi-link-45deg"></i>
                                     </a>
@@ -289,14 +331,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arquitectura">
                     <img src="img/portafolio-img/arclabs_arquitectura.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/architechture/arclabs/index.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Arclabs Arquitectura</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/arclabs_arquitectura.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="https://giseamex.com/web/architechture/arclabs/index.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Arclabs Arquitectura</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/arclabs_arquitectura.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -304,29 +346,29 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-barberia">
                     <img src="img/portafolio-img/barberia_gisea.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="service_desarollo_web.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Gisea Haircare</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/barberia_gisea.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="service_desarollo_web.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Gisea Haircare</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/barberia_gisea.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
-                
+
                 <!--Arquitectura Items-->
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arquitectura">
                     <img src="img/portafolio-img/gisea_arquitectura.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="service_desarollo_web.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Gisea Arquitectura</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/gisea_arquitectura.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="service_desarollo_web.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Gisea Arquitectura</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/gisea_arquitectura.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -334,14 +376,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-restaurantes">
                     <img src="img/portafolio-img/caviar_restaurante.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/restaurants/caviar/index.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Gisea Caviar</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/caviar_restaurante.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="https://giseamex.com/web/restaurants/caviar/index.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Gisea Caviar</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/caviar_restaurante.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -349,14 +391,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-barberia">
                     <img src="img/portafolio-img/alotan_barberia.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/BarberShops/alotan/index.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Alotan Barber Shop</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/alotan_barberia.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="https://giseamex.com/web/BarberShops/alotan/index.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Alotan Barber Shop</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/alotan_barberia.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -364,7 +406,8 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-restaurantes">
                     <img src="img/portafolio-img/gisea_restaurante.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/BarberShops/alotan/index.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Alotan Barber Shop</a></h4>
+                        <h4><a href="https://giseamex.com/web/BarberShops/alotan/index.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Alotan Barber Shop</a></h4>
                         <h4>Gisea Restaurante<h4>
                                 <div class="portfolio-icons">
                                     <a href="img/portafolio-img/gisea_restaurante.png" class="glightbox preview-link"><i
@@ -376,11 +419,12 @@
                     </div>
                 </div><!-- End Portfolio Item -->
 
-                 <!--Restaurante Items-->
-                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-restaurantes">
+                <!--Restaurante Items-->
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-restaurantes">
                     <img src="img/portafolio-img/taste_restaurante.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/BarberShops/alotan/index.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Alotan Barber Shop</a></h4>
+                        <h4><a href="https://giseamex.com/web/BarberShops/alotan/index.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Alotan Barber Shop</a></h4>
                         <h4>Taste Restaurante<h4>
                                 <div class="portfolio-icons">
                                     <a href="img/portafolio-img/taste_restaurante.png" class="glightbox preview-link"><i
@@ -396,14 +440,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-restaurantes">
                     <img src="img/portafolio-img/pato_restaurante.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://rych182.github.io/Restaurante/"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Pato Restaurante</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/pato_restaurante.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="https://rych182.github.io/Restaurante/" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Pato Restaurante</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/pato_restaurante.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -411,14 +455,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-abogados">
                     <img src="img/portafolio-img/judge_abogados.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="service_desarollo_web.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Gisea Judge</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/judge_abogados.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="service_desarollo_web.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Gisea Judge</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/judge_abogados.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -426,14 +470,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-abogados">
                     <img src="img/portafolio-img/law_abogados.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="service_desarollo_web.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Law Abogados</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/law_abogados.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="service_desarollo_web.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Law Abogados</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/law_abogados.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -441,14 +485,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-abogados">
                     <img src="img/portafolio-img/justice_abogados.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/lawyers/justice/index.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Justice Abogados</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/justice_abogados.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="https://giseamex.com/web/lawyers/justice/index.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Justice Abogados</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/justice_abogados.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -456,29 +500,29 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doctores">
                     <img src="img/portafolio-img/gisea_doctor.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="service_desarollo_web.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Gisea Doctor</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/gisea_doctor.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="service_desarollo_web.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Gisea Doctor</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/gisea_doctor.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
-                 <!--Doctores Items-->
-                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doctores">
+                <!--Doctores Items-->
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doctores">
                     <img src="img/portafolio-img/klinik_doctores.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="https://giseamex.com/web/doctors/klinik/index.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Klinik Doctores</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/klinik_doctores.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="https://giseamex.com/web/doctors/klinik/index.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Klinik Doctores</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/klinik_doctores.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -486,14 +530,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doctores">
                     <img src="img/portafolio-img/novena_doctores.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="service_desarollo_web.html"data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" class="a-color">Novena Doctores</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/novena_doctores.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="service_desarollo_web.html" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" class="a-color">Novena Doctores</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/novena_doctores.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -503,38 +547,38 @@
         </div>
 
     </section><!-- /Portfolio Section -->
-<section>
-<footer class="footer">
-    <div class="container-fluid p-0">
-        <div class="footer-top text-center" data-aos="fade-right">
-            <img src="img/logo_final.png" alt="Logo" class="footer-logo">
-        </div>
-        <div class="footer-bottom d-flex justify-content-between align-items-center">
-            <div class="footer-contact">
-                <p>@giseamex@gmail.com</p>
+    <section>
+        <footer class="footer">
+            <div class="container-fluid p-0">
+                <div class="footer-top text-center" data-aos="fade-right">
+                    <img src="img/logo_final.png" alt="Logo" class="footer-logo">
+                </div>
+                <div class="footer-bottom d-flex justify-content-between align-items-center">
+                    <div class="footer-contact">
+                        <p>@giseamex@gmail.com</p>
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#clientes">Contacto</a></li>
+                        <li><a href="#contacto">Carrers</a></li>
+                        <li><a href="#contacto">Blog</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="" alt="instagram" class="red-social-footer">
+                            <i class="fa-brands fa-instagram fa-xl"></i>
+                        </a>
+                        <a href="" alt="linkedin" class="red-social-footer">
+                            <i class="fa-brands fa-linkedin fa-xl"></i>
+                        </a>
+                        <a href="" alt="facebook" class="red-social-footer">
+                            <i class="fa-brands fa-facebook fa-xl"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <ul class="footer-links">
-                <li><a href="">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#clientes">Contacto</a></li>
-                <li><a href="#contacto">Carrers</a></li>
-                <li><a href="#contacto">Blog</a></li>
-            </ul>
-            <div class="footer-social">
-                <a href="" alt="instagram" class="red-social-footer">
-                    <i class="fa-brands fa-instagram fa-xl"></i>
-                </a>
-                <a href="" alt="linkedin" class="red-social-footer">
-                    <i class="fa-brands fa-linkedin fa-xl"></i>
-                </a>
-                <a href="" alt="facebook" class="red-social-footer">
-                    <i class="fa-brands fa-facebook fa-xl"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
-</section>
+        </footer>
+    </section>
     <script src="js/index.js"></script>
     <script src="js/portafolio.js"></script>
     <script src="js/aos/aos.js"></script>

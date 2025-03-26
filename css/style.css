@@ -1210,7 +1210,6 @@ li .icon-check-info{
     margin-top: 50px; /* Ajusta el valor según sea necesario */
 }
 
-
 /* CARD DE EMPRESAS MEDIANAS */
 #empresas-medianas h2{
     font-size: 3rem;
@@ -1275,12 +1274,112 @@ li .icon-check-empgrnd{
 }
 
 .portafolio-title {
-    margin: 20px; /* Ajusta el valor según sea necesario */
+    position: relative;
+    margin: 20px; 
+    text-align: center;
 }
+/**ESTILOS DE PAISES PORTAFOLIO WEB */
+.country-hover .number {
+    font-size: 5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+.flag {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+/* Aparecen desde diferentes ángulos */
+.country-hover.active .flag-usa {
+    top: -18px;
+    left: 48px;
+    opacity: 1;
+    animation: animate__slideInDown 0.6s ease-in-out;
+  }
+  
+  .country-hover.active .flag-venezuela {
+    top: 38px;
+    left: 74px;
+    opacity: 1;
+    animation: animate__slideInLeft 0.7s ease-in-out;
+  }
+  
+  .country-hover.active .flag-mexico {
+    left: -15px;
+    top: -19px;
+    opacity: 1;
+    animation: animate__slideInUp 0.8s ease-in-out;
+  }
+  
+  .country-hover.active .flag-japan {
+    bottom: 0;
+    right: 34px;
+    top: 39px;
+    left: -40px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+  }
+  
+  .country-hover h3 {
+    margin-top: 10px;
+    font-size: 2rem;
+}
+/***ESTILOS DE IDIOMAS PORTAFOLIO WEB**/
+.idioma-hover {
+    position: relative;
+    text-align: center;
+  }
+  .idioma-hover .number {
+    font-size: 5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+  }
+  .idioma-flag {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .idioma-hover.active .flag-esp {
+    top: 40px;
+    left: -40px;
+    opacity: 1;
+    animation: animate__fadeInLeft 0.6s ease-in-out;
+  }
+  .idioma-hover.active .flag-eng {
+    top: -15px;
+    left: 50%;
+    opacity: 1;
+    animation: animate__fadeInDown 0.7s ease-in-out;
+  }
+  
+  .idioma-hover.active .flag-jpn {
+    top: 41px;
+    left: 71px;
+    opacity: 1;
+    animation: animate__fadeInRight 0.8s ease-in-out;
+  }
 
 .portafolio-title h2 {
     margin: 0;
-    font-size: 4rem; /* Ajusta el tamaño según sea necesario */
+    font-size: 4rem; 
 }
 
 .portafolio-title h3 {
@@ -1579,11 +1678,6 @@ li .icon-check-empgrnd{
         margin: 10px 0; 
         padding: 15px; 
     }
-
-    .pricing-card h2 {
-        font-size: 2rem; 
-    }
-
     .pricing-card .price {
         font-size: 2rem;
         padding: 20px;
@@ -1629,19 +1723,23 @@ li .icon-check-empgrnd{
         border-radius: 5px;
         margin-top: 2px;
     }
-    
+    .portafolio-title {
+        margin: 28px; 
+    }
     .pricing-card .cta-button:hover {
         background: #1f2333;
     }
     #negocios-pequeños .icon-check-mdnpequeña{
-        margin-left: 41px;
+        margin-left: 30px;
     }
-    #e
+    #negocios-pequeños h2{
+        font-size: 2.3rem;
+    }
     #empresas-medianas h2{
         font-size: 2rem;
     }
     #empresas-medianas .icon-check{
-        margin-left: 54px;
+        margin-left: 24px;
     }
     #empresas-grandes {
         width: 100%;
@@ -1650,7 +1748,10 @@ li .icon-check-empgrnd{
         font-size: 2rem;
     }
     #empresas-grandes h2{
-        font-size: 2rem;
+        font-size: 2.3rem;
+    }
+    #empresas-medianas h2{
+        font-size: 2.3rem;
     }
     #empresas-grandes li{
         font-size: 1.2rem;
@@ -1663,24 +1764,26 @@ li .icon-check-empgrnd{
     }
     #empresas-grandes .icon-check-empgrandes{
         margin-left: 12px;
+        margin-right: 8px;
     }
     #empresas-grandes .icon-check-empgrandes-bilingue{
-        margin-left: 43px;
+        margin-left: 6px;
+        margin-right: 8px;
     }
     #empresas-grandes .icon-check-empgrnd{
         margin-left: 25px;
     }
     li .icon-check-hospedaje{
-        margin-left: 20px;
+        margin-left: 9px;
     }
     li .icon-check-multibilingue{
-        margin-left: 37px;
+        margin-left: 29px;
     }
     li .icon-check-moderna{
         margin-left: 37px;
     }
     li .icon-check-mdnfuncional{
-        margin-left: 38px;
+        margin-left: 28px;
     }
     li .icon-check-empmedianas{
         margin-right: 35px;
