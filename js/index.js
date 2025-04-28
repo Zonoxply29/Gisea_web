@@ -144,3 +144,32 @@ document.addEventListener('DOMContentLoaded', function () {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+/// Esta funcion permite que los elementos se activen automaticamente y no necesariamente con un hover en las banderas de paises
+function animateOnScroll(selector, flagSelector) {
+    const target = document.querySelector(selector);
+    if (!target) return;
+  
+    const flags = target.querySelectorAll(flagSelector);
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          target.classList.add("active");
+          flags.forEach(flag => {
+            flag.classList.remove("animate__animated");
+            void flag.offsetWidth;
+            flag.classList.add("animate__animated", flag.dataset.animation);
+          });
+        } else {
+          target.classList.remove("active");
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    observer.observe(target);
+  }
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    animateOnScroll(".country-hover", ".flag");
+    animateOnScroll(".idioma-hover", ".idioma-flag");
+  });
