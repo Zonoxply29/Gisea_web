@@ -23,7 +23,7 @@ body{
 }
 /*Estilos barra de navegacion*/
 .gisea-logo{
-    width: 25vh;
+    width: 21vh;
     height: auto;
     padding-left: 15px;
     padding-top:0;
@@ -32,7 +32,7 @@ body{
 .estilos-navbar{
     background-color: #EFEFEF;
     height: 100%;
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Racing_Hard";
     --bs-navbar-color:#C49C3C;
     --bs-navbar-hover-color: #1C1F3D;
@@ -167,6 +167,7 @@ a.linkedin:hover {
 }
 .dropdown-menu{
     font-size: 30px;
+    --bs-dropdown-link-active-bg:#C49C3C !important;
 }
 .dropdown-content a:hover {
     background-color: #f1f1f1;
@@ -201,10 +202,10 @@ a.linkedin:hover {
 }
 
 .rotate-180 {
-    animation: rotateIn 0.5s ease-in-out forwards;
+    animation: rotateIn 0.5s ease-in-out forwards !important;
 }
 .rotate-0 {
-    animation: rotateOut 0.5s ease-in-out forwards;
+    animation: rotateOut 0.5s ease-in-out forwards !important;
 }
 
 /*Estilos Carousel Inicio*/
