@@ -1301,8 +1301,8 @@ li .icon-check-empgrnd{
 }
 /* Aparecen desde diferentes ángulos */
 .country-hover.active .flag-usa {
-    top: -18px;
-    left: 48px;
+    top: -12px;
+    left: 63px;
     opacity: 1;
     animation: animate__slideInDown 0.6s ease-in-out;
   }
@@ -1315,8 +1315,8 @@ li .icon-check-empgrnd{
   }
   
   .country-hover.active .flag-mexico {
-    left: -15px;
-    top: -19px;
+    left: -29px;
+    top: -13px;
     opacity: 1;
     animation: animate__slideInUp 0.8s ease-in-out;
   }
@@ -1329,7 +1329,14 @@ li .icon-check-empgrnd{
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
   }
-  
+  .country-hover.active .flag-esp {
+    bottom: 0;
+    right: 34px;
+    top: -44px;
+    left: 17px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+  }
   .country-hover h3 {
     margin-top: 10px;
     font-size: 2rem;
