@@ -1315,7 +1315,7 @@ li .icon-check-empgrnd{
   }
   
   .country-hover.active .flag-mexico {
-    left: -29px;
+    left: 14px;
     top: -13px;
     opacity: 1;
     animation: animate__slideInUp 0.8s ease-in-out;
@@ -1393,6 +1393,89 @@ li .icon-check-empgrnd{
 .portafolio-title h3 {
     margin: 0;
     font-size: 2.5rem; /* Ajusta el tamaño según sea necesario */
+}
+/**** CLIENTES ******/
+.clientes-hover {
+    position: relative;
+    text-align: center;
+  }
+/* Animaciones para clientes-hover */
+.clientes-hover .flag {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.clientes-hover.active .flag-usa {
+    top: 36px;
+    left: 151px;
+    opacity: 1;
+    animation: animate__slideInDown 0.6s ease-in-out;
+}
+
+.clientes-hover.active .flag-venezuela {
+    top: 81px;
+    left: 173px;
+    opacity: 1;
+    animation: animate__slideInLeft 0.7s ease-in-out;
+}
+
+.clientes-hover.active .flag-mexico {
+    left: -12px;
+    top: 38px;
+    opacity: 1;
+    animation: animate__slideInUp 0.8s ease-in-out;
+}
+
+.clientes-hover.active .flag-japan {
+    bottom: 0;
+    top: 80px;
+    left: -34px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+}
+
+.clientes-hover.active .flag-esp {
+    bottom: 0;
+    top: -8px;
+    left: 10px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+}
+.clientes-hover.active .flag-arg {
+    bottom: 0;
+    top: -45px;
+    left: 38px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+}
+.clientes-hover.active .flag-brazil {
+    bottom: 0;
+    top: -84px;
+    left: 71px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+}
+.clientes-hover.active .flag-australia {
+    bottom: 0;
+    top: -4px;
+    left: 128px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+}
+.clientes-hover.active .flag-italia {
+    bottom: 0;
+    top: -44px;
+    left: 102px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
 }
 
 /*-----------Portfolio ITEMS-----------*/
@@ -1805,7 +1888,7 @@ li .icon-check-empgrnd{
         margin-left: 20px;
     }
     .portafolio-container{
-        gap: 60px;
+        gap: 90px;
     }
 
 }
@@ -2000,7 +2083,8 @@ li .icon-check-empgrnd{
     }
 
     .navbar-nav .nav-link {
-        padding: 10px 20px; /* Ajusta el padding de los enlaces */
+        padding: 10px 20px; 
+        font-size: 25px;
     }
 
     .header-social-links {
