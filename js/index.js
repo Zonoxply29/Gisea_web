@@ -172,4 +172,5 @@ function animateOnScroll(selector, flagSelector) {
   document.addEventListener("DOMContentLoaded", function () {
     animateOnScroll(".country-hover", ".flag");
     animateOnScroll(".idioma-hover", ".idioma-flag");
+    animateOnScroll(".clientes-hover", ".flag")
   });
