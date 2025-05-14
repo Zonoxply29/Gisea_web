@@ -623,6 +623,27 @@ h6 {
   margin-top: 6px;
   font-size: 13px;
 }
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/sitio_web_psicologa/assets/img/logo_psicologia.jpg');
+  background-size: contain;
+  background-position: 95% -49px;
+  background-repeat: no-repeat;
+  opacity: 0.6; 
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.footer .footer-top,
+.footer .copyright {
+  position: relative;
+  z-index: 2; 
+}
 
 /*--------------------------------------------------------------
 # Preloader
