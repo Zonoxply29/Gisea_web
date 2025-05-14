@@ -204,6 +204,47 @@ h6 {
   .header .navmenu {
     order: 3;
   }
+  .btn-getstarted {
+    display: none; 
+  }
+  .section-title h2{
+    font-size: 20px !important;
+  }
+  .section-title h2:before
+  {
+    margin: 0 15px 4px 0 !important;
+    width: 31px !important;
+    height: 3px !important;
+  }
+  .section-title h2:after {
+    margin: 0 0 4px 11px !important;
+    width: 28px !important;
+  }
+  .footer .footer-about p {
+    font-size: 19px !important;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/sitio_web_psicologa/assets/img/logo_psicologia.jpg');
+  background-size: contain;
+  background-position: 95% -42px;
+  background-repeat: no-repeat;
+  opacity: 0.2; 
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.footer .footer-top,
+.footer .copyright {
+  position: relative;
+  z-index: 2; 
+}
+
 }
 
 .scrolled .header {
@@ -342,7 +383,7 @@ h6 {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 39px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -469,12 +510,12 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  padding-bottom: 50px;
   position: relative;
+  font-size: 14px;
+  padding-bottom: 30px;
+  color: var(--default-color);
 }
+
 
 .footer .footer-top {
   padding-top: 50px;
@@ -1400,12 +1441,14 @@ section,
 }
 
 .pricing h4 sup {
-  font-size: 28px;
+  font-size: 31px;
+  vertical-align: -15px;
+  padding-right: 5px;
 }
 
 .pricing h4 span {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 400;
 }
 
