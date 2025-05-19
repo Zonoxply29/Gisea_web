@@ -170,7 +170,7 @@ h6 {
 
 .header .logo span {
   color: var(--accent-color);
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 600;
   padding-left: 3px;
 }
@@ -196,18 +196,24 @@ h6 {
   .header .logo {
     order: 1;
   }
-
+  .header .logo h1{
+    font-size: 14px;
+  }
+  .header .logo span{
+    padding-left: 0px;
+  }
+  .header .logo img{
+    max-height: 77px;
+    margin-right: 8px;
+  }
   .header .btn-getstarted {
     order: 2;
-    margin: 0 15px 0 0;
-    padding: 6px 20px;
+    margin: 0 14px 5px 13px;
+    padding: 4px 21px;
   }
 
   .header .navmenu {
     order: 3;
-  }
-  .btn-getstarted {
-    display: none; 
   }
   .section-title h2{
     font-size: 20px !important;
@@ -255,11 +261,32 @@ h6 {
   margin-left: 104px;
 }
 }
-
+/********** ESTILOS NAVBAR DISPOSITIVOS PEQUEÑOS********/
 @media (max-width: 320px) {
   .section-title h2 {
-        font-size: 22px !important;
+        font-size: 15px !important;
     }
+    .header .logo h1{
+      font-size: 13px !important;
+      margin: 2px;
+    }
+    .header .logo img{
+      max-height: 76px;
+      margin-right: 0px;
+    }
+    .header .btn-getstarted {
+    order: 2;
+    margin: 0 3px 3px 8px;
+    padding: 5px 12px;
+  }
+  .header .logo span {
+  font-size: 15px;
+  padding-left: 0px;
+  }
+  .mobile-nav-toggle{
+    margin-right: 2px !important;
+  }
+  
 }
 
 .scrolled .header {
