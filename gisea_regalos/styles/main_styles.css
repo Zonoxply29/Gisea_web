@@ -41,6 +41,12 @@ COLOR PALETTE
 ***********/
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900');
+@font-face{
+    font-family: "Locanita";
+    src: 
+    url("/gisea_regalos/fonts/Locanita.otf") format("truetype");
+    font-display:wrap;
+}
 
 /*********************************
 2. Body and some general stuff
@@ -57,7 +63,7 @@ body
 	font-size: 14px;
 	line-height: 23px;
 	font-weight: 400;
-	background: #FFFFFF;
+	background: #F4F2F0;
 	color: #1e1e27;
 }
 div
@@ -567,15 +573,16 @@ section
     margin: 0;
     position: absolute;
     top: 100%; /* Posiciona el submenú debajo del elemento principal */
-    left: 0;
-    background-color: #fff;
+    left: 50%;
+	transform: translateX(-50%);
+    background-color: #F9F0F1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: none; /* Oculta el submenú por defecto */
     z-index: 10;
 }
 
 .submenu li {
-    width: 200px; /* Ancho del submenú */
+    width: 150px; /* Ancho del submenú */
 }
 
 .submenu a {
@@ -586,8 +593,7 @@ section
 }
 
 .submenu a:hover {
-    background-color: #f8f8f8;
-    color: #fe4c50;
+    background-color: #ffff;
 }
 
 /* Mostrar el submenú al pasar el mouse */
@@ -598,7 +604,7 @@ section
 .main_nav_container
 {
 	width: 100%;
-	background: #FFF3F6;
+	background: #F9F0F1;
 	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
 }
 .navbar
@@ -612,13 +618,16 @@ section
 .navbar_menu li
 {
 	display: inline-block;
+	text-align: center;
 }
 .navbar_menu li a
 {
 	display: block;
 	color: #1e1e27;
-	font-size: 13px;
+	font-family: 'Locanita';
+	font-size:20px;
 	font-weight: 500;
+	text-align: center;
 	text-transform: uppercase;
 	padding: 20px;
 	-webkit-transition: color 0.3s ease;
@@ -629,7 +638,7 @@ section
 }
 .navbar_menu li a:hover
 {
-	color: #b5aec4;
+	color: #F48FB1;
 }
 .navbar_user
 {
@@ -690,6 +699,66 @@ section
 	color: #FFFFFF;
 }
 
+/********* CAROUSEL DE HEADER************/
+/* Centrar y ajustar imágenes del carousel */
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  height:110vh; /* Ajusta la altura según tu diseño */
+  background: #F9F0F1;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 30vh; /*ESTE PADDING SIRVE PARA QUE LA IMAGEN NO SE VEA CON TANTO ZOOM*/
+  margin-bottom:30vh;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit:cover;
+  margin: auto;
+  display: block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	width:47px;
+	height:47px;
+  filter: invert(62%) sepia(41%) saturate(695%) hue-rotate(299deg) brightness(101%) contrast(97%);
+}
+@media (min-width:320px) and (max-width:500px) {
+  #carouselExampleFade {
+    margin-top: 75px; /* Ajusta para móviles si tu navbar es más pequeño */
+  }
+   .carousel-inner{
+	height: 40vh;
+  }
+  .carousel-item{
+	padding: 0;
+	margin-bottom: 10px;
+  }
+  .carousel-item img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+  .carousel-control-next, .carousel-control-prev{
+	opacity: 0;
+  }
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {	
+	opacity: 0;
+  }	
+}
+
+
+
 /*********************************
 3.5 Hamburger Menu
 *********************************/
@@ -711,7 +780,7 @@ section
 }
 .hamburger_container:hover i
 {
-	color: #b5aec4;
+	color: #F48FB1;
 }
 .hamburger_menu
 {
@@ -772,6 +841,7 @@ section
 }
 .hamburger_menu_content
 {
+	font-family:'Locanita';
 	padding-top: 100px;
 	width: 100%;
 	height: 100%;
@@ -790,13 +860,12 @@ section
 	color: #1e1e27;
 	font-weight: 500;
 	height: 50px;
-	/*line-height: 50px;*/
 	font-size: 14px;
 	text-transform: uppercase;
 }
 .menu_item > a:hover
 {
-	color: #b5aec4;
+	color: #F48FB1;
 }
 .menu_item > a > i
 {
@@ -842,7 +911,7 @@ section
 }
 .menu_selection li a:hover
 {
-	color: #b5aec4;
+	color: #F48FB1;
 }
 .menu_selection li:last-child a
 {
@@ -866,10 +935,10 @@ section
 }
 .logo_container a
 {
-	font-size: 24px;
+	font-family: 'Locanita';
+	font-size: 40px;
 	color: #1e1e27;
 	font-weight: 700;
-	text-transform: uppercase;
 }
 .logo_container a span
 {
@@ -877,8 +946,8 @@ section
 }
 
 /*********************************
-3.7 Main Slider
-*********************************/
+3.7 Main Slider - SE ELIMINO
+*********************************
 
 .main_slider
 {
@@ -979,6 +1048,7 @@ section
 }
 .banner_category a
 {
+	font-family: 'Locanita';
 	display: block;
 	color: #1e1e27;
 	text-transform: uppercase;
@@ -995,7 +1065,7 @@ section
 }
 .banner_category a:hover
 {
-	color: #b5aec4;
+	color: #F48FB1;
 }
 
 /*********************************
@@ -1049,12 +1119,12 @@ section
 }
 .grid_sorting_button.active:hover
 {
-	background: #FE7C7F !important;
+	background: #F48FB1 !important;
 }
 .grid_sorting_button.active
 {
 	color: #FFFFFF;
-	background: #fe4c50;
+	background: #F48FB1;
 }
 
 /*********************************
@@ -1298,6 +1368,7 @@ section
 }
 .section_title h2
 {
+	font-family: 'Locanita';
 	display: inline-block;
 }
 .section_title::after
@@ -1313,7 +1384,7 @@ section
 	transform: translateX(-50%);
 	width: 60px;
 	height: 5px;
-	background: #fe4c50;
+	background: #F48FB1;
 	content: '';
 }
 .timer
