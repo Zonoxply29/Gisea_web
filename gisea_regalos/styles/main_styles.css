@@ -545,7 +545,6 @@ section
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px;
 }
 
 .navbar_menu li {
@@ -1196,7 +1195,7 @@ section
 }
 .product_name:hover a
 {
-	color: #b5aec4;
+	color: #F48FB1;
 }
 .discount .product_info .product_price
 {
@@ -1205,7 +1204,7 @@ section
 .product_price
 {
 	font-size: 16px;
-	color: #fe4c50;
+	color: #F48FB1;
 	font-weight: 600;
 }
 .product_price span
@@ -1546,7 +1545,7 @@ section
 .benefit_icon i
 {
 	font-size: 30px;
-	color: #fe4c50;
+	color: #F48FB1;
 }
 .benefit_content
 {
@@ -1755,7 +1754,9 @@ section
 
 .footer_nav_container
 {
+	font-size: 100px;
 	height: 130px;
+	font-family: 'Locanita';
 }
 .cr
 {
@@ -1772,7 +1773,7 @@ section
 }
 .footer_nav li a, .cr
 {
-	font-size: 14px;
+	font-size: 20px;
 	color: #51545f;
 	line-height: 30px;
 	-webkit-transition: all 300ms ease;
@@ -1783,7 +1784,7 @@ section
 }
 .footer_nav li a:hover, .cr a, .cr i
 {
-	color: #fe4c50;
+	color: #F48FB1;
 }
 .footer_social
 {
@@ -1793,6 +1794,7 @@ section
 {
 	display: inline-block;
 	margin-right: 10px;
+	font-size: 30px;
 }
 .footer_social ul li:last-child
 {
@@ -1814,5 +1816,5 @@ section
 }
 .footer_social ul li a:hover
 {
-	color: #fe4c50;
+	color: #F48FB1;
 }
