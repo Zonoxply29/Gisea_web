@@ -390,7 +390,7 @@
 		display: block;
 		margin-right: 0px;
 		margin-bottom: 30px;
-		font-size: 13px;
+		font-size: 21px;
 	}
 	.footer_nav
 	{
@@ -403,7 +403,7 @@
 	}
 	.footer_nav li a
 	{
-		font-size: 13px;
+		font-size: 25px;
 	}
 }
 
