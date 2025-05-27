@@ -44,7 +44,7 @@ COLOR PALETTE
 @font-face{
     font-family: "Locanita";
     src: 
-    url("/gisea_regalos/fonts/Locanita.otf") format("truetype");
+    url("../fonts/Locanita.otf") format("truetype");
     font-display:wrap;
 }
 

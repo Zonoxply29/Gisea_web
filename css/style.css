@@ -1008,7 +1008,7 @@ a.red-social-footer:hover {
 /*----------ESTILOS SERVICE DESAROLLO WEB ------------*/
 .desarrollo-web-header {
     position: relative;
-    background: url('/img/header_desarollo_web.jpg') no-repeat center center/cover;
+    background: url('../img/header_desarollo_web.jpg') no-repeat center center/cover;
     height: 95vh; 
     width: 100%;
     color: white; 
