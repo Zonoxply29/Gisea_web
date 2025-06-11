@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
@@ -42,38 +43,16 @@
 
 
     <!-- Navbar start -->
-    <div class="container-fluid sticky-top px-0">
-        <div class="container-fluid">
-            <div class="container px-0">
-                <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
-                    <a href="index.html" class="navbar-brand">
-                        <h4 class="text-primary display-6 fw-bold mb-0">MJ<strong class="text-secondary">&</strong>VE
-                        </h4>
-                    </a>
-                    <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse">
-                        <span class="fa fa-bars text-primary"></span>
-                    </button>
-                    <div class="collapse navbar-collapse py-3" id="navbarCollapse">
-                        <div class="navbar-nav mx-auto border-top">
-                            <a href="#weddingHome" class="nav-item nav-link active">Inicio</a>
-                            <a href="#weddingAbout" class="nav-item nav-link">Itinerario</a>
-                            <a href="#weddingStory" class="nav-item nav-link">Ubicaciones</a>
-                            <a href="#weddingTimeline" class="nav-item nav-link">Mesa de Regalos</a>
-                            <a href="#weddingGallery" class="nav-item nav-link">Recomendaciones de Hospedaje</a>
-                        </div>
-                        <div class="d-flex align-items-center flex-nowrap pt-xl-0">
-                            <a href="#weddingRsvp" class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">Confirma
-                                tu Asistencia</a>
-                        </div>
-                    </div>
-                </nav>
+    <div class="navbar-tab-container">
+        <div class="navbar-tab-bg">
+            <div class="navbar-tab-circle">
+                <h4 class="navbar-tab-title text-primary mb-0">
+                    MJ<strong class="text-secondary">&</strong>VE
+                </h4>
             </div>
         </div>
     </div>
     <!-- Navbar End -->
-
-
 
     <!-- Carousel Start -->
     <div class="container-fluid carousel-header px-0">
@@ -222,80 +201,99 @@
     <!-- About End -->
 
     <!-- Story Start -->
-    <div class="container-fluid story position-relative historia-amor" id="weddingStory">
+    <div class="container-fluid story position-relative historia-amor font-antic-didone" id="weddingStory">
         <div class="position-absolute" style="top: -35px; right: 0;">
             <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
         </div>
         <div class="position-absolute" style="top: -15px; left: 0; transform: rotate(150deg);">
             <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
         </div>
-        <div class="container position-relative py-5">
+        <div class="container position-relative py-5 espacio-itenerario">
             <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <h5 class="text-uppercase text-primary fw-bold mb-4">Story</h5>
-                <h1 class="display-4">Our Love Story</h1>
+                <h1 class="display-4">Itinerario</h1>
             </div>
             <div class="story-timeline">
+                <!--Reunion Previa - Primer bloque-->
                 <div class="row wow fadeInUp" data-wow-delay="0.2s">
                     <div class="col-md-6 text-end border-0 border-top border-end border-secondary p-4">
                         <div class="d-inline-flex align-items-center h-100">
                             <img src="img/story-1.jpg" class="img-fluid w-100 img-border" alt="">
                         </div>
                     </div>
-                    <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                            <h4 class="mb-2 text-dark">First Meet</h4>
-                            <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">01 Jan 2050</p>
-                            <p class="m-0 fs-5 text-dark">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem
-                                lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod
-                                amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                    <div class="col-md-6 border-start border-top border-secondary p-4 pe-0 d-flex align-items-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 flex-grow-1">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="img/recepcion_boda.png" alt="Icono reunión"
+                                    style="width:90px; height:90px; object-fit:contain;" class="me-2">
+                                <h4 class="mb-2 text-dark mb-0">Reunion Previa</h4>
+                            </div>
+                            <p class="m-0 fs-5 text-dark">En la casa de la novia</p>
+                            <p class="m-0 fs-5 text-dark"><b>10/06/2025 4:00 pm</b></p>
                         </div>
                     </div>
                 </div>
+                <!--Caminata a la Iglesia - Segundo Bloque-->
                 <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
-                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                            <h4 class="text-dark mb-2">First Date</h4>
-                            <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">01 Jan 2050</p>
-                            <p class="m-0 fs-5">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem
-                                lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod
-                                amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                    <div class="col-md-6 text-end border-start border-top border-secondary p-4 ps-3">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 position-relative">
+                            <div class="d-flex align-items-center justify-content-md-end justify-content-center mb-2">
+                                <span class="me-3">
+                                    <img src="img/caminata_boda.png" alt="Icono Caminata"
+                                        style="width:70px; height:70px; object-fit:contain;">
+                                </span>
+                                <h4 class="text-dark mb-2 mb-0">Caminata a la Iglesia</h4>
+                            </div>
+                            <p class="m-0 fs-5 text-dark">Desde el parque</p>
+                            <p class="m-0 fs-5 text-dark"><b>10/06/2025 5:30 pm</b></p>
                         </div>
                     </div>
-                    <div class="col-md-6 border-start border-top border-secondary p-4">
+                    <div class="col-md-6 border-top border-end border-secondary p-4">
                         <div class="d-inline-flex align-items-center h-100">
                             <img src="img/story-2.jpg" class="img-fluid w-100 img-border" alt="">
                         </div>
                     </div>
                 </div>
+                <!--Ceremonia Religiosa - Tercer Bloque -->
                 <div class="row wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                    <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-1">
                         <div class="d-inline-flex align-items-center h-100">
-                            <img src="img/story-3.jpg" class="img-fluid w-100 img-border" alt="">
+                            <img src="img/catedral_cuerna.jpg" class="img-fluid w-100 img-border" alt="">
                         </div>
                     </div>
                     <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                            <h4 class="text-dark mb-2">Proposal</h4>
-                            <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">01 Jan 2050</p>
-                            <p class="m-0 fs-5">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem
-                                lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod
-                                amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="img/iglesia_boda.png" alt="Icono Ceremonia"
+                                    style="width:70px; height:70px; object-fit:contain;" class="me-2">
+                                <h4 class="text-dark mb-2 mb-0">Ceremonia religiosa</h4>
+                            </div>
+                            <p class="m-0 fs-5 text-dark">Catedral de Cuernavaca 6:00 pm</p>
+                            <a href="https://maps.app.goo.gl/brfeogATX1JarP6C6" target="_blank"
+                                class="btn btn-primary btn-primary-outline-0 mt-3 align-self-start">
+                                Ver ubicación en Google Maps
+                            </a>
                         </div>
                     </div>
                 </div>
+                <!--Recepcion en el Salon - Cuarto Bloque-->
                 <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                    <div class="col-md-6 text-end border-top border-start border-secondary p-4 ps-0">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                            <h4 class="text-dark mb-2">Enagagement</h4>
-                            <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">01 Jan 2050</p>
-                            <p class="m-0 fs-5">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem
-                                lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod
-                                amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <div class="d-flex align-items-center justify-content-end mb-2">
+                                <img src="img/fiesta_boda.png" alt="Icono Salón"
+                                    style="width:70px; height:70px; object-fit:contain;" class="me-2">
+                                <h4 class="text-dark mb-2">Recepcion en el Salon</h4>
+                            </div>
+                            <p class="m-0 fs-5 text-dark text-end">Ariah Salon de Eventos 7:00 pm</p>
+                            <a href="https://maps.app.goo.gl/XynSPXSNWxWnCWJ78" target="_blank"
+                                class="btn btn-primary btn-primary-outline-0 mt-3 align-self-end">
+                                Ver ubicación en Google Maps
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-6 border border-end-0 border-secondary p-4">
+                    <div class="col-md-6 border-top border-end border-secondary p-4">
                         <div class="d-inline-flex align-items-center h-100">
-                            <img src="img/story-4.jpg" class="img-fluid w-100 img-border" alt="">
+                            <img src="img/salon_fiestas.jpeg" class="img-fluid w-100 img-border" alt="">
                         </div>
                     </div>
                 </div>
