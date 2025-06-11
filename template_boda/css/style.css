@@ -1,4 +1,6 @@
-
+.font-antic-didone p {
+    font-family: 'Antic Didone', serif !important;
+}
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
@@ -122,6 +124,7 @@
 }
 .btn-primary-outline-0 {
     color: white  !important;
+     font-family: 'Antic Didone', serif !important;
 }
 
 .btn-light-outline-0 {
@@ -157,12 +160,82 @@
 
 
 /*** Navbar Start ***/
-.sticky-top {
-    transition: 0.5s;
-    background: var(--bs-white);
-}
 
-
+ .navbar-tab-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: transparent;
+        z-index: 1055; /* Más alto que cualquier otro contenido */
+        pointer-events: none; /* Permite hacer clic en elementos debajo excepto el círculo */
+    }
+    .navbar-tab-bg {
+        width: 190px;
+        height: 111px;
+        background: rgba(255, 255, 255, 0.7); /* Blanco con 70% opacidad */
+        border-radius: 0 0 80px 80px / 0 0 88px 88px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07), 0 1.5px 0 #e3e3e3;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+        pointer-events: auto;
+    }
+    .navbar-tab-circle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6px;
+        width: 90px;
+        height: 88px;
+        background: #FAF3E7;
+        border-radius: 50%;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.11);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid #FAF3E7;
+        z-index: 2;
+        pointer-events: auto;
+    }
+    .navbar-tab-title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1;
+        pointer-events: auto;
+    }
+    @media (max-width: 400px) {
+        .navbar-tab-bg {
+            width: 90px;
+            min-width: 180px;
+        }
+        .navbar-tab-circle {
+            bottom: 10px;
+        }
+        .navbar-tab-title {
+            font-size: 1.2rem;
+        }
+    }
+    @media (max-width: 350px) {
+        .navbar-tab-bg {
+            width: 90px;
+        }
+        .navbar-tab-circle {
+            bottom: 10px;
+        }
+        .navbar-tab-title {
+            font-size: 1.2rem;
+        }
+    }
+/*
 .navbar .navbar-nav .nav-link {
     padding: 10px 15px;
     font-family: 'Petit Formal Script', cursive;
@@ -182,7 +255,7 @@
     .navbar .navbar-collapse .border-top {
         border-top: none !important;
     }
-}
+}*/
 /*** Navbar End ***/
 
 /*** Carousel Start ***/
@@ -191,7 +264,7 @@
 }
 .carousel-item {
     position: relative;
-    min-height: 100vh   
+    min-height: 120vh;   
 }
 
 .carousel-item img {
@@ -277,7 +350,8 @@
 
 /*** Wedding Story Start ***/
 .historia-amor{
-    padding-top: 7rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
 }
 .story .story-timeline,
 .story .story-timeline .row {
@@ -290,7 +364,7 @@
     content: "";
     width: 15px;
     height: 15px;
-    background: var(--bs-secondary);
+    background: #fd5d5d;
     border-radius: 10px;
     left: 50%;
     top: -7px;
@@ -308,7 +382,7 @@
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 30px;
-    color: var(--bs-secondary);
+    color: #fd5d5d;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -371,6 +445,9 @@
     #carouselCards .card {
         height: 40vh;
         min-height: 150px;
+    }
+    .espacio-itenerario{
+    padding-top: 6rem !important;
     }
 }
 /*** Wedding Timeline End ***/
