@@ -1,19 +1,21 @@
 .font-antic-didone p {
     font-family: 'Antic Didone', serif !important;
 }
+
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
     visibility: hidden;
     transition: opacity .8s ease-out, visibility 0s linear .5s;
     z-index: 99999;
- }
+}
 
- #spinner.show {
-     transition: opacity .8s ease-out, visibility 0s linear .0s;
-     visibility: visible;
-     opacity: 1;
- }
+#spinner.show {
+    transition: opacity .8s ease-out, visibility 0s linear .0s;
+    visibility: visible;
+    opacity: 1;
+}
+
 /*** Spinner End ***/
 
 .back-to-top {
@@ -29,41 +31,55 @@
     z-index: 99;
 }
 
-.text-primary{
+.text-primary {
     color: #2F3E46 !important;
 }
-.text-secondary{
+
+.text-secondary {
     color: #fd5d5d !important;
 }
-.border-secondary{
+
+.border-secondary {
     border-color: #fd5d5d !important;
 }
-.color-heart{
+
+.color-heart {
     color: #fd5d5d;
 }
+
 .wedding-names {
     line-height: 1.1;
 }
+
 .wedding-names .wedding-heart {
     font-size: 1em;
     margin: 0.2em 0;
     display: inline-block;
     transition: font-size 0.2s;
 }
+
 /**ANIMACION DE CORAZON***/
 @keyframes heart-beat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
-    10%, 30% {
+
+    10%,
+    30% {
         transform: scale(1.4);
     }
-    20%, 40% {
+
+    20%,
+    40% {
         transform: scale(0.95);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     60% {
         transform: scale(1);
     }
@@ -72,20 +88,25 @@
 .wedding-heart.animated-heart {
     animation: heart-beat 3s infinite;
 }
-.heart-large{
+
+.heart-large {
     font-size: 3em;
 }
-.bg-secondary{
+
+.bg-secondary {
     background-color: #FAF3E7 !important;
 }
-.border{
+
+.border {
     border: none !important;
 }
+
 /*** Button Start ***/
 .btn {
     font-weight: 600;
     transition: .5s;
 }
+
 .btn-square {
     width: 32px;
     height: 32px;
@@ -116,15 +137,18 @@
     justify-content: center;
     font-weight: normal;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     border: none !important;
 }
-.btn-primary:focus{
+
+.btn-primary:focus {
     box-shadow: none;
 }
+
 .btn-primary-outline-0 {
-    color: white  !important;
-     font-family: 'Antic Didone', serif !important;
+    color: white !important;
+    font-family: 'Antic Didone', serif !important;
 }
 
 .btn-light-outline-0 {
@@ -133,7 +157,7 @@
 }
 
 .btn-primary-outline-0:hover {
-    background:#D6C7B9 !important;
+    background: #D6C7B9 !important;
     color: black !important;
 }
 
@@ -161,80 +185,93 @@
 
 /*** Navbar Start ***/
 
- .navbar-tab-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        background: transparent;
-        z-index: 1055; /* Más alto que cualquier otro contenido */
-        pointer-events: none; /* Permite hacer clic en elementos debajo excepto el círculo */
-    }
+.navbar-tab-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: transparent;
+    z-index: 1055;
+    /* Más alto que cualquier otro contenido */
+    pointer-events: none;
+    /* Permite hacer clic en elementos debajo excepto el círculo */
+}
+
+.navbar-tab-bg {
+    width: 190px;
+    height: 111px;
+    background: rgba(255, 255, 255, 0.7);
+    /* Blanco con 70% opacidad */
+    border-radius: 0 0 80px 80px / 0 0 88px 88px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07), 0 1.5px 0 #e3e3e3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+    pointer-events: auto;
+}
+
+.navbar-tab-circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6px;
+    width: 90px;
+    height: 88px;
+    background: #FAF3E7;
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #FAF3E7;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+.navbar-tab-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1;
+    pointer-events: auto;
+}
+
+@media (max-width: 400px) {
     .navbar-tab-bg {
-        width: 190px;
-        height: 111px;
-        background: rgba(255, 255, 255, 0.7); /* Blanco con 70% opacidad */
-        border-radius: 0 0 80px 80px / 0 0 88px 88px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.07), 0 1.5px 0 #e3e3e3;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 0 auto;
-        pointer-events: auto;
-    }
-    .navbar-tab-circle {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 6px;
         width: 90px;
-        height: 88px;
-        background: #FAF3E7;
-        border-radius: 50%;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.11);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 4px solid #FAF3E7;
-        z-index: 2;
-        pointer-events: auto;
+        min-width: 180px;
     }
+
+    .navbar-tab-circle {
+        bottom: 10px;
+    }
+
     .navbar-tab-title {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: bold;
-        text-align: center;
-        letter-spacing: 2px;
-        line-height: 1;
-        pointer-events: auto;
+        font-size: 1.2rem;
     }
-    @media (max-width: 400px) {
-        .navbar-tab-bg {
-            width: 90px;
-            min-width: 180px;
-        }
-        .navbar-tab-circle {
-            bottom: 10px;
-        }
-        .navbar-tab-title {
-            font-size: 1.2rem;
-        }
+}
+
+@media (max-width: 350px) {
+    .navbar-tab-bg {
+        width: 90px;
     }
-    @media (max-width: 350px) {
-        .navbar-tab-bg {
-            width: 90px;
-        }
-        .navbar-tab-circle {
-            bottom: 10px;
-        }
-        .navbar-tab-title {
-            font-size: 1.2rem;
-        }
+
+    .navbar-tab-circle {
+        bottom: 10px;
     }
+
+    .navbar-tab-title {
+        font-size: 1.2rem;
+    }
+}
+
 /*
 .navbar .navbar-nav .nav-link {
     padding: 10px 15px;
@@ -259,12 +296,13 @@
 /*** Navbar End ***/
 
 /*** Carousel Start ***/
-.bg-primary{
+.bg-primary {
     background-color: #FFF0F3 !important;
 }
+
 .carousel-item {
     position: relative;
-    min-height: 120vh;   
+    min-height: 120vh;
 }
 
 .carousel-item img {
@@ -317,6 +355,7 @@
     border-right: 15px solid var(--bs-primary);
     border-left: 15px solid var(--bs-primary);
 }
+
 /* Carousel dentro de tab-class */
 .tab-class {
     overflow: hidden;
@@ -326,7 +365,7 @@
 #carouselCards .carousel-inner,
 #carouselCards .carousel-item,
 #carouselCards .card {
-    height:55vh;
+    height: 55vh;
     min-height: 300px;
     width: 100%;
 }
@@ -339,7 +378,7 @@
 
 .carousel-img-fit {
     width: 100%;
-    height: 120%; /* Altura relativa al viewport, ajusta según tu diseño */
+    height: 120%;
     object-fit: cover;
     border-radius: 1rem;
 
@@ -349,10 +388,11 @@
 
 
 /*** Wedding Story Start ***/
-.historia-amor{
+.historia-amor {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
 }
+
 .story .story-timeline,
 .story .story-timeline .row {
     position: relative;
@@ -389,20 +429,50 @@
 }
 
 @media (max-width: 768px) {
+
     .story .story-timeline::before,
     .story .story-timeline::after,
-    .story .story-timeline .row::after  {
+    .story .story-timeline .row::after {
         display: none;
     }
 }
+
 /*** Wedding Story End ***/
+
+/*ESTILOS PARA CONTADOR DE CONFIRMAR TU ASISTENCIA*/
+.contador-fecha {
+    font-family: 'Antic Didone', 'Great Vibes', serif;
+    letter-spacing: 1px;
+}
+
+.contador-fecha>div {
+    text-align: center;
+}
+
+.contador-fecha #days,
+.contador-fecha #hours,
+.contador-fecha #minutes,
+.contador-fecha #seconds {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    line-height: 1;
+}
+
+.contador-fecha span {
+    font-size: 1.1rem;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin-top: 0.2em;
+    letter-spacing: 2px;
+}
 
 /*** Wedding Date Start ***/
 .wedding-date-bg .wedding-date {
     width: 100%;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/wedding-date-bg.jpg) center;
+    background-color: #FAF3E7;
     object-fit: cover;
     background-repeat: no-repeat;
 }
@@ -422,36 +492,146 @@
     position: relative;
     z-index: 9;
 }
+
 /*** Wedding Date End ***/
 
 
-/*** Wedding Timeline Start ***/
+/*** Wedding Timeline Start y estilos para mobile***/
 @media (max-width: 576px) {
     .wedding-timeline .wedding-content .heart-circle {
         display: none;
     }
+
     .wedding-names {
         font-size: 2.2rem !important;
     }
+
     .wedding-names .wedding-heart {
         font-size: 1.5em;
     }
-    .inicio-contenedor{
+
+    .inicio-contenedor {
         padding-top: 8rem !important;
     }
-     #carouselCards,
+
+    #carouselCards,
     #carouselCards .carousel-inner,
     #carouselCards .carousel-item,
     #carouselCards .card {
         height: 40vh;
         min-height: 150px;
     }
-    .espacio-itenerario{
-    padding-top: 6rem !important;
-    }
-}
-/*** Wedding Timeline End ***/
 
+    .espacio-itenerario {
+        padding-top: 6rem !important;
+    }
+
+    /*diseño de confirma tu asistencia*/
+    .asistencia-titulo {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 320px;
+    }
+
+    .asistencia-titulo h4 {
+        text-align: center !important;
+        font-size: 1rem;
+        letter-spacing: 2px !important;
+    }
+
+    .ramo-derecho {
+        top: 48% !important;
+    }
+
+    .ramo-izquierdo {
+        top: 64% !important;
+    }
+
+    .contador-fecha {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem 1.5rem;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .contador-fecha>div {
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        width: 100%;
+    }
+
+    .contador-fecha #days,
+    .contador-fecha #hours,
+    .contador-fecha #minutes,
+    .contador-fecha #seconds {
+        font-size: 2rem;
+    }
+
+    .contador-fecha span {
+        font-size: 1rem;
+    }
+    .btn-asistencia {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+
+/*** Wedding Timeline End ***/
+/***MESA DE REGALOS****/
+.gift-card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(47, 62, 70, 1.08);
+    border: 2px solid #fd5d5d22;
+    padding: 1.5rem 1rem;
+    max-width: 260px;
+    min-height: 220px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+    position: relative;
+    z-index: 2;
+}
+
+.gift-card:hover {
+    box-shadow: 0 8px 24px rgba(47, 62, 70, 0.15);
+    border-color: #fd5d5d;
+}
+.gift-card-title {
+    font-size: 1.2rem;
+    color: #2F3E46;
+    margin: 0.5rem 0 0.2rem 0;
+    font-family: 'Antic Didone', serif;
+    font-weight: bold;
+}
+
+.gift-card-text {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+@media (max-width: 576px) {
+    .wedding-content .row > [class^="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .gift-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 340px;
+  }
+}
 
 /*** Gallery Start ***/
 .gallery .gallery-img {
@@ -501,12 +681,13 @@
     transition: 0.5s;
     opacity: 0;
     z-index: 2;
-    
+
 }
 
 .gallery .gallery-img:hover .search-icon {
     opacity: 1;
 }
+
 /*** Gallery End ***/
 
 
@@ -573,6 +754,7 @@
 .team .team-item:hover .team-img .team-img-bg img {
     transform: scale(1.1);
 }
+
 /*** Team End ***/
 
 
@@ -581,6 +763,7 @@
     background: linear-gradient(rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2));
     object-fit: cover;
 }
+
 /*** Contact Us End ***/
 
 
@@ -605,12 +788,14 @@
 }
 
 @media (max-width: 992px) {
+
     .footer .text-start,
     .footer .text-center,
     .footer .text-end {
         text-align: center !important;
     }
 }
+
 /*** Footer End ***/
 
 
@@ -619,4 +804,5 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     background: var(--bs-dark) !important;
 }
+
 /*** copyright end ***/
