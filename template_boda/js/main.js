@@ -58,3 +58,19 @@
 
 })(jQuery);
 
+///OWL CAROUSEL
+  $(document).ready(function () {
+        $('#bridesmaids-carousel, #groomsmen-carousel').owlCarousel({
+            loop: false,
+            margin: 30,
+            nav: true,
+            dots: false,
+            autoplay: false,
+            responsive: {
+                0: { items: 1 },
+                576: { items: 2 },
+                992: { items: 3 },
+                1200: { items: 4 }
+            }
+        });
+    });

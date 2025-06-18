@@ -302,11 +302,11 @@
 
 .carousel-item {
     position: relative;
-    min-height: 120vh;
+    min-height: 73vh;
 }
 
 .carousel-item img {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -328,19 +328,19 @@
 
 .carousel-control-prev,
 .carousel-control-next {
-    opacity: 0;
+    opacity: 1;
 }
 
 .carousel-control-prev .carousel-control-prev-icon,
 .carousel-control-next .carousel-control-next-icon {
-    background: transparent;
+    color: #FAF3E7;
 }
 
-#carouselId .carousel-indicators {
+#galleryCarouselMobile  .carousel-indicators {
     padding-bottom: 30px;
 }
 
-#carouselId .carousel-indicators li {
+#galleryCarouselMobile  .carousel-indicators li {
     border-top: 10px solid var(--bs-white);
     border-bottom: 10px solid var(--bs-white);
     border-right: 5px solid var(--bs-white);
@@ -349,11 +349,27 @@
     transition: 0.5s;
 }
 
-#carouselId .carousel-indicators li.active {
+#galleryCarouselMobile  .carousel-indicators li.active {
     background: var(--bs-primary);
     border-color: var(--bs-primary);
     border-right: 15px solid var(--bs-primary);
     border-left: 15px solid var(--bs-primary);
+}
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
 }
 
 /* Carousel dentro de tab-class */
@@ -634,6 +650,22 @@
 }
 
 /*** Gallery Start ***/
+ .gallery-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-img {
+    position: relative;
+    width: 100%;
+  }
+
+  .gallery-img img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+  }
 .gallery .gallery-img {
     position: relative;
     overflow: hidden;
@@ -667,12 +699,12 @@
 .gallery .gallery-item .gallery-overlay {
     transition: 0.5s;
 }
-
+/* es un hover para la parte de abajo de el carousel donde muestra el pie de imagenes 
 .gallery .gallery-item:hover .gallery-overlay {
     background: transparent !important;
     border: 0 !important;
 }
-
+*/
 .gallery .gallery-img .search-icon {
     position: absolute;
     top: 50%;
@@ -686,6 +718,37 @@
 
 .gallery .gallery-img:hover .search-icon {
     opacity: 1;
+}
+@media (min-width: 992px) {
+  #galleryCarouselDesktop .carousel-control-prev,
+  #galleryCarouselDesktop .carousel-control-next {
+    top: 45%;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  #galleryCarouselDesktop .carousel-control-prev {
+    left: -60px;
+  }
+
+  #galleryCarouselDesktop .carousel-control-next {
+    right: -60px;
+  }
+
+  #galleryCarouselDesktop .carousel-control-prev-icon,
+  #galleryCarouselDesktop .carousel-control-next-icon {
+    background-image: none; /* eliminamos la imagen por defecto */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fd5d5d; /* flecha roja */
+  }
 }
 
 /*** Gallery End ***/

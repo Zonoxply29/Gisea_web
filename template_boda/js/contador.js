@@ -1,5 +1,5 @@
     // Fecha objetivo del contador 
-    const targetDate = new Date("2025-06-15T14:00:00").getTime();
+    const targetDate = new Date("2025-07-01T14:00:00").getTime();
 
     const countdown = setInterval(function() {
         const now = new Date().getTime();
