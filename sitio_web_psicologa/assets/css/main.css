@@ -237,12 +237,12 @@ h6 {
   }
   .section-title h2:before
   {
-    margin: 0 15px 4px 0 !important;
-    width: 31px !important;
+    margin: 0 6px 4px -25px !important;
+    width: 26px !important;
     height: 3px !important;
   }
   .section-title h2:after {
-    margin: 0 0 4px 11px !important;
+    margin: 0 -34px 4px 7px !important;
     width: 28px !important;
   }
   .footer .footer-about p {
@@ -866,7 +866,7 @@ section,
 .section-title h2:after {
   content: "";
   width: 50px;
-  height: 2px;
+  height: 3px;
   background: var(--accent-color);
   display: inline-block;
 }
