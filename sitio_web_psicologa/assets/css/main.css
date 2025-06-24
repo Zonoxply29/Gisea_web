@@ -283,7 +283,7 @@ h6 {
 /********** ESTILOS NAVBAR DISPOSITIVOS PEQUEÑOS********/
 @media (max-width: 320px) {
   .section-title h2 {
-        font-size: 15px !important;
+        font-size: 17px !important;
     }
     .header .logo h1{
       font-size: 13px !important;
