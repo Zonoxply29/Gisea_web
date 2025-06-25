@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Influencer</title>
+    <!--AOS-->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!--Boostrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container-fluid px-4 px-lg-5">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold fs-4 me-3" href="#"><span class="dot">.In</span>fluencer</a>
+
+            <!-- Botón hamburguesa para colapsar -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Contenido colapsable -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0 ms-lg-3">
+                    <button class="btn btn-follow">Follow Me</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Columna Izquierda: Texto -->
+                <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+                    <div class="col-lg-6 text-center text-lg-start position-relative mb-5 mb-lg-0">
+                        <p class="cookie-regular text-pink mb-2 fs-2 position-relative" data-aos="fade-up">Hola, me
+                            presento...</p>
+                        <div class="flower-wrapper" data-aos="fade-up">
+                            <img src="img/cabeza_flor.PNG" alt="decoración" class="flower">
+                        </div>
+                        <h1 class="hero-title mb-3" data-aos="fade-up">Influencer de Belleza & Redes Sociales</h1>
+                        <p class="hero-description mb-4" data-aos="fade-up" data-aos-delay="100">
+                            Soy una influencer apasionada por el mundo de la belleza. Me encanta compartir tips de
+                            maquillaje, cuidado personal y tendencias que te harán sentir segura, auténtica y poderosa
+                            cada día.
+                        </p>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3"
+                        data-aos="zoom-in" data-aos-delay="200">
+                        <button class="btn btn-follow">Mis estadisticas</button>
+                        <button class="btn btn-outline-pink">Contactame</button>
+                    </div>
+                    <!-- Redes Sociales -->
+                    <div class="social-section mt-5 text-lg-start">
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <svg class="wave-deco-svg" width="200" height="20" viewBox="0 0 200 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 10 
+             Q 12.5 0, 25 10 
+             T 50 10 
+             T 75 10 
+             T 100 10 
+             T 125 10 
+             T 150 10 
+             T 175 10 
+             T 200 10" stroke="#ff6e84" stroke-width="2" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="social-text text-center text-lg-start mb-3">
+                        Conecta conmigo <span class="social-line"></span>
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Imagen e íconos -->
+                <div
+                    class="col-lg-6 d-flex flex-column justify-content-start align-items-center position-relative bg-influencer">
+                    <div class="influencer-box position-relative">
+                        <!-- Fondo ovalado -->
+                        <div class="oval-bg"></div>
+
+                        <!-- Imagen principal -->
+                        <img src="img/img_influencer.png" alt="influencer" class="influencer-img">
+
+                        <!-- Líneas decorativas tipo marco -->
+                        <div class="corner-line top-left"></div>
+                        <div class="corner-line top-right"></div>
+                        <div class="corner-line bottom-left"></div>
+                        <div class="corner-line bottom-right"></div>
+
+                        <p class="influencer-name">Arwa González</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN ESTADÍSTICAS-->
+    <section class="stats-section py-5">
+        <div class="container text-center">
+            <h2 class="section-title mb-5">Mis Estadísticas</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- TIKTOK -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stats-card p-4 h-100">
+                        <div class="mb-3">
+                            <i class="bi bi-tiktok fs-4 text-dark"></i> @arwa_influencer
+                        </div>
+                        <h3 class="fw-bold display-6">
+                            <span id="count-tiktok"></span><span class="text-pink">k</span>
+                        </h3>
+                        <p class="subtitle text-pink mb-3">Tiktok Followers</p>
+                        <p class="desc small">Soy activa creando contenido dinámico, retos y tips de belleza en videos
+                            cortos.</p>
+                        <button class="btn btn-follow mt-3">Follow Me</button>
+                    </div>
+                </div>
+
+                <!-- INSTAGRAM -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stats-card p-4 h-100">
+                        <div class="mb-3">
+                            <i class="bi bi-instagram fs-4 text-danger"></i> @arwa_influencer
+                        </div>
+                        <h3 class="fw-bold display-6">
+                            <span id="count-instagram"></span><span class="text-pink">k</span>
+                        </h3>
+                        <p class="subtitle text-pink mb-3">Instagram Followers</p>
+                        <p class="desc small">Comparto fotos, looks del día, reels de maquillaje y colaboraciones con
+                            marcas.</p>
+                        <button class="btn btn-follow mt-3">Follow Me</button>
+                    </div>
+                </div>
+
+                <!-- TWITTER/X -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stats-card p-4 h-100">
+                        <div class="mb-3">
+                            <i class="fa-brands fa-x-twitter fs-4 text-dark"></i> @arwa_influencer
+                        </div>
+                        <h3 class="fw-bold display-6">
+                            <span id="count-twitter"></span><span class="text-pink">k</span>
+                        </h3>
+                        <p class="subtitle text-pink mb-3">Twitter Followers</p>
+                        <p class="desc small">Comparto reflexiones, tips rápidos y mantengo comunicación directa con mis
+                            seguidores.</p>
+                        <button class="btn btn-follow mt-3">Follow Me</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,     // Duración en ms
+            once: true          // Animar solo una vez
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const duration = 2000; // ms
+            const stats = [
+                { id: "count-tiktok", value: 123 },
+                { id: "count-instagram", value: 175 },
+                { id: "count-twitter", value: 98 },
+            ];
+
+            stats.forEach(({ id, value }) => {
+                const el = document.getElementById(id);
+                if (!el) return;
+
+                let start = 0;
+                const stepTime = Math.abs(Math.floor(duration / value));
+                const timer = setInterval(() => {
+                    start += 1;
+                    el.textContent = start;
+                    if (start >= value) {
+                        clearInterval(timer);
+                    }
+                }, stepTime);
+            });
+        });
+    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
