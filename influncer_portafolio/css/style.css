@@ -1,0 +1,325 @@
+/* Tipografía Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Domine:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+body {
+  background-color: #FDF4F7;
+  font-family: 'Domine', serif;
+  font-weight: 500;
+}
+
+.custom-navbar {
+  background-color: rgba(253, 244, 247, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
+}
+
+.navbar-brand .dot {
+  color: #ff6e84;
+}
+
+.nav-link {
+  color: #333;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff6e84;
+}
+
+.btn-follow {
+  background-color: #ff6e84;
+  color: white;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-follow:hover {
+  background-color: #e0556d;
+}
+/*----Hero Section-------*/
+.hero-section {
+  background-color: #FFFF;
+  min-height: 100vh;
+}
+/* Cookie para el texto cursivo */
+.cookie-regular {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Colores y tamaños */
+.text-pink {
+  color: #ff6e84;
+}
+
+.hero-title {
+   font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #3b1f1f;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #5e5e5e;
+  border-left: 3px solid #ff6e84;
+  padding-left: 1rem;
+}
+
+/* Botones */
+.btn-follow {
+  background-color: #ff6e84;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  border: none;
+}
+
+.btn-follow:hover {
+  background-color: #e0556d;
+}
+
+.btn-outline-pink {
+  border: 2px solid #ff6e84;
+  color: #ff6e84;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.btn-outline-pink:hover {
+  background-color: #ffe1e5;
+}
+/* Contenedor que posiciona la flor */
+.flower-wrapper {
+  position: absolute;
+  top: -10px;
+  right: -13px;
+  width: 80px;
+  z-index: 0;
+}
+
+.flower {
+  width: 100%;
+  animation: rotateFlower 8s linear infinite;
+}
+
+@keyframes rotateFlower {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .flower-wrapper {
+    top: -20px;
+    right: 4px;
+    width: 70px;
+  }
+}
+
+/*Ola decorativa*/
+.wave-deco-svg {
+  display: block;
+  margin: 0 0 1rem 0;
+  opacity: 0.5;
+  max-width: 200px;
+}
+
+/* Línea decorativa */
+.social-text {
+  font-weight: 500;
+  color: #444;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #333;
+}
+
+/* Estilo iconos */
+.social-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ff6e84;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #ff6e84;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #ff6e84;
+  color: #fff;
+}
+/*******Estilos lado derecho*********/
+/* Fondo aplicado a toda la columna derecha */
+.bg-influencer {
+  background-color: #FDF4F7;
+  height: 100%;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+/* Asegurar altura mínima en ambas columnas del hero */
+.hero-section .row {
+  min-height: 100%; 
+}
+
+.influencer-box {
+  width: 320px;
+  height: 420px;
+  position: relative;
+}
+.oval-bg {
+  background-color: #ffb6c1; /* color rosa coral */
+  border-radius: 60% / 40%;
+  width: 100%;
+  height: 106%;
+  position: absolute;
+  top: -9px;
+  left: -2px;
+  z-index: 1;
+}
+
+.influencer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 34% / 42%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Líneas tipo marco */
+.corner-line {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ff6e84;
+  position: absolute;
+  z-index: 3;
+}
+
+.top-left {
+  top: -20px;
+  left: -20px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.top-right {
+  top: -20px;
+  right: -20px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottom-left {
+  bottom: -20px;
+  left: -20px;
+  border-right: none;
+  border-top: none;
+}
+
+.bottom-right {
+  bottom: -20px;
+  right: -20px;
+  border-left: none;
+  border-top: none;
+}
+/**ESTILOS PARA OVALO Y IMAGEN DE INFLUENCER**/
+.influencer-box {
+  width: 320px;
+  height: 420px;
+  position: relative;
+}
+.influencer-name {
+  position: absolute;
+  bottom: -83px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3b1f1f;
+  font-family: 'Domine', serif;
+  background-color: #FDF4F7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  white-space: nowrap; /* ← mantiene el texto en una sola línea */
+}
+
+/* Responsive para la imagen de la influencer y el ovalo*/
+@media (max-width: 768px) {
+  .influencer-box {
+    width: 240px;
+    height: 320px;
+  }
+}
+
+/*estilo para el menu de hamburgesa*/
+@media (max-width: 992px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .hero-section .row {
+    min-height: 80vh;
+  }
+}
+/**SEGUNDA SECCIÓN DE LA PAGINA ESTADÍSTICAS***/
+.stats-card {
+  border: 1.5px solid #ffb6c1;
+  border-radius: 18px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-family: 'Domine', serif;
+  font-size: 2rem;
+  color: #3b1f1f;
+}
+
+.text-pink {
+  color: #ff6e84;
+}
+
+.btn-follow {
+  background-color: #ff6e84;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-follow:hover {
+  background-color: #ff4c6d;
+}
