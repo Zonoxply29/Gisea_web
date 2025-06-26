@@ -190,7 +190,7 @@ body {
   position: relative;
 }
 .oval-bg {
-  background-color: #ffb6c1; /* color rosa coral */
+  background-color: #ffb6c1; 
   border-radius: 60% / 40%;
   width: 100%;
   height: 106%;
@@ -263,7 +263,7 @@ body {
   background-color: #FDF4F7;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
-  white-space: nowrap; /* ← mantiene el texto en una sola línea */
+  white-space: nowrap;
 }
 
 /* Responsive para la imagen de la influencer y el ovalo*/
@@ -287,7 +287,7 @@ body {
     min-height: 80vh;
   }
 }
-/**SEGUNDA SECCIÓN DE LA PAGINA ESTADÍSTICAS***/
+/**SEGUNDA SECCIÓN ESTADÍSTICAS***/
 .stats-card {
   border: 1.5px solid #ffb6c1;
   border-radius: 18px;
@@ -322,4 +322,280 @@ body {
 
 .btn-follow:hover {
   background-color: #ff4c6d;
+}
+/**TERCERA SECCION CIFRAS EN TOTAL**/
+.story-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #3b1f1f;
+  line-height: 1.2;
+}
+
+.story-text {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.story-img-wrapper img {
+  position: relative;
+  z-index: 2;
+  object-fit: cover;
+  width: 93%;
+  height: 100%;
+  top: 7px;
+  left: 20px;
+}
+
+.oval-bg-story {
+  background-color: #ffb6c1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50% / 45%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.stat-value {
+  font-family: 'Domine', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3b1f1f;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 1rem;
+  margin-top: -10px;
+}
+
+/* Mantén tamaño ideal en pantallas medianas (tablet) */
+@media (max-width: 991.98px) {
+  .story-img-wrapper {
+    width: 220px;
+    height: 260px;
+  }
+}
+
+/* Tamaño normal en escritorio */
+.story-img-wrapper {
+  width: 280px;
+  height: 320px;
+  position: relative;
+}
+
+/* ========== ICONOS SOCIALES EN STORY SECTION ========== */
+.social-icons-section {
+  margin-top: 1.5rem;
+}
+
+.social-icon-story {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid #f0f0f0;
+}
+
+.social-icon-story:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 110, 132, 0.3);
+  border-color: #ff6e84;
+}
+
+.social-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.social-icon-story:hover .social-img {
+  filter: grayscale(0%);
+}
+
+/* Responsive para iconos sociales */
+@media (max-width: 768px) {
+  .social-icon-story {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .social-img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icons-section .d-flex {
+    gap: 0.75rem !important;
+  }
+}
+/* ========== MARCO DEL TELÉFONO Y VIDEO ========== */
+.phone-frame {
+  position: relative;
+  max-width: 325px;
+  width: 100%;  /* Aseguramos que el ancho sea relativo al contenedor */
+  aspect-ratio: 11/25.5; /* ESTE ASPECT RATIO SE SOBRESCRIBE CON LA LIBRERIA plyr */
+  margin: 0 auto;
+  margin-bottom: 0; /* Eliminar margen inferior adicional */
+}
+
+.phone-image {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 96%;
+  height: 73%;
+  z-index: 2;
+  pointer-events: none; /* para que no interfiera al hacer clic */
+}
+
+.video-container {
+  position: absolute;
+  top: 1.2%;
+  left: 2.5%;
+  width: 89%;
+  height: 72%;
+  border-radius: 32px;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 1;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* ========== MARCO DEL TELÉFONO Y VIDEO PARA TABLETS ========== */
+@media (max-width: 1024px) {
+  .phone-frame {
+    max-width: 280px; /* Tamaño ajustado para tablet */
+    aspect-ratio: 11/25.5; /* ESTE ASPECT RATIO SE SOBRESCRIBE CON LA LIBRERIA plyr */
+  }
+
+  .phone-image {
+    position: absolute;
+    top: 8px;
+    left: 5%;
+    width: 90%;
+    height: 72%;
+  }
+
+  .video-container {
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    width: 84%;
+    height: 71%;
+    border-radius: 30px;
+  }
+}
+
+/* ========== MARCO DEL TELÉFONO Y VIDEO PARA MÓVILES ========== */
+@media (max-width: 576px) {
+  .phone-frame {
+    max-width: 230px; /* Tamaño ajustado para móvil */
+    aspect-ratio: 9/19.5; /* ESTE ASPECT RATIO SE SOBRESCRIBE CON LA LIBRERIA plyr */
+  }
+
+  .phone-image {
+    position: absolute;
+    top: 4px;
+    left: 3%;
+    width: 94%;
+    height: 80%;
+  }
+
+  .video-container {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 88%;
+    height: 78%;
+    border-radius: 20px;
+  }
+}
+/* ========== PERSONALIZACIÓN DE PLYR VIDEO PLAYER ========== */
+/* Personalizacion de los elementos de PLYR */
+.plyr {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4.2/8;
+}
+
+/* Personalizar el color principal de Plyr */
+.plyr--audio .plyr__control.plyr__tab-focus, 
+.plyr--audio .plyr__control:hover, 
+.plyr--audio .plyr__control[aria-expanded=true] {
+  background: #ff6e84;
+}
+
+.plyr__control--overlaid {
+  background: rgba(255, 110, 132, 0.9);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.plyr__control--overlaid:hover {
+  background: rgba(255, 110, 132, 1);
+}
+
+/* Personalizar la barra de progreso */
+.plyr__progress input[type=range] {
+  color: #ff6e84;
+}
+
+.plyr__progress input[type=range]::-webkit-slider-thumb {
+  background: #ff6e84;
+  border: 0;
+  border-radius: 100%;
+  height: 13px;
+  position: relative;
+  width: 13px;
+}
+
+.plyr__progress input[type=range]::-moz-range-thumb {
+  background: #ff6e84;
+  border: 0;
+  border-radius: 100%;
+  height: 13px;
+  position: relative;
+  width: 13px;
+}
+
+/* Personalizar los controles */
+.plyr__controls {
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.7));
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+  padding: 10px;
+}
+
+.plyr__control:hover {
+  background: rgba(255, 110, 132, 0.8);
+}
+
+.plyr__control[aria-pressed=true] {
+  background: #ff6e84;
+  color: #fff;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+  .plyr__controls {
+    padding: 8px;
+  }
+  
+  .plyr__time {
+    font-size: 11px;
+  }
 }
