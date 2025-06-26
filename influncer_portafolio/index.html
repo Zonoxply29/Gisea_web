@@ -7,6 +7,10 @@
     <title>Portafolio Influencer</title>
     <!--AOS-->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel/dist/assets/owl.theme.default.min.css">
+
     <!--Boostrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--Font Awesome-->
@@ -34,21 +38,20 @@
             <!-- Contenido colapsable -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
                 <ul class="navbar-nav mx-auto text-center">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estadisticas">Mi alcance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#videos">Fotos y Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#colaboraciones">Colaboraciones</a></li>
                 </ul>
                 <div class="d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0 ms-lg-3">
-                    <button class="btn btn-follow">Follow Me</button>
+                    <a href="#precios" class="btn btn-follow">Precios y Paquetes</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section py-3">
+    <section class="hero-section py-3" id="hero">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Columna Izquierda: Texto -->
@@ -57,7 +60,7 @@
                         <p class="cookie-regular text-pink mb-2 fs-2 position-relative" data-aos="fade-up">Hola, me
                             presento...</p>
                         <div class="flower-wrapper" data-aos="fade-up">
-                            <img src="img/cabeza_flor.PNG" alt="decoración" class="flower">
+                            <img src="./img/cabeza_flor.PNG" alt="decoración" class="flower">
                         </div>
                         <h1 class="hero-title mb-3" data-aos="fade-up">Influencer de Belleza & Redes Sociales</h1>
                         <p class="hero-description mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -68,8 +71,8 @@
                     </div>
                     <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3"
                         data-aos="zoom-in" data-aos-delay="200">
-                        <button class="btn btn-follow">Mis estadisticas</button>
-                        <button class="btn btn-outline-pink">Contactame</button>
+                        <a href="#estadisticas" class="btn btn-follow">Mis estadisticas</a>
+                        <a href="#colaboraciones" class="btn btn-follow">Colaboraciones</a>
                     </div>
                     <!-- Redes Sociales -->
                     <div class="social-section mt-5 text-lg-start">
@@ -107,7 +110,7 @@
                         <div class="oval-bg"></div>
 
                         <!-- Imagen principal -->
-                        <img src="img/img_influencer.png" alt="influencer" class="influencer-img">
+                        <img src="./img/img_influencer.png" alt="influencer" class="influencer-img">
 
                         <!-- Líneas decorativas tipo marco -->
                         <div class="corner-line top-left"></div>
@@ -139,7 +142,7 @@
                         <p class="subtitle text-pink mb-3">Tiktok Followers</p>
                         <p class="desc small">Soy activa creando contenido dinámico, retos y tips de belleza en videos
                             cortos.</p>
-                        <button class="btn btn-follow mt-3">Follow Me</button>
+                        <button class="btn btn-follow mt-3">Sigueme</button>
                     </div>
                 </div>
 
@@ -155,7 +158,7 @@
                         <p class="subtitle text-pink mb-3">Instagram Followers</p>
                         <p class="desc small">Comparto fotos, looks del día, reels de maquillaje y colaboraciones con
                             marcas.</p>
-                        <button class="btn btn-follow mt-3">Follow Me</button>
+                        <button class="btn btn-follow mt-3">Sigueme</button>
                     </div>
                 </div>
 
@@ -171,7 +174,7 @@
                         <p class="subtitle text-pink mb-3">Twitter Followers</p>
                         <p class="desc small">Comparto reflexiones, tips rápidos y mantengo comunicación directa con mis
                             seguidores.</p>
-                        <button class="btn btn-follow mt-3">Follow Me</button>
+                        <button class="btn btn-follow mt-3">Sigueme</button>
                     </div>
                 </div>
 
@@ -179,7 +182,7 @@
         </div>
     </section>
     <!---SECCION ALCANCE CON MI CONTENIDO-->
-    <section class="story-section py-5">
+    <section class="story-section py-5" id="estadisticas">
         <div class="container">
             <div class="row align-items-center gy-4">
 
@@ -197,7 +200,7 @@
                 <div class="col-lg-4 d-flex justify-content-center mb-4" data-aos="zoom-in">
                     <div class="story-img-wrapper position-relative">
                         <div class="oval-bg-story"></div>
-                        <img src="img/img_influencer.png" alt="influencer" class="img-fluid position-relative z-2" />
+                        <img src="./img/img_influencer.png" alt="influencer" class="img-fluid position-relative z-2" />
                     </div>
                 </div>
 
@@ -229,19 +232,19 @@
                     <div class="social-icons-section mt-4">
                         <div class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap">
                             <a href="#" class="social-icon-story" title="Instagram">
-                                <img src="img/instagram.png" alt="Instagram" class="social-img">
+                                <img src="./img/instagram.png" alt="Instagram" class="social-img">
                             </a>
                             <a href="#" class="social-icon-story" title="TikTok">
-                                <img src="img/tiktok.png" alt="TikTok" class="social-img">
+                                <img src="./img/tiktok.png" alt="TikTok" class="social-img">
                             </a>
                             <a href="#" class="social-icon-story" title="Twitter/X">
-                                <img src="img/x.png" alt="Twitter" class="social-img">
+                                <img src="./img/x.png" alt="Twitter" class="social-img">
                             </a>
                             <a href="#" class="social-icon-story" title="Facebook">
-                                <img src="img/facebook.png" alt="Facebook" class="social-img">
+                                <img src="./img/facebook.png" alt="Facebook" class="social-img">
                             </a>
                             <a href="#" class="social-icon-story" title="YouTube">
-                                <img src="img/maquillaje_icono.png" alt="Maquillaje" class="social-img">
+                                <img src="./img/maquillaje_icono.png" alt="Maquillaje" class="social-img">
                             </a>
                         </div>
                     </div>
@@ -251,17 +254,17 @@
         </div>
     </section>
     <!--SECCION DE VIDEOS DE MUESTRA-->
-    <section class="videos-section py-5 bg-light">
+    <section class="videos-section py-5 bg-light" id="videos">
         <div class="container">
             <h2 class="text-center mb-5">Mis Ultimos Videos</h2>
             <div class="row justify-content-center gy-3">
-                
+
                 <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                     <div class="phone-frame">
-                        <img src="img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <img src="./img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
                         <div class="video-container">
                             <video class="plyr-video" muted>
-                                <source src="media/video_prueba.mp4" type="video/mp4">
+                                <source src="./media/video_prueba.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
@@ -270,10 +273,10 @@
 
                 <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                     <div class="phone-frame">
-                        <img src="img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <img src="./img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
                         <div class="video-container">
                             <video class="plyr-video" muted>
-                                <source src="media/video_prueba_2.mp4" type="video/mp4">
+                                <source src="./media/video_prueba_2.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
@@ -282,10 +285,10 @@
 
                 <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                     <div class="phone-frame">
-                        <img src="img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <img src="./img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
                         <div class="video-container">
                             <video class="plyr-video" muted>
-                                <source src="media/video_prueba_3.mp4" type="video/mp4">
+                                <source src="./media/video_prueba_3.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
@@ -294,10 +297,10 @@
 
                 <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                     <div class="phone-frame">
-                        <img src="img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <img src="./img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
                         <div class="video-container">
                             <video class="plyr-video" muted>
-                                <source src="media/video_prueba_4.mp4" type="video/mp4">
+                                <source src="./media/video_prueba_4.mp4" type="video/mp4">
                                 Tu navegador no soporta el elemento de video.
                             </video>
                         </div>
@@ -306,18 +309,132 @@
             </div>
         </div>
     </section>
+    <section class="collaborations-section py-5 bg-influencer" id="colaboraciones">
+        <div class="container">
+            <h2 class="text-center mb-5">Colaboraciones Recientes</h2>
+            <div class="row justify-content-center">
+
+                <!-- Desktop Grid (4 items per row) -->
+                <div class="col-12 d-none d-lg-block">
+                    <div class="row row-cols-4 justify-content-center g-4">
+                        <!-- Collaboration Logos -->
+                        <div class="col text-center">
+                            <div class="collaboration-item">
+                                <img src="./img/colaboraciones/dior_logo.png" alt="Dior" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <div class="collaboration-item">
+                                <img src="./img/colaboraciones/logo_bershka.PNG" alt="Bershka" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <div class="collaboration-item">
+                                <img src="./img/colaboraciones/logo_h&m.PNG" alt="H&M" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <div class="collaboration-item">
+                                <img src="./img/colaboraciones/loreal_logo.png" alt="Loreal" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile/Tablet Carousel -->
+                <div class="col-12 d-lg-none">
+                    <div class="owl-carousel owl-theme">
+                        <!-- Collaboration Logos -->
+                        <div class="item text-center">
+                            <img src="./img/colaboraciones/dior_logo.png" alt="Dior" class="img-fluid">
+                        </div>
+                        <div class="item text-center">
+                            <img src="./img/colaboraciones/logo_bershka.PNG" alt="Bershka" class="img-fluid">
+                        </div>
+                        <div class="item text-center">
+                            <img src="./img/colaboraciones/logo_h&m.PNG" alt="H&M" class="img-fluid">
+                        </div>
+                        <div class="item text-center">
+                            <img src="./img/colaboraciones/loreal_logo.png" alt="Loreal" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+
+                <!-- Columna Izquierda: Imagen -->
+                <div class="col-lg-4 d-flex justify-content-center" data-aos="fade-right">
+                    <div class="footer-img-wrapper position-relative">
+                        <div class="footer-oval-bg"></div>
+                        <img src="./img/img_influencer.png" alt="Arwa González" class="footer-img img-fluid position-relative z-2" />
+                    </div>
+                </div>
+
+                <!-- Columna Central: Texto -->
+                <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="footer-title mb-3">¡Trabajemos Juntos!</h2>
+                    <p class="footer-text mb-4">
+                        ¿Tienes una marca de belleza o un producto que quieres promocionar? Me encantaría colaborar contigo
+                        para crear contenido auténtico que conecte con mi audiencia.
+                    </p>
+                    <a href="#contacto" class="btn btn-follow btn-lg">Colabora Conmigo</a>
+                </div>
+
+                <!-- Columna Derecha: Redes Sociales -->
+                <div class="col-lg-4 text-center" data-aos="fade-left" data-aos-delay="200">
+                    <h4 class="footer-social-title mb-4">Sígueme en mis redes</h4>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+                        <a href="#" class="footer-social-icon" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                            <span class="social-text-footer">@arwa_influencer</span>
+                        </a>
+                        <a href="#" class="footer-social-icon" title="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                            <span class="social-text-footer">@arwa_influencer</span>
+                        </a>
+                    </div>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#" class="footer-social-icon" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                            <span class="social-text-footer">Arwa González</span>
+                        </a>
+                        <a href="#" class="footer-social-icon" title="Twitter/X">
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <span class="social-text-footer">@arwa_influencer</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="row mt-5 pt-4 border-top">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright mb-0">
+                        © 2025 Arwa González - Influencer de Belleza. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,     // Duración en ms
-            once: true          // Animar solo una vez
-        });
-    </script>
-    <!-- Scripts externos -->
-    <script src="js/counter-animation.js"></script>
-    <!--Plyr Video Player-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+    <!-- Script externo -->
+    <script src="js/init.js"></script>
+
+    <!-- Otros scripts -->
+    <script src="js/counter-animation.js"></script>
     <script src="js/plyr-config.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
