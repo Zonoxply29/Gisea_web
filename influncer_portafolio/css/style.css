@@ -190,7 +190,7 @@ body {
   position: relative;
 }
 .oval-bg {
-  background-color: #ffb6c1; 
+  background-color: #ec99b7; 
   border-radius: 60% / 40%;
   width: 100%;
   height: 106%;
@@ -421,6 +421,154 @@ body {
 .btn-follow:hover {
   background-color: #ff4c6d;
 }
+
+/* Centrado perfecto para la tercera estadística */
+.stats-third-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .stats-third-item {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+/* Estilos para el embed de TikTok */
+.tiktok-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.tiktok-embed {
+  max-width: 100% !important;
+  min-width: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* Placeholder para el embed de TikTok */
+.tiktok-placeholder {
+  min-height: 300px;
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  transition: opacity 0.3s ease;
+}
+
+.tiktok-loading {
+  text-align: center;
+  color: #6c757d;
+}
+
+.tiktok-loading i {
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Media queries para TikTok embed responsive */
+@media (max-width: 576px) {
+  .tiktok-wrapper {
+    margin: 0.5rem 0;
+  }
+  
+  .tiktok-placeholder {
+    min-height: 250px;
+    margin: 0.5rem 0;
+  }
+  
+  .stats-card .tiktok-embed {
+    max-width: 100% !important;
+    min-width: 250px !important;
+    width: 100% !important;
+  }
+  
+  .stats-card {
+    padding: 1rem !important;
+  }
+  
+  .stats-card .desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .tiktok-wrapper {
+    transform: scale(0.95);
+    transform-origin: center;
+    margin: 0.25rem 0;
+  }
+  
+  .tiktok-placeholder {
+    min-height: 220px;
+    margin: 0.25rem 0;
+  }
+  
+  .stats-card .tiktok-embed {
+    max-width: 100% !important;
+    min-width: 280px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .tiktok-wrapper {
+    transform: scale(0.85);
+    transform-origin: center;
+    margin: 0.15rem 0;
+  }
+  
+  .tiktok-placeholder {
+    min-height: 200px;
+    margin: 0.15rem 0;
+  }
+  
+  .stats-card .tiktok-embed {
+    max-width: 100% !important;
+    min-width: 260px !important;
+    width: 100% !important;
+  }
+  
+  .stats-card {
+    padding: 0.75rem !important;
+  }
+  
+  .stats-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stats-card .desc {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .stats-card .btn-follow {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
 /**TERCERA SECCION CIFRAS EN TOTAL**/
 .story-title {
   font-family: 'Playfair Display', serif;
@@ -438,7 +586,7 @@ body {
   position: relative;
   z-index: 2;
   object-fit: cover;
-  width: 93%;
+  width: 81%;
   height: 100%;
   top: 7px;
   left: 20px;
@@ -698,89 +846,130 @@ body {
   }
 }
 /**ESTILOS COLABORACIONES**/
-.collaborations-section img {
-    max-width: 160px;  /* Ajusta el tamaño de los logos */
-    transition: transform 0.3s ease;
+.collaborations-section {
+  padding: 80px 0;
+  overflow: hidden; /* Evitar desbordamiento */
 }
 
-.collaborations-section img:hover {
-    transform: scale(1.1);  /* Efecto hover de aumentar el logo */
+.collaborations-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px; /* Padding reducido ya que no hay flechas */
 }
 
-/* Estilo adicional para los logos de la colaboración */
-.collaborations-section .img-fluid {
-  max-width: 160px;
-  max-height: 120px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+/* Contenedor principal del carrusel */
+.collaborations-carousel.owl-carousel {
+  width: 100%;
+  overflow: hidden;
 }
 
-.collaborations-section .img-fluid:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.2);
+/* Estilos específicos para el carrusel de colaboraciones */
+.collaborations-carousel.owl-carousel .owl-stage-outer {
+  overflow: hidden;
+  padding: 20px 0;
 }
 
-/* Estilos específicos para el owl carousel */
-.owl-carousel .item {
+.collaborations-carousel.owl-carousel .owl-stage {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 15px;
 }
 
-.owl-theme .owl-dots {
-  margin-top: 30px;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  background: #ff6e84;
-  width: 12px;
-  height: 12px;
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-  background: #e0556d;
-}
-
-/* Nuevos estilos para los contenedores de colaboraciones */
 .collaboration-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 140px;
+  height: 180px; /* Aumentado de 140px a 180px */
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilo para los logos de colaboración */
+.collaborations-section .img-fluid {
+  max-width: 250px; /* Aumentado de 200px a 250px */
+  max-height: 180px; /* Aumentado de 150px a 180px */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Ocultar controles del carrusel de colaboraciones */
+.collaborations-carousel.owl-theme .owl-dots {
+  display: none; /* Ocultar dots/puntos */
+}
+
+/* Ocultar navegación (flechas) */
+.collaborations-carousel.owl-theme .owl-nav {
+  display: none; /* Ocultar flechas de navegación */
 }
 
 /* Media queries para colaboraciones */
+@media (max-width: 1199px) {
+  .collaborations-carousel-wrapper {
+    padding: 0 30px; /* Reducir padding ya que no hay flechas */
+  }
+}
+
 @media (max-width: 991px) {
-  .collaborations-section .img-fluid {
-    max-width: 140px;
-    max-height: 100px;
+  .collaborations-section {
+    padding: 60px 0;
+  }
+  
+  .collaborations-carousel-wrapper {
+    padding: 0 20px; 
   }
   
   .collaboration-item {
-    height: 120px;
+    height: 160px; /* Aumentado de 120px a 160px */
     padding: 15px;
+  }
+  
+  .collaborations-section .img-fluid {
+    max-width: 210px; /* Aumentado de 170px a 210px */
+    max-height: 160px; /* Aumentado de 130px a 160px */
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collaborations-carousel-wrapper {
+    padding: 0 15px; /* Padding mínimo */
   }
 }
 
 @media (max-width: 576px) {
-  .collaborations-section .img-fluid {
-    max-width: 120px;
-    max-height: 80px;
+  .collaborations-section {
+    padding: 50px 0;
+  }
+  
+  .collaborations-carousel-wrapper {
+    padding: 0 10px; /* Padding mínimo para móviles */
   }
   
   .collaboration-item {
-    height: 100px;
-    padding: 12px;
+    height: 150px; /* Aumentado de 120px a 150px */
+    padding: 20px;
+  }
+  
+  .collaborations-section .img-fluid {
+    max-width: 190px; /* Aumentado de 160px a 190px */
+    max-height: 140px; /* Aumentado de 120px a 140px */
+    padding: 15px;
+  }
+}
+
+/* Estilos específicos para móviles muy pequeños */
+@media (max-width: 480px) {
+  .collaboration-item {
+    height: 130px; /* Aumentado de 100px a 130px */
+    padding: 15px;
+    justify-content: center; /* Centrar perfectamente el logo único */
+  }
+  
+  .collaborations-section .img-fluid {
+    max-width: 253px; /* Aumentado para móviles pequeños */
+    max-height: 165px; /* Aumentado para móviles pequeños */
   }
 }
 
@@ -788,7 +977,7 @@ body {
 .footer-section {
   background: linear-gradient(135deg, #FDF4F7 0%, #F8E8ED 100%);
   border-top: 3px solid #ffb6c1;
-  margin-top: 5rem; /* Separación del carousel de colaboraciones */
+  margin-top: 5rem; 
 }
 
 .footer-title {
@@ -829,10 +1018,9 @@ body {
   width: 180px;
   height: 220px;
   object-fit: cover;
-  border-radius: 40% / 45%;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 14px;
+  left: 5px;
   z-index: 2;
 }
 
@@ -943,7 +1131,7 @@ body {
   }
   
   .footer-img {
-    width: 120px;
+    width: 132px;
     height: 150px;
   }
   
@@ -964,6 +1152,183 @@ body {
   
   .footer-social-title {
     font-size: 1.3rem;
+  }
+}
+
+/* Estilos para el embed de Instagram */
+.instagram-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.instagram-media {
+  max-width: 100% !important;
+  min-width: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* Placeholder para el embed de Instagram */
+.instagram-placeholder {
+  min-height: 300px;
+  background-color: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  transition: opacity 0.3s ease;
+}
+
+.instagram-loading {
+  text-align: center;
+  color: #6c757d;
+}
+
+.instagram-loading i {
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Media queries para Instagram embed responsive */
+@media (max-width: 576px) {
+  .instagram-wrapper {
+    margin: 0.5rem 0;
+  }
+  
+  .instagram-placeholder {
+    min-height: 250px;
+    margin: 0.5rem 0;
+  }
+  
+  .stats-card .instagram-media {
+    max-width: 100% !important;
+    min-width: 250px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .instagram-wrapper {
+    transform: scale(0.95);
+    transform-origin: center;
+    margin: 0.25rem 0;
+  }
+  
+  .instagram-placeholder {
+    min-height: 220px;
+    margin: 0.25rem 0;
+  }
+  
+  .stats-card .instagram-media {
+    max-width: 100% !important;
+    min-width: 280px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .instagram-wrapper {
+    transform: scale(0.85);
+    transform-origin: center;
+    margin: 0.15rem 0;
+  }
+  
+  .instagram-placeholder {
+    min-height: 200px;
+    margin: 0.15rem 0;
+  }
+  
+  .stats-card .instagram-media {
+    max-width: 100% !important;
+    min-width: 260px !important;
+    width: 100% !important;
+  }
+}
+
+/* Media queries para TikTok embed responsive */
+@media (max-width: 576px) {
+  .tiktok-wrapper {
+    margin: 0.5rem 0;
+  }
+  
+  .tiktok-placeholder {
+    min-height: 250px;
+    margin: 0.5rem 0;
+  }
+  
+  .stats-card .tiktok-embed {
+    max-width: 100% !important;
+    min-width: 250px !important;
+    width: 100% !important;
+  }
+  
+  .stats-card {
+    padding: 1rem !important;
+  }
+  
+  .stats-card .desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .tiktok-wrapper {
+    transform: scale(0.95);
+    transform-origin: center;
+    margin: 0.25rem 0;
+  }
+  
+  .tiktok-placeholder {
+    min-height: 220px;
+    margin: 0.25rem 0;
+  }
+  
+  .stats-card .tiktok-embed {
+    max-width: 100% !important;
+    min-width: 280px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .tiktok-wrapper {
+    transform: scale(0.85);
+    transform-origin: center;
+    margin: 0.15rem 0;
+  }
+  
+  .tiktok-placeholder {
+    min-height: 200px;
+    margin: 0.15rem 0;
+  }
+  
+  .stats-card .tiktok-embed {
+    max-width: 100% !important;
+    min-width: 260px !important;
+    width: 100% !important;
+  }
+  
+  .stats-card {
+    padding: 0.75rem !important;
+  }
+  
+  .stats-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stats-card .desc {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .stats-card .btn-follow {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
   }
 }
 
