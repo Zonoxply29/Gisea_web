@@ -8,17 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Estadísticas de redes sociales
     const socialStats = [
-        { id: "count-tiktok", value: 123 },
-        { id: "count-instagram", value: 175 },
-        { id: "count-twitter", value: 98 },
+        { id: "count-tiktok", value: 696 },
+        { id: "count-instagram", value: 42 },
     ];
 
     // Estadísticas de la sección story
     const storyStats = [
-        { id: "count-views", value: 10 },
-        { id: "count-comments", value: 230 },
-        { id: "count-saves", value: 25 },
-        { id: "count-shares", value: 15 },
+        { id: "count-alcance", value: 11.5, decimal: true },
+        { id: "count-interacciones", value: 1.9, decimal: true },
+        { id: "count-visualizaciones", value: 19.2, decimal: true }, 
     ];
 
     let socialHasAnimated = false; // Para la sección de redes sociales
@@ -28,18 +26,27 @@ document.addEventListener("DOMContentLoaded", () => {
      * Anima un contador individual
      * @param {string} id - ID del elemento HTML
      * @param {number} value - Valor final del contador
+     * @param {boolean} decimal - Si debe mostrar decimales
      */
-    function animateCounter(id, value) {
+    function animateCounter(id, value, decimal = false) {
         const el = document.getElementById(id);
         if (!el) return;
 
         let start = 0;
-        const stepTime = Math.abs(Math.floor(duration / value));
+        const increment = decimal ? value / 50 : 1; // Para decimales, dividir en 50 pasos
+        const stepTime = duration / (decimal ? 50 : value);
+        
         const timer = setInterval(() => {
-            start += 1;
-            el.textContent = start;
+            start += increment;
             if (start >= value) {
+                start = value;
                 clearInterval(timer);
+            }
+            
+            if (decimal) {
+                el.textContent = start.toFixed(1);
+            } else {
+                el.textContent = Math.floor(start);
             }
         }, stepTime);
     }
@@ -51,8 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (socialHasAnimated) return;
         socialHasAnimated = true;
         
-        socialStats.forEach(({ id, value }) => {
-            animateCounter(id, value);
+        socialStats.forEach(({ id, value, decimal }) => {
+            animateCounter(id, value, decimal);
         });
     }
 
@@ -63,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (storyHasAnimated) return;
         storyHasAnimated = true;
         
-        storyStats.forEach(({ id, value }) => {
-            animateCounter(id, value);
+        storyStats.forEach(({ id, value, decimal }) => {
+            animateCounter(id, value, decimal);
         });
     }
 

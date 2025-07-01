@@ -8,25 +8,42 @@ AOS.init({
 
 // Inicialización de Owl Carousel
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 4,             // Número de elementos por slide
-    loop: true,           // Deslizar en bucle
-    margin: 20,           // Espaciado entre los elementos
-    nav: false,           // No mostrar los botones de navegación
-    dots: true,           // Mostrar los puntos de navegación
-    autoplay: true,       // Reproducción automática
-    autoplayTimeout: 3000, // Tiempo entre transiciones (3 segundos)
-    autoplayHoverPause: true, // Pausar al pasar el mouse
-    smartSpeed: 800,      // Velocidad de transición suave
+  // Configuración limpia para el carrusel de colaboraciones
+  $(".collaborations-carousel").owlCarousel({
+    loop: true,                    // ✅ Deslizar en bucle infinito
+    margin: 20,                    // ✅ Espaciado entre elementos
+    nav: false,                    // ❌ Sin flechas de navegación
+    dots: false,                   // ❌ Sin puntos de navegación
+    autoplay: true,                // ✅ Reproducción automática
+    autoplayTimeout: 3000,         // ✅ Cambio cada 3 segundos
+    autoplayHoverPause: true,      // ✅ Pausa al pasar el mouse
+    smartSpeed: 800,               // ✅ Velocidad de transición suave
+    mouseDrag: true,               // ✅ Permitir arrastrar con mouse
+    touchDrag: true,               // ✅ Permitir arrastrar en móviles
     responsive: {
       0: {
-        items: 1  // En pantallas pequeñas, mostrar solo 1 elemento
+        items: 1,                  // Móviles pequeños: 1 elemento
+        margin: 10
       },
-      600: {
-        items: 2  // En pantallas de tablet, mostrar 2 elementos
+      480: {
+        items: 1,                  // Móviles medianos: 1 elemento  
+        margin: 15
       },
-      1000: {
-        items: 4  // En pantallas grandes, mostrar 4 elementos
+      576: {
+        items: 2,                  // Móviles grandes: 2 elementos
+        margin: 18
+      },
+      768: {
+        items: 3,                  // Tablets: 3 elementos
+        margin: 20
+      },
+      992: {
+        items: 4,                  // Desktop: 4 elementos
+        margin: 22
+      },
+      1200: {
+        items: 5,                  // Pantallas grandes: 5 elementos
+        margin: 25
       }
     }
   });
