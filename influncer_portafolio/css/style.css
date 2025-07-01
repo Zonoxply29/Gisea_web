@@ -1,12 +1,21 @@
-/* Tipografía Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Domine:ital,wght@0,500;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap');
-
+/* Fuentes Quicksand para toda el contenido de la pagina*/
+@font-face{
+    font-family: "Quicksand";
+    src: 
+    url("../fonts/Quicksand-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+/*Fuente para texto "LIA GARRIDO*/
+@font-face{
+    font-family: "JamGrotesque";
+    src: 
+    url("../fonts/jamgrotesque-bold.otf") format("truetype");
+    font-display: swap;
+}
 
 body {
   background-color: #FDF4F7;
-  font-family: 'Domine', serif;
+  font-family: 'Quicksand';
   font-weight: 500;
 }
 
@@ -48,10 +57,8 @@ body {
   min-height: 100vh;
 }
 /* Cookie para el texto cursivo */
-.cookie-regular {
-  font-family: "Cookie", cursive;
-  font-weight: 400;
-  font-style: normal;
+.text-hi {
+  font-family: 'Quicksand';
 }
 
 /* Colores y tamaños */
@@ -60,11 +67,31 @@ body {
 }
 
 .hero-title {
-   font-family: 'Playfair Display', serif;
-  font-weight: 600;
   font-size: 2.5rem;
   color: #3b1f1f;
   line-height: 1.2;
+}
+
+/* Contenedor del título sin márgenes adicionales */
+.title-container {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  line-height: inherit;
+}
+
+/* Clase específica para "LÍA GARRIDO" */
+.name-title {
+  font-family: 'JamGrotesque', sans-serif;
+  font-weight: bold;
+  font-size: 6.5vh;
+}
+
+/* Clase específica para "PETFLUENCER & LIFESTYLE" */
+.petfluencer-title {
+ font-variation-settings: "wght" 400;
+ font-size: 3.8vh;
+ letter-spacing: -2px;
 }
 
 .hero-description {
@@ -104,7 +131,7 @@ body {
 .flower-wrapper {
   position: absolute;
   top: -10px;
-  right: -13px;
+  right: -60px;
   width: 80px;
   z-index: 0;
 }
@@ -123,7 +150,7 @@ body {
 @media (max-width: 768px) {
   .flower-wrapper {
     top: -20px;
-    right: 4px;
+    right: -3px;
     width: 70px;
   }
 }
@@ -176,7 +203,7 @@ body {
   background-color: #FDF4F7;
   height: 100%;
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 /* Asegurar altura mínima en ambas columnas del hero */
@@ -191,12 +218,12 @@ body {
 }
 .oval-bg {
   background-color: #ec99b7; 
-  border-radius: 60% / 40%;
+  border-radius: 57% / 40%;
   width: 100%;
-  height: 106%;
+  height: 100%;
   position: absolute;
-  top: -9px;
-  left: -2px;
+  top: -2px;
+  left: 0px;
   z-index: 1;
 }
 
@@ -204,7 +231,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 34% / 42%;
+  border-radius: 68% / 50%;
   position: relative;
   z-index: 2;
 }
@@ -233,14 +260,14 @@ body {
 }
 
 .bottom-left {
-  bottom: -20px;
+  bottom: -48px;
   left: -20px;
   border-right: none;
   border-top: none;
 }
 
 .bottom-right {
-  bottom: -20px;
+  bottom: -48px;
   right: -20px;
   border-left: none;
   border-top: none;
@@ -253,13 +280,12 @@ body {
 }
 .influencer-name {
   position: absolute;
-  bottom: -83px;
-  left: 50%;
+  bottom: -71px;
+  left: 51%;
   transform: translateX(-50%);
   font-size: 2rem;
-  font-weight: 600;
   color: #3b1f1f;
-  font-family: 'Domine', serif;
+  font-family: 'Quicksand';
   background-color: #FDF4F7;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
@@ -399,7 +425,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Domine', serif;
+  font-family: 'Quicksand';
   font-size: 2rem;
   color: #3b1f1f;
 }
@@ -571,7 +597,7 @@ body {
 
 /**TERCERA SECCION CIFRAS EN TOTAL**/
 .story-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand';
   font-size: 2rem;
   color: #3b1f1f;
   line-height: 1.2;
@@ -584,19 +610,20 @@ body {
 
 .story-img-wrapper img {
   position: relative;
+  border-radius: 55% / 35%;
   z-index: 2;
   object-fit: cover;
-  width: 81%;
+  width: 88%;
   height: 100%;
-  top: 7px;
-  left: 20px;
+  top: 36px;
+  left: 21px;
 }
 
 .oval-bg-story {
   background-color: #ffb6c1;
-  width: 100%;
-  height: 100%;
-  border-radius: 50% / 45%;
+  width: 102%;
+  height: 111%;
+  border-radius: 61% / 52%;
   position: absolute;
   top: 0;
   left: 0;
@@ -604,7 +631,7 @@ body {
 }
 
 .stat-value {
-  font-family: 'Domine', serif;
+  font-family: 'Quicksand';
   font-size: 2.5rem;
   font-weight: 700;
   color: #3b1f1f;
@@ -981,7 +1008,7 @@ body {
 }
 
 .footer-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand';
   font-size: 2.5rem;
   color: #3b1f1f;
   font-weight: 600;
@@ -997,16 +1024,16 @@ body {
 }
 
 .footer-img-wrapper {
-  width: 200px;
-  height: 240px;
+  width: 208px;
+  height: 243px;
   position: relative;
   margin: 0 auto;
 }
 
 .footer-oval-bg {
   background-color: #ffb6c1;
-  width: 100%;
-  height: 100%;
+  width: 108%;
+  height: 108%;
   border-radius: 50% / 45%;
   position: absolute;
   top: 0;
@@ -1015,17 +1042,18 @@ body {
 }
 
 .footer-img {
-  width: 180px;
-  height: 220px;
+  width: 201px;
+  height: 209px;
+  border-radius: 50% / 41%;
   object-fit: cover;
   position: absolute;
-  top: 14px;
-  left: 5px;
+  top: 53px;
+  left: 13px;
   z-index: 2;
 }
 
 .footer-social-title {
-  font-family: 'Domine', serif;
+  font-family: 'Quicksand';
   color: #3b1f1f;
   font-weight: 600;
   font-size: 1.5rem;
@@ -1091,14 +1119,20 @@ body {
   }
   
   .footer-img-wrapper {
-    width: 160px;
+    width: 156px;
     height: 190px;
     margin-bottom: 2rem;
   }
   
   .footer-img {
-    width: 140px;
-    height: 170px;
+  width: 146px;
+  height: 166px;
+  border-radius: 49% / 39%;
+  object-fit: cover;
+  position: absolute;
+  top: 40px;
+  left: 12px;
+  z-index: 2;
   }
   
   .footer-social-icon {
@@ -1131,8 +1165,11 @@ body {
   }
   
   .footer-img {
-    width: 132px;
-    height: 150px;
+    left: 6px;
+    top: 40px;
+    border-radius: 50% / 50%;
+    width: 143px;
+    height: 146px;
   }
   
   .footer-social-icon {
