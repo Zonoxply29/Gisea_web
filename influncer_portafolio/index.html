@@ -238,7 +238,7 @@
                         Con mi contenido podemos alcanzar una cantidad de interacciones y visulizaciones para tu marca o
                         negocio
                     </p>
-                    <a href="#" class="btn btn-follow">Precios Y Paquetes</a>
+                    <a href="#precios" class="btn btn-follow">Precios Y Paquetes</a>
                 </div>
 
                 <!-- Imagen principal -->
@@ -404,7 +404,7 @@
             </div>
         </div>
     </section>
-    <!--PRECIOS Y PAQUETES-->
+    <!--PRECIOS UNITARIOS-->
     <section class="precios-section py-5 bg-light" id="precios">
         <div class="container">
             <h2 class="text-center mb-1 titulo-precios">Precios Unitarios</h2>
@@ -451,7 +451,7 @@
                     </div>
                     <p class="precio-servicio">$1,200</p>
                 </div>
-               <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-center">
                     <h5 class="mb-3 tipo-servicio">INSTAGRAM REEL</h5>
                     <div class="phone-frame">
                         <img src="./img/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
@@ -463,6 +463,77 @@
                     </div>
                     <p class="precio-servicio">$2500</p>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!--PRECIOS Y PAQUETES-->
+    <section class="py-5 bg-light" id="paquetes">
+        <div class="container">
+            <h2 class="text-center mb-2 titulo-paquetes">PRECIOS Y PAQUETES</h2>
+            <p class="text-center subtitulo-paquetes">• PRECIOS REPRESENTADOS EN MXN</p>
+
+            <div class="row justify-content-center gy-4 mt-4">
+
+                <!-- Paquete 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 1</div>
+                        <div class="card-body">
+                            <p><img src="img/tiktok.png" class="icono-red"> 1 TIKTOK</p>
+                            <p><img src="img/instagram.png" class="icono-red"> 1 HISTORIA</p>
+                            <p><img src="img/instagram.png" class="icono-red"> 1 REEL</p>
+                            <hr>
+                            <p><b>Sin Paquete : $9,500</b></p>
+                            <p>En Paquete: $7.900</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paquete 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 2</div>
+                        <div class="card-body">
+                            <p><img src="img/instagram.png" class="icono-red"> SET 5 HISTORIAS</p>
+                            <p><img src="img/tiktok.png" class="icono-red"> 1 TIKTOK</p>
+                            <p>+ CONT. PAUTADO <br> (20–30 DÍAS)</p>
+                            <hr>
+                            <p><b>Sin Paquete : *Por Confirmar*</b></p>
+                            <p>En Paquete: *Por Confirmar*</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paquete 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 3</div>
+                        <div class="card-body">
+                            <p><img src="img/tiktok.png" class="icono-red"> 2 TIKTOK</p>
+                            <p>+ EXCLUSIVIDAD <br> (20–30 DÍAS)</p>
+                            <hr>
+                            <p><b>Sin Paquete : $12,100</b></p>
+                            <p>En Paquete: $10,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paquete 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 4</div>
+                        <div class="card-body">
+                            <p><img src="img/tiktok.png" class="icono-red"> 1 TIKTOK</p>
+                            <p><img src="img/instagram.png" class="icono-red"> 1 REEL</p>
+                            <p><img src="img/instagram.png" class="icono-red"> SET 5 HISTORIAS</p>
+                            <p>+ CONT. PAUTADO + EXCLUSIVIDAD <br> (20–30 DÍAS)</p>
+                            <hr>
+                            <p><b>Sin Paquete : $15,300</b></p>
+                            <p>En Paquete: $12,200</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -539,80 +610,26 @@
         </div>
     </footer>
 
+    <!-- Scripts de librerías externas -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/owl.carousel/dist/owl.carousel.min.js"></script>
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script externo -->
+    <!-- Scripts de funcionalidades principales -->
     <script src="js/init.js"></script>
-
-    <!-- Otros scripts -->
     <script src="js/counter-animation.js"></script>
     <script src="js/plyr-config.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts de interacción (carga después de las funcionalidades principales) -->
+    <script src="js/navbar-handler.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/social-embeds.js"></script>
 
     <!-- TikTok embed script -->
     <script async src="https://www.tiktok.com/embed.js"></script>
-
-    <!-- Instagram embed script -->
     <script async src="//www.instagram.com/embed.js"></script>
-
-    <!-- Script para manejar la carga del TikTok embed -->
-    <script>
-        // Ocultar placeholder y mostrar embed cuando se carga
-        document.addEventListener('DOMContentLoaded', function () {
-            // Manejar TikTok embed
-            const checkTikTokLoaded = setInterval(function () {
-                const tiktokEmbed = document.querySelector('.tiktok-embed');
-                const tiktokPlaceholder = document.querySelector('.tiktok-placeholder');
-
-                if (tiktokEmbed && tiktokEmbed.offsetHeight > 0) {
-                    tiktokPlaceholder.style.display = 'none';
-                    tiktokEmbed.style.display = 'block';
-                    clearInterval(checkTikTokLoaded);
-                }
-            }, 200);
-
-            // Timeout de respaldo para TikTok después de 3 segundos
-            setTimeout(function () {
-                const tiktokPlaceholder = document.querySelector('.tiktok-placeholder');
-                const tiktokEmbed = document.querySelector('.tiktok-embed');
-                if (tiktokPlaceholder) {
-                    tiktokPlaceholder.style.display = 'none';
-                }
-                if (tiktokEmbed) {
-                    tiktokEmbed.style.display = 'block';
-                }
-                clearInterval(checkTikTokLoaded);
-            }, 3000);
-
-            // Manejar Instagram embed
-            const checkInstagramLoaded = setInterval(function () {
-                const instagramEmbed = document.querySelector('.instagram-media');
-                const instagramPlaceholder = document.querySelector('.instagram-placeholder');
-
-                if (instagramEmbed && instagramEmbed.offsetHeight > 0) {
-                    instagramPlaceholder.style.display = 'none';
-                    instagramEmbed.style.display = 'block';
-                    clearInterval(checkInstagramLoaded);
-                }
-            }, 200);
-
-            // Timeout de respaldo para Instagram después de 3 segundos
-            setTimeout(function () {
-                const instagramPlaceholder = document.querySelector('.instagram-placeholder');
-                const instagramEmbed = document.querySelector('.instagram-media');
-                if (instagramPlaceholder) {
-                    instagramPlaceholder.style.display = 'none';
-                }
-                if (instagramEmbed) {
-                    instagramEmbed.style.display = 'block';
-                }
-                clearInterval(checkInstagramLoaded);
-            }, 3000);
-        });
-    </script>
 </body>
 
 </html>
