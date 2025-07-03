@@ -803,7 +803,8 @@ body {
 .plyr {
   border-radius: 20px;
   overflow: hidden;
-  aspect-ratio: 4.2/8;
+  width: 100%;
+  height: 100%;
 }
 
 /* Personalizar el color principal de Plyr */
@@ -816,6 +817,10 @@ body {
 .plyr__control--overlaid {
   background: rgba(255, 110, 132, 0.9);
   border: 3px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 .plyr__control--overlaid:hover {
@@ -852,7 +857,6 @@ body {
   color: #fff;
   padding: 10px;
 }
-
 .plyr__control:hover {
   background: rgba(255, 110, 132, 0.8);
 }
@@ -948,20 +952,20 @@ body {
   }
   
   .collaboration-item {
-    height: 160px; /* Aumentado de 120px a 160px */
+    height: 160px; 
     padding: 15px;
   }
   
   .collaborations-section .img-fluid {
-    max-width: 210px; /* Aumentado de 170px a 210px */
-    max-height: 160px; /* Aumentado de 130px a 160px */
+    max-width: 210px; 
+    max-height: 160px; 
     padding: 12px;
   }
 }
 
 @media (max-width: 768px) {
   .collaborations-carousel-wrapper {
-    padding: 0 15px; /* Padding mínimo */
+    padding: 0 15px; 
   }
 }
 
@@ -971,17 +975,17 @@ body {
   }
   
   .collaborations-carousel-wrapper {
-    padding: 0 10px; /* Padding mínimo para móviles */
+    padding: 0 10px; 
   }
   
   .collaboration-item {
-    height: 150px; /* Aumentado de 120px a 150px */
+    height: 150px; 
     padding: 20px;
   }
   
   .collaborations-section .img-fluid {
-    max-width: 190px; /* Aumentado de 160px a 190px */
-    max-height: 140px; /* Aumentado de 120px a 140px */
+    max-width: 190px; 
+    max-height: 140px; 
     padding: 15px;
   }
 }
@@ -989,14 +993,48 @@ body {
 /* Estilos específicos para móviles muy pequeños */
 @media (max-width: 480px) {
   .collaboration-item {
-    height: 130px; /* Aumentado de 100px a 130px */
+    height: 130px; 
     padding: 15px;
-    justify-content: center; /* Centrar perfectamente el logo único */
+    justify-content: center; 
   }
   
   .collaborations-section .img-fluid {
-    max-width: 253px; /* Aumentado para móviles pequeños */
-    max-height: 165px; /* Aumentado para móviles pequeños */
+    max-width: 253px; 
+    max-height: 165px; 
+  }
+}
+
+/*========PRECIOS SECTION===========*/
+
+.titulo-precios {
+  font-family: 'Quicksand';
+  font-size: 2.8rem;
+}
+
+.subtitulo-precios {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.tipo-servicio {
+  background: #ff4c6d;
+  color: #fff;
+  padding: 15px 12px;
+  border-radius: 25px;
+  font-family: 'Quicksand';
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.precio-servicio {
+  margin-top: -88px;
+  font-size: 1.4rem;
+}
+/* Ajustes solo para pantallas entre 1024px y 1440px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .video-container {
+    top: 2.5%;
+    border-radius: 22px;
   }
 }
 
@@ -1368,4 +1406,22 @@ body {
     padding: 0.4rem 1rem;
   }
 }
+
+/* ========== CLASE PARA BOTONES DE CONTACTO MÓVIL ========== */
+.btn-contact-mobile {
+  /* En móviles: ancho controlado y centrado */
+  max-width: 280px;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* En pantallas pequeñas y superiores: comportamiento normal */
+@media (min-width: 576px) {
+  .btn-contact-mobile {
+    max-width: none;
+    width: auto;
+    margin: 0;
+  }
+}
+
 
