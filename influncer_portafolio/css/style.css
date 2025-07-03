@@ -17,11 +17,18 @@ body {
   background-color: #FDF4F7;
   font-family: 'Quicksand';
   font-weight: 500;
+  scroll-behavior: smooth;
+}
+
+/* Agregar padding-top a las secciones para compensar el navbar sticky */
+section[id] {
+  scroll-margin-top: 100px; /* Ajustar según la altura del navbar */
 }
 
 .custom-navbar {
   background-color: rgba(253, 244, 247, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
+  backdrop-filter: blur(10px);
 }
 
 .navbar-brand .dot {
@@ -1004,7 +1011,7 @@ body {
   }
 }
 
-/*========PRECIOS SECTION===========*/
+/**========PRECIOS UNITARIOS SECTION===========**/
 
 .titulo-precios {
   font-family: 'Quicksand';
@@ -1036,6 +1043,39 @@ body {
     top: 2.5%;
     border-radius: 22px;
   }
+}
+/******* PRECIOS Y PAQUETES CARDS **************/
+.titulo-paquetes {
+  font-family: 'Quicksand';
+  font-size: 2.8rem;
+}
+
+.subtitulo-paquetes {
+  font-size: 1rem;
+  color: #555;
+}
+
+.paquete-card {
+  background-color: #fdf4f7;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 15px;
+}
+
+.paquete-titulo {
+  background-color: #ff4c6d;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  padding: 10px;
+  color: #FFF;
+}
+
+.icono-red {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* ========== FOOTER SECTION ========== */
