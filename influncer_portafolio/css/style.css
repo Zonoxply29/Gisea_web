@@ -12,7 +12,10 @@
     url("../fonts/jamgrotesque-bold.otf") format("truetype");
     font-display: swap;
 }
-
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 body {
   background-color: #FDF4F7;
   font-family: 'Quicksand';
@@ -138,8 +141,8 @@ section[id] {
 .flower-wrapper {
   position: absolute;
   top: -10px;
-  right: -60px;
-  width: 80px;
+  right: -30px;
+  width: 60px;
   z-index: 0;
 }
 
@@ -157,7 +160,7 @@ section[id] {
 @media (max-width: 768px) {
   .flower-wrapper {
     top: -20px;
-    right: -3px;
+    right: -10px;
     width: 70px;
   }
 }
@@ -261,7 +264,7 @@ section[id] {
 
 .top-right {
   top: -20px;
-  right: -20px;
+  right: -10px;
   border-left: none;
   border-bottom: none;
 }
@@ -275,7 +278,7 @@ section[id] {
 
 .bottom-right {
   bottom: -48px;
-  right: -20px;
+  right: -10px;
   border-left: none;
   border-top: none;
 }
@@ -533,7 +536,7 @@ section[id] {
   
   .stats-card .tiktok-embed {
     max-width: 100% !important;
-    min-width: 250px !important;
+    min-width: auto !important;
     width: 100% !important;
   }
   
@@ -560,7 +563,7 @@ section[id] {
   
   .stats-card .tiktok-embed {
     max-width: 100% !important;
-    min-width: 280px !important;
+    min-width: 100% !important;
     width: 100% !important;
   }
 }
