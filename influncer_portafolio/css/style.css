@@ -21,17 +21,29 @@ body {
   font-family: 'Quicksand';
   font-weight: 500;
   scroll-behavior: smooth;
+  padding-top: 80px;
 }
 
-/* Agregar padding-top a las secciones para compensar el navbar sticky */
+/* Scroll suave nativo del navegador */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajuste simple para las secciones */
 section[id] {
-  scroll-margin-top: 100px; /* Ajustar según la altura del navbar */
+  scroll-margin-top: 80px;
 }
 
 .custom-navbar {
   background-color: rgba(253, 244, 247, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
   backdrop-filter: blur(10px);
+  z-index: 1020;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 80px; /* Altura mínima estable */
 }
 
 .navbar-brand .dot {
@@ -421,6 +433,7 @@ section[id] {
     color: #ff6e84;
   }
 }
+
 /**SEGUNDA SECCIÓN ESTADÍSTICAS***/
 .stats-card {
   border: 1.5px solid #ffb6c1;
@@ -563,7 +576,7 @@ section[id] {
   
   .stats-card .tiktok-embed {
     max-width: 100% !important;
-    min-width: 100% !important;
+    min-width: 280px !important;
     width: 100% !important;
   }
 }
@@ -888,7 +901,7 @@ section[id] {
 }
 /**ESTILOS COLABORACIONES**/
 .collaborations-section {
-  padding: 80px 0;
+  padding: 50px 0; /* Reducido de 80px a 50px */
   overflow: hidden; /* Evitar desbordamiento */
 }
 
@@ -1450,21 +1463,13 @@ section[id] {
   }
 }
 
-/* ========== CLASE PARA BOTONES DE CONTACTO MÓVIL ========== */
-.btn-contact-mobile {
-  /* En móviles: ancho controlado y centrado */
-  max-width: 280px;
-  width: auto;
-  margin: 0 auto;
+/* Ajustes para mejor flujo entre secciones */
+.videos-section {
+  padding: 50px 0 !important; /* Reducir el padding de py-5 */
 }
 
-/* En pantallas pequeñas y superiores: comportamiento normal */
-@media (min-width: 576px) {
-  .btn-contact-mobile {
-    max-width: none;
-    width: auto;
-    margin: 0;
-  }
+.story-section {
+  padding: 60px 0 !important; /* Ajustar sección de estadísticas */
 }
 
 
