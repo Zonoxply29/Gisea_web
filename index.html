@@ -35,37 +35,41 @@
                 <div class="collapse navbar-collapse estilos-navbar" id="navbarNav">
                     <ul class="navbar-nav estilos-navbar nav-underline">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link" href="index.html" data-translate="navInicio">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Sobre Nosotros</a>
+                            <a class="nav-link" href="about.html" data-translate="navSobreNosotros">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                                aria-expanded="false" data-translate="navServicios">
                                 Servicios
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="service_desarollo_web.html">Desarollo Web</a></li>
-                                <li><a class="dropdown-item" href="#">Recursos Humanos</a></li>
-                                <li><a class="dropdown-item" href="#">Capacitacion IT</a></li>
+                                <li><a class="dropdown-item" href="service_desarollo_web.html"
+                                        data-translate="dropdownDesarrollo">Desarollo Web</a></li>
+                                <li><a class="dropdown-item" href="#" data-translate="dropdownRecursos">Recursos
+                                        Humanos</a></li>
+                                <li><a class="dropdown-item" href="#" data-translate="dropdownCapacitacion">Capacitacion
+                                        IT</a></li>
                                 <li></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="#" data-translate="navContacto">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Trabaja con <br>Nosotros</a>
+                            <a class="nav-link" href="#" data-translate="navTrabaja">Trabaja con <br>Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">BLOG</a>
+                            <a class="nav-link" href="#" data-translate="navBlog">BLOG</a>
                         </li>
                         <li>
                             <!--Dropdown btn de idioma-->
                             <div class="dropdown">
                                 <button id="languageButton" class="btn-cambio-idioma">
-                                    <img src="icons/bandera_mex.png" alt="Idioma" id="languageIcon" style="width: 40px; margin-right: 8px;">
+                                    <img src="icons/bandera_mex.png" alt="Idioma" id="languageIcon"
+                                        style="width: 40px; margin-right: 8px;">
                                     <span id="selectedLanguage">SPA</span>
                                     <i id="dropdownIcon" class="fa-solid fa-angle-down"></i>
                                 </button>
@@ -144,12 +148,12 @@
     <section>
         <div class="container-lg">
             <div class="section-title">
-                <h1>Sobre Nosotros</h1>
+                <h1 data-translate="titleSobreNosotros">Sobre Nosotros</h1>
             </div>
-            <h3 class="about-alineacion">
-                "We are an international digital agency with a presence in Mexico and the United States,
-                with a team of expert members in areas like graphic design, software development,
-                and audio visual media development"
+            <h3 class="about-alineacion" data-translate="aboutDescription">
+                "Somos una agencia digital internacional con presencia en México y Estados Unidos,
+                contamos con un equipo de miembros expertos en áreas como diseño gráfico, desarrollo de software
+                y desarrollo de medios audiovisuales."
             </h3>
         </div>
     </section>
@@ -157,7 +161,7 @@
     <section>
         <div class="container-lg">
             <div class="section-title">
-                <h1>Servicios</h1>
+                <h1 data-translate="titleServicios">Servicios</h1>
             </div>
         </div>
         <div class="container text-center my-5">
@@ -167,7 +171,7 @@
                         <img src="img/card-img/imagen_desarollo_web.jpg" class="card-img-top" alt="Desarrollo Web">
                         <div class="card-body">
                             <div class="title-icon-container">
-                                <h5 class="card-title">Desarrollo Web</h5>
+                                <h5 class="card-title" data-translate="cardDesarrollo">Desarrollo Web</h5>
                                 <i class="fa-solid fa-desktop fa-2xl icon-background" style="color:#c49c3c;"></i>
                             </div>
                         </div>
@@ -178,7 +182,7 @@
                         <img src="img/card-img/img_recursos_humanos.jpeg" class="card-img-top" alt="Recursos Humanos">
                         <div class="card-body">
                             <div class="title-icon-container">
-                                <h5 class="card-title">Recursos Humanos</h5>
+                                <h5 class="card-title" data-translate="cardRecursos">Recursos Humanos</h5>
                                 <i class="fa-solid fa-users fa-2xl icon-background" style="color:#c49c3c;"></i>
                             </div>
                         </div>
@@ -190,7 +194,7 @@
                             alt="Capacitación Programadores">
                         <div class="card-body">
                             <div class="title-icon-container">
-                                <h5 class="card-title">Capacitación IT</h5>
+                                <h5 class="card-title" data-translate="cardCapacitacion">Capacitación IT</h5>
                                 <i class="fa-solid fa-chalkboard-user fa-2xl icon-background"
                                     style="color:#c49c3c;"></i>
                             </div>
@@ -204,7 +208,7 @@
     <section>
         <div class="container-lg">
             <div class="section-title">
-                <h1>Clientes</h1>
+                <h1 data-translate="titleClientes">Clientes</h1>
             </div>
             <div class="container text-center my-5">
                 <div class="row justify-content-center">
@@ -291,11 +295,11 @@
                             <div class="client-logo" data-aos="fade-up">
                                 <img src="img/clients-img/gategroup.png" alt="gategroup">
                             </div>
-                        </div>     
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
     <footer class="footer">
         <div class="container-fluid p-0">
@@ -307,12 +311,12 @@
                     <p>@giseamex@gmail.com</p>
                 </div>
                 <ul class="footer-links">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Sobre Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#clientes">Contacto</a></li>
-                    <li><a href="#contacto">Carrers</a></li>
-                    <li><a href="#contacto">Blog</a></li>
+                    <li><a href="" data-translate="footerInicio">Inicio</a></li>
+                    <li><a href="" data-translate="footerSobreNosotros">Sobre Nosotros</a></li>
+                    <li><a href="#servicios" data-translate="footerServicios">Servicios</a></li>
+                    <li><a href="#clientes" data-translate="footerContacto">Contacto</a></li>
+                    <li><a href="#contacto" data-translate="footerCarrers">Carrers</a></li>
+                    <li><a href="#contacto" data-translate="footerBlog">Blog</a></li>
                 </ul>
                 <div class="footer-social">
                     <a href="" alt="instagram" class="red-social-footer">
@@ -328,11 +332,11 @@
             </div>
         </div>
     </footer>
-        <script src="js/index.js"></script>
-        <script src="js/aos/aos.js"></script>
-        <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="js/fontawesome/all.min.js"></script>
-        <script> AOS.init(); </script>
+    <script src="js/index.js"></script>
+    <script src="js/aos/aos.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome/all.min.js"></script>
+    <script> AOS.init(); </script>
 </body>
 
 </html>
