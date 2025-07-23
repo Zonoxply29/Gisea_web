@@ -448,6 +448,140 @@ a.red-social-footer:hover {
 }   
 /*-- FIN ESTILOS FOOTER--*/
 
+/*-- ESTILOS PARA ADAPTACIÓN DE IDIOMAS --*/
+/* Clases para ajustar el tamaño de texto según el idioma */
+.lang-jpn {
+    font-size: 0.8em !important;
+    line-height: 1.2 !important;
+}
+
+.lang-jpn .section-title h1 {
+    font-size: 2.5rem !important;
+}
+
+.lang-jpn .about-alineacion {
+    font-size: 1.6rem !important;
+    line-height: 1.4 !important;
+}
+
+.lang-jpn .service-card .card-title {
+    font-size: 1.6rem !important;
+    line-height: 1.3 !important;
+}
+
+.lang-jpn .nav-link {
+    font-size: 0.9em !important;
+}
+
+.lang-jpn .dropdown-item {
+    font-size: 0.9em !important;
+}
+
+.lang-jpn .footer-links a {
+    font-size: 0.9em !important;
+}
+
+/* Ajustes específicos para navbar en japonés */
+.lang-jpn .navbar-nav {
+    font-size: 26px !important;
+}
+
+.lang-jpn .estilos-navbar {
+    font-size: 18px !important;
+}
+
+/* Ajustes específicos para el dropdown de servicios en japonés */
+.lang-jpn .dropdown-menu {
+    font-size: 26px !important;
+}
+
+/* Ajustes para las cards cuando están en hover (Mas Información) */
+.lang-jpn .service-card:hover .card-title {
+    font-size: 1.4rem !important;
+}
+
+/* Ajustes específicos para la página About en japonés */
+.lang-jpn .about-header-text h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+}
+
+.lang-jpn .tech-card .card-title {
+    font-size: 1.5rem !important;
+}
+
+.lang-jpn .section-title-card-tech {
+    font-size: 1rem !important;
+}
+
+.lang-jpn .valores-title h1 {
+    font-size: 2.5rem !important;
+}
+
+.lang-jpn .valor-title h2 {
+    font-size: 1.8rem !important;
+    text-align: center;
+}
+
+.lang-jpn .mision-card h2, 
+.lang-jpn .vision-card h2 {
+    font-size: 2rem !important;
+}
+
+.lang-jpn .mision-card p, 
+.lang-jpn .vision-card p {
+    font-size: 1.4rem !important;
+    line-height: 1.4 !important;
+}
+
+/* Clases para inglés - ajustes menores */
+.lang-eng .service-card .card-title {
+    font-size: 1.8rem !important;
+}
+
+.lang-eng .about-alineacion {
+    font-size: 1.8rem !important;
+}
+
+/* Español mantiene los estilos originales por defecto */
+
+/* Ajustes responsivos para idiomas */
+@media (max-width: 768px) {
+    .lang-jpn .section-title h1 {
+        font-size: 2rem !important;
+    }
+    
+    .lang-jpn .about-alineacion {
+        font-size: 1.4rem !important;
+    }
+    
+    .lang-jpn .navbar-nav {
+        font-size: 22px !important;
+    }
+    .lang-spa .nav-link{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .lang-jpn .section-title h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .lang-jpn .about-alineacion {
+        font-size: 1.2rem !important;
+    }
+    
+    .lang-jpn .service-card .card-title {
+        font-size: 1.4rem !important;
+    }
+    
+    .lang-jpn .navbar-nav {
+        font-size: 20px !important;
+    }
+}
+/*-- FIN ESTILOS PARA ADAPTACIÓN DE IDIOMAS --*/
+
 /*-----------------ESTILOS ABOUT US ---------------------*/
 
 .about-header-container {
@@ -550,7 +684,7 @@ a.red-social-footer:hover {
 .usage-section {
     position: absolute;
     top: 22px;
-    right: 42px;
+    right: 42px; /** en tablets tenemos que reducir la propiedad right a 12px*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -704,7 +838,7 @@ a.red-social-footer:hover {
     border-radius: 50%;
 }
 .section-title-card-tech {
-    font-size: 20px;
+    font-size: 19px;
     margin-bottom: 8px;
     text-align: left;
     width: 100%;
@@ -820,7 +954,7 @@ a.red-social-footer:hover {
 .laravel-card .usage-section {
     position: relative;
     top: 0;
-    right: 0;
+    right: 0 !important;
     width: 100%;
     margin-top: 20px;
     align-items: center;
@@ -859,7 +993,22 @@ a.red-social-footer:hover {
 .laravel-card .used-by-section {
     margin-top: 20px;
 }
-
+/* Estilos específicos para tablets - Tech Cards */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .col-md-5 {
+        flex: 0 0 auto !important;
+        width: 50% !important;
+    }
+    
+    .tech-card {
+        max-width: 450px !important;
+        width: 100% !important;
+    }
+    
+    .card-container {
+        justify-content: center !important;
+    }
+}
 
 /*------------Estilos para Tooltips---------*/
 .tooltip-card {
@@ -963,9 +1112,36 @@ a.red-social-footer:hover {
 }
 .responsabilidad-icon {
     position: relative; 
-    right: -70px; 
+    right: -23px; 
+}
+
+/* Ajuste específico para inglés en responsabilidad-icon */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .lang-eng .responsabilidad-icon {
+        right: -47px !important;
+    }
+    .lang-eng .respeto-icon {
+        right: 0px !important;
+    }
+    .lang-eng .honestidad-icon {
+        left: 10px;
+    }
+    .lang-eng .calidad-icon {
+        left: 4px;
+    }
+    .lang-jpn .about-header-text{
+        left: 33%;
+    }
 }
 .honestidad-icon{
+    position: relative; 
+    right: -30px; 
+}
+.respeto-icon{
+    position: relative; 
+    right: -30px; 
+}
+.calidad-icon{
     position: relative; 
     right: -30px; 
 }
@@ -1678,6 +1854,11 @@ li .icon-check-empgrnd{
         left:10%;
         padding: 10px; /* Ajusta el padding para pantallas pequeñas */
     }
+
+    /* Ajuste específico para japonés en about-header-text */
+    .lang-jpn .about-header-text {
+        left: 22% !important;
+    }
     /*-------NUESTROS VALORES---------*/
     .valores-container {
         flex-direction: column; /* Cambia a una disposición vertical */
@@ -1696,10 +1877,16 @@ li .icon-check-empgrnd{
     .valor-icon {
         width: 100px; /* Reduce el tamaño de los íconos */
         margin: 0 auto; /* Centra los íconos */
+        right: -8px;
     }
     .responsabilidad-icon {
         position: relative; /* Permite ajustar la posición del icono */
         right: -55px; /* Ajusta la posición horizontal del icono */
+    }
+
+    /* Ajuste específico para japonés en responsabilidad-icon */
+    .lang-jpn .responsabilidad-icon {
+        right: 0px !important;
     }
 
     .mision-vision-container {
@@ -1722,6 +1909,14 @@ li .icon-check-empgrnd{
     .vision-card p {
         font-size: 1rem; /* Ajusta el tamaño del texto */
         line-height: 1.4; /* Mejora la legibilidad */
+    }
+    /* Ajustes específicos para japonés en tablets */
+    .usage-section {
+        right: 19px !important;
+    }
+    
+    .brand-icons {
+        margin-top: 44px !important;
     }
     /*-----------FIN ESTILOS ABOUT US  -----------*/
     
@@ -1957,9 +2152,12 @@ li .icon-check-empgrnd{
     }
 
     .about-header-text {
-        top:45%;
-        left:10%;
+        top:46%;
+        left:20%;
         padding: 15px; /* Ajusta el padding para pantallas medianas */
+    }
+    .lang-jpn .about-header-text{
+        left: 32%;
     }
     /*----NUESTROS VALORES----*/
     .valores-container {
@@ -1968,6 +2166,9 @@ li .icon-check-empgrnd{
         justify-content: center; /* Centra los elementos */
         gap: 40px; /* Espacio entre los valores */
     }
+    .lang-jpn .valores-container{
+        gap: 14px;
+    }
 
     .valor-title h2 {
         font-size: 2.5rem; /* Ajusta el tamaño de los títulos */
@@ -1975,6 +2176,12 @@ li .icon-check-empgrnd{
 
     .valor-icon {
         width: 120px; /* Ajusta el tamaño de los íconos */
+    }
+    .lang-jpn .responsabilidad-icon{
+        right: -23px !important;
+    }
+    .responsabilidad-icon{
+        right: -60px !important;
     }
 
     .mision-vision-container {
@@ -2138,4 +2345,201 @@ li .icon-check-empgrnd{
     /*-----------FIN ESTILOS ABOUT US  -----------*/
     /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
 }
+
+/* Media Queries para portátiles/laptops (1024px) - Ajustes de navbar para idiomas */
+@media (max-width: 1024px) {
+    /* Reducir font-size general del navbar para pantallas de portátil */
+    .estilos-navbar {
+        font-size: 24px !important;
+    }
+    
+    /* Ajustes específicos para inglés en portátiles */
+    .lang-eng .estilos-navbar {
+        font-size: 20px !important;
+    }
+    
+    .lang-eng .navbar-nav {
+        font-size: 20px !important;
+    }
+    
+    .lang-eng .nav-link {
+        font-size: 1em !important;
+    }
+    
+    .lang-eng .dropdown-item {
+        font-size: 0.85em !important;
+    }
+    
+    /* Ajustes específicos para español en portátiles */
+    .lang-spa .estilos-navbar {
+        font-size: 22px !important;
+    }
+    
+    .lang-spa .navbar-nav {
+        font-size: 22px !important;
+    }
+
+    .lang-spa .dropdown-item {
+        font-size: 0.9em !important;
+    }
+    
+    /* Reducir espacio entre elementos del navbar */
+    .nav-item {
+        margin-right: 15px !important;
+    }
+    
+    /* Ajustar el logo para portátiles */
+    .gisea-logo {
+        width: 18vh !important;
+    }
+}
+
+/* Media Query específica para portátiles de 1024px */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    /* Ajustes específicos para el rango de portátiles 1024px-1366px */
+    .estilos-navbar {
+        font-size: 22px !important;
+    }
+    
+    /* Para inglés */
+    .lang-eng .estilos-navbar {
+        font-size: 18px !important;
+    }
+    
+    .lang-eng .navbar-nav {
+        font-size: 18px !important;
+    }
+    
+    .lang-eng .nav-link {
+        font-size: 0.85em !important;
+        padding: 8px 12px !important;
+    }
+    
+    .lang-eng .dropdown-item {
+        font-size: 0.8em !important;
+    }
+    
+    /* Para español */
+    .lang-spa .estilos-navbar {
+        font-size: 20px !important;
+    }
+    
+    .lang-spa .navbar-nav {
+        font-size: 20px !important;
+    }
+    
+    .lang-spa .nav-link {
+        font-size: 0.9em !important;
+        padding: 8px 12px !important;
+    }
+    
+    .lang-spa .dropdown-item {
+        font-size: 0.85em !important;
+    }
+    
+    /* Para japonés */
+    .lang-jpn .estilos-navbar {
+        font-size: 16px !important;
+    }
+    
+    .lang-jpn .navbar-nav {
+        font-size: 16px !important;
+    }
+    
+    .lang-jpn .nav-link {
+        font-size: 0.8em !important;
+        padding: 8px 10px !important;
+    }
+    
+    /* Reducir margen entre elementos */
+    .nav-item {
+        margin-right: 12px !important;
+    }
+    
+    /* Ajustar logo */
+    .gisea-logo {
+        width: 17vh !important;
+    }
+    
+    /* Ajustar botón de idioma */
+    .btn-cambio-idioma {
+        font-size: 20px !important;
+        padding: 6px 10px !important;
+    }
+    
+    /* Ajustar iconos sociales */
+    .header-social-links .red-social i {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Media Query ultra específica para pantallas de 1024px */
+@media (min-width: 1020px) and (max-width: 1024px) {
+    /* Ajustes ultra específicos para 1024px */
+    .estilos-navbar {
+        font-size: 20px !important;
+    }
+    
+    .lang-eng .estilos-navbar {
+        font-size: 16px !important;
+    }
+    
+    .lang-eng .navbar-nav {
+        font-size: 16px !important;
+    }
+    
+    .lang-eng .nav-link {
+        font-size: 1em !important;
+        padding: 6px 10px !important;
+    }
+    
+    .lang-spa .estilos-navbar {
+        font-size: 18px !important;
+    }
+    
+    .lang-spa .navbar-nav {
+        font-size: 18px !important;
+    }
+    
+    .lang-spa .nav-link {
+        font-size: 1em !important;
+        padding: 6px 10px !important;
+    }
+    
+    .lang-jpn .estilos-navbar {
+        font-size: 14px !important;
+    }
+    
+    .lang-jpn .navbar-nav {
+        font-size: 14px !important;
+    }
+    
+    .lang-jpn .nav-link {
+        font-size: 1em !important;
+        padding: 6px 8px !important;
+    }
+    
+    .nav-item {
+        margin-right: 8px !important;
+    }
+    
+    .gisea-logo {
+        width: 16vh !important;
+    }
+    
+    /* Asegurar que el dropdown de servicios no se salga */
+    .dropdown-menu {
+        font-size: 16px !important;
+    }
+    
+    .lang-eng .dropdown-menu {
+        font-size: 14px !important;
+    }
+    
+    .lang-spa .dropdown-menu {
+        font-size: 15px !important;
+    }
+}
+
+
 
