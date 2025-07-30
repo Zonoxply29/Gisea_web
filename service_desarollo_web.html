@@ -103,30 +103,35 @@
                             <a class="nav-link" href="#" data-translate="navBlog">BLOG</a>
                         </li>
                         <li>
-                            <!--Dropdown btn de idioma-->
-                            <div class="dropdown">
-                                <button id="languageButton" class="btn-cambio-idioma">
-                                    <img src = "icons/bandera_mex.png" alt="Idioma" id="languageIcon" style ="width:40px; margin-right: 8px;">
-                                    <span id="selectedLanguage">SPA</span>
-                                    <i id="dropdownIcon" class="fa-solid fa-angle-down rotate-0"></i>
-                                </button>
-                                <div id="languageDropdown" class="dropdown-content">
-                                    <a href="#" data-lang="SPA" data-flag="icons/bandera_mex.png">
-                                        <img src="icons/bandera_mex.png" alt="SPA" style="width: 40px; height:40px;">
-                                        SPA
-                                    </a>
-                                    <a href="#" data-lang="ENG" data-flag="icons/bandera_usa.png">
-                                        <img src="icons/bandera_usa.png" alt="SPA" style="width: 40px; height:40px;">
-                                        ENG</a>
-                                    <a href="#" data-lang="JPN" data-flag="icons/bandera_jpn.png">
-                                        <img src="icons/bandera_jpn.png" alt="JPN" style="width: 40px; height:40px;">
-                                        JPN</a>
+                            <div class="d-flex align-items-center gap-3">
+                                <!--Dropdown btn de idioma-->
+                                <div class="dropdown me-2">
+                                    <button id="languageButton" class="btn-cambio-idioma">
+                                        <img src="icons/bandera_mex.png" alt="Idioma" id="languageIcon"
+                                            style="width: 40px; margin-right: 8px;">
+                                        <span id="selectedLanguage">SPA</span>
+                                        <i id="dropdownIcon" class="fa-solid fa-angle-down"></i>
+                                    </button>
+                                    <div id="languageDropdown" class="dropdown-content">
+                                        <a href="#" data-lang="SPA" data-flag="icons/bandera_mex.png">
+                                            <img src="icons/bandera_mex.png" alt="SPA"
+                                                style="width: 40px; height:40px;">
+                                            SPA
+                                        </a>
+                                        <a href="#" data-lang="ENG" data-flag="icons/bandera_usa.png">
+                                            <img src="icons/bandera_usa.png" alt="SPA"
+                                                style="width: 40px; height:40px;">
+                                            ENG</a>
+                                        <a href="#" data-lang="JPN" data-flag="icons/bandera_jpn.png">
+                                            <img src="icons/bandera_jpn.png" alt="JPN"
+                                                style="width: 40px; height:40px;">
+                                            JPN</a>
+                                    </div>
                                 </div>
-                            </div>
                         </li>
                         <li>
-                            <div class="header-container">
-                                <div class="header-social-links">
+                            <div class="d-flex align-items-center gap-3 header-social-wrapper">
+                                <div class="header-social-links d-flex gap-2 align-items-center">
                                     <a href="" alt="instagram" class="red-social instagram">
                                         <i class="fa-brands fa-instagram fa-xl"></i>
                                     </a>
@@ -137,6 +142,9 @@
                                         <i class="fa-brands fa-facebook fa-xl"></i>
                                     </a>
                                 </div>
+                                <button id="toggle-dark-mode" class="btn-cambio-idioma" title="Cambiar tema">
+                                    <i id="icon-theme" class=" fa-solid fa-moon"></i>
+                                </button>
                             </div>
                         </li>
                     </ul>
@@ -718,6 +726,7 @@
     <script src="js/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="js/waypoints/noframework.waypoints.js"></script>
     <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script src="js/theme.js"></script>
     <script> AOS.init(); </script>
 </body>
 
