@@ -168,6 +168,7 @@ a.linkedin:hover {
 .dropdown-menu{
     font-size: 30px;
     --bs-dropdown-link-active-bg:#C49C3C !important;
+    --bs-dropdown-bg: #0C0C2B !important;
 }
 .dropdown-content a:hover {
     background-color: #f1f1f1;
@@ -223,6 +224,35 @@ a.linkedin:hover {
 .carousel-indicators [data-bs-target]{
     width: 90px;
     background-color: #C49C3C;
+}
+/* Contenedor de redes sociales + botón modo oscuro */
+.header-social-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content:space-around; /* alineado a la derecha */
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Botón modo oscuro */
+#toggle-dark-mode {
+  border: 2px solid #C49C3C;
+  border-radius: 10px;
+  padding: 6px 12px;
+  background-color: transparent;
+  color: #1C1F3D;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 20px;
+}
+
+#toggle-dark-mode:hover {
+  background-color: #C49C3C;
+  color: white;
+}
+
+body.dark-mode #toggle-dark-mode {
+  color: #EFEFEF;
+  border-color: #EFEFEF;
 }
 /*--FIN BOTON CAMBIO DE IDIOMA---*/
 
@@ -2547,7 +2577,7 @@ li:not(.d-flex) .icon-check-empgrnd{
 
     .navbar-nav .nav-link {
         padding: 10px 20px; 
-        font-size: 25px;
+        font-size: 21px;
     }
 
     .header-social-links {
@@ -2731,6 +2761,9 @@ li:not(.d-flex) .icon-check-empgrnd{
 
 /* Media Query ultra específica para pantallas de 1024px */
 @media (min-width: 1020px) and (max-width: 1024px) {
+    .header-social-wrapper{
+        margin-left: -9px;
+    }
     /* Ajustes ultra específicos para 1024px */
     .estilos-navbar {
         font-size: 20px !important;
@@ -2796,6 +2829,257 @@ li:not(.d-flex) .icon-check-empgrnd{
         font-size: 15px !important;
     }
 }
+/* MODO OSCURO */
+body.dark-mode {
+  background-color: #0C0C2B;
+  color: #f0f0f0;
+}
 
+/* Navbar */
+body.dark-mode .estilos-navbar {
+  background-color: #0C0C2B;
+  --bs-navbar-color: #f0f0f0;
+  --bs-navbar-hover-color: #C49C3C;
+}
 
+/* Cards */
+body.dark-mode .card {
+  background-color: #222;
+  color: #f0f0f0;
+  border-color: #444;
+}
+body.dark-mode .card-title,
+body.dark-mode .card-text {
+  color: #f0f0f0;
+}
 
+/* Secciones */
+body.dark-mode section {
+  background-color: #0C0C2B;
+}
+body.dark-mode .section-title h1 {
+  color: #f0f0f0;
+}
+
+/* Footer */
+body.dark-mode .footer {
+  background-color: #0C0C2B;
+  color: #f0f0f0;
+}
+body.dark-mode .footer a {
+  color: #C49C3C;
+}
+body.dark-mode .footer a:hover {
+  color: #f0f0f0;
+}
+
+/* Botón modo oscuro */
+body.dark-mode #toggle-dark-mode,
+body.dark-mode .btn-cambio-idioma {
+  background-color: transparent;
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+/* Dropdown */
+body.dark-mode .dropdown-content {
+  background-color: #0C0C2B;
+  color: #f0f0f0;
+}
+body.dark-mode .dropdown-content a:hover {
+  background-color: #2e2760;
+}
+
+/* Dropdown menu de Bootstrap */
+body.dark-mode .dropdown-menu {
+  --bs-dropdown-bg: #0C0C2B !important;
+  background-color: #0C0C2B !important;
+}
+
+/* Hover y selección en dropdown items modo oscuro */
+body.dark-mode .dropdown-item {
+  color: #f0f0f0 !important;
+  background-color: transparent !important;
+  border-bottom: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item:focus {
+  background-color: rgba(196, 156, 60, 0.1) !important;
+  color: #C49C3C !important;
+  border-bottom: 2px solid #C49C3C !important;
+}
+
+/* Social Icons */
+body.dark-mode a.red-social,
+body.dark-mode a.red-social-footer {
+  color: #C49C3C;
+}
+
+/* Estilos generales para texto blanco en modo oscuro */
+body.dark-mode,
+body.dark-mode * {
+  color: #f0f0f0 !important;
+}
+
+/* Excepciones para elementos que deben mantener sus colores específicos */
+body.dark-mode a.red-social,
+body.dark-mode a.red-social-footer,
+body.dark-mode .footer-contact,
+body.dark-mode .footer-links a:hover,
+body.dark-mode a:hover {
+  color: #C49C3C !important;
+}
+
+/* Mantener colores específicos de navegación */
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: #C49C3C !important;
+  border-bottom: 2px solid #C49C3C !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Subrayado para nav-link activo en modo oscuro */
+body.dark-mode .navbar-nav .nav-link.active {
+  color: #C49C3C !important;
+  border-bottom: 2px solid #C49C3C !important;
+}
+
+/* Asegurar que los enlaces normales no tengan borde por defecto */
+body.dark-mode .navbar-nav .nav-link {
+  border-bottom: 2px solid transparent !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Mantener colores de botones activos */
+body.dark-mode .portfolio-filters .filter-active {
+  color: #fff !important;
+  background: #C49C3C !important;
+}
+
+/* Ajustes específicos para las tech cards */
+body.dark-mode .tech-card {
+  background-color: #222 !important;
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .section-title-card-tech {
+  color: #f0f0f0 !important;
+}
+
+/* Pricing cards en modo oscuro */
+body.dark-mode .pricing-card {
+  background-color: #222 !important;
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .pricing-card h2 {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .pricing-card .price {
+  background: #1C1F3D !important;
+  color: #fff !important;
+}
+
+/* Service cards en modo oscuro */
+body.dark-mode .service-card .card-body {
+  background-color: #0C0C2B !important;
+  color: #fff !important;
+}
+
+/* Portafolio y textos generales */
+body.dark-mode .portafolio-title h2,
+body.dark-mode .portafolio-title h3,
+body.dark-mode .about-alineacion,
+body.dark-mode .valores-title h1,
+body.dark-mode .valor-title h2 {
+  color: #f0f0f0 !important;
+}
+
+/* Footer específico */
+body.dark-mode .footer-top {
+  background-color: #0C0C2B!important;
+}
+
+body.dark-mode .footer-bottom {
+  background-color: #0C0C2B !important;
+}
+
+/* Enlaces normales en modo oscuro */
+body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a) {
+  color: #C49C3C !important;
+}
+
+/* Asegurar que los iconos de Font Awesome mantengan su color */
+body.dark-mode .fa-brands,
+body.dark-mode .fa-solid,
+body.dark-mode .fa-regular {
+  color: inherit !important;
+}
+
+/* Ajustes específicos para clases con colores oscuros */
+body.dark-mode .about-alineacion {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .section-title-card-tech {
+  color: #f0f0f0 !important;
+  font-weight: bold;
+}
+
+body.dark-mode .a-color {
+  color: #f0f0f0 !important;
+}
+
+/* Asegurar que todos los párrafos, títulos y textos sean blancos */
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode span,
+body.dark-mode div,
+body.dark-mode li {
+  color: #f0f0f0 !important;
+}
+
+/* Excepciones para elementos que deben mantener colores específicos */
+body.dark-mode .service-card .card-body *,
+body.dark-mode .mision-card *,
+body.dark-mode .vision-card *,
+body.dark-mode .footer-bottom * {
+  color: #fff !important;
+}
+
+/* Asegurar que los elementos de portfolio mantengan la estructura correcta */
+body.dark-mode .portfolio-filters li {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .portfolio-info h4,
+body.dark-mode .portfolio-info p {
+  color: #fff !important;
+}
+
+/* Drop-shadow sutil para imágenes de clientes en modo oscuro */
+body.dark-mode .client-logo img {
+  border: none !important;
+  background-color: transparent !important;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7)) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .client-logo img:hover {
+  background-color: transparent !important;
+  filter: drop-shadow(0 0 8px rgba(196, 156, 60, 0.5)) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Quitar outline adicional */
+body.dark-mode .clients-container .client-logo img {
+  outline: none !important;
+  outline-offset: 0 !important;
+}
