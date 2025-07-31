@@ -168,7 +168,9 @@ a.linkedin:hover {
 .dropdown-menu{
     font-size: 30px;
     --bs-dropdown-link-active-bg:#C49C3C !important;
-    --bs-dropdown-bg: #0C0C2B !important;
+    /* Color de fondo por defecto para modo normal (blanco/claro) */
+    --bs-dropdown-bg: #ffffff !important;
+    background-color: #ffffff !important;
 }
 .dropdown-content a:hover {
     background-color: #f1f1f1;
@@ -253,6 +255,17 @@ a.linkedin:hover {
 body.dark-mode #toggle-dark-mode {
   color: #EFEFEF;
   border-color: #EFEFEF;
+}
+/* Estilos para los iconos SVG */
+#icon-theme svg {
+    fill: currentColor;
+    transition: fill 0.3s ease;
+    vertical-align: middle;
+}
+
+#moon-icon, #sun-icon {
+    width: 27px;
+    height: 25px;
 }
 /*--FIN BOTON CAMBIO DE IDIOMA---*/
 
@@ -485,6 +498,11 @@ a.red-social-footer:hover {
     line-height: 1.2 !important;
 }
 
+/* Excluir footer-logo de la reducción de tamaño */
+.lang-jpn .footer-logo {
+    font-size: 1em !important;
+}
+
 .lang-jpn .section-title h1 {
     font-size: 2.5rem !important;
 }
@@ -511,6 +529,15 @@ a.red-social-footer:hover {
     font-size: 0.9em !important;
 }
 
+/* Footer logo específico para japonés - mantener tamaño y AOS */
+.lang-jpn .footer-logo {
+    max-width: 25vh !important;
+    height: auto !important;
+    font-size: 1em !important; /* Reset font-size para el logo */
+    transform: none !important; /* Reset cualquier transform que pueda interferir con AOS */
+    transition: all 0.3s ease !important;
+}
+
 /* Ajustes específicos para navbar en japonés */
 .lang-jpn .navbar-nav {
     font-size: 26px !important;
@@ -532,8 +559,8 @@ a.red-social-footer:hover {
 
 /* Ajustes específicos para la página About en japonés */
 .lang-jpn .about-header-text h1 {
-    font-size: 2.5rem !important;
-    line-height: 1.2 !important;
+    font-size: 1.2rem !important;
+    line-height: 2.2 !important;
 }
 
 .lang-jpn .tech-card .card-title {
@@ -1356,6 +1383,7 @@ a.red-social-footer:hover {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 15px auto 0 auto;
+    transition: all 0.3s ease;
 }
 .btn-centro {
     display: flex;
@@ -1364,7 +1392,9 @@ a.red-social-footer:hover {
     padding-bottom: 22px;
 }
 .pricing-card .cta-button:hover {
-    background: #343a40;
+    background: #C49C3C;
+    color: #343a40;
+    transform: scale(1.05);
 }
 .separator-container{
     border-top: 6px solid #C49C3C;
@@ -2081,14 +2111,61 @@ li:not(.d-flex) .icon-check-empgrnd{
         margin: 10px auto;
     }
 
-    .btn-cambio-idioma {
-        display: block; /* Asegura que el botón de cambio de idioma sea visible */
-        margin: 10px auto; /* Centra el botón de cambio de idioma */
+    /* Ajustes específicos para el botón de modo oscuro en mobile */
+    #toggle-dark-mode {
+        margin-right: 0 !important;
+        margin-left: 10px;
+        padding: 8px 12px;
+        min-width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    /* Contenedor de redes sociales y botón de tema en mobile */
+    .header-social-wrapper {
+        flex-direction: row !important;
+        gap: 15px !important;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+
+    .header-social-links {
+        gap: 10px !important;
+    }
+
     .dropdown-content {
         bottom: 100%; /* Posiciona el dropdown hacia arriba */
         transform: translateY(-10px); /* Ajusta la posición del dropdown */
     }
+}
+
+/* Media query adicional para pantallas extra pequeñas */
+@media (max-width: 400px) {
+    /* Ajustes específicos para el botón de modo oscuro en pantallas muy pequeñas */
+    #toggle-dark-mode {
+        padding: 6px 10px;
+        min-width: 45px;
+        margin-left: 5px;
+    }
+
+    .header-social-wrapper {
+        gap: 10px !important;
+    }
+
+    .header-social-links {
+        gap: 8px !important;
+    }
+
+    .header-social-links a {
+        padding: 5px;
+    }
+}
+
+/* Continuación de estilos para pantallas pequeñas (576px) */
+@media (max-width: 576px) {
     .carousel-control-prev-icon svg,
     .carousel-control-next-icon svg {
         display: none;
@@ -2308,9 +2385,6 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
     .portafolio-title {
         margin: 28px; 
-    }
-    .pricing-card .cta-button:hover {
-        background: #1f2333;
     }
     #negocios-pequeños .icon-check-mdnpequeña{
         margin-left: 30px;
@@ -2676,7 +2750,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     
     /* Ajustar el logo para portátiles */
     .gisea-logo {
-        width: 18vh !important;
+        width: 21vh !important;
     }
 }
 
@@ -2967,6 +3041,11 @@ body.dark-mode .section-title-card-tech {
   color: #f0f0f0 !important;
 }
 
+/* Texto de porcentaje en las cards de tecnología - Negro en modo oscuro */
+body.dark-mode .usage-text {
+  color: #000000 !important;
+}
+
 /* Pricing cards en modo oscuro */
 body.dark-mode .pricing-card {
   background-color: #222 !important;
@@ -3007,7 +3086,7 @@ body.dark-mode .footer-bottom {
 }
 
 /* Enlaces normales en modo oscuro */
-body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a) {
+body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button) {
   color: #C49C3C !important;
 }
 
@@ -3051,7 +3130,15 @@ body.dark-mode .service-card .card-body *,
 body.dark-mode .mision-card *,
 body.dark-mode .vision-card *,
 body.dark-mode .footer-bottom * {
-  color: #fff !important;
+  color: #c49c3c !important;
+}
+
+/* Estilos específicos para texto de misión y visión en modo oscuro */
+body.dark-mode .mision-card h2,
+body.dark-mode .vision-card h2,
+body.dark-mode .mision-card p,
+body.dark-mode .vision-card p {
+  color: #ffffff !important;
 }
 
 /* Asegurar que los elementos de portfolio mantengan la estructura correcta */
@@ -3068,18 +3155,84 @@ body.dark-mode .portfolio-info p {
 body.dark-mode .client-logo img {
   border: none !important;
   background-color: transparent !important;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7)) !important;
   transition: all 0.3s ease !important;
 }
 
 body.dark-mode .client-logo img:hover {
   background-color: transparent !important;
-  filter: drop-shadow(0 0 8px rgba(196, 156, 60, 0.5)) !important;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)) !important;
   transform: scale(1.1) !important;
+}
+
+/* Drop-shadow para el logo de Gisea en modo oscuro */
+body.dark-mode .gisea-logo {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .gisea-logo:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
+  transform: scale(1.02) !important;
+}
+
+/* Drop-shadow para el logo del footer en modo oscuro */
+body.dark-mode .footer-logo {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .footer-logo:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
+  transform: scale(1.02) !important;
+}
+
+/* Drop-shadow para los íconos de valores en modo oscuro */
+body.dark-mode .valor-icon {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .valor-icon:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Drop-shadow para los íconos de marcas en las tech cards en modo oscuro */
+body.dark-mode .brand-icon {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Botones CTA en modo oscuro */
+body.dark-mode .cta-button {
+  background-color: #1C1F3D !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark-mode .cta-button:hover {
+  background-color: #C49C3C !important;
+  color: #1C1F3D !important;
+  transform: scale(1.05) !important;
 }
 
 /* Quitar outline adicional */
 body.dark-mode .clients-container .client-logo img {
   outline: none !important;
   outline-offset: 0 !important;
+}
+
+/* Iconos del portafolio en modo oscuro - mantener color negro */
+body.dark-mode .portfolio-icons a {
+  color: #000000 !important;
+}
+
+body.dark-mode .portfolio-icons a:hover {
+  color: #C49C3C !important;
+}
+
+/* Iconos específicos de Bootstrap en el portafolio */
+body.dark-mode .portfolio-icons .bi-zoom-in,
+body.dark-mode .portfolio-icons .bi-link-45deg {
+  color: #000000 !important;
 }

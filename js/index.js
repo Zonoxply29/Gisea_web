@@ -345,6 +345,13 @@ function changeLanguage(lang) {
     
     // Guardar idioma seleccionado en localStorage
     localStorage.setItem('selectedLanguage', lang);
+    
+    // Reinicializar AOS después del cambio de idioma para detectar correctamente los elementos
+    if (typeof AOS !== 'undefined') {
+        setTimeout(() => {
+            AOS.refresh();
+        }, 100);
+    }
 }
 
 // Agrega un evento de clic a cada opción del menú desplegable

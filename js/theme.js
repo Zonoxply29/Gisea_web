@@ -1,38 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("toggle-dark-mode");
-  const icon = document.getElementById("icon-theme");
+    const toggle = document.getElementById("toggle-dark-mode");
+    const moonIcon = document.getElementById("moon-icon");
+    const sunIcon = document.getElementById("sun-icon");
 
-  function updateIcon(isDark) {
-    if (!icon) return;
-
-    icon.classList.remove("fa-moon", "fa-sun");
-
-    if (isDark) {
-      icon.classList.add("fa-sun");
-    } else {
-      icon.classList.add("fa-moon");
+    if (!toggle || !moonIcon || !sunIcon) {
+        console.error("Elementos no encontrados");
+        return;
     }
-  }
 
-  // Cargar tema desde localStorage
-  const savedTheme = localStorage.getItem("theme");
-  const isDark = savedTheme === "dark";
+    // Cargar tema desde localStorage
+    const savedTheme = localStorage.getItem("theme");
+    const isDark = savedTheme === "dark";
 
-  if (isDark) {
-    document.body.classList.add("dark-mode");
-  }
+    // Aplicar tema inicial
+    function setInitialTheme() {
+        if (isDark) {
+            document.body.classList.add("dark-mode");
+            moonIcon.style.display = "none";
+            sunIcon.style.display = "inline";
+        } else {
+            document.body.classList.remove("dark-mode");
+            moonIcon.style.display = "inline";
+            sunIcon.style.display = "none";
+        }
+    }
 
-  updateIcon(isDark);
+    setInitialTheme();
 
-  // Evento al presionar botón
-  if (toggle) {
+    // Evento click
     toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      const nowDark = document.body.classList.contains("dark-mode");
-      localStorage.setItem("theme", nowDark ? "dark" : "light");
-      updateIcon(nowDark);
+        const nowDark = !document.body.classList.contains("dark-mode");
+        
+        // Alternar clase
+        document.body.classList.toggle("dark-mode");
+        
+        // Cambiar iconos
+        if (nowDark) {
+            moonIcon.style.display = "none";
+            sunIcon.style.display = "inline";
+        } else {
+            moonIcon.style.display = "inline";
+            sunIcon.style.display = "none";
+        }
+        
+        // Guardar preferencia
+        localStorage.setItem("theme", nowDark ? "dark" : "light");
     });
-  }
 });
-
-
