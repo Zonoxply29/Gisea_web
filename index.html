@@ -17,7 +17,24 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-D82C62QHR9');
+  gtag('config', 'G-D82C62QHR9', {
+    // Configuración para tracking mejorado de idiomas
+    'custom_map': {
+      'custom_parameter_1': 'session_duration_minutes',
+      'custom_parameter_2': 'interaction_count',
+      'custom_parameter_3': 'language_type'
+    },
+    // Permitir tracking de eventos offline
+    'transport_type': 'beacon',
+    // Mejorar precisión de timing
+    'page_title': document.title,
+    'page_location': window.location.href
+  });
+  
+  // Configurar dimensiones personalizadas para idiomas
+  gtag('config', 'G-D82C62QHR9', {
+    'send_page_view': true
+  });
 </script>
 <body>
     <header class="fixed-top">
