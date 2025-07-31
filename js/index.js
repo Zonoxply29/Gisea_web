@@ -17,6 +17,94 @@ document.getElementById('languageButton').addEventListener('click', function() {
     }
 });
 
+// Variables globales para tracking de idiomas extranjeros
+let foreignLanguageStartTime = null;
+let foreignLanguagePageViews = 0;
+let foreignLanguageInteractions = 0;
+
+// Función para trackear interacciones en idiomas extranjeros
+function trackForeignLanguageInteraction(interactionType, elementType) {
+    const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
+    
+    if (currentLang === 'ENG' || currentLang === 'JPN') {
+        foreignLanguageInteractions++;
+        
+        gtag('event', 'foreign_language_interaction', {
+            'event_category': 'Language_Engagement',
+            'event_label': `${currentLang}_${interactionType}`,
+            'interaction_type': interactionType,
+            'element_type': elementType,
+            'language': currentLang,
+            'total_interactions': foreignLanguageInteractions
+        });
+    }
+}
+
+// Función para enviar heartbeat cada 30 segundos cuando está en idioma extranjero
+function startForeignLanguageHeartbeat() {
+    const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
+    
+    if (currentLang === 'ENG' || currentLang === 'JPN') {
+        // Evitar múltiples intervals
+        if (window.foreignLanguageInterval) {
+            clearInterval(window.foreignLanguageInterval);
+        }
+        
+        window.foreignLanguageInterval = setInterval(() => {
+            const currentLangCheck = localStorage.getItem('selectedLanguage') || 'SPA';
+            if (currentLangCheck === 'ENG' || currentLangCheck === 'JPN') {
+                const startTime = sessionStorage.getItem(`${currentLangCheck}_start_time`);
+                if (startTime) {
+                    const currentDuration = Math.round((Date.now() - parseInt(startTime)) / 1000);
+                    
+                    gtag('event', 'foreign_language_heartbeat', {
+                        'event_category': 'Language_Session',
+                        'event_label': currentLangCheck,
+                        'language': currentLangCheck,
+                        'session_duration_seconds': currentDuration,
+                        'interactions_count': foreignLanguageInteractions,
+                        'custom_parameter_1': Math.round(currentDuration / 60) // minutos
+                    });
+                    
+                    // Verificar milestones de engagement
+                    trackEngagementMilestones();
+                }
+            } else {
+                // Si cambió de idioma, limpiar el interval
+                clearInterval(window.foreignLanguageInterval);
+            }
+        }, 30000); // 30 segundos
+    }
+}
+
+// Función para crear eventos personalizados de engagement
+function trackEngagementMilestones() {
+    const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
+    
+    if (currentLang === 'ENG' || currentLang === 'JPN') {
+        const startTime = sessionStorage.getItem(`${currentLang}_start_time`);
+        if (startTime) {
+            const currentDuration = Math.round((Date.now() - parseInt(startTime)) / 1000);
+            const milestones = [30, 60, 120, 300, 600]; // 30s, 1m, 2m, 5m, 10m
+            
+            milestones.forEach(milestone => {
+                if (currentDuration >= milestone && !sessionStorage.getItem(`${currentLang}_milestone_${milestone}`)) {
+                    gtag('event', 'foreign_language_engagement_milestone', {
+                        'event_category': 'Language_Engagement',
+                        'event_label': `${currentLang}_${milestone}s`,
+                        'language': currentLang,
+                        'milestone_seconds': milestone,
+                        'total_interactions': foreignLanguageInteractions
+                    });
+                    
+                    // Marcar milestone como alcanzado
+                    sessionStorage.setItem(`${currentLang}_milestone_${milestone}`, 'true');
+                }
+            });
+        }
+    }
+}
+
 // Objeto con las traducciones
 const translations = {
     SPA: {
@@ -343,9 +431,61 @@ function changeLanguage(lang) {
         });
     }
     
+    // Obtener idioma anterior para tracking
+    const previousLang = localStorage.getItem('selectedLanguage') || 'SPA';
+    
     // Guardar idioma seleccionado en localStorage
     localStorage.setItem('selectedLanguage', lang);
     
+    // Enviar el evento a Google Analytics 4 - Mejorado
+    gtag('event', 'language_change', {
+        'event_category': 'User_Interaction',
+        'event_label': `${previousLang}_to_${lang}`,
+        'previous_language': previousLang,
+        'new_language': lang,
+        'value': 1
+    });
+    
+    // Tracking especial para idiomas no españoles
+    if (lang === 'ENG' || lang === 'JPN') {
+        // Marcar el inicio de tiempo para idiomas especiales
+        sessionStorage.setItem(`${lang}_start_time`, Date.now());
+        
+        // Resetear contadores de interacción
+        foreignLanguageInteractions = 0;
+        
+        // Enviar evento de inicio de sesión en idioma extranjero
+        gtag('event', 'foreign_language_session_start', {
+            'event_category': 'Language_Session',
+            'event_label': lang,
+            'language': lang,
+            'timestamp': new Date().toISOString()
+        });
+        
+        // Iniciar heartbeat para tracking continuo
+        startForeignLanguageHeartbeat();
+    }
+    
+    // Si cambió de un idioma extranjero a español, calcular tiempo de sesión
+    if ((previousLang === 'ENG' || previousLang === 'JPN') && lang === 'SPA') {
+        const startTime = sessionStorage.getItem(`${previousLang}_start_time`);
+        if (startTime) {
+            const sessionDuration = Math.round((Date.now() - parseInt(startTime)) / 1000); // en segundos
+            
+            gtag('event', 'foreign_language_session_end', {
+                'event_category': 'Language_Session',
+                'event_label': previousLang,
+                'language': previousLang,
+                'session_duration_seconds': sessionDuration,
+                'session_duration_minutes': Math.round(sessionDuration / 60),
+                'value': sessionDuration
+            });
+            
+            // Limpiar el tiempo guardado
+            sessionStorage.removeItem(`${previousLang}_start_time`);
+        }
+    }
+
     // Reinicializar AOS después del cambio de idioma para detectar correctamente los elementos
     if (typeof AOS !== 'undefined') {
         setTimeout(() => {
@@ -425,20 +565,103 @@ function loadSavedLanguage() {
     
     // Aplicar las traducciones y estilos de idioma
     changeLanguage(savedLanguage);
+    
+    // Si ya está en un idioma extranjero, inicializar tracking si no existe
+    if ((savedLanguage === 'ENG' || savedLanguage === 'JPN')) {
+        const startTime = sessionStorage.getItem(`${savedLanguage}_start_time`);
+        if (!startTime) {
+            // Si no hay tiempo de inicio, establecerlo ahora
+            sessionStorage.setItem(`${savedLanguage}_start_time`, Date.now());
+            
+            gtag('event', 'foreign_language_page_load', {
+                'event_category': 'Language_Session',
+                'event_label': savedLanguage,
+                'language': savedLanguage,
+                'load_type': 'page_refresh'
+            });
+            
+            // Iniciar heartbeat
+            startForeignLanguageHeartbeat();
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     // Cargar idioma guardado
     loadSavedLanguage();
     
+    // Agregar eventos a los enlaces del dropdown de idiomas
+    document.querySelectorAll('#languageDropdown a').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const lang = event.target.getAttribute('data-lang'); // Obtener el idioma del atributo data-lang
+            changeLanguage(lang); // Cambiar el idioma y registrar el evento en GA4
+            event.preventDefault(); // Evitar la recarga de la página al hacer clic en el enlace
+        });
+    });
+    
     // Funcionalidad de las cards
     document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseenter', () => changeContent(card));
+        card.addEventListener('mouseenter', () => {
+            changeContent(card);
+            trackForeignLanguageInteraction('hover', 'service_card');
+        });
         card.addEventListener('mouseleave', () => resetContent(card));
+        card.addEventListener('click', () => {
+            trackForeignLanguageInteraction('click', 'service_card');
+        });
     });
-});
-
-///Animacion de Btn Services con hover para cambio de texto y icono
+    
+    // Trackear clics en navegación
+    document.querySelectorAll('.navbar-nav a, .footer a').forEach(link => {
+        link.addEventListener('click', () => {
+            const linkText = link.textContent.trim();
+            trackForeignLanguageInteraction('navigation_click', linkText);
+        });
+    });
+    
+    // Trackear scroll para medir engagement
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > 0 && scrollPercent % 25 === 0) { // Cada 25% de scroll
+                trackForeignLanguageInteraction('scroll', `${scrollPercent}_percent`);
+            }
+        }, 150);
+    });
+    
+    // Detectar tiempo en página cuando se va a cerrar/cambiar
+    window.addEventListener('beforeunload', () => {
+        const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
+        if (currentLang === 'ENG' || currentLang === 'JPN') {
+            const startTime = sessionStorage.getItem(`${currentLang}_start_time`);
+            if (startTime) {
+                const sessionDuration = Math.round((Date.now() - parseInt(startTime)) / 1000);
+                
+                // Usar sendBeacon para envío confiable al cerrar página
+                if (navigator.sendBeacon) {
+                    const data = JSON.stringify({
+                        event: 'foreign_language_session_end',
+                        language: currentLang,
+                        duration: sessionDuration,
+                        interactions: foreignLanguageInteractions
+                    });
+                    navigator.sendBeacon('/analytics', data);
+                } else {
+                    gtag('event', 'foreign_language_session_end', {
+                        'event_category': 'Language_Session',
+                        'event_label': currentLang,
+                        'language': currentLang,
+                        'session_duration_seconds': sessionDuration,
+                        'total_interactions': foreignLanguageInteractions,
+                        'transport_type': 'beacon'
+                    });
+                }
+            }
+        }
+    });
+});///Animacion de Btn Services con hover para cambio de texto y icono
 
 function changeContent(card) {
     const title = card.querySelector('.card-title');
