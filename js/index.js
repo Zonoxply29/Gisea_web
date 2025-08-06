@@ -1,12 +1,12 @@
 // Agrega un evento de clic al botón con el id 'languageButton'
-document.getElementById('languageButton').addEventListener('click', function() {
+document.getElementById('languageButton').addEventListener('click', function () {
     // Obtiene el icono del dropdown y el menú desplegable
     let dropdownIcon = document.getElementById('dropdownIcon');
     let languageDropdown = document.getElementById('languageDropdown');
-    
+
     // Alterna la visibilidad del menú desplegable
     languageDropdown.classList.toggle('show');
-    
+
     // Alterna la rotación del icono entre 180 grados y 0 grados
     if (dropdownIcon.classList.contains('rotate-180')) {
         dropdownIcon.classList.remove('rotate-180');
@@ -25,10 +25,10 @@ let foreignLanguageInteractions = 0;
 // Función para trackear interacciones en idiomas extranjeros
 function trackForeignLanguageInteraction(interactionType, elementType) {
     const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
-    
+
     if (currentLang === 'ENG' || currentLang === 'JPN') {
         foreignLanguageInteractions++;
-        
+
         gtag('event', 'foreign_language_interaction', {
             'event_category': 'Language_Engagement',
             'event_label': `${currentLang}_${interactionType}`,
@@ -43,20 +43,20 @@ function trackForeignLanguageInteraction(interactionType, elementType) {
 // Función para enviar heartbeat cada 30 segundos cuando está en idioma extranjero
 function startForeignLanguageHeartbeat() {
     const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
-    
+
     if (currentLang === 'ENG' || currentLang === 'JPN') {
         // Evitar múltiples intervals
         if (window.foreignLanguageInterval) {
             clearInterval(window.foreignLanguageInterval);
         }
-        
+
         window.foreignLanguageInterval = setInterval(() => {
             const currentLangCheck = localStorage.getItem('selectedLanguage') || 'SPA';
             if (currentLangCheck === 'ENG' || currentLangCheck === 'JPN') {
                 const startTime = sessionStorage.getItem(`${currentLangCheck}_start_time`);
                 if (startTime) {
                     const currentDuration = Math.round((Date.now() - parseInt(startTime)) / 1000);
-                    
+
                     gtag('event', 'foreign_language_heartbeat', {
                         'event_category': 'Language_Session',
                         'event_label': currentLangCheck,
@@ -65,7 +65,7 @@ function startForeignLanguageHeartbeat() {
                         'interactions_count': foreignLanguageInteractions,
                         'custom_parameter_1': Math.round(currentDuration / 60) // minutos
                     });
-                    
+
                     // Verificar milestones de engagement
                     trackEngagementMilestones();
                 }
@@ -80,13 +80,13 @@ function startForeignLanguageHeartbeat() {
 // Función para crear eventos personalizados de engagement
 function trackEngagementMilestones() {
     const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
-    
+
     if (currentLang === 'ENG' || currentLang === 'JPN') {
         const startTime = sessionStorage.getItem(`${currentLang}_start_time`);
         if (startTime) {
             const currentDuration = Math.round((Date.now() - parseInt(startTime)) / 1000);
             const milestones = [30, 60, 120, 300, 600]; // 30s, 1m, 2m, 5m, 10m
-            
+
             milestones.forEach(milestone => {
                 if (currentDuration >= milestone && !sessionStorage.getItem(`${currentLang}_milestone_${milestone}`)) {
                     gtag('event', 'foreign_language_engagement_milestone', {
@@ -96,7 +96,7 @@ function trackEngagementMilestones() {
                         'milestone_seconds': milestone,
                         'total_interactions': foreignLanguageInteractions
                     });
-                    
+
                     // Marcar milestone como alcanzado
                     sessionStorage.setItem(`${currentLang}_milestone_${milestone}`, 'true');
                 }
@@ -361,18 +361,18 @@ const translations = {
 // Función para cambiar el idioma
 function changeLanguage(lang) {
     const translation = translations[lang];
-    
+
     // Remover clases de idioma anteriores del body
     document.body.classList.remove('lang-spa', 'lang-eng', 'lang-jpn');
-    
+
     // Agregar la clase del idioma actual al body
     document.body.classList.add('lang-' + lang.toLowerCase());
-    
+
     // Actualizar todos los elementos con data-translate
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         let translatedText;
-        
+
         // Manejar traducciones anidadas (como portfolioFilters.all)
         if (key.includes('.')) {
             const keys = key.split('.');
@@ -380,7 +380,7 @@ function changeLanguage(lang) {
         } else {
             translatedText = translation[key];
         }
-        
+
         if (translatedText) {
             if (key === 'navTrabaja') {
                 element.innerHTML = translatedText;
@@ -389,7 +389,7 @@ function changeLanguage(lang) {
             }
         }
     });
-    
+
     // Ajustes específicos para japonés
     if (lang === 'JPN') {
         // Ajustar específicamente elementos problemáticos
@@ -398,13 +398,13 @@ function changeLanguage(lang) {
             aboutSection.style.fontSize = '1.6rem';
             aboutSection.style.lineHeight = '1.4';
         }
-        
+
         // Ajustar títulos de sección
         const sectionTitles = document.querySelectorAll('.section-title h1');
         sectionTitles.forEach(title => {
             title.style.fontSize = '2.5rem';
         });
-        
+
         // Ajustar cards de servicios
         const serviceCards = document.querySelectorAll('.service-card .card-title');
         serviceCards.forEach(card => {
@@ -418,42 +418,42 @@ function changeLanguage(lang) {
             aboutSection.style.fontSize = '';
             aboutSection.style.lineHeight = '';
         }
-        
+
         const sectionTitles = document.querySelectorAll('.section-title h1');
         sectionTitles.forEach(title => {
             title.style.fontSize = '';
         });
-        
+
         const serviceCards = document.querySelectorAll('.service-card .card-title');
         serviceCards.forEach(card => {
             card.style.fontSize = '';
             card.style.lineHeight = '';
         });
     }
-    
+
     // Obtener idioma anterior para tracking
     const previousLang = localStorage.getItem('selectedLanguage') || 'SPA';
-    
+
     // Guardar idioma seleccionado en localStorage
     localStorage.setItem('selectedLanguage', lang);
-    
+
     // Enviar el evento a Google Analytics 4 - Mejorado
     gtag('event', 'language_change', {
         'event_category': 'User_Interaction',
         'event_label': `${previousLang}_to_${lang}`,
         'previous_language': previousLang,
-        'new_language': lang,
+        'custom_language': lang,
         'value': 1
     });
-    
+
     // Tracking especial para idiomas no españoles
     if (lang === 'ENG' || lang === 'JPN') {
         // Marcar el inicio de tiempo para idiomas especiales
         sessionStorage.setItem(`${lang}_start_time`, Date.now());
-        
+
         // Resetear contadores de interacción
         foreignLanguageInteractions = 0;
-        
+
         // Enviar evento de inicio de sesión en idioma extranjero
         gtag('event', 'foreign_language_session_start', {
             'event_category': 'Language_Session',
@@ -461,17 +461,17 @@ function changeLanguage(lang) {
             'custom_language': lang,
             'timestamp': new Date().toISOString()
         });
-        
+
         // Iniciar heartbeat para tracking continuo
         startForeignLanguageHeartbeat();
     }
-    
+
     // Si cambió de un idioma extranjero a español, calcular tiempo de sesión
     if ((previousLang === 'ENG' || previousLang === 'JPN') && lang === 'SPA') {
         const startTime = sessionStorage.getItem(`${previousLang}_start_time`);
         if (startTime) {
             const sessionDuration = Math.round((Date.now() - parseInt(startTime)) / 1000); // en segundos
-            
+
             gtag('event', 'foreign_language_session_end', {
                 'event_category': 'Language_Session',
                 'event_label': previousLang,
@@ -480,7 +480,7 @@ function changeLanguage(lang) {
                 'session_duration_minutes': Math.round(sessionDuration / 60),
                 'value': sessionDuration
             });
-            
+
             // Limpiar el tiempo guardado
             sessionStorage.removeItem(`${previousLang}_start_time`);
         }
@@ -495,7 +495,7 @@ function changeLanguage(lang) {
 }
 
 // Agrega un evento de clic a cada opción del menú desplegable
-document.querySelectorAll('#languageDropdown a').forEach(function(element) {
+document.querySelectorAll('#languageDropdown a').forEach(function (element) {
     element.addEventListener('click', function (event) {
         event.preventDefault(); // Previene el comportamiento por defecto del enlace
 
@@ -523,7 +523,7 @@ document.querySelectorAll('#languageDropdown a').forEach(function(element) {
 });
 
 // Cierra el menú si se hace clic fuera de él
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('#languageButton') && !event.target.matches('#languageButton *')) {
         var dropdowns = document.getElementsByClassName('dropdown-content');
         for (var i = 0; i < dropdowns.length; i++) {
@@ -540,10 +540,10 @@ window.onclick = function(event) {
 }
 
 //ANIMACION DE CERRAR Y ABRIR DE EL MENU DE HAMBURGESA
-document.getElementById('navbar-toggler').addEventListener('click', function() {
+document.getElementById('navbar-toggler').addEventListener('click', function () {
     const hamburgerIcon = document.querySelector('.icon-hamburger');
     const closeIcon = document.querySelector('.icon-close');
-    
+
     hamburgerIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
 });
@@ -558,28 +558,28 @@ function loadSavedLanguage() {
         'ENG': 'icons/bandera_usa.png',
         'JPN': 'icons/bandera_jpn.png'
     };
-    
+
     // Actualizar el botón de idioma
     document.getElementById('selectedLanguage').textContent = savedLanguage;
     document.getElementById('languageIcon').src = flagMap[savedLanguage];
-    
+
     // Aplicar las traducciones y estilos de idioma
     changeLanguage(savedLanguage);
-    
+
     // Si ya está en un idioma extranjero, inicializar tracking si no existe
     if ((savedLanguage === 'ENG' || savedLanguage === 'JPN')) {
         const startTime = sessionStorage.getItem(`${savedLanguage}_start_time`);
         if (!startTime) {
             // Si no hay tiempo de inicio, establecerlo ahora
             sessionStorage.setItem(`${savedLanguage}_start_time`, Date.now());
-            
+
             gtag('event', 'foreign_language_page_load', {
                 'event_category': 'Language_Session',
                 'event_label': savedLanguage,
                 'custom_language': savedLanguage,
                 'load_type': 'page_refresh'
             });
-            
+
             // Iniciar heartbeat
             startForeignLanguageHeartbeat();
         }
@@ -589,7 +589,7 @@ function loadSavedLanguage() {
 document.addEventListener('DOMContentLoaded', () => {
     // Cargar idioma guardado
     loadSavedLanguage();
-    
+
     // Agregar eventos a los enlaces del dropdown de idiomas
     document.querySelectorAll('#languageDropdown a').forEach(button => {
         button.addEventListener('click', (event) => {
@@ -598,7 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault(); // Evitar la recarga de la página al hacer clic en el enlace
         });
     });
-    
+
     // Funcionalidad de las cards
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('mouseenter', () => {
@@ -610,7 +610,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trackForeignLanguageInteraction('click', 'service_card');
         });
     });
-    
+
     // Trackear clics en navegación
     document.querySelectorAll('.navbar-nav a, .footer a').forEach(link => {
         link.addEventListener('click', () => {
@@ -618,7 +618,7 @@ document.addEventListener('DOMContentLoaded', () => {
             trackForeignLanguageInteraction('navigation_click', linkText);
         });
     });
-    
+
     // Trackear scroll para medir engagement
     let scrollTimeout;
     window.addEventListener('scroll', () => {
@@ -630,34 +630,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 150);
     });
-    
+
     // Detectar tiempo en página cuando se va a cerrar/cambiar
     window.addEventListener('beforeunload', () => {
         const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
         if (currentLang === 'ENG' || currentLang === 'JPN') {
             const startTime = sessionStorage.getItem(`${currentLang}_start_time`);
             if (startTime) {
-                const sessionDuration = Math.round((Date.now() - parseInt(startTime)) / 1000);
-                
-                // Usar sendBeacon para envío confiable al cerrar página
-                if (navigator.sendBeacon) {
-                    const data = JSON.stringify({
-                        event: 'foreign_language_session_end',
-                        language: currentLang,
-                        duration: sessionDuration,
-                        interactions: foreignLanguageInteractions
-                    });
-                    navigator.sendBeacon('/analytics', data);
-                } else {
-                    gtag('event', 'foreign_language_session_end', {
-                        'event_category': 'Language_Session',
-                        'event_label': currentLang,
-                        'custom_language': currentLang,
-                        'session_duration_seconds': sessionDuration,
-                        'total_interactions': foreignLanguageInteractions,
-                        'transport_type': 'beacon'
-                    });
-                }
+                gtag('event', 'foreign_language_session_end', {
+                    'event_category': 'Language_Session',
+                    'event_label': currentLang,
+                    'custom_language': currentLang,
+                    'session_duration_seconds': sessionDuration,
+                    'session_duration_minutes': Math.round(sessionDuration / 60),
+                    'total_interactions': foreignLanguageInteractions,
+                    'transport_type': 'beacon'
+                });
             }
         }
     });
@@ -705,7 +693,7 @@ function resetContent(card) {
 // Tooltip para cards
 function showTooltip(card) {
     // Remueve la clase 'selected' de todas las tarjetas
-    document.querySelectorAll('.tech-card').forEach(function(el) {
+    document.querySelectorAll('.tech-card').forEach(function (el) {
         el.classList.remove('selected');
     });
 
@@ -714,12 +702,12 @@ function showTooltip(card) {
 }
 
 // Evento para detectar clic fuera de las tarjetas
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function (event) {
     const isClickInside = event.target.closest('.tech-card');
 
     if (!isClickInside) {
         // Remueve la clase 'selected' de todas las tarjetas si el clic es fuera de una tarjeta
-        document.querySelectorAll('.tech-card').forEach(function(el) {
+        document.querySelectorAll('.tech-card').forEach(function (el) {
             el.classList.remove('selected');
         });
     }
@@ -736,29 +724,29 @@ document.addEventListener('DOMContentLoaded', function () {
 function animateOnScroll(selector, flagSelector) {
     const target = document.querySelector(selector);
     if (!target) return;
-  
+
     const flags = target.querySelectorAll(flagSelector);
-  
+
     const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          target.classList.add("active");
-          flags.forEach(flag => {
-            flag.classList.remove("animate__animated");
-            void flag.offsetWidth;
-            flag.classList.add("animate__animated", flag.dataset.animation);
-          });
-        } else {
-          target.classList.remove("active");
-        }
-      });
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                target.classList.add("active");
+                flags.forEach(flag => {
+                    flag.classList.remove("animate__animated");
+                    void flag.offsetWidth;
+                    flag.classList.add("animate__animated", flag.dataset.animation);
+                });
+            } else {
+                target.classList.remove("active");
+            }
+        });
     }, { threshold: 0.5 });
-  
+
     observer.observe(target);
-  }
-  
-  document.addEventListener("DOMContentLoaded", function () {
+}
+
+document.addEventListener("DOMContentLoaded", function () {
     animateOnScroll(".country-hover", ".flag");
     animateOnScroll(".idioma-hover", ".idioma-flag");
     animateOnScroll(".clientes-hover", ".flag")
-  });
+});
