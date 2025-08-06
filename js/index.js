@@ -34,7 +34,7 @@ function trackForeignLanguageInteraction(interactionType, elementType) {
             'event_label': `${currentLang}_${interactionType}`,
             'interaction_type': interactionType,
             'element_type': elementType,
-            'language': currentLang,
+            'custom_language': currentLang,
             'total_interactions': foreignLanguageInteractions
         });
     }
@@ -60,7 +60,7 @@ function startForeignLanguageHeartbeat() {
                     gtag('event', 'foreign_language_heartbeat', {
                         'event_category': 'Language_Session',
                         'event_label': currentLangCheck,
-                        'language': currentLangCheck,
+                        'custom_language': currentLangCheck,
                         'session_duration_seconds': currentDuration,
                         'interactions_count': foreignLanguageInteractions,
                         'custom_parameter_1': Math.round(currentDuration / 60) // minutos
@@ -92,7 +92,7 @@ function trackEngagementMilestones() {
                     gtag('event', 'foreign_language_engagement_milestone', {
                         'event_category': 'Language_Engagement',
                         'event_label': `${currentLang}_${milestone}s`,
-                        'language': currentLang,
+                        'custom_language': currentLang,
                         'milestone_seconds': milestone,
                         'total_interactions': foreignLanguageInteractions
                     });
@@ -458,7 +458,7 @@ function changeLanguage(lang) {
         gtag('event', 'foreign_language_session_start', {
             'event_category': 'Language_Session',
             'event_label': lang,
-            'language': lang,
+            'custom_language': lang,
             'timestamp': new Date().toISOString()
         });
         
@@ -475,7 +475,7 @@ function changeLanguage(lang) {
             gtag('event', 'foreign_language_session_end', {
                 'event_category': 'Language_Session',
                 'event_label': previousLang,
-                'language': previousLang,
+                'custom_language': previousLang,
                 'session_duration_seconds': sessionDuration,
                 'session_duration_minutes': Math.round(sessionDuration / 60),
                 'value': sessionDuration
@@ -576,7 +576,7 @@ function loadSavedLanguage() {
             gtag('event', 'foreign_language_page_load', {
                 'event_category': 'Language_Session',
                 'event_label': savedLanguage,
-                'language': savedLanguage,
+                'custom_language': savedLanguage,
                 'load_type': 'page_refresh'
             });
             
@@ -652,7 +652,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     gtag('event', 'foreign_language_session_end', {
                         'event_category': 'Language_Session',
                         'event_label': currentLang,
-                        'language': currentLang,
+                        'custom_language': currentLang,
                         'session_duration_seconds': sessionDuration,
                         'total_interactions': foreignLanguageInteractions,
                         'transport_type': 'beacon'
