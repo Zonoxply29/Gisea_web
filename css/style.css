@@ -1450,9 +1450,6 @@ li:not(.d-flex) .icon-check-info{
     font-size: 3rem;
 }
 
-#empresas-medianas .price{
-    padding: 5px;
-}
 /* CARD DE EMPRESAS GRANDES O CORPORATIVOS */
 li:not(.d-flex) .icon-check-empgrandes{
     width: 40px; 
