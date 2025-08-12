@@ -22,36 +22,42 @@
 </head>
 <style>
     @keyframes rotateIn {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(180deg);
-    }
-}
+        0% {
+            transform: rotate(0deg);
+        }
 
-@keyframes rotateOut {
-    0% {
-        transform: rotate(180deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
+        50% {
+            transform: rotate(180deg);
+        }
 
-.rotate-180 {
-    animation: rotateIn 0.5s ease-in-out forwards !important;
-}
-.rotate-0 {
-    animation: rotateOut 0.5s ease-in-out forwards !important;
-}
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes rotateOut {
+        0% {
+            transform: rotate(180deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .rotate-180 {
+        animation: rotateIn 0.5s ease-in-out forwards !important;
+    }
+
+    .rotate-0 {
+        animation: rotateOut 0.5s ease-in-out forwards !important;
+    }
 </style>
+
 <body>
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg estilos-navbar">
@@ -87,9 +93,12 @@
                                 Servicios
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="service_desarollo_web.html" data-translate="dropdownDesarrollo">Desarollo Web</a></li>
-                                <li><a class="dropdown-item" href="#" data-translate="dropdownRecursos">Recursos Humanos</a></li>
-                                <li><a class="dropdown-item" href="#" data-translate="dropdownCapacitacion">Capacitacion IT</a></li>
+                                <li><a class="dropdown-item" href="service_desarollo_web.html"
+                                        data-translate="dropdownDesarrollo">Desarollo Web</a></li>
+                                <li><a class="dropdown-item" href="#" data-translate="dropdownRecursos">Recursos
+                                        Humanos</a></li>
+                                <li><a class="dropdown-item" href="#" data-translate="dropdownCapacitacion">Capacitacion
+                                        IT</a></li>
                                 <li></li>
                             </ul>
                         </li>
@@ -97,7 +106,7 @@
                             <a class="nav-link" href="#" data-translate="navContacto">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-translate="navTrabaja">Trabaja con  <br> Nosotros</a>
+                            <a class="nav-link" href="#" data-translate="navTrabaja">Trabaja con <br> Nosotros</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-translate="navBlog">BLOG</a>
@@ -135,10 +144,11 @@
                                     <a href="" alt="instagram" class="red-social instagram">
                                         <i class="fa-brands fa-instagram fa-xl"></i>
                                     </a>
-                                    <a href="" alt="linkedin" class="red-social linkedin">
+                                    <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank"
+                                        alt="linkedin" class="red-social linkedin">
                                         <i class="fa-brands fa-linkedin fa-xl"></i>
                                     </a>
-                                    <a href="" alt="facebook" class="red-social facebook">
+                                    <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook" class="red-social facebook">
                                         <i class="fa-brands fa-facebook fa-xl"></i>
                                     </a>
                                 </div>
@@ -169,14 +179,18 @@
             <div class="text-left">
                 <h1 data-translate="serviceHeaderTitle">DESAROLLO WEB</h1>
                 <p data-translate="serviceHeaderSubtitle">Contamos con paquetes desde:</p>
-                <h2 data-translate="serviceHeaderPrice">$10,000 MXN</h2>
+                <h2 data-translate="serviceHeaderPrice">$3,000 MXN</h2>
             </div>
             <div class="text-right">
                 <ul>
-                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit1">Solución a tu medida y presupuesto</span></li>
-                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit2">Incrementa tu presencia en Internet</span></li>
-                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit3">Conoce tus estadísticas y alcance de tu sitio</span></li>
-                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit4">Eleva tu marca al siguiente nivel</span></li>
+                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit1">Solución a tu
+                            medida y presupuesto</span></li>
+                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit2">Incrementa tu
+                            presencia en Internet</span></li>
+                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit3">Conoce tus
+                            estadísticas y alcance de tu sitio</span></li>
+                    <li><i class="fa-solid fa-check"></i><span data-translate="serviceHeaderBenefit4">Eleva tu marca al
+                            siguiente nivel</span></li>
                 </ul>
             </div>
         </div>
@@ -194,23 +208,25 @@
                     <div class="pricing-card" id="negocios-pequeños">
                         <img src="img/web-service/negocios_pequenos.png" alt="Paquete Negocios Pequeños">
                         <h2 data-translate="packageSmallBusinessTitle">NEGOCIOS PEQUEÑOS</h2>
-                        <div class="price" data-translate="packageSmallBusinessPrice">DESDE $10,000 MXN</div>
+                        <div class="price" data-translate="packageSmallBusinessPrice">DESDE $3,000 MXN</div>
                         <ul>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureHosting">Hospedaje por 2 AÑOS</span>
+                                    <span data-translate="packageFeatureHosting">Hospedaje por 3 AÑOS</span>
                                 </div>
                                 <img src="icons/check_icon.svg" alt="" class="icon-check-hospedaje">
                             </li>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureMultilingual">Sin Sitio <br> Multibilingüe Simple</span>
+                                    <span data-translate="packageFeatureMultilingual">Sin Sitio <br> Multibilingüe
+                                        Simple</span>
                                 </div>
                                 <img src="icons/ban_icon.svg" alt="" class="icon-check-multibilingue">
                             </li>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureModernPlatform">Plataforma Moderna <br> y Funcional</span>
+                                    <span data-translate="packageFeatureModernPlatform">Plataforma Moderna <br> y
+                                        Funcional</span>
                                 </div>
                                 <img src="icons/check_icon.svg" class="icon-check-mdnpequeña">
                             </li>
@@ -225,7 +241,7 @@
                                 </li>
                             </ul>
                         </div>
-                         <div class="btn-centro">
+                        <div class="btn-centro">
                             <a href="#" class="cta-button" data-translate="packageMoreInfoBtn">Más Información!</a>
                         </div>
                     </div>
@@ -235,34 +251,39 @@
                     <div class="pricing-card" id="empresas-medianas">
                         <img src="img/web-service/empresas_medianas.png" alt="Paquete Empresas Medianas">
                         <h2 data-translate="packageMediumBusinessTitle">EMPRESAS MEDIANAS</h2>
-                        <div class="price" data-translate="packageMediumBusinessPrice">DESDE $20,000 a $40,000 MXN</div>
+                        <div class="price" data-translate="packageMediumBusinessPrice">DESDE $6,000 MXN</div>
                         <ul>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureHosting">Hospedaje por 2 AÑOS</span>
+                                    <span data-translate="packageFeatureHosting">Hospedaje por 3 AÑOS</span>
                                 </div>
                                 <img src="icons/check_icon.svg" alt="" class="icon-check-hospedaje">
                             </li>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureModernPlatform">Plataforma Moderna <br> y Funcional</span>
+                                    <span data-translate="packageFeatureModernPlatform">Plataforma Moderna <br> y
+                                        Funcional</span>
                                 </div>
                                 <img src="icons/check_icon.svg" class="icon-check-mdnfuncional">
                             </li>
                             <li class="alinear-texto d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureMultilingual">Sin Sitio <br> Multilingüe Simple</span>
+                                    <span data-translate="packageFeatureMultilingual">Sin Sitio <br> Multilingüe
+                                        Simple</span>
                                 </div>
-                                <img src="icons/info_icon.svg" class="icon-check" data-bs-toggle="tooltip" title="Costo Extra">
+                                <img src="icons/info_icon.svg" class="icon-check" data-bs-toggle="tooltip"
+                                    title="Costo Extra">
                             </li>
                         </ul>
                         <div class="separator-container">
                             <ul>
                                 <li class="d-flex align-items-center justify-content-between">
                                     <div class="feature-text-container">
-                                        <span data-translate="packageFeatureFourToEightPages">Sitio de 4 a 8 Páginas</span>
+                                        <span data-translate="packageFeatureFourToEightPages">Sitio de 4 a 8
+                                            Páginas</span>
                                     </div>
-                                    <img src="icons/info_icon.svg" alt="" class="icon-check-info" data-bs-toggle="tooltip" title="+8 páginas costo extra">
+                                    <img src="icons/info_icon.svg" alt="" class="icon-check-info"
+                                        data-bs-toggle="tooltip" title="+8 páginas costo extra">
                                 </li>
                             </ul>
                         </div>
@@ -277,34 +298,39 @@
                     <div class="pricing-card" id="empresas-grandes">
                         <img src="img/web-service/empresas_grandes_corporativos.png" alt="Paquete Empresas Grandes">
                         <h2 data-translate="packageLargeBusinessTitle">EMPRESAS GRANDES O CORPORATIVOS</h2>
-                        <div class="price" data-translate="packageLargeBusinessPrice">DESDE $50,000 a $140,000 MXN</div>
+                        <div class="price" data-translate="packageLargeBusinessPrice">DESDE $9,999 MXN</div>
                         <ul>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureHosting">Hospedaje por 2 AÑOS</span>
+                                    <span data-translate="packageFeatureHosting">Hospedaje por 3 AÑOS</span>
                                 </div>
                                 <img src="icons/check_icon.svg" alt="" class="icon-check-hospedaje">
                             </li>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureModernPlatform">Plataforma Moderna y Funcional</span>
+                                    <span data-translate="packageFeatureModernPlatform">Plataforma Moderna y
+                                        Funcional</span>
                                 </div>
                                 <img src="icons/check_icon.svg" alt="" class="icon-check-empgrandes">
                             </li>
                             <li class="d-flex align-items-center justify-content-between">
                                 <div class="feature-text-container">
-                                    <span data-translate="packageFeatureMultilingual">Sin Sitio <br> Multilingüe Simple</span>
+                                    <span data-translate="packageFeatureMultilingual">Sin Sitio <br> Multilingüe
+                                        Simple</span>
                                 </div>
-                                <img src="icons/info_icon.svg" class="icon-check-empgrandes-bilingue" data-bs-toggle="tooltip" title="Costo Extra">
+                                <img src="icons/info_icon.svg" class="icon-check-empgrandes-bilingue"
+                                    data-bs-toggle="tooltip" title="Costo Extra">
                             </li>
                         </ul>
                         <div class="separator-container">
                             <ul>
                                 <li class="d-flex align-items-center justify-content-between">
                                     <div class="feature-text-container">
-                                        <span data-translate="packageFeatureMoreThanEightPages">Más de 8 Páginas <br>en el Sitio</span>
+                                        <span data-translate="packageFeatureMoreThanEightPages">Más de 8 Páginas <br>en
+                                            el Sitio</span>
                                     </div>
-                                    <img src="icons/info_icon.svg" alt="" class="icon-check-empgrnd" data-bs-toggle="tooltip" title="Personalizacion Extra">
+                                    <img src="icons/info_icon.svg" alt="" class="icon-check-empgrnd"
+                                        data-bs-toggle="tooltip" title="Personalizacion Extra">
                                 </li>
                             </ul>
                         </div>
@@ -357,7 +383,7 @@
                 <div class="portafolio-title clientes-hover">
                     <div class="number">
                         <h2>9</h2>
-                        <img src="icons/bandera_usa.png" class="flag flag-usa animate__animated"/>
+                        <img src="icons/bandera_usa.png" class="flag flag-usa animate__animated" />
                         <img src="icons/bandera_venezuela.png" class="flag flag-venezuela animate__animated" />
                         <img src="icons/bandera_mex.png" class="flag flag-mexico animate__animated" />
                         <img src="icons/bandera_jpn.png" class="flag flag-japan animate__animated" />
@@ -394,8 +420,8 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-barberia">
                     <img src="img/portafolio-img/barberia_shop.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="barber_shop/index.html" class="a-color"
-                                data-bs-toggle="tooltip" title="Haz clic para conocer el sitio" target="_blank">Barbershop</a></h4>
+                        <h4><a href="barber_shop/index.html" class="a-color" data-bs-toggle="tooltip"
+                                title="Haz clic para conocer el sitio" target="_blank">Barbershop</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/barberia_shop.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -409,8 +435,8 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-seguridad">
                     <img src="img/portafolio-img/eco_seguridad.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="eco_5_0/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">ECO 5-0</a>
+                        <h4><a href="eco_5_0/index.html" data-bs-toggle="tooltip" title="Haz clic para conocer el sitio"
+                                class="a-color" target="_blank">ECO 5-0</a>
                             <h4>
                                 <div class="portfolio-icons">
                                     <a href="img/portafolio-img/eco_seguridad.png" class="glightbox preview-link"><i
@@ -426,8 +452,8 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arquitectura">
                     <img src="img/portafolio-img/arcade_arquitectura.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="arcade/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Arcade Arquitectura</a>
+                        <h4><a href="arcade/index.html" data-bs-toggle="tooltip" title="Haz clic para conocer el sitio"
+                                class="a-color" target="_blank">Arcade Arquitectura</a>
                             <h4>
                                 <div class="portfolio-icons">
                                     <a href="img/portafolio-img/arcade_arquitectura.png"
@@ -444,7 +470,8 @@
                     <img src="img/portafolio-img/arclabs_arquitectura.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="arclabs_arquitectura/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Arclabs Arquitectura</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Arclabs
+                                Arquitectura</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/arclabs_arquitectura.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -459,7 +486,8 @@
                     <img src="img/portafolio-img/barberia_gisea.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="gisea_haircare/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Haircare</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea
+                                Haircare</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/barberia_gisea.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -473,8 +501,8 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-arquitectura">
                     <img src="img/portafolio-img/gisea_arquitectura.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="kd/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Arquitectura</a></h4>
+                        <h4><a href="kd/index.html" data-bs-toggle="tooltip" title="Haz clic para conocer el sitio"
+                                class="a-color" target="_blank">Gisea Arquitectura</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/gisea_arquitectura.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -489,7 +517,8 @@
                     <img src="img/portafolio-img/caviar_restaurante.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="restaurante_caviar/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Caviar</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Caviar</a>
+                        </h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/caviar_restaurante.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -504,7 +533,8 @@
                     <img src="img/portafolio-img/alotan_barberia.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="alotan_barber_shop/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Alotan Barber Shop</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Alotan Barber
+                                Shop</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/alotan_barberia.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -518,15 +548,14 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-restaurantes">
                     <img src="img/portafolio-img/taste_restaurante.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="taste/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Taste Restaurante</a></h4>
-                                <div class="portfolio-icons">
-                                    <a href="img/portafolio-img/taste_restaurante.png" class="glightbox preview-link"><i
-                                            class="bi bi-zoom-in"></i></a>
-                                    <a href="portfolio-details.html" class="dsetails-link"><i
-                                            class="bi bi-link-45deg"></i>
-                                    </a>
-                                </div>
+                        <h4><a href="taste/index.html" data-bs-toggle="tooltip" title="Haz clic para conocer el sitio"
+                                class="a-color" target="_blank">Taste Restaurante</a></h4>
+                        <div class="portfolio-icons">
+                            <a href="img/portafolio-img/taste_restaurante.png" class="glightbox preview-link"><i
+                                    class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" class="dsetails-link"><i class="bi bi-link-45deg"></i>
+                            </a>
+                        </div>
                     </div>
                 </div><!-- End Portfolio Item -->
 
@@ -535,7 +564,8 @@
                     <img src="img/portafolio-img/pato_restaurante.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="pato_restaurante/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Pato Restaurante</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Pato
+                                Restaurante</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/pato_restaurante.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -550,7 +580,8 @@
                     <img src="img/portafolio-img/judge_abogados.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="gisea_judge_abogados/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Judge</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Judge</a>
+                        </h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/judge_abogados.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -563,8 +594,8 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-abogados">
                     <img src="img/portafolio-img/justice_abogados.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
-                        <h4><a href="justice/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Justice Abogados</a></h4>
+                        <h4><a href="justice/index.html" data-bs-toggle="tooltip" title="Haz clic para conocer el sitio"
+                                class="a-color" target="_blank">Justice Abogados</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/justice_abogados.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -579,7 +610,8 @@
                     <img src="img/portafolio-img/klinik_doctores.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="klinik_doctores/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Klinik Doctores</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Klinik
+                                Doctores</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/klinik_doctores.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -594,7 +626,8 @@
                     <img src="img/portafolio-img/gisea_dentist.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="gisea_dentistas/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Dentist</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Dentist</a>
+                        </h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/gisea_dentist.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -604,12 +637,13 @@
                     </div>
                 </div><!-- End Portfolio Item -->
 
-                 <!--Doctores Items-->
-                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doctores">
+                <!--Doctores Items-->
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doctores">
                     <img src="img/portafolio-img/gisea_clinica_dental.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="gisea_dental_clinica/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Clinica Dental</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Clinica
+                                Dental</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/klinik_doctores.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -624,7 +658,8 @@
                     <img src="img/portafolio-img/neurologo_juan_perez.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="gisea_doctor/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Neurologo Juan Perez</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Neurologo Juan
+                                Perez</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/neurologo_juan_perez.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -633,13 +668,14 @@
                         </div>
                     </div>
                 </div><!-- End Portfolio Item -->
-                
+
                 <!--Doctores Items-->
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-doctores">
                     <img src="img/portafolio-img/sitio_web_psicologa.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="sitio_web_psicologa/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Asesorias Psicologica</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Asesorias
+                                Psicologica</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/sitio_web_psicologa.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -649,12 +685,13 @@
                     </div>
                 </div><!-- End Portfolio Item -->
 
-                 <!--Automotriz Items-->
-                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <!--Automotriz Items-->
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
                     <img src="img/portafolio-img/gisea_car_care.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="gisea_hojalateria_pintura/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Car Care</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Car
+                                Care</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/gisea_car_care.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -663,12 +700,13 @@
                         </div>
                     </div>
                 </div><!-- End Portfolio Item -->
-                 <!--Automotriz Items-->
-                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
+                <!--Automotriz Items-->
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-auto">
                     <img src="img/portafolio-img/gisea_hojalateria_pintura.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="gisea_pintura/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Hojalateria & Pintura</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Gisea Hojalateria
+                                & Pintura</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/gisea_hojalateria_pintura.png" class="glightbox preview-link"><i
                                     class="bi bi-zoom-in"></i></a>
@@ -679,11 +717,12 @@
                 </div><!-- End Portfolio Item -->
 
                 <!--Belleza Item- PORTAFOLIO DE LIA GARRIDO-->
-                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-barberia">
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-barberia">
                     <img src="img/portafolio-img/influencer_portafolio.png" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4><a href="influncer_portafolio/index.html" data-bs-toggle="tooltip"
-                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Web Oficial Lia Garrido</a></h4>
+                                title="Haz clic para conocer el sitio" class="a-color" target="_blank">Web Oficial Lia
+                                Garrido</a></h4>
                         <div class="portfolio-icons">
                             <a href="img/portafolio-img/influencer_portafolio.png" class="glightbox preview-link">
                                 <i class="bi bi-zoom-in"></i></a>
@@ -693,7 +732,7 @@
                         </div>
                     </div>
                 </div><!-- End Portfolio Item -->
-        </div>
+            </div>
 
     </section><!-- /Portfolio Section -->
     <section>
@@ -718,10 +757,12 @@
                         <a href="" alt="instagram" class="red-social-footer">
                             <i class="fa-brands fa-instagram fa-xl"></i>
                         </a>
-                        <a href="" alt="linkedin" class="red-social-footer">
+                        <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank" alt="linkedin"
+                            class="red-social-footer">
                             <i class="fa-brands fa-linkedin fa-xl"></i>
                         </a>
-                        <a href="" alt="facebook" class="red-social-footer">
+                        <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook"
+                            class="red-social-footer">
                             <i class="fa-brands fa-facebook fa-xl"></i>
                         </a>
                     </div>
