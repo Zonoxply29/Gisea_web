@@ -129,6 +129,14 @@ const translations = {
         cardRecursos: "Recursos Humanos",
         cardCapacitacion: "Capacitación IT",
         cardMasInfo: "Mas Informacion",
+        // Carousel
+        carouselGiseaSubtitle: '"Hacemos Realidad tus Proyectos"',
+        carouselWebDevTitle: "Desarollo web",
+        carouselWebDevSubtitle: '"Creamos el sitio para tu compañia"',
+        carouselTrainingTitle: "Capacitacion it",
+        carouselTrainingSubtitle: '"Crece tus Habilidades y Conviértete en un Profesional"',
+        carouselHRTitle: "Recursos Humanos",
+        carouselHRSubtitle: '"Encontramos el Talento Perfecto para tu Empresa"',
         // About page específicos
         aboutHeaderTitle1: "Sobre Nosotros",
         aboutHeaderTitle2: "Conoce nuestro stack de Tecnologias",
@@ -215,6 +223,14 @@ const translations = {
         cardRecursos: "Human Resources",
         cardCapacitacion: "IT Training",
         cardMasInfo: "More Information",
+        // Carousel
+        carouselGiseaSubtitle: '"We Make Your Projects Reality"',
+        carouselWebDevTitle: "Web Development",
+        carouselWebDevSubtitle: '"We Create the Website for Your Company"',
+        carouselTrainingTitle: "IT Training",
+        carouselTrainingSubtitle: '"Grow Your Skills and Become a Professional"',
+        carouselHRTitle: "Human Resources",
+        carouselHRSubtitle: '"We Find the Perfect Talent for Your Company"',
         // About page específicos
         aboutHeaderTitle1: "About Us",
         aboutHeaderTitle2: "Discover our Technology Stack",
@@ -301,6 +317,14 @@ const translations = {
         cardRecursos: "人材",
         cardCapacitacion: "IT 研修",
         cardMasInfo: "詳細情報",
+        // Carousel
+        carouselGiseaSubtitle: "「あなたのプロジェクトを現実にします」",
+        carouselWebDevTitle: "ウェブ開発",
+        carouselWebDevSubtitle: "「あなたの会社のサイトを作成します」",
+        carouselTrainingTitle: "IT研修",
+        carouselTrainingSubtitle: "「スキルを伸ばしてプロフェッショナルになりましょう」",
+        carouselHRTitle: "人材",
+        carouselHRSubtitle: "「あなたの会社にぴったりの人材を見つけます」",
         // About page específicos
         aboutHeaderTitle1: "私たちについて",
         aboutHeaderTitle2: "技術スタックを発見",
