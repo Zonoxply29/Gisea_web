@@ -268,6 +268,342 @@ body.dark-mode #toggle-dark-mode {
     height: 25px;
 }
 /*--FIN BOTON CAMBIO DE IDIOMA---*/
+/*-----CAROUSEL INICIO ------*/
+.carousel {
+    height: 100vh; 
+    min-height: 400px;
+    overflow: hidden; 
+}
+
+.carousel-inner {
+    height: 100%; 
+}
+
+.carousel-item {
+    position: relative;
+    height: 100%; 
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    margin-top: 8vh;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+}
+
+.logo-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+h2 {
+    margin-top: 10px; 
+    font-size: 5rem; 
+}
+
+/* Estilos para el overlay de texto del slider de desarrollo web */
+.carousel-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    width: 90%;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.web-dev-title {
+    font-family: "Revamped";
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+.golden-line {
+    width: 40vh;
+    height: 6px;
+    background: #C49C3C;
+    margin: 0 auto 30px auto;
+    border-radius: 3px;
+}
+
+.web-dev-subtitle {
+    font-family: "Racing_Hard", sans-serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+}
+
+/* Estilos para el overlay de texto del slider de GISEA */
+.gisea-logo-container {
+    margin-bottom: 30px;
+}
+
+.gisea-logo-slide {
+    width: 150px !important;
+    height: auto !important;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.7));
+}
+
+.gisea-title {
+    font-family:"Revamped";
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 9px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+}
+
+.gisea-subtitle {
+    font-family: "Racing_Hard", sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+}
+
+/* Estilos para el overlay de texto del slider de Developer Training */
+.developer-training-title {
+    font-family: "Revamped";
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+.developer-training-subtitle {
+    font-family: "Racing_Hard", sans-serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+}
+
+/* Estilos para el overlay de texto del slider de Human Resources */
+.human-resources-title {
+    font-family: "Revamped";
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+.human-resources-subtitle {
+    font-family: "Racing_Hard", sans-serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .carousel {
+        height: 60vh; 
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    .logo-shadow {
+        max-width: 120px; 
+    }
+    
+    /* Responsive para GISEA slider - tablet */
+    .gisea-logo-container {
+        margin-bottom: 20px;
+    }
+    
+    .gisea-logo-slide {
+        width: 80px;
+    }
+    
+    .gisea-title {
+        font-size: 3rem;
+        margin: 15px 0;
+        letter-spacing: 2px;
+    }
+    
+    .gisea-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .web-dev-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .golden-line {
+        width: 150px;
+        height: 4px;
+        margin-bottom: 20px;
+    }
+    
+    .web-dev-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    /* Responsive para Developer Training slider */
+    .developer-training-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    
+    .developer-training-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    /* Responsive para Human Resources slider */
+    .human-resources-title {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+    
+    .human-resources-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 60vh; 
+    }
+    
+    /* Responsive para GISEA slider - móvil */
+    .gisea-logo-container {
+        margin-bottom: 10px;
+    }
+    
+    .gisea-logo-slide {
+        width: 80px !important;
+        height: auto !important;
+    }
+    
+    .gisea-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin: 10px 0;
+    }
+    
+    .gisea-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .web-dev-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .golden-line {
+        width: 120px;
+        height: 3px;
+    }
+    
+    .web-dev-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    /* Responsive para Developer Training slider - móvil */
+    .developer-training-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .developer-training-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    /* Responsive para Human Resources slider - móvil */
+    .human-resources-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .human-resources-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Media query para dispositivos muy pequeños */
+@media (max-width: 360px) {
+    .carousel {
+        height: 50vh;
+    }
+    
+    .carousel-text-overlay {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    /* GISEA slider - dispositivos muy pequeños */
+    .gisea-logo-slide {
+        width: 80px !important;
+        height: auto !important;
+    }
+    
+    .gisea-title {
+        font-size: 1.5rem;
+        margin: 5px 0;
+    }
+    
+    .gisea-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Otros sliders - dispositivos muy pequeños */
+    .web-dev-title,
+    .developer-training-title,
+    .human-resources-title {
+        font-size: 1.5rem;
+    }
+    
+    .web-dev-subtitle,
+    .developer-training-subtitle,
+    .human-resources-subtitle {
+        font-size: 1rem;
+    }
+    
+    .golden-line {
+        width: 100px;
+        height: 2px;
+    }
+}
 
 /*----ESTILOS ABOUT US INDEX------*/
 div.container-lg{
@@ -442,6 +778,37 @@ div.section-title{
 
 .footer-contact{
     margin-bottom: 10px;
+}
+
+/* Estilos para el botón de WhatsApp en el footer */
+.whatsapp-contact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #25D366 !important;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 25px;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-contact:hover {
+    background: rgba(37, 211, 102, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+    color: #128C7E !important;
+}
+
+.whatsapp-contact i {
+    font-size: 1.2rem;
+}
+
+.whatsapp-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: inherit;
 }
 
 .footer-links {
@@ -1717,29 +2084,29 @@ li:not(.d-flex) .icon-check-empgrnd{
 }
 
 .clientes-hover.active .flag-usa {
-    top: 36px;
-    left: 151px;
+    top: 45px;
+    left: 159px;
     opacity: 1;
     animation: animate__slideInDown 0.6s ease-in-out;
 }
 
 .clientes-hover.active .flag-venezuela {
-    top: 81px;
-    left: 173px;
+    top: 91px;
+    left: 180px;
     opacity: 1;
     animation: animate__slideInLeft 0.7s ease-in-out;
 }
 
 .clientes-hover.active .flag-mexico {
-    left: -12px;
-    top: 38px;
+    left: -17px;
+    top: 49px;
     opacity: 1;
     animation: animate__slideInUp 0.8s ease-in-out;
 }
 
 .clientes-hover.active .flag-japan {
     bottom: 0;
-    top: 80px;
+    top: 92px;
     left: -34px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
@@ -1747,36 +2114,43 @@ li:not(.d-flex) .icon-check-empgrnd{
 
 .clientes-hover.active .flag-esp {
     bottom: 0;
-    top: -8px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
 .clientes-hover.active .flag-arg {
     bottom: 0;
-    top: -45px;
-    left: 38px;
+    top: -38px;
+    left: 28px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
 .clientes-hover.active .flag-brazil {
     bottom: 0;
     top: -84px;
-    left: 71px;
+    left: 46px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
 .clientes-hover.active .flag-australia {
     bottom: 0;
-    top: -4px;
-    left: 128px;
+    top: 2px;
+    left: 135px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
 .clientes-hover.active .flag-italia {
     bottom: 0;
-    top: -44px;
-    left: 102px;
+    top: -39px;
+    left: 109px;
+    opacity: 1;
+    animation: animate__slideInRight 0.6s ease-in-out;
+}
+.clientes-hover.active .flag-canada {
+    bottom: 0;
+    top: -85px;
+    left: 90px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
@@ -2206,6 +2580,20 @@ li:not(.d-flex) .icon-check-empgrnd{
         margin-bottom: 0;
         padding-right: 0;
         padding-left: 0;
+    }
+    
+    /* Responsivo para WhatsApp en móviles */
+    .whatsapp-contact {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .whatsapp-contact i {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-text {
+        font-size: 0.8rem;
     }
     .footer-links {
         align-items: center;
@@ -2988,6 +3376,22 @@ body.dark-mode a.red-social-footer {
   color: #C49C3C;
 }
 
+/* Estilos para WhatsApp en modo oscuro */
+body.dark-mode .whatsapp-contact {
+  color: #25D366 !important;
+  background: rgba(37, 211, 102, 0.15);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+}
+
+body.dark-mode .whatsapp-contact:hover {
+  background: rgba(37, 211, 102, 0.25);
+  color: #34E877 !important;
+}
+
+body.dark-mode .whatsapp-text {
+  color: #25D366 !important;
+}
+
 /* Estilos generales para texto blanco en modo oscuro */
 body.dark-mode,
 body.dark-mode * {
@@ -3232,4 +3636,65 @@ body.dark-mode .portfolio-icons a:hover {
 body.dark-mode .portfolio-icons .bi-zoom-in,
 body.dark-mode .portfolio-icons .bi-link-45deg {
   color: #000000 !important;
+}
+
+/* Estilos específicos para texto japonés en carousel */
+body.lang-jpn .gisea-subtitle,
+body.lang-jpn .web-dev-subtitle,
+body.lang-jpn .developer-training-subtitle,
+body.lang-jpn .human-resources-subtitle {
+  font-size: 1.8rem !important;
+  line-height: 1.3 !important;
+}
+
+/* Estilos responsivos para japonés en tablets */
+@media (max-width: 768px) {
+  body.lang-jpn .gisea-subtitle,
+  body.lang-jpn .web-dev-subtitle,
+  body.lang-jpn .developer-training-subtitle,
+  body.lang-jpn .human-resources-subtitle {
+    font-size: 1.4rem !important;
+  }
+  
+  body.lang-jpn .gisea-title,
+  body.lang-jpn .web-dev-title,
+  body.lang-jpn .developer-training-title,
+  body.lang-jpn .human-resources-title {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Estilos responsivos para japonés en móviles */
+@media (max-width: 480px) {
+  body.lang-jpn .gisea-subtitle,
+  body.lang-jpn .web-dev-subtitle,
+  body.lang-jpn .developer-training-subtitle,
+  body.lang-jpn .human-resources-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  body.lang-jpn .gisea-title,
+  body.lang-jpn .web-dev-title,
+  body.lang-jpn .developer-training-title,
+  body.lang-jpn .human-resources-title {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* Estilos responsivos para japonés en dispositivos muy pequeños */
+@media (max-width: 360px) {
+  body.lang-jpn .gisea-subtitle,
+  body.lang-jpn .web-dev-subtitle,
+  body.lang-jpn .developer-training-subtitle,
+  body.lang-jpn .human-resources-subtitle {
+    font-size: 0.9rem !important;
+  }
+  
+  body.lang-jpn .gisea-title,
+  body.lang-jpn .web-dev-title,
+  body.lang-jpn .developer-training-title,
+  body.lang-jpn .human-resources-title {
+    font-size: 1.2rem !important;
+  }
 }

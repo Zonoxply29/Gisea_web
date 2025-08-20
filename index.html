@@ -13,29 +13,30 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D82C62QHR9"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-D82C62QHR9', {
-    // Configuración para tracking mejorado de idiomas
-    'custom_map': {
-      'custom_parameter_1': 'session_duration_minutes',
-      'custom_parameter_2': 'interaction_count',
-      'custom_parameter_3': 'language_type'
-    },
-    // Permitir tracking de eventos offline
-    'transport_type': 'beacon',
-    // Mejorar precisión de timing
-    'page_title': document.title,
-    'page_location': window.location.href
-  });
-  
-  // Configurar dimensiones personalizadas para idiomas
-  gtag('config', 'G-D82C62QHR9', {
-    'send_page_view': true
-  });
+    gtag('config', 'G-D82C62QHR9', {
+        // Configuración para tracking mejorado de idiomas
+        'custom_map': {
+            'custom_parameter_1': 'session_duration_minutes',
+            'custom_parameter_2': 'interaction_count',
+            'custom_parameter_3': 'language_type'
+        },
+        // Permitir tracking de eventos offline
+        'transport_type': 'beacon',
+        // Mejorar precisión de timing
+        'page_title': document.title,
+        'page_location': window.location.href
+    });
+
+    // Configurar dimensiones personalizadas para idiomas
+    gtag('config', 'G-D82C62QHR9', {
+        'send_page_view': true
+    });
 </script>
+
 <body>
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg estilos-navbar">
@@ -121,10 +122,12 @@
                                     <a href="" alt="instagram" class="red-social instagram">
                                         <i class="fa-brands fa-instagram fa-xl"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank" alt="linkedin" class="red-social linkedin">
+                                    <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank"
+                                        alt="linkedin" class="red-social linkedin">
                                         <i class="fa-brands fa-linkedin fa-xl"></i>
                                     </a>
-                                    <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook" class="red-social facebook">
+                                    <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook"
+                                        class="red-social facebook">
                                         <i class="fa-brands fa-facebook fa-xl"></i>
                                     </a>
                                 </div>
@@ -154,16 +157,46 @@
         <div id="carousel-Inicio" class="carousel slide carousel-fade carousel-height" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="img/slide/Slider2_Inicio.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <div class="position-relative">
+                        <img src="img/slide/banner_inicio_gisea.png" class="d-block w-100 img-fluid" alt="GISEA Banner">
+                        <div class="carousel-text-overlay">
+                            <div class="gisea-logo-container">
+                                <img src="img/slide/gisea_logo.png" alt="Logo GISEA" class="gisea-logo-slide">
+                            </div>
+                            <h1 class="gisea-title">GISEA</h1>
+                            <p class="gisea-subtitle" data-translate="carouselGiseaSubtitle">"Hacemos Realidad tus Proyectos"</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/slide/Slider3_Web-Development.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <div class="position-relative">
+                        <img src="img/slide/slider_web_development.png" class="d-block w-100 img-fluid" alt="...">
+                        <div class="carousel-text-overlay">
+                            <h1 class="web-dev-title" data-translate="carouselWebDevTitle">Desarollo web</h1>
+                            <div class="golden-line"></div>
+                            <p class="web-dev-subtitle" data-translate="carouselWebDevSubtitle">"Creamos el sitio para tu compañia"</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/slide/Slider_4_Developer_Training.jpg" class="d-block w-100 img img-fluid" alt="...">
+                    <div class="position-relative">
+                        <img src="img/slide/tercer_banner_asesoramiento.png" class="d-block w-100 img-fluid" alt="Developer Training">
+                        <div class="carousel-text-overlay">
+                            <h1 class="developer-training-title" data-translate="carouselTrainingTitle">Capacitacion it</h1>
+                            <div class="golden-line"></div>
+                            <p class="developer-training-subtitle" data-translate="carouselTrainingSubtitle">"Crece tus Habilidades y Conviértete en un Profesional"</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="img/slide/Slider_5_Human_Resourcers.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <div class="position-relative">
+                        <img src="img/slide/baner_recursos_humanos.png" class="d-block w-100 img-fluid" alt="Human Resources">
+                        <div class="carousel-text-overlay">
+                            <h1 class="human-resources-title" data-translate="carouselHRTitle">Recursos Humanos</h1>
+                            <div class="golden-line"></div>
+                            <p class="human-resources-subtitle" data-translate="carouselHRSubtitle">"Encontramos el Talento Perfecto para tu Empresa"</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-Inicio" data-bs-slide="prev">
@@ -338,7 +371,12 @@
                                 <img src="img/clients-img/gategroup.png" alt="gategroup">
                             </div>
                             <div class="client-logo" data-aos="fade-up">
-                                <img src="img/clients-img/soy_lia_garrido_logo.PNG" alt="Soy Lia Garrido" style="width: 120px; margin-top: -48px;">
+                                <img src="img/clients-img/soy_lia_garrido_logo.PNG" alt="Soy Lia Garrido"
+                                    style="width: 120px; margin-top: -48px;">
+                            </div>
+                            <div class="client-logo" data-aos="fade-up">
+                                <img src="img/clients-img/eco_logo_hd.png" alt="ECO-05"
+                                    style="width: 78px; margin-top: -33px;">
                             </div>
                         </div>
                     </div>
@@ -353,7 +391,10 @@
             </div>
             <div class="footer-bottom d-flex justify-content-between align-items-center">
                 <div class="footer-contact">
-                    <p>@giseamex@gmail.com</p>
+                    <a href="https://wa.me/5215511234567" target="_blank" alt="whatsapp" class="red-social-footer whatsapp-contact">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                        <span class="whatsapp-text">WhatsApp</span>
+                    </a>
                 </div>
                 <ul class="footer-links">
                     <li><a href="index.html" data-translate="footerInicio">Inicio</a></li>
@@ -367,10 +408,12 @@
                     <a href="" alt="instagram" class="red-social-footer">
                         <i class="fa-brands fa-instagram fa-xl"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank" alt="linkedin" class="red-social-footer">
+                    <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank" alt="linkedin"
+                        class="red-social-footer">
                         <i class="fa-brands fa-linkedin fa-xl"></i>
                     </a>
-                    <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook" class="red-social-footer">
+                    <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook"
+                        class="red-social-footer">
                         <i class="fa-brands fa-facebook fa-xl"></i>
                     </a>
                 </div>
