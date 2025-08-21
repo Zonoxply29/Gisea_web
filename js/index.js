@@ -747,11 +747,192 @@ document.addEventListener('click', function (event) {
 });
 
 /// Tooltip de Service Desarollo Web
-document.addEventListener('DOMContentLoaded', function () {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
+// Función global para inicializar tooltips
+window.initializeTooltips = function() {
+    console.log('🔍 Inicializando tooltips...');
+    
+    // SOLUCIÓN ALTERNATIVA: Agregar tooltips manualmente a las banderas
+    const flagTitles = {
+        'bandera_usa.png': 'Estados Unidos',
+        'bandera_venezuela.png': 'Venezuela', 
+        'bandera_mex.png': 'México',
+        'bandera_jpn.png': 'Japón',
+        'bandera_esp.png': 'España',
+        'bandera_argentina.png': 'Argentina',
+        'bandera_brazil.png': 'Brasil',
+        'bandera_australia.png': 'Australia',
+        'bandera_italia.png': 'Italia',
+        'bandera_canada.png': 'Canadá'
+    };
+    
+    // Buscar banderas en la sección de clientes específicamente
+    const clientSection = document.querySelector('.clientes-hover');
+    if (clientSection) {
+        const flags = clientSection.querySelectorAll('.flag');
+        console.log('🏁 Banderas en sección clientes encontradas:', flags.length);
+        
+        flags.forEach((flag, index) => {
+            const src = flag.getAttribute('src') || flag.src;
+            console.log(`🔍 Bandera ${index + 1}:`, {
+                src: src,
+                currentTitle: flag.getAttribute('title'),
+                hasDataBsToggle: flag.hasAttribute('data-bs-toggle'),
+                classList: flag.classList.toString(),
+                outerHTML: flag.outerHTML.substring(0, 200) + '...'
+            });
+            
+            // Encontrar el título correcto basado en el src
+            let correctTitle = null;
+            for (const [fileName, title] of Object.entries(flagTitles)) {
+                if (src && src.includes(fileName)) {
+                    correctTitle = title;
+                    break;
+                }
+            }
+            
+            if (correctTitle) {
+                // Limpiar clases undefined
+                const classList = flag.className.replace(/undefined/g, '').replace(/\s+/g, ' ').trim();
+                flag.className = classList;
+                
+                // Forzar los atributos necesarios
+                flag.setAttribute('data-bs-toggle', 'tooltip');
+                flag.setAttribute('title', correctTitle);
+                console.log(`✅ Forzando tooltip en bandera ${index + 1}:`, correctTitle);
+                
+                // Crear tooltip directamente
+                try {
+                    // Destruir tooltip existente si existe
+                    const existingTooltip = bootstrap.Tooltip.getInstance(flag);
+                    if (existingTooltip) {
+                        existingTooltip.dispose();
+                    }
+                    
+                    const tooltip = new bootstrap.Tooltip(flag, {
+                        trigger: 'hover focus',
+                        placement: 'top',
+                        animation: true,
+                        delay: { "show": 200, "hide": 100 },
+                        html: false,
+                        container: 'body',
+                        title: correctTitle,
+                        template: '<div class="tooltip flag-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+                    });
+                    
+                    console.log(`🎯 Tooltip creado exitosamente para:`, correctTitle);
+                    
+                    // Agregar eventos de debugging
+                    flag.addEventListener('mouseenter', () => {
+                        console.log('🐭 Mouse ENTER en:', correctTitle);
+                    });
+                    
+                    flag.addEventListener('mouseleave', () => {
+                        console.log('🐭 Mouse LEAVE en:', correctTitle);
+                    });
+                    
+                } catch (error) {
+                    console.error(`❌ Error creando tooltip para ${correctTitle}:`, error);
+                }
+            } else {
+                console.warn(`⚠️ No se encontró título para bandera con src:`, src);
+            }
+        });
+    } else {
+        console.error('❌ No se encontró la sección .clientes-hover');
+    }
+    
+    // También inicializar otros tooltips normales (no banderas)
+    const otherTooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]:not(.flag)');
+    console.log('🔧 Inicializando otros tooltips:', otherTooltips.length);
+    
+    otherTooltips.forEach(element => {
+        const title = element.getAttribute('title');
+        if (title) {
+            try {
+                new bootstrap.Tooltip(element);
+                console.log('✅ Tooltip normal inicializado:', title);
+            } catch (error) {
+                console.error('❌ Error en tooltip normal:', error);
+            }
+        }
     });
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('🚀 DOM cargado, iniciando diagnóstico...');
+    
+    // Verificar si Bootstrap está disponible
+    if (typeof bootstrap === 'undefined') {
+        console.error('❌ Bootstrap no está disponible!');
+        return;
+    } else {
+        console.log('✅ Bootstrap disponible:', bootstrap);
+    }
+    
+    // Verificar si Bootstrap.Tooltip está disponible
+    if (typeof bootstrap.Tooltip === 'undefined') {
+        console.error('❌ Bootstrap.Tooltip no está disponible!');
+        return;
+    } else {
+        console.log('✅ Bootstrap.Tooltip disponible');
+    }
+
+    // ESPERAR 3 segundos antes de inicializar tooltips para que las animaciones terminen
+    setTimeout(() => {
+        console.log('⏰ Inicializando tooltips después del delay...');
+        window.initializeTooltips();
+    }, 3000);
+
+    // CSS SOLO para banderas, dejando tooltips normales intactos
+    const style = document.createElement('style');
+    style.textContent = `
+        /* SOLO para tooltips de banderas con clase flag-tooltip */
+        .tooltip.flag-tooltip {
+            z-index: 99999 !important;
+            pointer-events: none !important;
+            position: absolute !important;
+        }
+        
+        .tooltip.flag-tooltip.show {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .tooltip.flag-tooltip .tooltip-inner {
+            background-color: #000 !important;
+            color: #fff !important;
+            border-radius: 4px !important;
+            padding: 8px 12px !important;
+            font-size: 14px !important;
+            font-weight: normal !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+            max-width: 200px !important;
+            word-wrap: break-word !important;
+        }
+        
+        .tooltip.flag-tooltip .tooltip-arrow {
+            position: absolute !important;
+            width: 0 !important;
+            height: 0 !important;
+            border: 5px solid transparent !important;
+        }
+        
+        .tooltip.flag-tooltip.bs-tooltip-top .tooltip-arrow {
+            bottom: 0 !important;
+            border-top-color: #000 !important;
+        }
+        
+        /* Solo asegurar que las banderas permitan hover */
+        .flag {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+        }
+        
+        /* NO modificar otros tooltips - mantener estilos de Bootstrap originales */
+    `;
+    document.head.appendChild(style);
+    console.log('🎨 CSS específico para banderas añadido (sin afectar otros tooltips)');
 });
 /// Esta funcion permite que los elementos se activen automaticamente y no necesariamente con un hover en las banderas de paises
 function animateOnScroll(selector, flagSelector) {
@@ -759,16 +940,22 @@ function animateOnScroll(selector, flagSelector) {
     if (!target) return;
 
     const flags = target.querySelectorAll(flagSelector);
+    console.log(`🎬 Configurando animación para ${selector}:`, flags.length, 'banderas');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log(`🎬 Activando animación en ${selector}`);
                 target.classList.add("active");
-                flags.forEach(flag => {
+                flags.forEach((flag, index) => {
+                    console.log(`🏁 Animando bandera ${index + 1}:`, flag.src);
                     flag.classList.remove("animate__animated");
                     void flag.offsetWidth;
                     flag.classList.add("animate__animated", flag.dataset.animation);
                 });
+                
+                // NO reinicializar tooltips aquí para evitar conflictos
+                console.log(`ℹ️ Animación completada para ${selector} - tooltips preservados`);
             } else {
                 target.classList.remove("active");
             }
