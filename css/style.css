@@ -2161,48 +2161,52 @@ li:not(.d-flex) .icon-check-empgrnd{
 @media (max-width: 768px) {
     /* Banderas para INGLÉS en móvil */
     .lang-eng .clientes-hover.active .flag-usa {
-        top: 36px !important;
-        left: 23vh !important; 
+        top: 35px !important;
+        left: 25vh !important; 
     }
     
     .lang-eng .clientes-hover.active .flag-venezuela {
         top: 81px !important;
-        left: 27vh !important; 
+        left: 29vh !important; 
     }
     
     .lang-eng .clientes-hover.active .flag-mexico {
         top: 38px !important;
-        left: -6vh !important; 
+        left: -7vh !important; 
     }
     
     .lang-eng .clientes-hover.active .flag-japan {
         top: 84px !important;
-        left: -9vh !important; 
+        left: -10vh !important; 
     }
     
     .lang-eng .clientes-hover.active .flag-esp {
         top: -8px !important;
-        left: -1vh !important; 
+        left: -3vh !important; 
     }
     
     .lang-eng .clientes-hover.active .flag-arg {
-        top: -45px !important;
-        left: 4vh !important; 
+        top: -50px !important;
+        left: 2vh !important; 
     }
     
     .lang-eng .clientes-hover.active .flag-brazil {
-        top: -84px !important;
-        left: 9vh !important;
+        top: -91px !important;
+        left: 6vh !important;
     }
     
     .lang-eng .clientes-hover.active .flag-australia {
-        top: -4px !important;
-        left: 19vh !important; 
+        top: -6px !important;
+        left: 21vh !important; 
     }
     
     .lang-eng .clientes-hover.active .flag-italia {
-        top: -44px !important;
-        left: 15vh !important; 
+        top: -49px !important;
+        left: 17vh !important; 
+    }
+     .lang-eng .clientes-hover.active .flag-canada {
+        top: -93px !important;
+        left: 13vh !important; 
     }
     
     /* Banderas para JAPONÉS en móvil */
@@ -2237,8 +2241,8 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
     
     .lang-jpn .clientes-hover.active .flag-brazil {
-        top: -84px !important;
-        left: 90px !important; 
+        top: -88px !important;
+        left: 66px !important; 
     }
     
     .lang-jpn .clientes-hover.active .flag-australia {
@@ -2250,6 +2254,11 @@ li:not(.d-flex) .icon-check-empgrnd{
         top: -44px !important;
         left: 21vh !important;
     }
+    .lang-jpn .clientes-hover.active .flag-canada {
+     top: -89px !important;
+     left: 18vh !important;
+    }
+    
 }
 
 /* ESTILOS ESPECÍFICOS PARA JAPONÉS EN DESKTOP - Solo posiciones de banderas */
@@ -2286,8 +2295,8 @@ li:not(.d-flex) .icon-check-empgrnd{
 }
 
 .lang-jpn .clientes-hover.active .flag-brazil {
-    top: -70px; 
-    left: 19vh;
+    top: -79px; 
+    left: 16vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-australia {
@@ -2298,6 +2307,10 @@ li:not(.d-flex) .icon-check-empgrnd{
 .lang-jpn .clientes-hover.active .flag-italia {
     top: -38px; 
     left: 26vh;
+}
+.lang-jpn .clientes-hover.active .flag-canada {
+    top: -80px; 
+    left: 23vh;
 }
 
 /* Responsive específico para japonés en móvil */
@@ -3093,8 +3106,8 @@ li:not(.d-flex) .icon-check-empgrnd{
     /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
 }
 
-/* Media Queries para portátiles/laptops (1024px) - Ajustes de navbar para idiomas */
-@media (max-width: 1024px) {
+/* Media Queries para portátiles/laptops (hasta 1023px) - Ajustes de navbar para idiomas */
+@media (max-width: 1023px) {
     /* Reducir font-size general del navbar para pantallas de portátil */
     .estilos-navbar {
         font-size: 24px !important;
@@ -3127,7 +3140,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
 
     .lang-spa .dropdown-item {
-        font-size: 0.9em !important;
+        font-size: 1em !important;
     }
     
     /* Reducir espacio entre elementos del navbar */
@@ -3181,7 +3194,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
     
     .lang-spa .dropdown-item {
-        font-size: 0.85em !important;
+        font-size: 0.90em !important;
     }
     
     /* Para japonés */
