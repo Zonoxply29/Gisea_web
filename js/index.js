@@ -747,11 +747,215 @@ document.addEventListener('click', function (event) {
 });
 
 /// Tooltip de Service Desarollo Web
-document.addEventListener('DOMContentLoaded', function () {
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
+
+// Función para inicializar tooltips de banderas
+window.initializeTooltips = function() {
+    // Títulos de las banderas aqui se hace el cambio de los nombres en los tooltips
+    const flagTitles = {
+        'bandera_usa.png': 'Little Rock, Arkansas',
+        'bandera_venezuela.png': 'Maracay', 
+        'bandera_mex.png': 'MTY, CDMX, GDL<br>EDOMEX, Cancun, TJ',
+        'bandera_jpn.png': 'Shibuya',
+        'bandera_esp.png': 'Mayorca,Malaga <br> Islas Canarias',
+        'bandera_argentina.png': 'Buenos Aires',
+        'bandera_brazil.png': 'Porto Alegre',
+        'bandera_australia.png': 'Sidney',
+        'bandera_italia.png': 'Milan',
+        'bandera_canada.png': 'Vancouver'
+    };
+    
+    // Buscar banderas en la sección de clientes
+    const clientSection = document.querySelector('.clientes-hover');
+    if (clientSection) {
+        const flags = clientSection.querySelectorAll('.flag');
+        
+        flags.forEach((flag) => {
+            const src = flag.getAttribute('src') || flag.src;
+            
+            // Encontrar el título correcto basado en el src
+            let correctTitle = null;
+            for (const [fileName, title] of Object.entries(flagTitles)) {
+                if (src && src.includes(fileName)) {
+                    correctTitle = title;
+                    break;
+                }
+            }
+            
+            if (correctTitle) {
+                // Limpiar clases undefined
+                const classList = flag.className.replace(/undefined/g, '').replace(/\s+/g, ' ').trim();
+                flag.className = classList;
+                
+                // Configurar atributos del tooltip
+                flag.setAttribute('data-bs-toggle', 'tooltip');
+                flag.setAttribute('title', correctTitle);
+                
+                // Crear tooltip
+                try {
+                    const existingTooltip = bootstrap.Tooltip.getInstance(flag);
+                    if (existingTooltip) {
+                        existingTooltip.dispose();
+                    }
+                    
+                    // Detectar dispositivo móvil
+                    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+                    
+                    const tooltip = new bootstrap.Tooltip(flag, {
+                        trigger: isMobile ? 'manual' : 'hover focus',
+                        placement: 'top',
+                        animation: true,
+                        delay: isMobile ? 0 : { "show": 200, "hide": 100 },
+                        html: true,
+                        container: 'body',
+                        title: correctTitle,
+                        template: '<div class="tooltip flag-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+                    });
+                    
+                    if (isMobile) {
+                        // Eventos para móvil
+                        flag.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            
+                            // Cerrar otros tooltips
+                            document.querySelectorAll('.flag').forEach(otherFlag => {
+                                if (otherFlag !== flag) {
+                                    const otherTooltip = bootstrap.Tooltip.getInstance(otherFlag);
+                                    if (otherTooltip) {
+                                        otherTooltip.hide();
+                                    }
+                                }
+                            });
+                            
+                            // Toggle tooltip actual
+                            const tooltipElement = document.querySelector('.tooltip.flag-tooltip');
+                            if (tooltipElement && tooltipElement.classList.contains('show')) {
+                                tooltip.hide();
+                            } else {
+                                tooltip.show();
+                            }
+                        });
+                        
+                        // Cerrar al hacer click fuera
+                        document.addEventListener('click', (e) => {
+                            if (!flag.contains(e.target) && !e.target.closest('.tooltip.flag-tooltip')) {
+                                tooltip.hide();
+                            }
+                        });
+                        
+                        // Cerrar al hacer scroll
+                        window.addEventListener('scroll', () => {
+                            tooltip.hide();
+                        });
+                    }
+                    
+                } catch (error) {
+                    console.error('Error creando tooltip:', error);
+                }
+            }
+        });
+    }
+    
+    // Inicializar otros tooltips (portafolio, etc.)
+    const otherTooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]:not(.flag)');
+    otherTooltips.forEach(element => {
+        const title = element.getAttribute('title');
+        if (title) {
+            try {
+                new bootstrap.Tooltip(element);
+            } catch (error) {
+                console.error('Error en tooltip:', error);
+            }
+        }
     });
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Verificar si Bootstrap está disponible
+    if (typeof bootstrap === 'undefined' || typeof bootstrap.Tooltip === 'undefined') {
+        console.error('Bootstrap Tooltip no está disponible');
+        return;
+    }
+
+    // Inicializar tooltips después de 3 segundos para permitir que terminen las animaciones
+    setTimeout(() => {
+        window.initializeTooltips();
+    }, 3000);
+
+    // CSS SOLO para banderas, con soporte móvil mejorado
+    const style = document.createElement('style');
+    style.textContent = `
+        /* SOLO para tooltips de banderas con clase flag-tooltip */
+        .tooltip.flag-tooltip {
+            z-index: 99999 !important;
+            pointer-events: none !important;
+            position: absolute !important;
+        }
+        
+        .tooltip.flag-tooltip.show {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .tooltip.flag-tooltip .tooltip-inner {
+            background-color: #000 !important;
+            color: #fff !important;
+            border-radius: 4px !important;
+            padding: 8px 12px !important;
+            font-size: 14px !important;
+            font-weight: normal !important;
+            text-align: center !important;
+            white-space: normal !important;
+            max-width: 250px !important;
+            word-wrap: break-word !important;
+            line-height: 1.4 !important;
+            min-width: fit-content !important;
+        }
+        
+        .tooltip.flag-tooltip .tooltip-arrow {
+            position: absolute !important;
+            width: 0 !important;
+            height: 0 !important;
+            border: 5px solid transparent !important;
+        }
+        
+        .tooltip.flag-tooltip.bs-tooltip-top .tooltip-arrow {
+            bottom: 0 !important;
+            border-top-color: #000 !important;
+        }
+        
+        /* Banderas con mejor soporte táctil */
+        .flag {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+            touch-action: manipulation !important;
+            -webkit-tap-highlight-color: transparent !important;
+        }
+        
+        /* Mejorar tooltips en móvil */
+        @media (max-width: 768px) {
+            .tooltip.flag-tooltip .tooltip-inner {
+                font-size: 16px !important;
+                padding: 10px 14px !important;
+                min-height: 40px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                max-width: 220px !important;
+                white-space: normal !important;
+                line-height: 1.3 !important;
+            }
+            
+            .flag {
+                min-width: 44px !important;
+                min-height: 44px !important;
+                cursor: pointer !important;
+            }
+        }
+        
+        /* NO modificar otros tooltips - mantener estilos de Bootstrap originales */
+    `;
+    document.head.appendChild(style);
 });
 /// Esta funcion permite que los elementos se activen automaticamente y no necesariamente con un hover en las banderas de paises
 function animateOnScroll(selector, flagSelector) {
@@ -764,7 +968,7 @@ function animateOnScroll(selector, flagSelector) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 target.classList.add("active");
-                flags.forEach(flag => {
+                flags.forEach((flag, index) => {
                     flag.classList.remove("animate__animated");
                     void flag.offsetWidth;
                     flag.classList.add("animate__animated", flag.dataset.animation);
