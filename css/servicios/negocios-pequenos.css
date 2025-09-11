@@ -1,0 +1,639 @@
+/* ===================================
+   ESTILOS ESPECÍFICOS - NEGOCIOS PEQUEÑOS
+   ================================== */
+
+/* Importar fuente Revamped */
+@font-face{
+    font-family: "Revamped";
+    src: 
+    url("../../fonts/Revamped.otf") format("truetype");
+    font-display: swap;
+}
+
+/* Importar fuente RacingHard para botones */
+@font-face{
+    font-family: "RacingHard";
+    src: 
+    url("../../fonts/RACINGHARD.ttf") format("truetype");
+    font-display: swap;
+}
+
+/* Animaciones personalizadas */
+@keyframes rotateIn {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotateOut {
+    0% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.rotate-180 {
+    animation: rotateIn 0.5s ease-in-out forwards !important;
+}
+
+.rotate-0 {
+    animation: rotateOut 0.5s ease-in-out forwards !important;
+}
+
+/* ===================================
+   ESTILOS DEL CAROUSEL DE PAQUETES
+   ================================== */
+
+/* Contenedor del carousel */
+.packages-carousel {
+    position: relative;
+}
+
+/* Items del carousel */
+.packages-carousel .item {
+    padding: 10px;
+}
+
+/* Cards de paquetes */
+.package-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.package-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Imágenes del carousel */
+.package-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.package-card:hover .package-image {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   CONTROLES DEL CAROUSEL
+   ================================== */
+
+/* Ocultar completamente la navegación con flechas */
+.packages-carousel .owl-nav {
+    display: none !important;
+}
+
+/* Ocultar los dots completamente */
+.packages-carousel .owl-dots {
+    display: none !important;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   ================================== */
+
+/* Tablet y dispositivos medianos */
+@media (max-width: 768px) {
+    .package-image {
+        height: 200px;
+    }
+}
+
+/* Dispositivos móviles */
+@media (max-width: 576px) {
+    .package-image {
+        height: 180px;
+    }
+    
+    .packages-carousel .item {
+        padding: 5px;
+    }
+}
+
+/* ===================================
+   SECCIÓN TÍTULO
+   ================================== */
+
+.section-title h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+}
+
+/* Línea decorativa del título */
+.section-title::after {
+    bottom: 24px;
+}
+
+/* Responsive para section-title */
+@media (max-width: 1200px) {
+    .section-title h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title h1 {
+        font-size: 2.5rem;
+    }
+    div.container-lg{
+        margin-top: 0;
+        margin-bottom: 0rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title h1 {
+        font-size: 2rem;
+        margin-top: 2.4rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .section-title h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Nuevo título con tipografía Revamped sin línea inferior */
+.section-title-revamped {
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.section-title-revamped h1 {
+    font-family: "Revamped", serif;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.section-title-revamped h2 {
+    font-family: "Revamped", serif;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive para títulos Revamped */
+@media (max-width: 768px) {
+    .section-title-revamped {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .section-title-revamped h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title-revamped h2 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-ordena-ya {
+        font-size: 1.5rem;
+        padding: 12px 35px;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title-revamped {
+        gap: 1rem;
+    }
+    
+    .section-title-revamped h1 {
+        font-size: 1.75rem;
+    }
+    
+    .section-title-revamped h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-ordena-ya {
+        font-size: 1.3rem;
+        padding: 10px 30px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-ordena-ya {
+        font-size: 1.1rem;
+        padding: 8px 25px;
+    }
+}
+
+/* Estilos específicos para el precio con IVA */
+.precio-iva {
+    position: relative;
+    display: inline-block;
+}
+
+.precio-iva .precio-principal {
+    font-size: inherit;
+}
+
+.precio-iva .iva-text {
+    font-size: 0.5em;
+    font-weight: 300;
+    vertical-align: super;
+    opacity: 0.8;
+    margin-left: 2px;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive para precio IVA */
+@media (max-width: 768px) {
+    .precio-iva .iva-text {
+        font-size: 0.45em;
+        margin-left: 1px;
+    }
+}
+
+@media (max-width: 576px) {
+    .precio-iva .iva-text {
+        font-size: 0.4em;
+        margin-left: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .precio-iva .iva-text {
+        font-size: 0.35em;
+    }
+}
+
+/* Estilos del botón Ordena Ya */
+.btn-ordena-ya {
+    background-color: #1C1F3D;
+    color: white;
+    font-family: "RacingHard", sans-serif;
+    font-size: 2rem;
+    padding: 3px 50px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(28, 31, 61, 0.3);
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-ordena-ya:hover {
+    background-color: #252850;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(28, 31, 61, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-ordena-ya:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(28, 31, 61, 0.3);
+}
+
+/* ===================================
+   SECCIÓN QUÉ INCLUYE - TÍTULO CON LÍNEA
+   ================================== */
+
+/* ——— TÍTULO ——— */
+.titulo-con-linea { 
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-bottom: none; /* abrimos la caja por debajo */
+    margin-bottom: 2rem;
+}
+
+.titulo-con-linea h2 {
+    margin: 0;
+    font-family: "RacingHard", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Línea que se extiende hacia la izquierda */
+.titulo-con-linea::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: -50px; /* ajuste del largo hacia la izquierda */
+    width: 50px;
+    height: 1px;
+    background: #000;
+}
+
+/* Línea que se extiende hacia la derecha */
+.titulo-con-linea::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -53vh; /* largo hacia la derecha */
+    width: 53vh;
+    height: 1px;
+    background: #000;
+}
+
+/* ——— IZQUIERDA: lista en dos columnas ——— */
+.features-list {
+    margin: 0;
+    padding-left: 1.2rem; /* alineación limpia con bullets */
+    column-count: 2;      /* dos columnas en desktop */
+    column-gap: 3rem;
+    list-style: disc;
+}
+.features-list li {
+    break-inside: avoid; /* evita cortes raros entre columnas */
+    margin-bottom: .75rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+/* ——— DERECHA: sidebar de paquetes ——— */
+.sidebar-paquetes {
+    padding-top: 0;
+    margin-top: -4.5rem; /* Sube el sidebar para alinearlo con el título */
+}
+.sidebar-title {
+    font-family: "RacingHard", sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.pkg-card {
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+    padding: .75rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.pkg-card:hover {
+    border-color: #bbb;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.pkg-card:hover .pkg-thumb {
+    transform: scale(1.05);
+}
+
+.pkg-card:hover .pkg-price {
+    color: #B8902E;
+    transform: scale(1.05);
+}
+
+.pkg-card:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(28, 31, 61, 0.15);
+}
+.pkg-thumb {
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: .25rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    transition: transform 0.3s ease;
+}
+.pkg-subtitle {
+    font-family: "RacingHard", sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: .25rem;
+}
+.pkg-price {
+    font-size: 1.4rem;
+    color: #C49C3C; /* dorado aproximado */
+    font-family: "RacingHard", sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* ——— Responsive para título con línea ——— */
+/* Tablets grandes y desktop pequeño */
+@media (max-width: 992px) and (min-width: 769px) {
+    .titulo-con-linea h2 {
+        font-size: 1.75rem;
+        padding: 10px 18px;
+    }
+    
+    .titulo-con-linea::before {
+        left: -40px;
+        width: 40px;
+    }
+    
+    .titulo-con-linea::after {
+        right: -150px;
+        width: 150px;
+    }
+
+    /* Mantener dos columnas en tablets grandes */
+    .features-list {
+        column-count: 2;
+        column-gap: 2.5rem;
+    }
+    
+    /* Ajuste del sidebar en tablet grande */
+    .sidebar-paquetes {
+        margin-top: -1.25rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .titulo-con-linea h2 {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+    
+    .titulo-con-linea::before {
+        left: -30px;
+        width: 30px;
+    }
+    
+    .titulo-con-linea::after {
+        right: -100px;
+        width: 100px;
+    }
+
+    /* Mantener dos columnas en tablets */
+    .features-list {
+        column-count: 2;
+        column-gap: 2rem; /* Reducir un poco el gap en tablets */
+    }
+    
+    /* Ajuste del sidebar en tablet */
+    .sidebar-paquetes {
+        margin-top: -1rem;
+    }
+    
+    /* Ajustar tamaño de las cards en tablet */
+    .pkg-thumb {
+        width: 100px;
+        height: 60px;
+    }
+    
+    .pkg-subtitle {
+        font-size: 1rem;
+    }
+    
+    .pkg-price {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo-con-linea h2 {
+        font-size: 1.8rem;
+        padding: 6px 12px;
+    }
+    
+    .titulo-con-linea::before {
+        left: -20px;
+        width: 20px;
+    }
+    
+    .titulo-con-linea::after {
+        right: -102px;
+        width: 102px;
+    }
+
+    /* lista en 1 columna en móviles */
+    .features-list {
+        column-count: 1;
+    }
+    
+    /* Ajuste del sidebar en móvil */
+    .sidebar-paquetes {
+        margin-top: -0.5rem;
+    }
+}
+
+
+/* ===================================
+   UTILIDADES ESPECÍFICAS
+   ================================== */
+
+/* Clase para efectos especiales */
+.active-slide {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===================================
+   MODO OSCURO
+   ================================== */
+
+/* Título con línea en modo oscuro */
+body.dark-mode .titulo-con-linea {
+    border-color: #fff;
+}
+
+body.dark-mode .titulo-con-linea h2 {
+    color: #fff;
+}
+
+/* Líneas decorativas en blanco para modo oscuro */
+body.dark-mode .titulo-con-linea::before {
+    background: #fff;
+}
+
+body.dark-mode .titulo-con-linea::after {
+    background: #fff;
+}
+
+/* Sidebar y cards en modo oscuro */
+body.dark-mode .sidebar-title {
+    color: #fff;
+}
+
+body.dark-mode .pkg-card {
+    background-color: transparent;
+    border-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .pkg-card:hover {
+    border-color: #666;
+    background-color: transparent;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .pkg-subtitle {
+    color: #fff;
+}
+
+body.dark-mode .pkg-price {
+    color: #ffd700; /* Dorado más brillante para modo oscuro */
+}
+
+body.dark-mode .pkg-card:hover .pkg-price {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Lista de características en modo oscuro */
+body.dark-mode .features-list {
+    color: #fff;
+}
+
+body.dark-mode .features-list li {
+    color: #fff;
+}

@@ -584,12 +584,50 @@ document.getElementById('navbar-toggler').addEventListener('click', function () 
 ////////////////////////////////////////////////////////////////////////////////!
 
 // Función para cargar el idioma guardado al cargar la página
+// Función global para generar rutas dinámicas según la profundidad de carpetas
+window.getRelativePath = function(resourcePath) {
+    const currentPath = window.location.pathname;
+    
+    // Normalizar la ruta removiendo barras duplicadas y espacios
+    const normalizedPath = currentPath.replace(/\/+/g, '/').trim();
+    
+    // Dividir la ruta en partes, excluyendo elementos vacíos y archivos HTML
+    const pathParts = normalizedPath.split('/').filter(part => {
+        return part !== '' && 
+               part !== '.' && 
+               part !== '..' && 
+               !part.endsWith('.html') && 
+               !part.endsWith('.htm');
+    });
+    
+    // Casos especiales para rutas en la raíz
+    if (normalizedPath === '/' || normalizedPath === '' || pathParts.length === 0) {
+        return resourcePath; // Estamos en la raíz, usar ruta directa
+    }
+    
+    // Si hay solo una parte y no hay archivo, probablemente estamos en raíz
+    if (pathParts.length === 1 && !normalizedPath.includes('.html')) {
+        return resourcePath;
+    }
+    
+    // Generar '../' por cada nivel de carpeta
+    const levelsUp = Math.max(0, pathParts.length);
+    const pathPrefix = '../'.repeat(levelsUp);
+    
+    // Remover barra inicial del resourcePath si existe para evitar rutas duplicadas
+    const cleanResourcePath = resourcePath.startsWith('/') ? resourcePath.slice(1) : resourcePath;
+    
+    return pathPrefix + cleanResourcePath;
+};
+
 function loadSavedLanguage() {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'SPA';
+    
+    // Usar la función global para generar rutas dinámicas
     const flagMap = {
-        'SPA': 'icons/bandera_mex.png',
-        'ENG': 'icons/bandera_usa.png',
-        'JPN': 'icons/bandera_jpn.png'
+        'SPA': window.getRelativePath('icons/bandera_mex.png'),
+        'ENG': window.getRelativePath('icons/bandera_usa.png'),
+        'JPN': window.getRelativePath('icons/bandera_jpn.png')
     };
 
     // Actualizar el botón de idioma
