@@ -1,0 +1,462 @@
+@font-face{
+    font-family: "Revamped";
+    src: 
+    url("../../fonts/Revamped.otf") format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: "Racing_Hard";
+    src: 
+    url("../fonts/RACINGHARD.ttf") format("truetype");
+    font-display: swap;
+}
+.tecnologias-title {
+    font-size: 3rem;
+    color: #1C1F3D;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.tecnologias-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .tecnologias-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tecnologias-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* ========================
+   EFECTO DE ÓRBITA AVANZADO
+   ======================== */
+
+/* Sección full-screen */
+.orbit_hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Texto centrado */
+.orbit_hero__center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* centro real por CSS */
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.orbit_hero__title {
+  font-weight: 700;
+  color: #1C1F3D;
+  letter-spacing: .02em;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-family: "Revamped", sans-serif;
+}
+
+.orbit_hero__subtitle {
+  opacity: .85;
+  font-size: clamp(.9rem, 2.2vw, 1.125rem);
+  font-family: "Revamped", sans-serif;
+  color: #1C1F3D;
+}
+
+/* Lienzo */
+.orbit_hero__stage {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Imágenes orbitando */
+.orbit_hero__item {
+  position: absolute;
+  width: clamp(56px, 9vw, 88px);
+  height: clamp(56px, 9vw, 88px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,.4)) 
+          drop-shadow(0 4px 8px rgba(0,0,0,.2));
+  padding: 8px;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.orbit_hero__item:hover {
+  filter: drop-shadow(0 12px 25px rgba(0,0,0,.5)) 
+          drop-shadow(0 6px 12px rgba(0,0,0,.3));
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Estilo específico para el logo de GitHub - solo invertir en modo oscuro */
+body.dark-mode .orbit_hero__item[alt="Github"] {
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,.4)) 
+          drop-shadow(0 4px 8px rgba(0,0,0,.2))
+          invert(1);
+}
+
+body.dark-mode .orbit_hero__item[alt="Github"]:hover {
+  filter: drop-shadow(0 12px 25px rgba(0,0,0,.5)) 
+          drop-shadow(0 6px 12px rgba(0,0,0,.3))
+          invert(1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Anillo visual de la órbita (opcional) */
+.orbit_hero__ring {
+  position: absolute;
+  left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(255,255,255,.25);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: .65;
+}
+
+/* XS: reducir items para evitar solapes */
+@media (max-width: 767px) {
+  .orbit_hero {
+    min-height: 70vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .orbit_hero__item {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    padding: 6px;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,.4)) 
+            drop-shadow(0 3px 6px rgba(0,0,0,.2));
+  }
+  
+  .orbit_hero__item:hover {
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,.5)) 
+            drop-shadow(0 4px 8px rgba(0,0,0,.3));
+  }
+}
+
+/* ========================
+   SECCIÓN TEMAS DE CAPACITACIÓN
+   ======================== */
+
+.capacitacion-temas {
+  min-height: auto;
+}
+
+.capacitacion-temas .section-title {
+  font-size: 4rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-family: "Racing_Hard";
+  position: relative;
+}
+
+.capacitacion-temas .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 4px;
+  background: #C49C3C;
+  border-radius: 2px;
+}
+
+.capacitacion-temas .section-subtitle {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.capacitacion-card {
+  background: #EFEFEF;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.capacitacion-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.capacitacion-card.featured {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.capacitacion-card.featured .card-title,
+.capacitacion-card.featured .card-description {
+  color: white;
+}
+
+.capacitacion-card.featured .card-features li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+ background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.capacitacion-card.featured .card-icon {
+  backdrop-filter: blur(10px);
+}
+
+.card-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-family: "Revamped", sans-serif;
+}
+
+.card-description {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.capacitacion-card.featured .tech-tag {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  color: #495057;
+}
+
+.card-features li i {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+
+.capacitacion-card.featured .card-features li i {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para el botón de contacto en las tarjetas */
+.card-contact {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #25D366 !important;
+  transition: all 0.3s ease;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+.card-whatsapp-btn:hover {
+  background: rgba(37, 211, 102, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+  color: #128C7E !important;
+}
+
+.card-whatsapp-btn i {
+  font-size: 1.2rem;
+}
+
+.card-whatsapp-btn span {
+  font-size: 0.9rem;
+  color: inherit;
+}
+
+/* Estilos especiales para la tarjeta featured */
+.capacitacion-card.featured .card-contact {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.capacitacion-card.featured .card-whatsapp-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+}
+
+.capacitacion-card.featured .card-whatsapp-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .capacitacion-temas .section-title {
+    font-size: 2rem;
+  }
+  
+  .capacitacion-card {
+    padding: 1.5rem;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-whatsapp-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .card-whatsapp-btn i {
+    font-size: 1rem;
+  }
+}
+
+/* Modo oscuro para la sección de capacitación */
+body.dark-mode .capacitacion-temas .section-title {
+  color: #ffffff;
+}
+
+body.dark-mode .capacitacion-temas .section-title::after {
+  background: #C49C3C;
+}
+
+body.dark-mode .capacitacion-temas .section-subtitle {
+  color: #adb5bd;
+}
+
+body.dark-mode .capacitacion-card {
+  background: #2c2c2c;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .capacitacion-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .card-title {
+  color: #ffffff;
+}
+
+body.dark-mode .card-description {
+  color: #adb5bd;
+}
+
+body.dark-mode .card-features li {
+  color: #ced4da;
+}
+
+/* Modo oscuro para el botón de WhatsApp */
+body.dark-mode .card-contact {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card-whatsapp-btn {
+  background: rgba(37, 211, 102, 0.15);
+  border-color: rgba(37, 211, 102, 0.4);
+}
+
+body.dark-mode .card-whatsapp-btn:hover {
+  background: rgba(37, 211, 102, 0.25);
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
+}
