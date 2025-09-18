@@ -130,6 +130,62 @@ body.dark-mode .orbit_hero__item[alt="Github"]:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
+/* Estilo específico para el logo de Astro - invertir en modo oscuro */
+body.dark-mode .orbit_hero__item[alt="Astro"] {
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,.4)) 
+          drop-shadow(0 4px 8px rgba(0,0,0,.2))
+          invert(1);
+}
+
+body.dark-mode .orbit_hero__item[alt="Astro"]:hover {
+  filter: drop-shadow(0 12px 25px rgba(0,0,0,.5)) 
+          drop-shadow(0 6px 12px rgba(0,0,0,.3))
+          invert(1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Estilo específico para el logo de Ajax - hacer más ancho */
+.orbit_hero__item[alt="Ajax"] {
+  width: clamp(80px, 12vw, 120px) !important;
+  height: clamp(56px, 9vw, 88px);
+  object-fit: contain;
+}
+
+@media (max-width: 360px) {
+  .orbit_hero__item[alt="Ajax"] {
+    width: 64px !important;
+    height: 48px;
+  }
+}
+
+/* Estilo específico para el logo de npm, pnpm, yarn - hacer más ancho */
+.orbit_hero__item[alt="Npm,pnpm,yarn"] {
+  width: clamp(100px, 14vw, 140px) !important;
+  height: clamp(56px, 9vw, 88px);
+  object-fit: contain;
+}
+
+@media (max-width: 360px) {
+  .orbit_hero__item[alt="Npm,pnpm,yarn"] {
+    width: 80px !important;
+    height: 48px;
+  }
+}
+
+/* Estilo específico para el logo de Node.js - hacer más ancho */
+.orbit_hero__item[alt="node"] {
+  width: clamp(80px, 12vw, 120px) !important;
+  height: clamp(56px, 9vw, 88px);
+  object-fit: contain;
+}
+
+@media (max-width: 360px) {
+  .orbit_hero__item[alt="node"] {
+    width: 64px !important;
+    height: 48px;
+  }
+}
+
 /* Anillo visual de la órbita (opcional) */
 .orbit_hero__ring {
   position: absolute;
@@ -166,11 +222,346 @@ body.dark-mode .orbit_hero__item[alt="Github"]:hover {
 }
 
 /* ========================
-   SECCIÓN TEMAS DE CAPACITACIÓN
+   NUEVAS CARDS HORIZONTALES DE TECNOLOGÍAS
    ======================== */
 
-.capacitacion-temas {
-  min-height: auto;
+.tech-card-horizontal {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  min-height: 300px;
+  position: relative;
+}
+
+.tech-card-horizontal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección del logo (20%) */
+.tech-logo-section {
+  flex: 0 0 20%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Backgrounds únicos para cada tecnología */
+.tech-logo-section.html5 {
+  background: linear-gradient(90deg, rgba(241, 101, 41, 1) 0%, rgba(255, 120, 43, 1) 50%, rgba(252, 176, 69, 1) 100%);
+}
+
+.tech-logo-section.css3 {
+  background: linear-gradient(135deg, #2965f1 0%, #0f7dc7 50%, #40a9ff 100%);
+}
+
+.tech-logo-section.javascript {
+  background: linear-gradient(135deg, #f7df1e 0%, #ffed4e 50%, #fbbf24 100%);
+}
+
+.tech-logo-section.typescript {
+  background: linear-gradient(135deg, #007acc 0%, #3178c6 50%, #5ba7f5 100%);
+}
+
+.tech-logo-section.nodejs {
+  background: linear-gradient(135deg, #3c873a 0%, #68a063 50%, #90c695 100%);
+}
+
+.tech-logo-section.php {
+  background: linear-gradient(135deg, #777bb4 0%, #8892bf 50%, #a8a2d3 100%);
+}
+
+.tech-logo-section.bootstrap {
+  background: linear-gradient(135deg, #563d7c 0%, #6f42c1 50%, #8a63d2 100%);
+}
+
+.tech-logo-section.mysql {
+  background: linear-gradient(135deg, #00758f 0%, #f29111 50%, #e97826 100%);
+}
+
+.tech-logo-section.jquery {
+  background: radial-gradient(circle,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.tech-logo-section.astro {
+  background: radial-gradient(circle,rgba(97, 22, 165, 1) 0%, rgba(11, 9, 28, 1) 50%, rgba(26, 20, 106, 1) 83%);
+}
+
+.tech-logo-section.linux {
+  background: linear-gradient(135deg, #fcc624 0%, #f39000 50%, #d97719 100%);
+}
+
+.tech-logo-section.vscode {
+  background: linear-gradient(135deg, #007acc 0%, #0e639c 50%, #1177bb 100%);
+}
+
+.tech-logo-section.package-managers {
+  background: linear-gradient(135deg, #cb3837 0%, #ffb3ba 25%, #4c9aff 50%, #764abc 75%, #000 100%);
+}
+
+.tech-logo-section.git-github {
+  background: linear-gradient(135deg, #f14e32 0%, #f05033 25%, #333 50%, #181717 75%, #000 100%);
+}
+
+.tech-logo-container {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.tech-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Sección del contenido (80%) */
+.tech-content-section {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tech-header {
+  margin-bottom: 1.5rem;
+}
+
+.tech-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  font-family: "Revamped", sans-serif;
+}
+
+.tech-category {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tech-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-importance {
+  grid-column: 1 / -1;
+}
+
+.tech-importance h4,
+.tech-usage h4,
+.tech-companies h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.8rem 0;
+}
+
+.tech-importance p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.usage-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.3rem;
+}
+
+.tech-additional {
+  margin-top: 1rem;
+}
+
+.tech-additional h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.8rem 0;
+}
+
+.additional-topics {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.topic-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topic-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.topic-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.topic-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #667eea;
+  text-align: center;
+}
+
+.companies-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.company-logo {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.company-logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.company-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.tech-action {
+  margin-top: auto;
+}
+
+.tech-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.tech-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  color: white !important;
+}
+
+.tech-whatsapp-btn i {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design para cards horizontales */
+@media (max-width: 768px) {
+  .tech-card-horizontal {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .tech-logo-section {
+    flex: 0 0 120px;
+    width: 100%;
+  }
+  
+  .tech-content-section {
+    padding: 1.5rem;
+  }
+  
+  .tech-info {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .usage-stats {
+    justify-content: center;
+  }
+  
+  .companies-logos {
+    justify-content: center;
+  }
+  
+  .company-logo {
+    width: 70px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-name {
+    font-size: 1.5rem;
+  }
+  
+  .tech-content-section {
+    padding: 1rem;
+  }
+  
+  .companies-logos {
+    gap: 0.5rem;
+  }
+  
+  .company-logo {
+    width: 60px;
+    height: 30px;
+  }
 }
 
 .capacitacion-temas .section-title {
@@ -200,214 +591,10 @@ body.dark-mode .orbit_hero__item[alt="Github"]:hover {
   margin: 0 auto;
 }
 
-.capacitacion-card {
-  background: #EFEFEF;
-  border-radius: 20px;
-  padding: 2rem;
-  height: 100%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-}
-
-.capacitacion-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.capacitacion-card.featured {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-}
-
-.capacitacion-card.featured .card-title,
-.capacitacion-card.featured .card-description {
-  color: white;
-}
-
-.capacitacion-card.featured .card-features li {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.card-icon {
-  width: 80px;
-  height: 80px;
- background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.capacitacion-card.featured .card-icon {
-  backdrop-filter: blur(10px);
-}
-
-.card-icon i {
-  font-size: 2rem;
-  color: white;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 1rem;
-  font-family: "Revamped", sans-serif;
-}
-
-.card-description {
-  color: #6c757d;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.tech-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.capacitacion-card.featured .tech-tag {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-}
-
-.card-features {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.card-features li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.8rem;
-  color: #495057;
-}
-
-.card-features li i {
-  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-  color: white;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
-  margin-right: 0.8rem;
-  flex-shrink: 0;
-}
-
-.capacitacion-card.featured .card-features li i {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-/* Estilos para el botón de contacto en las tarjetas */
-.card-contact {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.card-whatsapp-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #25D366 !important;
-  transition: all 0.3s ease;
-  padding: 12px 20px;
-  border-radius: 25px;
-  background: rgba(37, 211, 102, 0.1);
-  border: 1px solid rgba(37, 211, 102, 0.3);
-  font-weight: 500;
-  width: 100%;
-  text-align: center;
-}
-
-.card-whatsapp-btn:hover {
-  background: rgba(37, 211, 102, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
-  color: #128C7E !important;
-}
-
-.card-whatsapp-btn i {
-  font-size: 1.2rem;
-}
-
-.card-whatsapp-btn span {
-  font-size: 0.9rem;
-  color: inherit;
-}
-
-/* Estilos especiales para la tarjeta featured */
-.capacitacion-card.featured .card-contact {
-  border-top-color: rgba(255, 255, 255, 0.2);
-}
-
-.capacitacion-card.featured .card-whatsapp-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff !important;
-}
-
-.capacitacion-card.featured .card-whatsapp-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: #ffffff !important;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .capacitacion-temas .section-title {
     font-size: 2rem;
-  }
-  
-  .capacitacion-card {
-    padding: 1.5rem;
-  }
-  
-  .card-icon {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .card-icon i {
-    font-size: 1.5rem;
-  }
-  
-  .card-title {
-    font-size: 1.3rem;
-  }
-
-  .card-whatsapp-btn {
-    padding: 10px 16px;
-    font-size: 0.85rem;
-  }
-
-  .card-whatsapp-btn i {
-    font-size: 1rem;
   }
 }
 
@@ -424,39 +611,89 @@ body.dark-mode .capacitacion-temas .section-subtitle {
   color: #adb5bd;
 }
 
-body.dark-mode .capacitacion-card {
+/* ========================
+   MODO OSCURO PARA CARDS HORIZONTALES
+   ======================== */
+
+body.dark-mode .tech-card-horizontal {
   background: #2c2c2c;
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-mode .capacitacion-card:hover {
+body.dark-mode .tech-card-horizontal:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-body.dark-mode .card-title {
+body.dark-mode .tech-name {
   color: #ffffff;
 }
 
-body.dark-mode .card-description {
+body.dark-mode .tech-importance h4,
+body.dark-mode .tech-usage h4,
+body.dark-mode .tech-companies h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .tech-importance p {
   color: #adb5bd;
 }
 
-body.dark-mode .card-features li {
-  color: #ced4da;
+body.dark-mode .stat-label {
+  color: #adb5bd;
 }
 
-/* Modo oscuro para el botón de WhatsApp */
-body.dark-mode .card-contact {
-  border-top-color: rgba(255, 255, 255, 0.1);
+body.dark-mode .company-logo {
+  opacity: 0.7;
 }
 
-body.dark-mode .card-whatsapp-btn {
-  background: rgba(37, 211, 102, 0.15);
-  border-color: rgba(37, 211, 102, 0.4);
+body.dark-mode .company-logo:hover {
+  opacity: 1;
 }
 
-body.dark-mode .card-whatsapp-btn:hover {
-  background: rgba(37, 211, 102, 0.25);
-  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
+body.dark-mode .company-logo img {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+}
+
+/* Estilos dark mode para temas adicionales */
+body.dark-mode .tech-additional h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .topic-name {
+  color: #667eea;
+}
+
+body.dark-mode .topic-icon {
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+}
+
+/* Estilo específico para el logo de Salesforce - hacerlo más grande */
+.company-logo img[alt="Salesforce"] {
+  width: 120px !important;
+  height: 50px !important;
+  max-width: 120px !important;
+  max-height: 50px !important;
+}
+
+/* Estilo específico para el logo de Vercel - hacerlo más grande */
+.company-logo img[alt="Vercel"] {
+  width: 110px !important;
+  height: 50px !important;
+  max-width: 110px !important;
+  max-height: 50px !important;
+}
+
+/* Estilo específico para el logo de Atlassian - hacerlo más grande */
+.company-logo img[alt="Atlassian"] {
+  width: 120px !important;
+  height: 50px !important;
+  max-width: 120px !important;
+  max-height: 50px !important;
+}
+.company-logo img[alt="Discord"] {
+  width: 120px !important;
+  height: 50px !important;
+  max-width: 120px !important;
+  max-height: 50px !important;
 }
