@@ -642,7 +642,8 @@ div.section-title{
 .about-alineacion {
     margin-top: 2rem; /* Añadir margen superior para separarlo del <h1> */
     font-size: 2rem; /* Ajusta según sea necesario */
-    font-family: "Racing_Hard";
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
     color: #333;
     text-align: center; /* Centra el texto del <h3> */
 }
@@ -879,6 +880,8 @@ a.red-social-footer:hover {
 .lang-jpn .about-alineacion {
     font-size: 1.6rem !important;
     line-height: 1.4 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
 }
 
 .lang-jpn .service-card .card-title {
@@ -967,6 +970,8 @@ a.red-social-footer:hover {
 
 .lang-eng .about-alineacion {
     font-size: 1.8rem !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
 }
 
 /* Español mantiene los estilos originales por defecto */
@@ -3521,6 +3526,8 @@ body.dark-mode .fa-regular {
 /* Ajustes específicos para clases con colores oscuros */
 body.dark-mode .about-alineacion {
   color: #f0f0f0 !important;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
 }
 
 body.dark-mode .section-title-card-tech {
