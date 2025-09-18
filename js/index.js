@@ -600,19 +600,33 @@ window.getRelativePath = function(resourcePath) {
                !part.endsWith('.htm');
     });
     
-    // Casos especiales para rutas en la raíz
-    if (normalizedPath === '/' || normalizedPath === '' || pathParts.length === 0) {
-        return resourcePath; // Estamos en la raíz, usar ruta directa
+    // Detectar si estamos en GitHub Pages o local
+    const isGitHubPages = normalizedPath.includes('github.io') || window.location.hostname.includes('github.io');
+    
+    // Para GitHub Pages, ajustar el conteo de niveles
+    let actualLevels = pathParts.length;
+    if (isGitHubPages) {
+        // En GitHub Pages, el primer nivel suele ser el nombre del repositorio
+        actualLevels = Math.max(0, pathParts.length - 1);
     }
     
-    // Si hay solo una parte y no hay archivo, probablemente estamos en raíz
-    if (pathParts.length === 1 && !normalizedPath.includes('.html')) {
+    // Si ya tiene '../' al inicio, verificar si es correcto para el nivel actual
+    if (resourcePath.startsWith('../')) {
+        // Si estamos en la raíz (nivel 0), remover el '../'
+        if (actualLevels === 0) {
+            return resourcePath.replace('../', '');
+        }
+        // Si no, mantener la ruta tal como está
         return resourcePath;
     }
     
+    // Casos especiales para rutas en la raíz
+    if (normalizedPath === '/' || normalizedPath === '' || actualLevels === 0) {
+        return resourcePath; // Estamos en la raíz, usar ruta directa
+    }
+    
     // Generar '../' por cada nivel de carpeta
-    const levelsUp = Math.max(0, pathParts.length);
-    const pathPrefix = '../'.repeat(levelsUp);
+    const pathPrefix = '../'.repeat(actualLevels);
     
     // Remover barra inicial del resourcePath si existe para evitar rutas duplicadas
     const cleanResourcePath = resourcePath.startsWith('/') ? resourcePath.slice(1) : resourcePath;
