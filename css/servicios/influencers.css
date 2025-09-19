@@ -1,0 +1,143 @@
+/* ========================
+   ESTILOS ESPECÍFICOS PARA INFLUENCERS
+   ======================== */
+
+@font-face {
+    font-family: "Gotham Black";
+    src: url("../../fonts/Gotham-Black.otf") format("opentype");
+    font-display: swap;
+}
+
+/* Header específico para influencers */
+.influencers-header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px; /* Separación del navbar */
+}
+
+.influencers-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(28, 31, 61, 0.8) 0%, rgba(28, 31, 61, 0.3) 100%);
+    z-index: 1;
+}
+
+.influencers-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.influencers-header h1 {
+    font-family: "Gotham Black", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.influencers-header p {
+    font-family: "Gotham Black", sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: #FFFFFF;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    font-weight: 700;
+}
+
+/* Botón "Conoce y Conecta" */
+.btn-conoce-conecta {
+    background: linear-gradient(135deg, #27346A 0%, #C49C3C 100%);
+    color: #FFFFFF;
+    font-family: "Gotham Black", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(196, 156, 60, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-conoce-conecta:hover {
+    background: linear-gradient(135deg, #C49C3C 0%, #27346A 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(196, 156, 60, 0.5);
+    color: #FFFFFF;
+}
+
+.btn-conoce-conecta:active {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(196, 156, 60, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .influencers-header {
+        min-height: 70vh;
+        padding-top: 70px;
+    }
+    
+    .btn-conoce-conecta {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .influencers-header {
+        padding-top: 60px;
+    }
+    
+    .btn-conoce-conecta {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Animaciones */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.influencers-header h1 {
+    animation: slideInFromLeft 0.8s ease-out;
+}
+
+.influencers-header p {
+    animation: slideInFromLeft 0.8s ease-out 0.2s both;
+}
+
+.btn-conoce-conecta {
+    animation: slideInFromLeft 0.8s ease-out 0.4s both;
+}
+
+
+body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button) {
+     color: #FFFFFF !important;
+}
