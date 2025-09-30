@@ -121,7 +121,7 @@ const translations = {
         dropdownCapacitacion: "Capacitacion IT",
         // Secciones principales
         titleSobreNosotros: "Sobre Nosotros",
-        aboutDescription: '"Somos una agencia digital internacional con presencia en México y Estados Unidos,contamos con un equipo de miembros expertos en áreas como diseño gráfico, desarrollo de software y desarrollo de medios audiovisuales."',
+        aboutDescription: 'Somos una agencia digital internacional con presencia en <strong>México, Estados Unidos, España y Argentina</strong>. <br> Nos especializamos en potenciar tu negocio a través de soluciones de <strong>desarrollo de software, desarrollo web</strong> y la producción de <strong>medios audiovisuales</strong>.<br> Además, contamos con expertos en <strong>Recursos Humanos</strong> para la <strong>capacitación de programadores</strong> y la gestión de <strong>talento de influencers</strong>, garantizando el éxito de tu estrategia digital.',
         titleServicios: "Servicios",
         titleClientes: "Clientes",
         // Cards de servicios
@@ -215,7 +215,7 @@ const translations = {
         dropdownCapacitacion: "IT Training",
         // Secciones principales
         titleSobreNosotros: "About Us",
-        aboutDescription: '"We are an international digital agency with a presence in Mexico and the United States, with a team of expert members in areas like graphic design, software development, and audio visual media development"',
+        aboutDescription: 'We are an international digital agency with presence in <strong>Mexico, United States, Spain and Argentina</strong>. <br> We specialize in empowering your business through <strong>software development, web development</strong> solutions and <strong>audiovisual media</strong> production.<br> Additionally, we have <strong>Human Resources</strong> experts for <strong>programmer training</strong> and <strong>influencer talent</strong> management, guaranteeing the success of your digital strategy.',
         titleServicios: "Services",
         titleClientes: "Clients",
         // Cards de servicios
@@ -309,7 +309,7 @@ const translations = {
         dropdownCapacitacion: "IT研修",
         // Secciones principales
         titleSobreNosotros: "私たちについて",
-        aboutDescription: '"私たちはメキシコとアメリカに拠点を持つ国際的なデジタル代理店です。グラフィックデザイン、ソフトウェア開発、オーディオビジュアルメディア開発の専門家チームを持っています。"',
+        aboutDescription: '私たちは<strong>メキシコ、アメリカ、スペイン、アルゼンチン</strong>に拠点を持つ国際的なデジタル代理店です。<br> <strong>ソフトウェア開発、ウェブ開発</strong>ソリューション、<strong>オーディオビジュアルメディア</strong>制作を通じてお客様のビジネスを強化することを専門としています。<br> さらに、<strong>プログラマー研修</strong>と<strong>インフルエンサータレント</strong>管理のための<strong>人材</strong>専門家を擁し、お客様のデジタル戦略の成功を保証します。',
         titleServicios: "サービス",
         titleClientes: "クライアント",
         // Cards de servicios
@@ -391,6 +391,27 @@ const translations = {
     }
 };
 
+// Función para actualizar el estado de los elementos del menú de idiomas
+function updateLanguageMenuState(selectedLang) {
+    document.querySelectorAll('#languageDropdown a').forEach(function (element) {
+        const elementLang = element.getAttribute('data-lang');
+        
+        if (elementLang === selectedLang) {
+            // Deshabilitar el idioma seleccionado
+            element.style.pointerEvents = 'none';
+            element.style.opacity = '0.5';
+            element.style.cursor = 'not-allowed';
+            element.classList.add('disabled');
+        } else {
+            // Habilitar otros idiomas
+            element.style.pointerEvents = 'auto';
+            element.style.opacity = '1';
+            element.style.cursor = 'pointer';
+            element.classList.remove('disabled');
+        }
+    });
+}
+
 // Función para cambiar el idioma
 function changeLanguage(lang) {
     const translation = translations[lang];
@@ -415,7 +436,7 @@ function changeLanguage(lang) {
         }
 
         if (translatedText) {
-            if (key === 'navTrabaja') {
+            if (key === 'navTrabaja' || key === 'aboutDescription') {
                 element.innerHTML = translatedText;
             } else {
                 element.textContent = translatedText;
@@ -423,52 +444,17 @@ function changeLanguage(lang) {
         }
     });
 
-    // Ajustes específicos para japonés
-    if (lang === 'JPN') {
-        // Ajustar específicamente elementos problemáticos
-        const aboutSection = document.querySelector('.about-alineacion');
-        if (aboutSection) {
-            aboutSection.style.fontSize = '1.6rem';
-            aboutSection.style.lineHeight = '1.4';
-        }
-
-        // Ajustar títulos de sección
-        const sectionTitles = document.querySelectorAll('.section-title h1');
-        sectionTitles.forEach(title => {
-            title.style.fontSize = '2.5rem';
-        });
-
-        // Ajustar cards de servicios
-        const serviceCards = document.querySelectorAll('.service-card .card-title');
-        serviceCards.forEach(card => {
-            card.style.fontSize = '1.6rem';
-            card.style.lineHeight = '1.3';
-        });
-    } else {
-        // Restaurar estilos originales para otros idiomas
-        const aboutSection = document.querySelector('.about-alineacion');
-        if (aboutSection) {
-            aboutSection.style.fontSize = '';
-            aboutSection.style.lineHeight = '';
-        }
-
-        const sectionTitles = document.querySelectorAll('.section-title h1');
-        sectionTitles.forEach(title => {
-            title.style.fontSize = '';
-        });
-
-        const serviceCards = document.querySelectorAll('.service-card .card-title');
-        serviceCards.forEach(card => {
-            card.style.fontSize = '';
-            card.style.lineHeight = '';
-        });
-    }
-
     // Obtener idioma anterior para tracking
     const previousLang = localStorage.getItem('selectedLanguage') || 'SPA';
 
     // Guardar idioma seleccionado en localStorage
     localStorage.setItem('selectedLanguage', lang);
+
+    // Forzar un reflow del DOM para asegurar que los estilos CSS se apliquen correctamente
+    document.body.offsetHeight;
+
+    // Actualizar el estado del menú de idiomas para deshabilitar el idioma seleccionado
+    updateLanguageMenuState(lang);
 
     // Enviar el evento a Google Analytics 4 - Mejorado
     gtag('event', 'language_change', {
@@ -532,6 +518,11 @@ document.querySelectorAll('#languageDropdown a').forEach(function (element) {
     element.addEventListener('click', function (event) {
         event.preventDefault(); // Previene el comportamiento por defecto del enlace
 
+        // Verificar si el elemento está deshabilitado
+        if (this.classList.contains('disabled')) {
+            return; // No hacer nada si está deshabilitado
+        }
+
         // Obtén el idioma seleccionado y la bandera correspondiente
         let selectedLang = this.getAttribute('data-lang');
         let flagSrc = this.getAttribute('data-flag');
@@ -542,7 +533,7 @@ document.querySelectorAll('#languageDropdown a').forEach(function (element) {
         // Cambia la imagen de la bandera
         document.getElementById('languageIcon').src = flagSrc;
 
-        // Cambia el idioma del contenido
+        // Cambia el idioma del contenido inmediatamente
         changeLanguage(selectedLang);
 
         // Oculta el menú desplegable
@@ -552,6 +543,12 @@ document.querySelectorAll('#languageDropdown a').forEach(function (element) {
         let dropdownIcon = document.getElementById('dropdownIcon');
         dropdownIcon.classList.remove('rotate-180');
         dropdownIcon.classList.add('rotate-0');
+
+        // Asegurar que los cambios se apliquen completamente
+        setTimeout(() => {
+            // Forzar un reflow suave para asegurar la aplicación de estilos CSS
+            document.documentElement.scrollTop = document.documentElement.scrollTop;
+        }, 50);
     });
 });
 
@@ -1037,5 +1034,9 @@ function animateOnScroll(selector, flagSelector) {
 document.addEventListener("DOMContentLoaded", function () {
     animateOnScroll(".country-hover", ".flag");
     animateOnScroll(".idioma-hover", ".idioma-flag");
-    animateOnScroll(".clientes-hover", ".flag")
+    animateOnScroll(".clientes-hover", ".flag");
+    
+    // Inicializar el estado del menú de idiomas
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'SPA';
+    updateLanguageMenuState(savedLanguage);
 });
