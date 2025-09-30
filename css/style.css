@@ -862,6 +862,20 @@ a.red-social-footer:hover {
 /*-- FIN ESTILOS FOOTER--*/
 
 /*-- ESTILOS PARA ADAPTACIÓN DE IDIOMAS --*/
+/* Transición suave para cambios de idioma */
+[data-translate] {
+    transition: font-size 0.2s ease, line-height 0.2s ease;
+}
+
+/* Estilos para elemento de idioma deshabilitado */
+#languageDropdown a.disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    color: #6c757d !important;
+}
+
+
 /* Clases para ajustar el tamaño de texto según el idioma */
 .lang-jpn {
     font-size: 0.8em !important;
