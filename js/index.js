@@ -121,7 +121,7 @@ const translations = {
         dropdownCapacitacion: "Capacitacion IT",
         // Secciones principales
         titleSobreNosotros: "Sobre Nosotros",
-        aboutDescription: 'Somos una agencia digital internacional con presencia en <strong>México, Estados Unidos, España y Argentina</strong>. <br> Nos especializamos en potenciar tu negocio a través de soluciones de <strong>desarrollo de software, desarrollo web</strong> y la producción de <strong>medios audiovisuales</strong>.<br> Además, contamos con expertos en <strong>Recursos Humanos</strong> para la <strong>capacitación de programadores</strong> y la gestión de <strong>talento de influencers</strong>, garantizando el éxito de tu estrategia digital.',
+        aboutDescription: 'Somos una agencia digital internacional con presencia en <strong>México, Estados Unidos y España</strong>. <br> Nos especializamos en potenciar tu negocio a través de soluciones de <strong>desarrollo de software, desarrollo web</strong> y la producción de <strong>medios audiovisuales</strong>.<br> Además, contamos con expertos en <strong>Recursos Humanos</strong> para la <strong>capacitación de programadores</strong> y la gestión de <strong>talento de influencers</strong>, garantizando el éxito de tu estrategia digital.',
         titleServicios: "Servicios",
         titleClientes: "Clientes",
         // Cards de servicios
@@ -215,7 +215,7 @@ const translations = {
         dropdownCapacitacion: "IT Training",
         // Secciones principales
         titleSobreNosotros: "About Us",
-        aboutDescription: 'We are an international digital agency with presence in <strong>Mexico, United States, Spain and Argentina</strong>. <br> We specialize in empowering your business through <strong>software development, web development</strong> solutions and <strong>audiovisual media</strong> production.<br> Additionally, we have <strong>Human Resources</strong> experts for <strong>programmer training</strong> and <strong>influencer talent</strong> management, guaranteeing the success of your digital strategy.',
+        aboutDescription: 'We are an international digital agency with presence in <strong>Mexico, United States and Spain</strong>. <br> We specialize in empowering your business through <strong>software development, web development</strong> solutions and <strong>audiovisual media</strong> production.<br> Additionally, we have <strong>Human Resources</strong> experts for <strong>programmer training</strong> and <strong>influencer talent</strong> management, guaranteeing the success of your digital strategy.',
         titleServicios: "Services",
         titleClientes: "Clients",
         // Cards de servicios
@@ -309,7 +309,7 @@ const translations = {
         dropdownCapacitacion: "IT研修",
         // Secciones principales
         titleSobreNosotros: "私たちについて",
-        aboutDescription: '私たちは<strong>メキシコ、アメリカ、スペイン、アルゼンチン</strong>に拠点を持つ国際的なデジタル代理店です。<br> <strong>ソフトウェア開発、ウェブ開発</strong>ソリューション、<strong>オーディオビジュアルメディア</strong>制作を通じてお客様のビジネスを強化することを専門としています。<br> さらに、<strong>プログラマー研修</strong>と<strong>インフルエンサータレント</strong>管理のための<strong>人材</strong>専門家を擁し、お客様のデジタル戦略の成功を保証します。',
+        aboutDescription: '私たちは<strong>メキシコ、アメリカ、スペイン</strong>に拠点を持つ国際的なデジタル代理店です。<br> <strong>ソフトウェア開発、ウェブ開発</strong>ソリューション、<strong>オーディオビジュアルメディア</strong>制作を通じてお客様のビジネスを強化することを専門としています。<br> さらに、<strong>プログラマー研修</strong>と<strong>インフルエンサータレント</strong>管理のための<strong>人材</strong>専門家を擁し、お客様のデジタル戦略の成功を保証します。',
         titleServicios: "サービス",
         titleClientes: "クライアント",
         // Cards de servicios
