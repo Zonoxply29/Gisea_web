@@ -2,8 +2,91 @@
 <html lang="en">
 
 <head>
+    <!-- ========== META TAGS BÁSICOS REQUERIDOS ========== -->
+    <!-- Codificación de caracteres UTF-8 - Permite mostrar acentos, ñ, emojis y caracteres especiales -->
     <meta charset="UTF-8">
+    
+    <!-- Control del viewport para diseño responsive - Hace que el sitio se adapte a dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========== SEO PRINCIPAL ========== -->
+    <!-- Título principal de la página - Aparece en:
+         • Pestaña del navegador
+         • Resultados de búsqueda de Google (enlace azul clickeable)
+         • Marcadores del navegador
+         • Factor de ranking MÁS IMPORTANTE para SEO
+         • Longitud óptima: 50-60 caracteres (máximo 70) -->
+    <title>Desarrollo Web para Empresas Medianas desde $6,000 MXN | GISEA</title>
+    
+    <!-- Meta descripción - Descripción que aparece en los resultados de Google debajo del título
+         • Influye directamente en el CTR (Click Through Rate)
+         • Longitud óptima: 140-160 caracteres (máximo 160)
+         • Debe incluir palabras clave principales y call-to-action atractivo -->
+    <meta name="description" content="Sitios web profesionales para empresas medianas desde $6,000 MXN. De 4 a 8 páginas, hospedaje incluido por 3 años, asesoría de imagen y código optimizado. ¡Destaca en digital!">
+
+    <!-- ========== OPEN GRAPH TAGS (FACEBOOK, LINKEDIN, WHATSAPP) ========== -->
+    <!-- Tipo de contenido - Define qué tipo de objeto es esta página
+         • "website" para páginas corporativas/comerciales
+         • Otras opciones: article, product, video, music -->
+    <meta property="og:type" content="website">
+    
+    <!-- Título para redes sociales - Título que aparece al compartir en Facebook, LinkedIn, WhatsApp
+         • Puede ser igual o diferente al <title>
+         • Longitud recomendada: 40-60 caracteres para mejor visualización
+         • Puede ser más directo y emocional que el title SEO -->
+    <meta property="og:title" content="Desarrollo Web para Empresas Medianas desde $6,000 MXN | GISEA">
+    
+    <!-- Descripción para redes sociales - Descripción en el preview al compartir el enlace
+         • Longitud recomendada: 130-160 caracteres
+         • Estilo más conversacional que la meta description
+         • Enfoque en beneficios claros y llamada a la acción -->
+    <meta property="og:description" content="Sitios web profesionales para empresas medianas. De 4 a 8 páginas, hospedaje incluido por 3 años, asesoría de imagen y código optimizado desde $6,000 MXN.">
+    
+    <!-- Imagen para compartir - Imagen que aparece al compartir el enlace en redes sociales
+         • Tamaño recomendado: 1200x630 píxeles (proporción 1.91:1)
+         • Peso máximo: 1MB
+         • Debe incluir logo + texto clave + colores de marca
+         • Formatos: JPG o PNG -->
+    <meta property="og:image" content="https://giseamex.com/img/servicios/empresas_medianas.png">
+    
+    <!-- URL canónica - URL oficial y única de esta página específica
+         • Evita problemas de contenido duplicado
+         • Debe ser URL completa y absoluta (incluir https://)
+         • Debe coincidir con la URL real de la página -->
+    <meta property="og:url" content="https://giseamex.com/desarrollo-web/empresas-medianas">
+    
+    <!-- Configuración de idioma y región - Define el idioma y país objetivo
+         • Formato: idioma_PAÍS (es_MX = español de México)
+         • Mejora la geolocalización y targeting regional
+         • Para GISEA: es_MX (mercado principal: México) -->
+    <meta property="og:locale" content="es_MX">
+
+    <!-- ========== TWITTER CARD TAGS ========== -->
+    <!-- Tipo de tarjeta de Twitter - Define cómo se muestra el contenido en Twitter
+         • "summary_large_image": Imagen grande arriba (RECOMENDADO)
+         • "summary": Imagen pequeña a la izquierda
+         • "app": Para aplicaciones móviles
+         • "player": Para contenido multimedia -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Título específico para Twitter - Título que aparece en el tweet
+         • Longitud recomendada: 50-60 caracteres
+         • Puede incluir hashtags relevantes si es apropiado
+         • Puede ser igual a og:title o diferente según la estrategia -->
+    <meta name="twitter:title" content="Desarrollo Web para Empresas Medianas desde $6,000 MXN | GISEA">
+    
+    <!-- Descripción para Twitter - Descripción que aparece en el tweet
+         • Longitud recomendada: 120-160 caracteres
+         • Estilo conciso y directo
+         • Puede incluir hashtags o menciones si es relevante -->
+    <meta name="twitter:description" content="Sitios web profesionales para empresas medianas. De 4 a 8 páginas, hospedaje incluido por 3 años, asesoría de imagen y código optimizado desde $6,000 MXN.">
+    
+    <!-- Imagen para Twitter - Imagen que aparece en el tweet
+         • Tamaño recomendado: 1200x600 píxeles (proporción 2:1)
+         • Puede ser la misma que og:image o específica para Twitter
+         • El texto debe ser legible incluso en tamaño pequeño -->
+    <meta name="twitter:image" content="https://giseamex.com/img/servicios/empresas_medianas.png">
+
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/fontawesome/all.min.css">
@@ -25,8 +108,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-
-    <title>Empresas Medianas</title>
 </head>
 <style>
     @keyframes rotateIn {
