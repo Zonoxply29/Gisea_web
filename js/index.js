@@ -199,6 +199,19 @@ const translations = {
             health: "Salud",
             lawyers: "Abogados",
             automotive: "Automotriz"
+        },
+        // Títulos de páginas
+        pageTitles: {
+            index: "Agencia Digital Internacional: Desarrollo Web y Soluciones IT | GISEA",
+            about: "Sobre Nuestra Agencia Digital: Stack y Clientes | GISEA",
+            service_desarrollo_web: "Desarrollo Web Profesional - Agencia Digital Internacional | GISEA Agency",
+            capacitacion_it: "Capacitación IT: Asesorías en Lenguajes y Frameworks | GISEA",
+            recursos_humanos: "Servicios de Recursos Humanos en México e Internacional | GISEA",
+            influencers: "Marketing de Influencers en México e Internacional | GISEA",
+            negocios_pequenos: "Desarrollo Web para Negocios Pequeños desde $3,000 MXN | GISEA",
+            empresas_medianas: "Desarrollo Web para Empresas Medianas desde $6,000 MXN | GISEA",
+            empresas_grandes_corp: "Desarrollo Web Corporativo para Empresas Grandes desde $9,999 MXN | GISEA",
+            produccion_digital: "Producción Digital: Contenido, Video y Diseño Profesional | GISEA"
         }
     },
     ENG: {
@@ -293,6 +306,19 @@ const translations = {
             health: "Health",
             lawyers: "Lawyers",
             automotive: "Automotive"
+        },
+        // Títulos de páginas
+        pageTitles: {
+            index: "International Digital Agency: Web Development & IT Solutions | GISEA",
+            about: "About Our Digital Agency: Stack & Clients | GISEA",
+            service_desarrollo_web: "Professional Web Development - International Digital Agency | GISEA Agency",
+            capacitacion_it: "IT Training: Programming Languages & Frameworks Consulting | GISEA",
+            recursos_humanos: "Human Resources Services in Mexico & International | GISEA",
+            influencers: "Influencer Marketing in Mexico & International | GISEA",
+            negocios_pequenos: "Web Development for Small Business from $3,000 MXN | GISEA",
+            empresas_medianas: "Web Development for Medium Companies from $6,000 MXN | GISEA",
+            empresas_grandes_corp: "Corporate Web Development for Large Companies from $9,999 MXN | GISEA",
+            produccion_digital: "Digital Production: Content, Video & Professional Design | GISEA"
         }
     },
     JPN: {
@@ -387,6 +413,19 @@ const translations = {
             health: "健康",
             lawyers: "弁護士",
             automotive: "自動車"
+        },
+        // Títulos de páginas  
+        pageTitles: {
+            index: "国際デジタルエージェンシー: ウェブ開発とITソリューション | GISEA",
+            about: "デジタルエージェンシーについて: スタックとクライアント | GISEA",
+            service_desarrollo_web: "プロフェッショナルウェブ開発 - 国際デジタルエージェンシー | GISEA Agency",
+            capacitacion_it: "IT研修: プログラミング言語とフレームワークコンサルティング | GISEA",
+            recursos_humanos: "メキシコと国際的な人材サービス | GISEA",
+            influencers: "メキシコと国際的なインフルエンサーマーケティング | GISEA",
+            negocios_pequenos: "小規模事業向けウェブ開発 $3,000 MXNから | GISEA",
+            empresas_medianas: "中規模企業向けウェブ開発 $6,000 MXNから | GISEA",
+            empresas_grandes_corp: "大企業向けコーポレートウェブ開発 $9,999 MXNから | GISEA",
+            produccion_digital: "デジタル制作: コンテンツ、ビデオ、プロフェッショナルデザイン | GISEA"
         }
     }
 };
@@ -410,6 +449,52 @@ function updateLanguageMenuState(selectedLang) {
             element.classList.remove('disabled');
         }
     });
+}
+
+// Función para actualizar el título de la página según el idioma
+function updatePageTitle(lang) {
+    const translation = translations[lang];
+    
+    // Determinar qué página es actualmente basándose en la URL
+    const currentPath = window.location.pathname;
+    const fileName = currentPath.split('/').pop() || 'index.html';
+    let pageKey = '';
+    
+    // Mapear los nombres de archivo a las claves de título
+    if (fileName === '' || fileName === 'index.html' || currentPath === '/' || currentPath.endsWith('/')) {
+        pageKey = 'index';
+    } else if (fileName === 'about.html') {
+        pageKey = 'about';
+    } else if (fileName === 'service_desarollo_web.html') {
+        pageKey = 'service_desarrollo_web';
+    } else if (fileName === 'capacitacion_it.html') {
+        pageKey = 'capacitacion_it';
+    } else if (fileName === 'recursos_humanos.html') {
+        pageKey = 'recursos_humanos';
+    } else if (fileName === 'influencers.html') {
+        pageKey = 'influencers';
+    } else if (fileName === 'negocios_pequenos.html') {
+        pageKey = 'negocios_pequenos';
+    } else if (fileName === 'empresas_medianas.html') {
+        pageKey = 'empresas_medianas';
+    } else if (fileName === 'empresas_grandes_corp.html') {
+        pageKey = 'empresas_grandes_corp';
+    } else if (fileName === 'produccion_digital.html') {
+        pageKey = 'produccion_digital';
+    }
+    
+    // Actualizar el título si existe una traducción
+    if (pageKey && translation.pageTitles && translation.pageTitles[pageKey]) {
+        document.title = translation.pageTitles[pageKey];
+        console.log('✅ Título actualizado:', fileName, '→', translation.pageTitles[pageKey], '(', lang, ')'); // Debug temporal
+        
+        // También actualizar el meta tag lang del HTML
+        document.documentElement.lang = lang === 'SPA' ? 'es' : 
+                                      lang === 'ENG' ? 'en' : 
+                                      lang === 'JPN' ? 'ja' : 'es';
+    } else {
+        console.log('❌ No se encontró título para:', fileName, 'pageKey:', pageKey, 'lang:', lang); // Debug temporal
+    }
 }
 
 // Función para cambiar el idioma
@@ -443,6 +528,9 @@ function changeLanguage(lang) {
             }
         }
     });
+
+    // Actualizar el título de la página dinámicamente
+    updatePageTitle(lang);
 
     // Obtener idioma anterior para tracking
     const previousLang = localStorage.getItem('selectedLanguage') || 'SPA';
@@ -801,7 +889,7 @@ document.addEventListener('click', function (event) {
 window.initializeTooltips = function() {
     // Títulos de las banderas aqui se hace el cambio de los nombres en los tooltips
     const flagTitles = {
-        'bandera_usa.png': 'Little Rock, Arkansas',
+        'bandera_usa.png': 'Little Rock, Arkansas,<br> LA California',
         'bandera_venezuela.png': 'Maracay', 
         'bandera_mex.png': 'MTY, CDMX, GDL<br>EDOMEX, Cancun, TJ',
         'bandera_jpn.png': 'Shibuya',
@@ -1036,7 +1124,73 @@ document.addEventListener("DOMContentLoaded", function () {
     animateOnScroll(".idioma-hover", ".idioma-flag");
     animateOnScroll(".clientes-hover", ".flag");
     
-    // Inicializar el estado del menú de idiomas
+    // Inicializar el estado del menú de idiomas y aplicar idioma guardado
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'SPA';
     updateLanguageMenuState(savedLanguage);
+    
+    // Aplicar el idioma guardado incluyendo el título
+    if (savedLanguage !== 'SPA') {
+        changeLanguage(savedLanguage);
+    } else {
+        // Si es español, solo actualizar el título
+        updatePageTitle('SPA');
+    }
+});
+
+// === FUNCIÓN SCROLL TO TOP ===
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    const footer = document.querySelector('.footer');
+    
+    // Mostrar/ocultar el botón basado en el scroll y detectar footer
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        const footerRect = footer.getBoundingClientRect();
+        
+        // 1. Mostrar u ocultar el botón
+        if (scrollPosition > 200) {
+            scrollToTopButton.classList.add('show');
+        } else {
+            scrollToTopButton.classList.remove('show');
+            scrollToTopButton.classList.remove('in-footer');
+            return;
+        }
+        
+        // 2. Detectar si el footer está visible en pantalla
+        const footerVisible = footerRect.top < windowHeight;
+        
+        if (footerVisible) {
+            // Footer visible: mover botón al footer
+            scrollToTopButton.classList.add('in-footer');
+            if (scrollToTopButton.parentNode !== footer) {
+                footer.appendChild(scrollToTopButton);
+            }
+        } else {
+            // Footer no visible: mantener botón fijo
+            scrollToTopButton.classList.remove('in-footer');
+            if (scrollToTopButton.parentNode !== document.body) {
+                document.body.appendChild(scrollToTopButton);
+            }
+        }
+    });
+    
+    // Función para hacer scroll suave hacia arriba
+    scrollToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Scroll suave hacia arriba
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Tracking opcional de Google Analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'scroll_to_top', {
+                'event_category': 'Navigation',
+                'event_label': 'Scroll to Top Button'
+            });
+        }
+    });
 });

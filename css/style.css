@@ -204,11 +204,29 @@ a.linkedin:hover {
     }
 }
 
+/* Especificidad mayor para asegurar que las animaciones funcionen */
+#dropdownIcon.rotate-180,
+.fa-solid.fa-angle-down.rotate-180,
+i.rotate-180 {
+    animation: rotateIn 0.5s ease-in-out forwards !important;
+    transform-origin: center !important;
+}
+
+#dropdownIcon.rotate-0,
+.fa-solid.fa-angle-down.rotate-0,
+i.rotate-0 {
+    animation: rotateOut 0.5s ease-in-out forwards !important;
+    transform-origin: center !important;
+}
+
+/* Fallback con menor especificidad */
 .rotate-180 {
     animation: rotateIn 0.5s ease-in-out forwards !important;
+    transform-origin: center !important;
 }
 .rotate-0 {
     animation: rotateOut 0.5s ease-in-out forwards !important;
+    transform-origin: center !important;
 }
 
 /*Estilos Carousel Inicio*/
@@ -3825,5 +3843,91 @@ body.lang-jpn .human-resources-subtitle {
     
     .package-card:hover {
         transform: translateY(-3px);
+    }
+}
+
+/* === BOTÓN SCROLL TO TOP === */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(45deg, #C49C3C, #D4AF47);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(196, 156, 60, 0.3);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Cuando el botón está en el footer */
+.scroll-to-top.in-footer {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.scroll-to-top:hover {
+    background: linear-gradient(45deg, #D4AF47, #E6C76B);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(196, 156, 60, 0.4);
+}
+
+/* Hover especial cuando está en el footer */
+.scroll-to-top.in-footer:hover {
+    transform: translateY(-3px);
+}
+
+.scroll-to-top:active {
+    transform: translateY(-1px);
+}
+
+/* Contenedor especial para el footer que permitirá posicionamiento relativo */
+.footer {
+    position: relative;
+}
+
+/* Responsive para el botón */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+    
+    .scroll-to-top.in-footer {
+        top: 15px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 18px;
+    }
+    
+    .scroll-to-top.in-footer {
+        top: 20px;
+        right: 15px;
     }
 }
