@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontawesome/all.min.css">
     <link rel="stylesheet" href="../css/aos/aos.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/servicios/recursos-humanos.css">
     <link rel="stylesheet" href="../css/glightbox/glightbox.min.css">
     <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
     <!-- Bootstrap Icons -->
@@ -163,203 +165,67 @@
     <section class="desarrollo-web-header" style="background-image: url('../img/header_recursos_humanos.png'); background-position: center -177%;">
         <div class="header-content">
             <div class="text-left">
-                <h1>Recursos Humanos</h1>
-                <p>Recibe el mejor asesoramiento de profesionales</p>
+                <h1 class="header-title-rh">Recursos Humanos</h1>
+                <p class="header-subtitle-rh">Recibe el mejor asesoramiento de profesionales</p>
             </div>
             <div class="text-right">
-                <ul>
+                <ul class="header-list-rh">
                     <li><i class="fa-solid fa-check"></i><span>Consultoría especializada en gestión de talento humano</span></li>
                     <li><i class="fa-solid fa-check"></i><span>Reclutamiento y selección de personal calificado</span></li>
-                    <li><i class="fa-solid fa-check"></i><span>Capacitación y desarrollo organizacional</span></li>
-                    <li><i class="fa-solid fa-check"></i><span>Evaluación de desempeño y clima laboral</span></li>
                 </ul>
             </div>
         </div>
     </section>
+    
+    <!-- SECCIÓN RECLUTAMOS Y ASESORAMOS -->
     <section>
         <div class="container-lg">
-            <div class="en-construccion-section" data-aos="fade-up">
-                <div class="construccion-content">
-                    <div class="construccion-icon">
-                        <i class="fa-solid fa-hard-hat fa-5x"></i>
-                    </div>
-                    <h2 class="construccion-title">¡Estamos Trabajando en Algo Increíble!</h2>
-                    <p class="construccion-subtitle">Nuestra sección de Recursos Humanos está en desarrollo</p>
-                    <div class="construccion-features">
-                        <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
-                            <i class="fa-solid fa-users"></i>
-                            <span>Reclutamiento</span>
+            <div class="section-title valores-title">
+                <h1 data-translate="hrMainTitle">Reclutamos y Asesoramos</h1>
+            </div>
+            
+            <!-- Contenido de la sección -->
+            <div class="row justify-content-center mt-5">
+                <!-- Botones de puestos de trabajo en fila -->
+                <div class="col-12">
+                    <div class="row justify-content-center g-3">
+                        <!-- Maquetador -->
+                        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                            <a href="#" class="btn-puesto btn-maquetador">
+                                <i class="fa-solid fa-code"></i>
+                                Maquetador
+                            </a>
                         </div>
-                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <span>Evaluación de Desempeño</span>
+                        
+                        <!-- Frontend Developer -->
+                        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                            <a href="#" class="btn-puesto btn-frontend">
+                                <i class="fa-brands fa-react"></i>
+                                Frontend
+                            </a>
                         </div>
-                        <div class="feature-item" data-aos="fade-left" data-aos-delay="300">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <span>Capacitación</span>
+                        
+                        <!-- Diseñador UX/UI -->
+                        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+                            <a href="#" class="btn-puesto btn-ux-ui">
+                                <i class="fa-solid fa-paintbrush"></i>
+                                Diseñador UX/UI
+                            </a>
                         </div>
-                    </div>
-                    <div class="construccion-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill"></div>
+                        
+                        <!-- Backend Developer -->
+                        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#" class="btn-puesto btn-backend">
+                                <i class="fa-solid fa-server"></i>
+                                Backend
+                            </a>
                         </div>
-                        <span class="progress-text">75% Completado</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <style>
-        .en-construccion-section {
-            background: #1C1F3D;
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            color: white;
-            margin: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .en-construccion-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255,255,255,0.05) 10px,
-                rgba(255,255,255,0.05) 20px
-            );
-            animation: construccionPattern 20s linear infinite;
-        }
-
-        @keyframes construccionPattern {
-            0% { transform: translateX(-20px) translateY(-20px); }
-            100% { transform: translateX(20px) translateY(20px); }
-        }
-
-        .construccion-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .construccion-icon {
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .construccion-icon .fa-hard-hat {
-            color: #FFD700;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        .construccion-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .construccion-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .construccion-features {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .feature-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-item i {
-            font-size: 2rem;
-            color: #FFD700;
-        }
-
-        .construccion-progress {
-            margin-bottom: 30px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            max-width: 400px;
-            height: 10px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 10px;
-            margin: 0 auto 10px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            width: 75%;
-            height: 100%;
-            background: linear-gradient(90deg, #FFD700, #FFA500);
-            border-radius: 10px;
-            animation: progressGlow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes progressGlow {
-            from { box-shadow: 0 0 5px #FFD700; }
-            to { box-shadow: 0 0 20px #FFD700, 0 0 30px #FFA500; }
-        }
-
-        .progress-text {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        @media (max-width: 768px) {
-            .en-construccion-section {
-                padding: 40px 20px;
-                margin: 40px 0;
-            }
-
-            .construccion-title {
-                font-size: 2rem;
-            }
-
-            .construccion-features {
-                gap: 20px;
-            }
-
-            .feature-item {
-                min-width: 120px;
-            }
-        }
-    </style>
-
+    
     <!---FOOTER-->
     <section>
         <footer class="footer">
