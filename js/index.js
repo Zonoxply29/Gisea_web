@@ -1194,3 +1194,67 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// === FUNCIONALIDAD BOTONES RECURSOS HUMANOS ===
+// JavaScript para efectos de botones y scroll suave en la página de recursos humanos
+document.addEventListener('DOMContentLoaded', function() {
+    // Verificar si estamos en la página de recursos humanos
+    const isRecursosHumanosPage = window.location.pathname.includes('recursos_humanos.html');
+    
+    if (isRecursosHumanosPage) {
+        // Seleccionar todos los botones de puestos
+        const buttons = document.querySelectorAll('.btn-puesto');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Remover clase 'clicked' de todos los botones
+                buttons.forEach(btn => btn.classList.remove('clicked'));
+                
+                // Agregar clase 'clicked' al botón actual
+                this.classList.add('clicked');
+                
+                // Si es un enlace ancla (como #frontend-section)
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault(); // Prevenir el comportamiento por defecto
+                    
+                    // Esperar un momento para que se vea el efecto del clic
+                    setTimeout(() => {
+                        const targetSection = document.querySelector(href);
+                        if (targetSection) {
+                            // Scroll suave personalizado
+                            targetSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            
+                            // Mantener el estado activo por más tiempo
+                            setTimeout(() => {
+                                this.classList.remove('clicked');
+                            }, 2000); // Mantener el estado por 2 segundos
+                        }
+                    }, 200); // Esperar 200ms antes del scroll
+                } else {
+                    // Para botones sin enlace ancla, solo mantener el estado visual
+                    setTimeout(() => {
+                        this.classList.remove('clicked');
+                    }, 1500); // Mantener el estado por 1.5 segundos
+                }
+            });
+            
+            // Soporte táctil mejorado para móviles
+            button.addEventListener('touchstart', function() {
+                this.classList.add('clicked');
+            });
+            
+            button.addEventListener('touchend', function() {
+                // Mantener el estado un poco más en móviles
+                setTimeout(() => {
+                    if (!this.getAttribute('href') || !this.getAttribute('href').startsWith('#')) {
+                        this.classList.remove('clicked');
+                    }
+                }, 300);
+            });
+        });
+    }
+});

@@ -3,12 +3,27 @@
    ================================== */
 
 /* ===================================
+   SECCIÓN RECLUTAMOS Y ASESORAMOS
+   ================================== */
+
+/* Estilos específicos para el container de la sección Reclutamos y Asesoramos */
+section:has(.recursos-humanos-title) .container-lg {
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+}
+
+/* ===================================
    BOTONES DE PUESTOS DE TRABAJO
    ================================== */
- 
+ @font-face {
+    font-family: "Gotham Black";
+    src: url("../../fonts/Gotham-Black.otf") format("opentype");
+    font-display: swap;
+}
+
 .btn-puesto {
-    font-family: "Racing_Hard", sans-serif;
-    font-size: 1.3rem;
+    font-family: "Gotham Black", sans-serif;
+    font-size: 0.9rem;
     padding: 12px 45px;
     border: none;
     border-radius: 50px;
@@ -24,7 +39,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 250px;
+    max-width: 271px;
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -38,6 +53,42 @@
 
 .btn-puesto:active {
     transform: translateY(-1px);
+}
+
+/* Estado activo para mantener el hover después del clic */
+.btn-puesto.clicked {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Estados activos para cada tipo de botón */
+.btn-frontend.clicked {
+    background: linear-gradient(135deg, #e879f9 0%, #f43f5e 100%);
+}
+
+.btn-maquetador.clicked {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 100%);
+}
+
+.btn-ux-ui.clicked {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+}
+
+.btn-backend.clicked {
+    background: linear-gradient(135deg, #22c55e 0%, #14b8a6 100%);
+}
+
+.btn-reclutador.clicked {
+    background: linear-gradient(90deg, #e43b35,#f45729,#ffcc00);
+}
+
+.btn-fullstack.clicked {
+    background: linear-gradient(90deg, #0a00cc,#000594);
+}
+
+.btn-project-manager.clicked {
+    background: linear-gradient(90deg, #4a0194,#992fc4,#e75af4);
 }
 
 /* Icono del botón */
@@ -59,7 +110,7 @@
 
 /* Gradientes específicos para cada puesto */
 .btn-maquetador {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(180deg, #23379a,#09133c);
 }
 
 .btn-maquetador:hover {
@@ -67,7 +118,7 @@
 }
 
 .btn-frontend {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(180deg, #23379a,#09133c);
 }
 
 .btn-frontend:hover {
@@ -75,7 +126,7 @@
 }
 
 .btn-ux-ui {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(180deg, #23379a,#09133c);
 }
 
 .btn-ux-ui:hover {
@@ -83,11 +134,35 @@
 }
 
 .btn-backend {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    background: linear-gradient(180deg, #23379a,#09133c);
 }
 
 .btn-backend:hover {
     background: linear-gradient(135deg, #22c55e 0%, #14b8a6 100%);
+}
+
+.btn-reclutador {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-reclutador:hover {
+    background: linear-gradient(90deg, #e43b35,#f45729,#ffcc00);
+}
+
+.btn-fullstack {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-fullstack:hover {
+    background: linear-gradient(90deg, #0a00cc,#000594);
+}
+
+.btn-project-manager {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-project-manager:hover {
+    background: linear-gradient(90deg, #4a0194,#992fc4,#e75af4);
 }
 
 /* ===================================
@@ -110,11 +185,27 @@
 }
 
 /* Responsive para botones de puestos */
+@media (max-width: 1024px) and (min-width: 993px) {
+    .btn-fullstack {
+        max-width: 280px;
+        font-size: 1rem;
+        padding: 10px 20px;
+        white-space: normal;
+        line-height: 1.2;
+        min-height: 50px;
+        align-items: center;
+    }
+    
+    .btn-fullstack .btn-text {
+        text-align: center;
+        line-height: 1.1;
+    }
+}
+
 @media (max-width: 992px) {
     .btn-puesto {
         font-size: 1.2rem;
         padding: 10px 18px;
-        max-width: 220px;
         gap: 12px;
     }
     
@@ -127,7 +218,7 @@
 
 @media (max-width: 768px) {
     .btn-puesto {
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 10px 16px;
         max-width: 200px;
         letter-spacing: 1px;
@@ -142,12 +233,16 @@
 }
 
 @media (max-width: 576px) {
+    .container-lg .section-title .recursos-humanos-title {
+        font-size: 1.5rem;
+    }
+    
     .btn-puesto {
-        font-size: 1rem;
+        font-size: 0.6rem;
         padding: 8px 14px;
         max-width: 180px;
         letter-spacing: 0.5px;
-        gap: 8px;
+        gap: 3px;
     }
     
     .btn-puesto i {
@@ -160,4 +255,386 @@
 
 /* ===================================
    FIN BOTONES DE PUESTOS DE TRABAJO
+   ================================== */
+
+/* ===================================
+   SECCIONES DETALLADAS DE PUESTOS
+   ================================== */
+
+.puesto-section {
+    padding: 80px 0;
+    background: #D9D9D9;
+    min-height: 100vh;
+}
+
+.puesto-section-title {
+    font-family: "Gotham Black", sans-serif;
+    font-size: 3rem;
+    color: #1c1f3d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.puesto-section-subtitle {
+    font-size: 1.2rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tarjetas de tecnologías */
+.tech-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #23379a, #09133c);
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(35, 55, 154, 0.2);
+}
+
+.tech-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.3));
+    border-radius: 50%;
+}
+
+.react-icon {
+    background: linear-gradient(135deg, #61dafb 0%, #21d4fd 100%);
+}
+
+.angular-icon {
+    background: linear-gradient(135deg, #dd0031 0%, #c3002f 100%);
+}
+
+.vue-icon {
+    background: linear-gradient(135deg, #4fc08d 0%, #44a08d 100%);
+}
+
+/* Iconos para Maquetadores */
+.html-icon {
+    background: linear-gradient(135deg, #e34f26 0%, #f06529 100%);
+}
+
+.css-icon {
+    background: linear-gradient(135deg, #1572b6 0%, #33a9dc 100%);
+}
+
+.email-icon {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+}
+
+/* Iconos para UX/UI */
+.ux-icon {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+.ui-icon {
+    background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+}
+
+.product-icon {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+/* Iconos para Backend */
+.ruby-icon {
+    background: linear-gradient(135deg, #cc342d 0%, #a91f1f 100%);
+}
+
+.php-icon {
+    background: linear-gradient(135deg, #4f5b93 0%, #8993be 100%);
+}
+
+.python-icon {
+    background: linear-gradient(135deg, #3776ab 0%, #ffd43b 100%);
+}
+
+.java-icon {
+    background: linear-gradient(135deg, #ed8b00 0%, #5382a1 100%);
+}
+
+.dotnet-icon {
+    background: linear-gradient(135deg, #512bd4 0%, #239acd 100%);
+}
+
+.node-icon {
+    background: linear-gradient(135deg, #339933 0%, #68a063 100%);
+}
+
+/* Iconos para Reclutadores IT */
+.tech-recruiter-icon {
+    background: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+}
+
+.talent-acquisition-icon {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.hr-tech-icon {
+    background: linear-gradient(135deg, #9c88ff 0%, #8c7ae6 100%);
+}
+
+/* Iconos para Fullstack Developers */
+.mean-stack-icon {
+    background: linear-gradient(135deg, #68a063 0%, #4caf50 100%);
+}
+
+.mern-stack-icon {
+    background: linear-gradient(135deg, #61dafb 0%, #21d4fd 100%);
+}
+
+.lamp-stack-icon {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+}
+
+.dotnet-fullstack-icon {
+    background: linear-gradient(135deg, #7b1fa2 0%, #512da8 100%);
+}
+
+.python-fullstack-icon {
+    background: linear-gradient(135deg, #ffd54f 0%, #ff9800 100%);
+}
+
+.java-fullstack-icon {
+    background: linear-gradient(135deg, #d32f2f 0%, #f57c00 100%);
+}
+
+/* Iconos para Project Managers */
+.scrum-master-icon {
+    background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+}
+
+.product-owner-icon {
+    background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+}
+
+.tech-pm-icon {
+    background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+}
+
+.agile-coach-icon {
+    background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+}
+
+.devops-pm-icon {
+    background: linear-gradient(135deg, #00bcd4 0%, #009688 100%);
+}
+
+.it-pm-icon {
+    background: linear-gradient(135deg, #795548 0%, #5d4037 100%);
+}
+
+.tech-header h3 {
+    font-family: "Gotham Black", sans-serif;
+    font-size: 1.5rem;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.tech-content {
+    text-align: left;
+}
+
+.tech-description {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.tech-stack h4 {
+   font-family: "Gotham Black", sans-serif;
+    font-size: 1.1rem;
+    color: #1c1f3d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-badge {
+    background: linear-gradient(135deg, #23379a 0%, #09133c 100%);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(35, 55, 154, 0.3);
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(35, 55, 154, 0.4);
+}
+
+.tech-badge i {
+    font-size: 1rem;
+}
+
+/* Responsive para secciones detalladas */
+@media (max-width: 992px) {
+    .puesto-section-title {
+        font-size: 2.5rem;
+    }
+    
+    .puesto-section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .tech-card {
+        padding: 25px;
+    }
+    
+    .tech-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .puesto-section {
+        padding: 60px 0;
+    }
+    
+    .puesto-section-title {
+        font-size: 2rem;
+    }
+    
+    .puesto-section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .tech-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .tech-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .tech-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .tech-badges {
+        gap: 8px;
+    }
+    
+    .tech-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .puesto-section {
+        padding: 40px 0;
+    }
+    
+    .puesto-section-title {
+        font-size: 1.8rem;
+    }
+    
+    .puesto-section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .tech-card {
+        padding: 15px;
+    }
+    
+    .tech-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .tech-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .tech-description {
+        font-size: 0.9rem;
+    }
+    
+    .tech-badges {
+        gap: 6px;
+    }
+    
+    .tech-badge {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+    
+    .btn-back {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+    }
+}
+
+/* ===================================
+   FIN SECCIONES DETALLADAS DE PUESTOS
    ================================== */
