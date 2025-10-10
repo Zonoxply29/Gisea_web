@@ -91,6 +91,10 @@ section:has(.recursos-humanos-title) .container-lg {
     background: linear-gradient(90deg, #4a0194,#992fc4,#e75af4);
 }
 
+.btn-otros-perfiles.clicked {
+    background: linear-gradient(90deg, #ff6b35,#f7931e,#ffd700);
+}
+
 /* Icono del botón */
 .btn-puesto i {
     font-size: 1.6rem;
@@ -163,6 +167,14 @@ section:has(.recursos-humanos-title) .container-lg {
 
 .btn-project-manager:hover {
     background: linear-gradient(90deg, #4a0194,#992fc4,#e75af4);
+}
+
+.btn-otros-perfiles {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-otros-perfiles:hover {
+    background: linear-gradient(90deg, #ff6b35,#f7931e,#ffd700);
 }
 
 /* ===================================
@@ -288,9 +300,10 @@ section:has(.recursos-humanos-title) .container-lg {
 }
 
 /* Tarjetas de tecnologías */
-.tech-card {
+.puesto-section .tech-card {
     background: white;
     border-radius: 20px;
+    max-width: 420px;
     padding: 30px;
     height: 100%;
     transition: all 0.3s ease;
@@ -298,9 +311,10 @@ section:has(.recursos-humanos-title) .container-lg {
     border: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
+   
 }
 
-.tech-card::before {
+.puesto-section .tech-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -310,7 +324,7 @@ section:has(.recursos-humanos-title) .container-lg {
     background: linear-gradient(90deg, #23379a, #09133c);
 }
 
-.tech-card:hover {
+.puesto-section .tech-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(35, 55, 154, 0.2);
 }
@@ -471,6 +485,19 @@ section:has(.recursos-humanos-title) .container-lg {
     background: linear-gradient(135deg, #795548 0%, #5d4037 100%);
 }
 
+/* Iconos para Otros perfiles IT */
+.community-manager-icon {
+    background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+}
+
+.devops-icon {
+    background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+}
+
+.cloud-architect-icon {
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+}
+
 .tech-header h3 {
     font-family: "Gotham Black", sans-serif;
     font-size: 1.5rem;
@@ -527,6 +554,28 @@ section:has(.recursos-humanos-title) .container-lg {
 
 .tech-badge i {
     font-size: 1rem;
+}
+
+/* Clase específica para SVGs en tech-badges */
+.tech-badge svg {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1); /* Convierte cualquier color a blanco */
+}
+
+/* Clase específica para imágenes en tech-badges */
+.tech-badge-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Convierte la imagen a blanco para que se vea bien */
+}
+
+/* Clase específica para SVGs en tech-icon (iconos del header de las tarjetas) */
+.tech-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: none; /* Mantiene los colores originales del SVG */
 }
 
 /* Responsive para secciones detalladas */
