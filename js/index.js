@@ -154,6 +154,9 @@ const translations = {
         misionText: "Desarrollar productos, servicios de calidad y manteniendo un buen servicio y satisfacción del cliente.",
         visionTitle: "VISIÓN",
         visionText: "Queremos ser una marca reconocida por hacer crecer las marcas de nuestros clientes, no sólo en ventas sino también acompañándoles en la transformación tecnológica que evoluciona día a día en las empresas de cualquier tipo y al mismo tiempo ser una marca reconocida en todo el mundo por ello.",
+        // Equipo
+        equipoTitle: "Nuestro Equipo",
+        portfolioButton: "Portafolio",
         // Footer
         footerInicio: "Inicio",
         footerSobreNosotros: "Sobre Nosotros",
@@ -261,6 +264,9 @@ const translations = {
         misionText: "Develop products, quality services and maintaining good service and customer satisfaction.",
         visionTitle: "VISION",
         visionText: "We want to be a recognized brand for growing our clients' brands, not only in sales but also accompanying them in the technological transformation that evolves day by day in companies of any type and at the same time be a brand recognized worldwide for it.",
+        // Equipo
+        equipoTitle: "Our Team",
+        portfolioButton: "Portfolio",
         // Footer
         footerInicio: "Home",
         footerSobreNosotros: "About Us",
@@ -368,6 +374,9 @@ const translations = {
         misionText: "製品、品質の高いサービスを開発し、良いサービスと顧客満足を維持する。",
         visionTitle: "ビジョン",
         visionText: "私たちは、クライアントのブランドを成長させることで認められたブランドになりたいと思っています。売上だけでなく、あらゆるタイプの企業で日々進化する技術的変革に同行し、同時に世界中で認められたブランドになりたいと思っています。",
+        // Equipo
+        equipoTitle: "私たちのチーム",
+        portfolioButton: "ポートフォリオ",
         // Footer
         footerInicio: "ホーム",
         footerSobreNosotros: "私たちについて",
@@ -1258,3 +1267,52 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// ==================== PROFILE CARDS FUNCTIONALITY ====================
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar profile cards cuando el DOM esté listo
+    initProfileCards();
+});
+
+function initProfileCards() {
+    const profileCards = document.querySelectorAll('.profile-card');
+    
+    profileCards.forEach(card => {
+        const buttons = card.querySelectorAll('.profile-card-buttons button');
+        const sections = card.querySelectorAll('.profile-card-section');
+        
+        const handleButtonClick = (e) => {
+            const targetSection = e.target.getAttribute('data-section');
+            const section = card.querySelector(targetSection);
+            
+            // Cambiar estado de la card
+            if (targetSection.includes('about')) {
+                card.classList.remove('is-active');
+            } else {
+                card.classList.add('is-active');
+            }
+            
+            card.setAttribute('data-state', targetSection);
+            
+            // Remover clases activas
+            sections.forEach(s => s.classList.remove('is-active'));
+            buttons.forEach(b => b.classList.remove('is-active'));
+            
+            // Agregar clases activas
+            e.target.classList.add('is-active');
+            if (section) {
+                section.classList.add('is-active');
+            }
+            
+            // Tracking para analytics
+            if (typeof trackForeignLanguageInteraction === 'function') {
+                trackForeignLanguageInteraction('profile_card_tab_click', 'team_member');
+            }
+        };
+        
+        // Agregar event listeners a los botones
+        buttons.forEach(btn => {
+            btn.addEventListener('click', handleButtonClick);
+        });
+    });
+}
