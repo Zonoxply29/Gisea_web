@@ -141,6 +141,9 @@ a.instagram:hover {
 a.linkedin:hover {
     color: #0077B5; /* Color personalizado para LinkedIn */
 }
+a.youtube:hover {
+    color: #FF0000; /* Color personalizado para YouTube */
+}
  
 /*ESTILOS BOTON CAMBIO DE IDIOMA*/
 .dropdown{
@@ -4048,7 +4051,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
     
     .lang-spa .navbar-nav {
-        font-size: 18px !important;
+        font-size: 15px !important;
     }
     
     .lang-spa .nav-link {
