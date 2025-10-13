@@ -1,4 +1,6 @@
 /*Estilos generales*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 @font-face{
     font-family: "Racing_Hard";
     src: 
@@ -665,8 +667,8 @@ div.section-title{
 }
 .about-alineacion {
     margin-top: 2rem; /* Añadir margen superior para separarlo del <h1> */
-    font-size: 2rem; /* Ajusta según sea necesario */
-    font-family: "Roboto", sans-serif;
+    font-size: 2rem; 
+    font-family: "Oswald", sans-serif;
     font-weight: 400;
     color: #333;
     text-align: center; /* Centra el texto del <h3> */
@@ -2236,7 +2238,7 @@ a.red-social-footer:hover {
 }
 
 .valor-title h2{
-    font-family:Racing_Hard ;
+    font-family: "Oswald", sans-serif;
     font-size: 3rem;
     margin-bottom: 10px; /* Añade un margen inferior para separar del icono */
 }
@@ -2307,6 +2309,7 @@ a.red-social-footer:hover {
 
 .mision-card h2,
 .vision-card h2 {
+    font-family: "Oswald", sans-serif;
     font-size: 2rem;
     margin-bottom: 15px;
     color: white; /* Color del título */
@@ -2314,6 +2317,8 @@ a.red-social-footer:hover {
 
 .mision-card p,
 .vision-card p {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -2604,8 +2609,57 @@ li:not(.d-flex) .icon-check-empgrnd{
     height: auto;
     padding-right: 15px;
     flex-shrink: 0;
-    margin-left: 0 !important;
+    margin-left: 0;
     vertical-align: middle;
+}
+
+/* Estilos sutiles para resaltar el hosting */
+.pricing-card ul li.d-flex.hosting-highlight {
+    background: rgba(196, 156, 60, 0.14);
+    border-radius: 6px;
+    padding: 8px 0px 8px 15px;
+    border-left: 3px solid #C49C3C;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.pricing-card ul li.d-flex.hosting-highlight:hover {
+    background: rgba(196, 156, 60, 0.20);
+    transform: translateX(2px);
+}
+
+.pricing-card ul li.d-flex.hosting-highlight .feature-text-container {
+    padding-right: 15px;
+}
+
+.pricing-card ul li.d-flex.hosting-highlight img[class*="icon-check"] {
+    margin-right: 0;
+    padding-right: 15px;
+}
+
+.pricing-card ul li.d-flex.hosting-highlight .hosting-text {
+    font-weight: 800;
+    color: #1f2333;
+    font-size: 20px;
+    letter-spacing: 0.3px;
+}
+
+/* Estilos para resaltar el hosting en listas de features */
+.features-list li.hosting-highlight {
+    background: rgba(196, 156, 60, 0.14);
+    border-radius: 6px;
+    padding: 12px 15px;
+    border-left: 3px solid #C49C3C;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    font-weight: 800;
+    color: #1f2333;
+    list-style: none;
+}
+
+.features-list li.hosting-highlight:hover {
+    background: rgba(196, 156, 60, 0.20);
+    transform: translateX(2px);
 }
 
 /* Responsive adjustments solo para elementos flexbox */
@@ -2641,6 +2695,22 @@ li:not(.d-flex) .icon-check-empgrnd{
     
     .pricing-card ul li.d-flex img[class*="icon-check"] {
         padding-right: 10px;
+    }
+    
+    .pricing-card ul li.d-flex.hosting-highlight {
+        padding: 6px 0px 6px 12px;
+    }
+    
+    .pricing-card ul li.d-flex.hosting-highlight .feature-text-container {
+        padding-right: 12px;
+    }
+    
+    .pricing-card ul li.d-flex.hosting-highlight img[class*="icon-check"] {
+        padding-right: 10px;
+    }
+    
+    .pricing-card ul li.d-flex.hosting-highlight .hosting-text {
+        font-size: 15px;
     }
 }
 /*--------PORTAFOLIO WEB--------*/
@@ -4192,6 +4262,30 @@ body.dark-mode .pricing-card h2 {
 body.dark-mode .pricing-card .price {
   background: #1C1F3D !important;
   color: #fff !important;
+}
+
+body.dark-mode .pricing-card ul li.d-flex.hosting-highlight {
+    background: rgba(196, 156, 60, 0.22);
+    border-left-color: #C49C3C;
+}
+
+body.dark-mode .pricing-card ul li.d-flex.hosting-highlight:hover {
+    background: rgba(196, 156, 60, 0.30);
+}
+
+body.dark-mode .pricing-card ul li.d-flex.hosting-highlight .hosting-text {
+    color: #DAA520;
+}
+
+/* Estilos para resaltar el hosting en listas de features - modo oscuro */
+body.dark-mode .features-list li.hosting-highlight {
+    background: rgba(196, 156, 60, 0.22);
+    border-left-color: #C49C3C;
+    color: #DAA520;
+}
+
+body.dark-mode .features-list li.hosting-highlight:hover {
+    background: rgba(196, 156, 60, 0.30);
 }
 
 /* Service cards en modo oscuro */
