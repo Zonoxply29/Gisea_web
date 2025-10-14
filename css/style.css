@@ -1276,6 +1276,20 @@ div.section-title{
     filter: grayscale(0%);
 }
 
+.inline-logo {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.inline-logo:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
 .profile-card-contact-wrapper {
     margin-top: 20px;
 }
