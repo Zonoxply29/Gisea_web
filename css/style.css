@@ -983,9 +983,17 @@ div.section-title{
     fill: #1877F2;
 }
 
+.profile-card-social .social-linkedin svg {
+    fill: #0A66C2;
+}
+
+.profile-card-social .social-whatsapp svg {
+    fill: #25D366;
+}
+
 .profile-card-social .social-website svg {
-    stroke: #6366F1;
-    fill: none;
+    fill: #6366F1;
+    stroke: none;
 }
 
 .profile-card-social .social-tiktok:hover svg {
@@ -1030,8 +1038,16 @@ div.section-title{
     background-color: rgba(24, 119, 242, 0.1);
 }
 
+.profile-card-social .social-whatsapp {
+    background-color: rgba(37, 211, 102, 0.1);
+}
+
 .profile-card-social .social-website {
     background-color: rgba(99, 102, 241, 0.1);
+}
+
+.profile-card-social .social-linkedin {
+    background-color: rgba(10, 102, 194, 0.1);
 }
 
 .profile-card-social .social-tiktok:hover {
@@ -1044,6 +1060,14 @@ div.section-title{
 
 .profile-card-social .social-facebook:hover {
     background-color: #1877F2;
+}
+
+.profile-card-social .social-whatsapp:hover {
+    background-color: #25D366;
+}
+
+.profile-card-social .social-linkedin:hover {
+    background-color: #0A66C2;
 }
 
 .profile-card-social .social-website:hover {
@@ -1063,14 +1087,14 @@ div.section-title{
 
 /* Excluir el website del hover general */
 .profile-card-social .social-website:hover {
-    background-color: rgba(99, 102, 241, 0.1) !important;
+    background-color: #6366F1;
     transform: scale(1.2);
     transition: transform 0.3s ease;
-    box-shadow: none !important;
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
 }
 
 .profile-card-social .social-website:hover svg {
-    stroke: #6366F1 !important;
+    fill: #ffffff;
 }
 
 .profile-card-buttons {
@@ -1771,7 +1795,7 @@ a.red-social-footer:hover {
 }
 /*--------ESTILOS CARD HTML--------*/
 .card-container {
-    padding-top: 100px;
+    padding-top: 3.125rem;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -3701,8 +3725,8 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
 
     .about-header-text {
-        top:46%;
-        left:20%;
+        top: 62%;
+        left: 19%;
         padding: 15px; /* Ajusta el padding para pantallas medianas */
     }
     .lang-jpn .about-header-text{
@@ -4091,6 +4115,12 @@ li:not(.d-flex) .icon-check-empgrnd{
     
     .lang-spa .dropdown-menu {
         font-size: 15px !important;
+    }
+    
+    /* Ajustes específicos para about-header-text en 1024px */
+    .about-header-text {
+        top: 69%;
+        left: 22%;
     }
 }
 /* MODO OSCURO */
@@ -4487,7 +4517,7 @@ body.dark-mode .profile-card-social a {
 
 /* Fondos específicos para modo oscuro */
 body.dark-mode .profile-card-social .social-tiktok {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 body.dark-mode .profile-card-social .social-instagram {
@@ -4496,6 +4526,10 @@ body.dark-mode .profile-card-social .social-instagram {
 
 body.dark-mode .profile-card-social .social-facebook {
     background-color: rgba(24, 119, 242, 0.3);
+}
+
+body.dark-mode .profile-card-social .social-whatsapp {
+    background-color: rgba(37, 211, 102, 0.3);
 }
 
 body.dark-mode .profile-card-social .social-website {
@@ -4523,6 +4557,11 @@ body.dark-mode .profile-card-social .social-facebook:hover {
     box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
 }
 
+body.dark-mode .profile-card-social .social-whatsapp:hover {
+    background-color: #25D366;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
 body.dark-mode .profile-card-social .social-website:hover {
     background-color: rgba(99, 102, 241, 0.1) !important;
     transform: scale(1.2);
@@ -4531,7 +4570,8 @@ body.dark-mode .profile-card-social .social-website:hover {
 }
 
 body.dark-mode .profile-card-social .social-website:hover svg {
-    stroke: #6366F1 !important;
+    fill: #ffffff !important;
+    stroke: none !important;
 }
 
 body.dark-mode .profile-card-buttons {
