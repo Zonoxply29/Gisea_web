@@ -1,6 +1,7 @@
 /* ========================
    ESTILOS ESPECÍFICOS PARA INFLUENCERS
    ======================== */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 @font-face {
     font-family: "Gotham Black";
@@ -18,7 +19,8 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px; /* Separación del navbar */
+    padding-top: 80px;
+    /* Separación del navbar */
 }
 
 .influencers-header::before {
@@ -38,7 +40,7 @@
 }
 
 .influencers-header h1 {
-    font-family: "Gotham Black", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 900;
     color: #FFFFFF;
@@ -48,7 +50,7 @@
 }
 
 .influencers-header p {
-    font-family: "Gotham Black", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: clamp(1.1rem, 2vw, 1.4rem);
     color: #FFFFFF;
     line-height: 1.6;
@@ -61,7 +63,7 @@
 .btn-conoce-conecta {
     background: linear-gradient(135deg, #27346A 0%, #C49C3C 100%);
     color: #FFFFFF;
-    font-family: "Gotham Black", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 1.2rem;
     font-weight: 900;
     text-transform: uppercase;
@@ -94,7 +96,7 @@
         min-height: 70vh;
         padding-top: 70px;
     }
-    
+
     .btn-conoce-conecta {
         font-size: 1rem;
         padding: 12px 25px;
@@ -105,7 +107,7 @@
     .influencers-header {
         padding-top: 60px;
     }
-    
+
     .btn-conoce-conecta {
         font-size: 0.9rem;
         padding: 10px 20px;
@@ -119,6 +121,7 @@
         opacity: 0;
         transform: translateX(-50px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -139,5 +142,5 @@
 
 
 body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button) {
-     color: #FFFFFF !important;
+    color: #FFFFFF !important;
 }
