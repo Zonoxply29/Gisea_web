@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @font-face{
     font-family: "Revamped";
     src: 
@@ -74,16 +75,17 @@
 
 .orbit_hero__title {
   font-weight: 700;
+  font-style: italic;
   color: #1C1F3D;
   letter-spacing: .02em;
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-family: "Revamped", sans-serif;
+  font-size: clamp(2rem, 10vw, 3.25rem);
+  font-family: "Oswald", sans-serif;
 }
 
 .orbit_hero__subtitle {
   opacity: .85;
-  font-size: clamp(.9rem, 2.2vw, 1.125rem);
-  font-family: "Revamped", sans-serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.125rem);
+  font-family: "Oswald", sans-serif;
   color: #1C1F3D;
 }
 
@@ -345,7 +347,7 @@ body.dark-mode .orbit_hero__item[alt="Astro"]:hover {
   font-weight: 700;
   color: #1a1a1a;
   margin: 0 0 0.5rem 0;
-  font-family: "Revamped", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .tech-category {
@@ -568,7 +570,7 @@ body.dark-mode .orbit_hero__item[alt="Astro"]:hover {
   font-size: 4rem;
   color: #1a1a1a;
   margin-bottom: 1rem;
-  font-family: "Racing_Hard";
+  font-family: "Oswald", sans-serif;
   position: relative;
 }
 
@@ -708,4 +710,19 @@ html {
 /* Específicamente para la sección de capacitación */
 .capacitacion-temas {
   overflow-x: hidden;
+}
+
+/* ========================
+   OVERRIDE ESPECÍFICO PARA TEXT-RIGHT EN CAPACITACIÓN IT
+   ======================== */
+
+/* Sobrescribir estilos solo para tablets (no móviles) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .desarrollo-web-header .text-right {
+        max-width: 50%;
+    }
+    
+    .desarrollo-web-header .text-left h1 {
+        font-size: 4rem;
+    }
 }

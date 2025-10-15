@@ -111,10 +111,52 @@
    RESPONSIVE DESIGN
    ================================== */
 
+/* Estilos del botón Ordena Ya - BASE */
+.section-title-revamped .btn-ordena-ya,
+a.btn-ordena-ya,
+button.btn-ordena-ya,
+.btn-ordena-ya {
+    background-color: #1C1F3D;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    padding: 3px 50px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(28, 31, 61, 0.3);
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-ordena-ya:hover {
+    background-color: #252850;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(28, 31, 61, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-ordena-ya:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(28, 31, 61, 0.3);
+}
+
 /* Tablet y dispositivos medianos */
 @media (max-width: 768px) {
     .package-image {
         height: 200px;
+    }
+    
+    .section-title-revamped .btn-ordena-ya,
+    a.btn-ordena-ya {
+        font-size: 1.5rem;
+        padding: 12px 35px;
+        letter-spacing: 1.5px;
     }
 }
 
@@ -126,6 +168,22 @@
     
     .packages-carousel .item {
         padding: 5px;
+    }
+    
+    .section-title-revamped .btn-ordena-ya,
+    a.btn-ordena-ya,
+    button.btn-ordena-ya {
+        font-size: 1.3rem;
+        padding: 10px 30px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-revamped .btn-ordena-ya,
+    a.btn-ordena-ya{
+        font-size: 1.1rem;
+        padding: 8px 25px;
     }
 }
 
@@ -198,7 +256,7 @@
 }
 
 .section-title-revamped h1 {
-    font-family: "Revamped", serif;
+    font-family: "Oswald", sans-serif;
     font-weight: normal;
     color: #333;
     margin-bottom: 0;
@@ -229,17 +287,11 @@
     .section-title-revamped h2 {
         font-size: 1.75rem;
     }
-    
-    .btn-ordena-ya {
-        font-size: 1.5rem;
-        padding: 12px 35px;
-        letter-spacing: 1.5px;
-    }
 }
 
 @media (max-width: 576px) {
     .section-title-revamped {
-        gap: 1rem;
+        gap: 2rem;
     }
     
     .section-title-revamped h1 {
@@ -248,19 +300,6 @@
     
     .section-title-revamped h2 {
         font-size: 1.5rem;
-    }
-    
-    .btn-ordena-ya {
-        font-size: 1.3rem;
-        padding: 10px 30px;
-        letter-spacing: 1px;
-    }
-}
-
-@media (max-width: 480px) {
-    .btn-ordena-ya {
-        font-size: 1.1rem;
-        padding: 8px 25px;
     }
 }
 
@@ -308,7 +347,7 @@
 .btn-ordena-ya {
     background-color: #1C1F3D;
     color: white;
-    font-family: "RacingHard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 2rem;
     padding: 3px 50px;
     border: none;
@@ -331,11 +370,6 @@
     text-decoration: none;
 }
 
-.btn-ordena-ya:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 10px rgba(28, 31, 61, 0.3);
-}
-
 /* ===================================
    SECCIÓN QUÉ INCLUYE - TÍTULO CON LÍNEA
    ================================== */
@@ -352,7 +386,7 @@
 
 .titulo-con-linea h2 {
     margin: 0;
-    font-family: "RacingHard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 2rem;
     font-style: italic;
     text-transform: uppercase;
@@ -402,7 +436,7 @@
     margin-top: -4.5rem; /* Sube el sidebar para alinearlo con el título */
 }
 .sidebar-title {
-    font-family: "RacingHard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-style: italic;
     text-transform: uppercase;
     margin-bottom: 1rem;
@@ -454,15 +488,17 @@
     transition: transform 0.3s ease;
 }
 .pkg-subtitle {
-    font-family: "RacingHard", sans-serif;
+    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
+    font-weight: 600;
     font-size: 1rem;
     margin-bottom: .25rem;
 }
 .pkg-price {
     font-size: 1.4rem;
     color: #C49C3C; /* dorado aproximado */
-    font-family: "RacingHard", sans-serif;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
     transition: all 0.3s ease;
 }
 

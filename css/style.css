@@ -1,157 +1,190 @@
 /*Estilos generales*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-@font-face{
+@font-face {
     font-family: "Racing_Hard";
-    src: 
-    url("../fonts/RACINGHARD.ttf") format("truetype");
+    src:
+        url("../fonts/RACINGHARD.ttf") format("truetype");
     font-display: swap;
 }
-@font-face{
+
+@font-face {
     font-family: "Revamped";
-    src: 
-    url("../fonts/Revamped.otf") format("truetype");
+    src:
+        url("../fonts/Revamped.otf") format("truetype");
     font-display: swap;
 }
-@font-face{
+
+@font-face {
     font-family: "Gotham_Black";
-    src: 
-    url("../fonts/Gotham Black.otf") format("opentype");
+    src:
+        url("../fonts/Gotham Black.otf") format("opentype");
     font-display: swap;
 }
-a{
+
+a {
     color: #C49C3C;
     text-decoration: none;
 }
-body{
+
+body {
     background-color: #D9D9D9;
 }
-.carousel{
+
+.carousel {
     padding-top: 6vh;
 }
+
 /*Estilos barra de navegacion*/
-.gisea-logo{
+.gisea-logo {
     width: 21vh;
     height: auto;
     padding-left: 15px;
-    padding-top:0;
+    padding-top: 0;
 }
 
-.estilos-navbar{
+.estilos-navbar {
     background-color: #EFEFEF;
     height: 100%;
-    font-size: 30px;
-    font-family: "Racing_Hard";
-    --bs-navbar-color:#C49C3C;
+    font-size: 3.3vh;
+    font-family: "Oswald", sans-serif;
+    --bs-navbar-color: #C49C3C;
     --bs-navbar-hover-color: #1C1F3D;
-    padding-left:5px;
+    padding-left: 5px;
     text-align: center;
 
 }
+
 .navbar-nav {
     display: flex;
-    align-items: center; /* Alinea los elementos verticalmente al centro */
-    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
     width: 100%;
 }
+
 .nav-item {
     margin-right: 20px;
     padding-top: 4vh;
 }
+
 .nav-link {
-    padding: 10px 15px; /* Ajusta el padding de los enlaces */
+    padding: 10px 15px;
+    /* Ajusta el padding de los enlaces */
 }
-.dropdown-item{
+
+.dropdown-item {
     text-align: center;
 }
 
-       
+
 /*Estilos para menu de Hamburgesa */
-.navbar-toggler{
-box-shadow: none;
-border: none;
-background: none; /* Elimina el fondo predeterminado */
-padding: 0; /* Elimina el padding predeterminado */
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 35px;
-padding-top: 2vh;
+.navbar-toggler {
+    box-shadow: none;
+    border: none;
+    background: none;
+    /* Elimina el fondo predeterminado */
+    padding: 0;
+    /* Elimina el padding predeterminado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    padding-top: 2vh;
 }
 
-.icon-hamburger, .icon-close {
+.icon-hamburger,
+.icon-close {
     transition: opacity 0.3s ease;
 }
 
-.icon-hamburger.hidden, .icon-close.hidden {
+.icon-hamburger.hidden,
+.icon-close.hidden {
     opacity: 0;
     pointer-events: none;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
     box-shadow: none;
 }
+
 .navbar-toggler svg {
-    width: 45px; 
-    height: 45px; 
-    fill: #C49C3C; 
+    width: 45px;
+    height: 45px;
+    fill: #C49C3C;
 }
 
-.nav-item{
+.nav-item {
     padding-top: 1.5vh;
     padding-bottom: 1.5vh;
-    margin-right:20px;
+    margin-right: 20px;
 }
+
 .navbar-collapse.estilos-navbar.collapse.show {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow-y: auto; /* Permite el desplazamiento vertical */
-    max-height: 80vh; /* Ajusta la altura máxima del contenido */
+    overflow-y: auto;
+    /* Permite el desplazamiento vertical */
+    max-height: 80vh;
+    /* Ajusta la altura máxima del contenido */
     width: 100%;
 }
 
 /* Contenedor para las redes sociales y el botón de cambio de idioma */
 .header-container {
     display: flex;
-    align-items: center; /* Alinea los elementos verticalmente al centro */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    padding: 20px 0; /* Añade padding superior e inferior */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos */
+    padding: 20px 0;
+    /* Añade padding superior e inferior */
 }
 
-.header-social-links{
+.header-social-links {
     display: flex;
-    align-items: center; /* Alinea los iconos verticalmente al centro */
-    margin: 0; /* Elimina el margen superior */
+    align-items: center;
+    /* Alinea los iconos verticalmente al centro */
+    margin: 0;
+    /* Elimina el margen superior */
 }
 
-a.red-social{
+a.red-social {
     color: #C49C3C;
     margin-right: 10px;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-a.facebook:hover{
+
+a.facebook:hover {
     color: #1C1F3D;
 }
+
 a.instagram:hover {
-    color: #E1306C; /* Color personalizado para Instagram */
+    color: #E1306C;
+    /* Color personalizado para Instagram */
 }
+
 a.linkedin:hover {
-    color: #0077B5; /* Color personalizado para LinkedIn */
+    color: #0077B5;
+    /* Color personalizado para LinkedIn */
 }
+
 a.youtube:hover {
-    color: #FF0000; /* Color personalizado para YouTube */
+    color: #FF0000;
+    /* Color personalizado para YouTube */
 }
- 
+
 /*ESTILOS BOTON CAMBIO DE IDIOMA*/
-.dropdown{
+.dropdown {
     position: relative;
     display: inline-block;
 }
 
-.btn-cambio-idioma{
+.btn-cambio-idioma {
     border: 2px solid #C49C3C;
     border-radius: 10px;
     color: #1C1F3D;
@@ -159,7 +192,8 @@ a.youtube:hover {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 9px 12px; /* Añade padding */
+    padding: 9px 12px;
+    /* Añade padding */
 }
 
 .dropdown-content {
@@ -167,25 +201,29 @@ a.youtube:hover {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1060;
 }
+
 .dropdown-content a {
     color: #1C1F3D;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-menu{
+
+.dropdown-menu {
     font-size: 30px;
-    --bs-dropdown-link-active-bg:#C49C3C !important;
+    --bs-dropdown-link-active-bg: #C49C3C !important;
     /* Color de fondo por defecto para modo normal (blanco/claro) */
     --bs-dropdown-bg: #ffffff !important;
     background-color: #ffffff !important;
 }
+
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+
 .show {
     display: block;
 }
@@ -195,9 +233,11 @@ a.youtube:hover {
     0% {
         transform: rotate(0deg);
     }
+
     50% {
         transform: rotate(180deg);
     }
+
     100% {
         transform: rotate(180deg);
     }
@@ -207,9 +247,11 @@ a.youtube:hover {
     0% {
         transform: rotate(180deg);
     }
+
     50% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -235,6 +277,7 @@ i.rotate-0 {
     animation: rotateIn 0.5s ease-in-out forwards !important;
     transform-origin: center !important;
 }
+
 .rotate-0 {
     animation: rotateOut 0.5s ease-in-out forwards !important;
     transform-origin: center !important;
@@ -243,48 +286,52 @@ i.rotate-0 {
 /*Estilos Carousel Inicio*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-image: none; 
+    background-image: none;
 }
 
 .carousel-control-prev-icon svg,
 .carousel-control-next-icon svg {
-    width: 5rem; 
-    height: 5rem; 
+    width: 5rem;
+    height: 5rem;
     fill: #C49C3C;
 }
-.carousel-indicators [data-bs-target]{
+
+.carousel-indicators [data-bs-target] {
     width: 90px;
     background-color: #C49C3C;
 }
+
 /* Contenedor de redes sociales + botón modo oscuro */
 .header-social-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content:space-around; /* alineado a la derecha */
-  gap: 16px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* alineado a la derecha */
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 /* Botón modo oscuro */
 #toggle-dark-mode {
-  border: 2px solid #C49C3C;
-  border-radius: 10px;
-  padding: 6px 12px;
-  background-color: transparent;
-  color: #1C1F3D;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-right: 20px;
+    border: 2px solid #C49C3C;
+    border-radius: 10px;
+    padding: 6px 12px;
+    background-color: transparent;
+    color: #1C1F3D;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 20px;
 }
 
 #toggle-dark-mode:hover {
-  background-color: #C49C3C;
-  color: white;
+    background-color: #C49C3C;
+    color: white;
 }
 
 body.dark-mode #toggle-dark-mode {
-  color: #EFEFEF;
-  border-color: #EFEFEF;
+    color: #EFEFEF;
+    border-color: #EFEFEF;
 }
+
 /* Estilos para los iconos SVG */
 #icon-theme svg {
     fill: currentColor;
@@ -292,25 +339,27 @@ body.dark-mode #toggle-dark-mode {
     vertical-align: middle;
 }
 
-#moon-icon, #sun-icon {
+#moon-icon,
+#sun-icon {
     width: 27px;
     height: 25px;
 }
+
 /*--FIN BOTON CAMBIO DE IDIOMA---*/
 /*-----CAROUSEL INICIO ------*/
 .carousel {
-    height: 100vh; 
+    height: 100vh;
     min-height: 400px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .carousel-inner {
-    height: 100%; 
+    height: 100%;
 }
 
 .carousel-item {
     position: relative;
-    height: 100%; 
+    height: 100%;
     background-size: cover;
     background-position: center;
 }
@@ -334,12 +383,12 @@ body.dark-mode #toggle-dark-mode {
 }
 
 .logo-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    margin-top: 10px; 
-    font-size: 5rem; 
+    margin-top: 10px;
+    font-size: 5rem;
 }
 
 /* Estilos para el overlay de texto del slider de desarrollo web */
@@ -357,7 +406,7 @@ h2 {
 }
 
 .web-dev-title {
-    font-family: "Revamped";
+    font-family: "Oswald", sans-serif;
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
@@ -375,7 +424,7 @@ h2 {
 }
 
 .web-dev-subtitle {
-    font-family: "Racing_Hard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 2.2rem;
     font-style: italic;
     margin: 0;
@@ -395,7 +444,7 @@ h2 {
 }
 
 .gisea-title {
-    font-family:"Revamped";
+    font-family: "Revamped";
     font-size: 4rem;
     font-weight: bold;
     margin: 9px 0;
@@ -405,7 +454,7 @@ h2 {
 }
 
 .gisea-subtitle {
-    font-family: "Racing_Hard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 2.5rem;
     font-style: italic;
     margin: 0;
@@ -416,7 +465,7 @@ h2 {
 
 /* Estilos para el overlay de texto del slider de Developer Training */
 .developer-training-title {
-    font-family: "Revamped";
+    font-family: "Oswald", sans-serif;
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
@@ -427,7 +476,7 @@ h2 {
 }
 
 .developer-training-subtitle {
-    font-family: "Racing_Hard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 2.2rem;
     font-style: italic;
     margin: 0;
@@ -438,7 +487,7 @@ h2 {
 
 /* Estilos para el overlay de texto del slider de Human Resources */
 .human-resources-title {
-    font-family: "Revamped";
+    font-family: "Oswald", sans-serif;
     font-size: 4rem;
     font-weight: bold;
     margin: 0;
@@ -449,7 +498,7 @@ h2 {
 }
 
 .human-resources-subtitle {
-    font-family: "Racing_Hard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 2.2rem;
     font-style: italic;
     margin: 0;
@@ -461,69 +510,69 @@ h2 {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .carousel {
-        height: 60vh; 
+        height: 60vh;
     }
 
     h2 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .logo-shadow {
-        max-width: 120px; 
+        max-width: 120px;
     }
-    
+
     /* Responsive para GISEA slider - tablet */
     .gisea-logo-container {
         margin-bottom: 20px;
     }
-    
+
     .gisea-logo-slide {
         width: 80px;
     }
-    
+
     .gisea-title {
         font-size: 3rem;
         margin: 15px 0;
         letter-spacing: 2px;
     }
-    
+
     .gisea-subtitle {
         font-size: 1.8rem;
     }
-    
+
     .web-dev-title {
         font-size: 2.5rem;
         margin-bottom: 15px;
     }
-    
+
     .golden-line {
         width: 150px;
         height: 4px;
         margin-bottom: 20px;
     }
-    
+
     .web-dev-subtitle {
         font-size: 1.4rem;
     }
-    
+
     /* Responsive para Developer Training slider */
     .developer-training-title {
         font-size: 2.5rem;
         margin-bottom: 15px;
         letter-spacing: 1px;
     }
-    
+
     .developer-training-subtitle {
         font-size: 1.4rem;
     }
-    
+
     /* Responsive para Human Resources slider */
     .human-resources-title {
         font-size: 2.5rem;
         margin-bottom: 15px;
         letter-spacing: 1px;
     }
-    
+
     .human-resources-subtitle {
         font-size: 1.4rem;
     }
@@ -531,58 +580,58 @@ h2 {
 
 @media (max-width: 480px) {
     .carousel {
-        height: 60vh; 
+        height: 60vh;
     }
-    
+
     /* Responsive para GISEA slider - móvil */
     .gisea-logo-container {
         margin-bottom: 15px;
     }
-    
+
     .gisea-logo-slide {
         width: 80px;
     }
-    
+
     .gisea-title {
         font-size: 2rem;
         letter-spacing: 1px;
         margin: 10px 0;
     }
-    
+
     .gisea-subtitle {
         font-size: 1.2rem;
     }
-    
+
     .web-dev-title {
         font-size: 2rem;
         letter-spacing: 1px;
     }
-    
+
     .golden-line {
         width: 120px;
         height: 3px;
     }
-    
+
     .web-dev-subtitle {
         font-size: 1.2rem;
     }
-    
+
     /* Responsive para Developer Training slider - móvil */
     .developer-training-title {
         font-size: 2rem;
         letter-spacing: 1px;
     }
-    
+
     .developer-training-subtitle {
         font-size: 1.2rem;
     }
-    
+
     /* Responsive para Human Resources slider - móvil */
     .human-resources-title {
         font-size: 2rem;
         letter-spacing: 1px;
     }
-    
+
     .human-resources-subtitle {
         font-size: 1.2rem;
     }
@@ -593,43 +642,44 @@ h2 {
     .carousel {
         height: 50vh;
     }
-    
+
     .carousel-text-overlay {
         width: 95%;
         padding: 0 10px;
     }
-    
+
     /* GISEA slider - dispositivos muy pequeños */
     .gisea-logo-slide {
         width: 80px !important;
         height: auto !important;
     }
+
     .gisea-logo-slide {
         width: 35px;
     }
-    
+
     .gisea-title {
         font-size: 1.5rem;
         margin: 5px 0;
     }
-    
+
     .gisea-subtitle {
         font-size: 1rem;
     }
-    
+
     /* Otros sliders - dispositivos muy pequeños */
     .web-dev-title,
     .developer-training-title,
     .human-resources-title {
         font-size: 1.5rem;
     }
-    
+
     .web-dev-subtitle,
     .developer-training-subtitle,
     .human-resources-subtitle {
         font-size: 1rem;
     }
-    
+
     .golden-line {
         width: 100px;
         height: 2px;
@@ -637,7 +687,7 @@ h2 {
 }
 
 /*----ESTILOS ABOUT US INDEX------*/
-div.container-lg{
+div.container-lg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -645,22 +695,25 @@ div.container-lg{
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
-div.section-title{
+
+div.section-title {
     position: relative;
     display: inline-block;
     text-align: center;
 }
-.section-title h1{
-    font-family:Racing_Hard ;
-    font-size: 3rem;
+
+.section-title h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.4rem;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
 
 }
-.section-title::after{
+
+.section-title::after {
     content: "";
-    position:absolute;
+    position: absolute;
     left: 50%;
     bottom: -10px;
     width: 50%;
@@ -668,13 +721,16 @@ div.section-title{
     background-color: #C49C3C;
     transform: translate(-50%);
 }
+
 .about-alineacion {
-    margin-top: 2rem; /* Añadir margen superior para separarlo del <h1> */
-    font-size: 2rem; 
+    margin-top: 2rem;
+    /* Añadir margen superior para separarlo del <h1> */
+    font-size: 2rem;
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     color: #333;
-    text-align: center; /* Centra el texto del <h3> */
+    text-align: center;
+    /* Centra el texto del <h3> */
 }
 
 /*----FIN ABOUT US INDEX------*/
@@ -684,47 +740,66 @@ div.section-title{
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transición suave para el efecto */
     cursor: pointer;
 }
+
 .service-card:hover {
-    transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aplica una sombra */
+    transform: translateY(-10px);
+    /* Mueve la tarjeta hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Aplica una sombra */
 }
+
 .service-card img {
     width: auto;
     height: 350px;
     object-fit: cover;
 }
+
 .service-card .card-body {
     background-color: #1C1F3D;
     color: #fff;
     text-align: center;
     padding: 1rem;
 }
+
 .service-card .card-title {
-    font-family: Racing_Hard;
+    font-family: "Oswald", sans-serif;
     font-size: 2rem;
     margin-bottom: 0;
     margin-left: 3rem;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Añade la transición */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Añade la transición */
 }
+
 .title-icon-container {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos al centro */
+    align-items: center;
+    /* Alinea verticalmente los elementos al centro */
 }
+
 .title-icon-container .card-title {
-    margin-right: 14px; /* Añade un margen derecho para separar el texto del icono */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave para el texto */
+    margin-right: 14px;
+    /* Añade un margen derecho para separar el texto del icono */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transición suave para el texto */
 }
 
 .icon-background {
-    background-color: #fff; /* Fondo blanco */
-    border-radius: 50%; /* Bordes redondeados para hacer el fondo circular */
-    padding: 10px; /* Padding para crear espacio alrededor del icono */
-    display: inline-flex; /* Asegura que el contenido se centre correctamente */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
+    background-color: #fff;
+    /* Fondo blanco */
+    border-radius: 50%;
+    /* Bordes redondeados para hacer el fondo circular */
+    padding: 10px;
+    /* Padding para crear espacio alrededor del icono */
+    display: inline-flex;
+    /* Asegura que el contenido se centre correctamente */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
     transition: all 0.5s ease;
     transform-origin: center;
 }
@@ -757,24 +832,34 @@ div.section-title{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px; /* Espacio entre los logos */
+    gap: 60px;
+    /* Espacio entre los logos */
     padding-right: 21px;
 }
+
 .client-logo {
-    flex: 1 1 200px; /* Ajusta el tamaño mínimo de los logos */
-    max-width: 200px; /* Ajusta el tamaño máximo de los logos */
+    flex: 1 1 200px;
+    /* Ajusta el tamaño mínimo de los logos */
+    max-width: 200px;
+    /* Ajusta el tamaño máximo de los logos */
     text-align: center;
 }
+
 .client-logo img {
     width: 130%;
     height: auto;
     object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave para el zoom y la sombra */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Transición suave para el zoom y la sombra */
 }
+
 .client-logo img:hover {
-    transform: scale(1.1); /* Aplica un zoom del 10% cuando se pasa el cursor */
-    filter: drop-shadow(0 4px 8px rgba(196, 156, 60, 0.5)); /* Aplica una sombra cuando se pasa el cursor */
+    transform: scale(1.1);
+    /* Aplica un zoom del 10% cuando se pasa el cursor */
+    filter: drop-shadow(0 4px 8px rgba(196, 156, 60, 0.5));
+    /* Aplica una sombra cuando se pasa el cursor */
 }
+
 /*---FIN ESTILOS CLIENTES--*/
 
 /*-- ESTILOS PROFILE CARDS EQUIPO --*/
@@ -1144,6 +1229,7 @@ div.section-title{
         opacity: 0;
         transform: translateY(40px);
     }
+
     100% {
         opacity: 1;
     }
@@ -1276,6 +1362,49 @@ div.section-title{
     filter: grayscale(0%);
 }
 
+/* Tech Stack Badges */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.tech-badge {
+    background: linear-gradient(135deg, #1C1F3D 0%, #2a2d4e 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(28, 31, 61, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tech-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(28, 31, 61, 0.3);
+    background: linear-gradient(135deg, #2a2d4e 0%, #1C1F3D 100%);
+}
+
+/* English Level Icon */
+.english-icon {
+    height: 35px !important;
+    width: auto;
+}
+
 .inline-logo {
     height: 24px;
     width: auto;
@@ -1304,7 +1433,7 @@ div.section-title{
     cursor: pointer;
 }
 
-.profile-card-contact + .profile-card-contact {
+.profile-card-contact+.profile-card-contact {
     margin-top: 16px;
 }
 
@@ -1348,21 +1477,21 @@ div.section-title{
         min-height: 500px;
         height: auto;
     }
-    
+
     .profile-card[data-state="#about-lia"],
     .profile-card[data-state="#about-rick"],
     .profile-card[data-state="#about-hugo"] {
         min-height: 500px;
         height: auto;
     }
-    
+
     .profile-card[data-state="#contact-lia"],
     .profile-card[data-state="#contact-rick"],
     .profile-card[data-state="#contact-hugo"] {
         min-height: 460px;
         height: auto;
     }
-    
+
     .profile-card[data-state="#experience-lia"],
     .profile-card[data-state="#experience-rick"],
     .profile-card[data-state="#experience-hugo"] {
@@ -1370,11 +1499,11 @@ div.section-title{
         height: auto;
         max-height: none;
     }
-    
+
     .profile-card-fullname {
         font-size: 20px;
     }
-    
+
     .profile-card-buttons button {
         font-size: 11px;
         padding: 12px 3px;
@@ -1389,21 +1518,21 @@ div.section-title{
         min-height: 480px;
         height: auto;
     }
-    
+
     .profile-card[data-state="#about-lia"],
     .profile-card[data-state="#about-rick"],
     .profile-card[data-state="#about-hugo"] {
         min-height: 480px;
         height: auto;
     }
-    
+
     .profile-card[data-state="#contact-lia"],
     .profile-card[data-state="#contact-rick"],
     .profile-card[data-state="#contact-hugo"] {
         min-height: 440px;
         height: auto;
     }
-    
+
     .profile-card[data-state="#experience-lia"],
     .profile-card[data-state="#experience-rick"],
     .profile-card[data-state="#experience-hugo"] {
@@ -1411,89 +1540,90 @@ div.section-title{
         height: auto;
         max-height: none;
     }
-    
+
     .profile-card-avatar {
         width: 80px;
         height: 80px;
     }
-    
+
     .profile-card-fullname {
         font-size: 18px;
         font-weight: 900;
     }
-    
+
     .profile-card-jobtitle {
         font-size: 10px;
     }
-    
+
     .profile-card-buttons button {
         font-size: 10px;
         padding: 10px 2px;
         font-weight: 900;
     }
-    
+
     .profile-card-social {
         gap: 5px;
         margin-bottom: 15px;
     }
-    
+
     .profile-card-social a {
         width: 30px;
         height: 30px;
     }
-    
+
     .profile-card-social svg {
         width: 16px;
         height: 16px;
     }
-    
+
     .profile-card-subtitle {
         font-size: 12px;
         font-weight: 900;
     }
-    
+
     .profile-card-item-title {
         font-size: 13px;
         font-weight: 700;
     }
-    
+
     .profile-card-content {
         padding: 12px 15px;
     }
-    
+
     .media-logo {
         height: 25px;
     }
-    
+
     .experience-item {
         padding: 8px 10px;
     }
-    
+
     .media-logos {
         gap: 10px;
         margin-top: 8px;
         padding: 4px 0;
     }
-    
+
     .profile-card-experience-list {
         gap: 12px;
         margin-top: 12px;
         margin-bottom: 15px;
     }
 }
+
 /*-- FIN ESTILOS PROFILE CARDS EQUIPO --*/
 
 /*-- ESTILOS FOOTER--*/
 .footer {
     color: #fff;
     width: 100%;
-    font-family:"Racing_Hard";
+    font-family: "Oswald", sans-serif;
     font-size: 20px;
 }
 
 .footer-top {
     background-color: #D9D9D9;
-    padding:20px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -1514,7 +1644,7 @@ div.section-title{
     gap: 20px;
 }
 
-.footer-contact{
+.footer-contact {
     margin-bottom: 10px;
 }
 
@@ -1584,16 +1714,18 @@ div.section-title{
     padding-right: 50px;
     display: flex;
     gap: 10px;
-} 
+}
 
-a.red-social-footer{
+a.red-social-footer {
     color: #C49C3C;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
+
 a.red-social-footer:hover {
     color: #fff;
-}   
+}
+
 /*-- FIN ESTILOS FOOTER--*/
 
 /*-- ESTILOS PARA ADAPTACIÓN DE IDIOMAS --*/
@@ -1612,9 +1744,8 @@ a.red-social-footer:hover {
 
 
 /* Clases para ajustar el tamaño de texto según el idioma */
-.lang-jpn {
-    font-size: 0.8em !important;
-    line-height: 1.2 !important;
+.lang-jpn .about-header-text {
+    left: 40%;
 }
 
 /* Excluir footer-logo de la reducción de tamaño */
@@ -1654,8 +1785,10 @@ a.red-social-footer:hover {
 .lang-jpn .footer-logo {
     max-width: 25vh !important;
     height: auto !important;
-    font-size: 1em !important; /* Reset font-size para el logo */
-    transform: none !important; /* Reset cualquier transform que pueda interferir con AOS */
+    font-size: 1em !important;
+    /* Reset font-size para el logo */
+    transform: none !important;
+    /* Reset cualquier transform que pueda interferir con AOS */
     transition: all 0.3s ease !important;
 }
 
@@ -1679,9 +1812,9 @@ a.red-social-footer:hover {
 }
 
 /* Ajustes específicos para la página About en japonés */
-.lang-jpn .about-header-text h1 {
-    font-size: 1.2rem !important;
-    line-height: 2.2 !important;
+body.lang-jpn .about-header-text h1 {
+    font-size: 2rem;
+    line-height: 2.2;
 }
 
 .lang-jpn .tech-card .card-title {
@@ -1692,6 +1825,29 @@ a.red-social-footer:hover {
     font-size: 1rem !important;
 }
 
+/* Ajustes de posición para about-header-text según idioma */
+.lang-eng .about-header-text {
+    left: 32%;
+}
+
+/* Ajustes de posición para iconos de valores según idioma */
+.lang-eng .responsabilidad-icon {
+    right: -47px;
+}
+
+.lang-eng .honestidad-icon {
+    right: -25px;
+}
+
+.lang-jpn .responsabilidad-icon {
+    right: -20px;
+}
+
+.lang-jpn .honestidad-icon {
+    right: -35px;
+}
+
+
 .lang-jpn .valores-title h1 {
     font-size: 2.5rem !important;
 }
@@ -1701,12 +1857,12 @@ a.red-social-footer:hover {
     text-align: center;
 }
 
-.lang-jpn .mision-card h2, 
+.lang-jpn .mision-card h2,
 .lang-jpn .vision-card h2 {
     font-size: 2rem !important;
 }
 
-.lang-jpn .mision-card p, 
+.lang-jpn .mision-card p,
 .lang-jpn .vision-card p {
     font-size: 1.4rem !important;
     line-height: 1.4 !important;
@@ -1730,16 +1886,46 @@ a.red-social-footer:hover {
     .lang-jpn .section-title h1 {
         font-size: 2rem !important;
     }
-    
+
     .lang-jpn .about-alineacion {
         font-size: 1.4rem !important;
     }
-    
+
     .lang-jpn .navbar-nav {
         font-size: 22px !important;
     }
-    .lang-spa .nav-link{
+
+    .lang-spa .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .section-title h1 {
         font-size: 2rem;
+    }
+
+    .lang-eng .about-header-text {
+        left: 23%;
+    }
+
+    .lang-eng .responsabilidad-icon {
+        right: -40px;
+    }
+
+    .lang-eng .honestidad-icon {
+        right: -20px;
+    }
+
+    .lang-jpn .responsabilidad-icon {
+        right: -15px;
+    }
+
+    .lang-jpn .honestidad-icon {
+        right: -30px;
+    }
+
+    body.lang-jpn .about-header-text h1 {
+        font-size: 2rem;
+        line-height: 2.2;
     }
 }
 
@@ -1747,19 +1933,50 @@ a.red-social-footer:hover {
     .lang-jpn .section-title h1 {
         font-size: 1.8rem !important;
     }
-    
+
     .lang-jpn .about-alineacion {
         font-size: 1.2rem !important;
     }
-    
+
     .lang-jpn .service-card .card-title {
         font-size: 1.4rem !important;
     }
-    
+
     .lang-jpn .navbar-nav {
         font-size: 20px !important;
     }
+
+    .section-title h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .lang-eng .about-header-text {
+        left: 7%;
+    }
+
+    .lang-eng .responsabilidad-icon {
+        right: -39px;
+    }
+
+    .lang-eng .honestidad-icon {
+        right: -5px;
+    }
+
+    .lang-jpn .responsabilidad-icon {
+        right: -10px;
+    }
+
+    .lang-jpn .honestidad-icon {
+        right: -4px;
+    }
+
+    body.lang-jpn .about-header-text h1 {
+        font-size: 1.2rem;
+        line-height: 2.2;
+    }
 }
+
+
 /*-- FIN ESTILOS PARA ADAPTACIÓN DE IDIOMAS --*/
 
 /*-----------------ESTILOS ABOUT US ---------------------*/
@@ -1787,26 +2004,30 @@ a.red-social-footer:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
     z-index: 1;
 }
+
 .about-header-image img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
     position: relative;
     z-index: 0;
 }
-.about-header-text{
-    font-family:"Racing_Hard";
-    position:absolute;
+
+.about-header-text {
+    font-family: "Oswald", sans-serif;
+    position: absolute;
     top: 69%;
-    left: 27%;
+    left: 32%;
     transform: translate(-50%, -50%);
     color: rgba(255, 255, 255, 0.9);
-    text-align:center;
+    text-align: center;
     z-index: 2;
 }
+
 /*--------ESTILOS CARD HTML--------*/
 .card-container {
     padding-top: 3.125rem;
@@ -1814,7 +2035,8 @@ a.red-social-footer:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 63px; /* Espacio entre las tarjetas */
+    gap: 63px;
+    /* Espacio entre las tarjetas */
 }
 
 .tech-card {
@@ -1828,12 +2050,15 @@ a.red-social-footer:hover {
     position: relative;
     padding-top: 60px;
     min-height: 400px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transición suave para el efecto */
 }
 
 .tech-card:hover {
-    transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aplica una sombra más intensa */
+    transform: translateY(-10px);
+    /* Mueve la tarjeta hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Aplica una sombra más intensa */
 }
 
 .logo-circle {
@@ -1864,7 +2089,8 @@ a.red-social-footer:hover {
 .usage-section {
     position: absolute;
     top: 22px;
-    right: 42px; /** en tablets tenemos que reducir la propiedad right a 12px*/
+    right: 42px;
+    /** en tablets tenemos que reducir la propiedad right a 12px*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1883,25 +2109,31 @@ a.red-social-footer:hover {
     background-color: white;
 }
 
-.js-card .usage-circle{
-    border-color: #F7DF1E; /* Cambia el color del borde a amarillo */
+.js-card .usage-circle {
+    border-color: #F7DF1E;
+    /* Cambia el color del borde a amarillo */
 }
+
 .js-card .card-title {
-    margin-left: 2px; /* Cambia el margen izquierdo a 2px */
+    margin-left: 2px;
+    /* Cambia el margen izquierdo a 2px */
 }
-.bootstrap-card .card-title{
+
+.bootstrap-card .card-title {
     margin-left: 10px;
 }
-.css3-card .card-title{
+
+.css3-card .card-title {
     margin-left: 0px;
     font-size: 24px;
 }
-.git-github-card .card-title{
+
+.git-github-card .card-title {
     margin-left: 3px;
     font-size: 25px;
 }
 
-.usage-circle-css3{
+.usage-circle-css3 {
     width: 138px;
     height: 133px;
     border-radius: 50%;
@@ -1913,7 +2145,7 @@ a.red-social-footer:hover {
     position: relative;
 }
 
-.usage-circle-css3::before{
+.usage-circle-css3::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1921,23 +2153,21 @@ a.red-social-footer:hover {
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background: conic-gradient(
-        #E84B93 0deg 180deg,
-        #0066FF 180deg 360deg
-    );
+    background: conic-gradient(#E84B93 0deg 180deg,
+            #0066FF 180deg 360deg);
 }
 
-.usage-circle-css3::after{
+.usage-circle-css3::after {
     content: '';
     position: absolute;
-    top:14px;
-    left:14px;
-    right:14px;
-    bottom:14px;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
     background: white;
     border-radius: 50%;
 }
-   
+
 .usage-text {
     font-size: 24px;
     font-weight: bold;
@@ -1965,10 +2195,8 @@ a.red-social-footer:hover {
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background: conic-gradient(
-        #1C1F3D 0deg 180deg,
-        #9747FF 180deg 360deg
-    );
+    background: conic-gradient(#1C1F3D 0deg 180deg,
+            #9747FF 180deg 360deg);
 }
 
 .usage-circle-bootstrap::after {
@@ -1981,6 +2209,7 @@ a.red-social-footer:hover {
     background: white;
     border-radius: 50%;
 }
+
 .usage-circle-git-github {
     width: 138px;
     height: 133px;
@@ -2001,10 +2230,11 @@ a.red-social-footer:hover {
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background: conic-gradient(
-        #C43C3C 0deg 240deg, /* Rojo abarca más de la mitad */
-        #1C1F3D 240deg 360deg /* Negro abarca el resto */
-    );
+    background: conic-gradient(#C43C3C 0deg 240deg,
+            /* Rojo abarca más de la mitad */
+            #1C1F3D 240deg 360deg
+            /* Negro abarca el resto */
+        );
 }
 
 .usage-circle-git-github::after {
@@ -2017,7 +2247,9 @@ a.red-social-footer:hover {
     background: white;
     border-radius: 50%;
 }
+
 .section-title-card-tech {
+    font-family: "Oswald", sans-serif;
     font-size: 19px;
     margin-bottom: 8px;
     text-align: left;
@@ -2042,15 +2274,20 @@ a.red-social-footer:hover {
     margin: 0 auto;
     flex: 1 1 20%;
 }
+
 .brand-icon:nth-child(5),
 .brand-icon:nth-child(6) {
-    flex: 1 1 40%; /* Los dos últimos iconos ocuparán el 50% del contenedor cada uno */
+    flex: 1 1 40%;
+    /* Los dos últimos iconos ocuparán el 50% del contenedor cada uno */
 }
+
 .bootstrap-card .brand-icons img:nth-child(5),
 .bootstrap-card .brand-icons img:nth-child(6),
 .bootstrap-card .brand-icons img:nth-child(7) {
-    flex: 1 1 10%; /* Ajusta el tamaño de los logos */
+    flex: 1 1 10%;
+    /* Ajusta el tamaño de los logos */
 }
+
 .used-by-section {
     margin-top: 66px;
 }
@@ -2112,11 +2349,13 @@ a.red-social-footer:hover {
     right: 0;
     bottom: 0;
     border-radius: 50%;
-    background: conic-gradient(
-        #587DBD 0deg 192deg,    /* Azul - 53.33% */
-        #FF5F08 192deg 288deg,  /* Naranja - 26.67% */
-        #E33629 288deg 360deg   /* Rojo - 20% */
-    );
+    background: conic-gradient(#587DBD 0deg 192deg,
+            /* Azul - 53.33% */
+            #FF5F08 192deg 288deg,
+            /* Naranja - 26.67% */
+            #E33629 288deg 360deg
+            /* Rojo - 20% */
+        );
 }
 
 .usage-circle-laravel::after {
@@ -2167,132 +2406,160 @@ a.red-social-footer:hover {
 
 .laravel-card .brand-icon:nth-child(5),
 .laravel-card .brand-icon:nth-child(6) {
-    flex: 1 1 40%; /* Los dos últimos iconos ocuparán el 50% del contenedor cada uno */
+    flex: 1 1 40%;
+    /* Los dos últimos iconos ocuparán el 50% del contenedor cada uno */
 }
 
 .laravel-card .used-by-section {
     margin-top: 20px;
 }
+
 /* Estilos específicos para tablets - Tech Cards */
 @media (min-width: 768px) and (max-width: 1024px) {
     .col-md-5 {
         flex: 0 0 auto !important;
         width: 50% !important;
     }
-    
+
     .tech-card {
         max-width: 450px !important;
         width: 100% !important;
     }
-    
+
     .card-container {
-        justify-content: center !important;
+        justify-content: center;
     }
 }
 
 /*------------Estilos para Tooltips---------*/
 .tooltip-card {
-    display: none; /* Oculta el tooltip por defecto */
+    display: none;
+    /* Oculta el tooltip por defecto */
     position: absolute;
     top: -73px;
     left: 156px;
-    background: linear-gradient(135deg, rgba(232, 75, 147, 0.8) 0%, rgba(0, 102, 255, 0.8) 100%); /* Gradiente con los colores y más transparentes */
+    background: linear-gradient(135deg, rgba(232, 75, 147, 0.8) 0%, rgba(0, 102, 255, 0.8) 100%);
+    /* Gradiente con los colores y más transparentes */
     color: white;
     padding: 10px;
     border-radius: 10px;
     z-index: 10;
     width: 200px;
 }
+
 .tooltip-card::after {
     content: "";
     position: absolute;
-    bottom: -8px; 
-    left: 5px; 
+    bottom: -8px;
+    left: 5px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 10px solid rgba(232, 75, 147, 0.8); /* Color del triángulo */
+    border-top: 10px solid rgba(232, 75, 147, 0.8);
+    /* Color del triángulo */
 }
 
 /* Tooltip para HTML card */
 .html-card .tooltip-card {
-    background: linear-gradient(135deg, rgba(196, 60, 60, 0.8) 0%, rgba(255, 0, 0, 0.8) 100%); /* Gradiente rojo */
+    background: linear-gradient(135deg, rgba(196, 60, 60, 0.8) 0%, rgba(255, 0, 0, 0.8) 100%);
+    /* Gradiente rojo */
 }
 
 .html-card .tooltip-card::after {
-    border-top: 10px solid rgba(196, 60, 60, 0.8); /* Color del triángulo */
+    border-top: 10px solid rgba(196, 60, 60, 0.8);
+    /* Color del triángulo */
 }
 
 /* Tooltip para JS card */
 .js-card .tooltip-card {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%); /* Gradiente negro */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+    /* Gradiente negro */
 }
 
 .js-card .tooltip-card::after {
-    border-top: 10px solid rgba(0, 0, 0, 0.8); /* Color del triángulo */
+    border-top: 10px solid rgba(0, 0, 0, 0.8);
+    /* Color del triángulo */
 }
 
 /* Tooltip para CSS3 y SASS card */
 .css3-card .tooltip-card {
-    background: linear-gradient(135deg, rgba(232, 75, 147, 0.8) 0%, rgba(0, 102, 255, 0.8) 100%); /* Gradiente rosa y azul */
+    background: linear-gradient(135deg, rgba(232, 75, 147, 0.8) 0%, rgba(0, 102, 255, 0.8) 100%);
+    /* Gradiente rosa y azul */
 }
 
 .css3-card .tooltip-card::after {
-    border-top: 10px solid rgba(232, 75, 147, 0.8); /* Color del triángulo */
+    border-top: 10px solid rgba(232, 75, 147, 0.8);
+    /* Color del triángulo */
 }
+
 .bootstrap-card .tooltip-card {
-    background: #9747FF; /* Color sólido morado */
+    background: #9747FF;
+    /* Color sólido morado */
 }
 
 .bootstrap-card .tooltip-card::after {
-    border-top: 10px solid #9747FF; /* Color del triángulo */
+    border-top: 10px solid #9747FF;
+    /* Color del triángulo */
 }
 
 .git-github-card .tooltip-card {
-    background: #C43C3C; /* Color sólido rojo */
+    background: #C43C3C;
+    /* Color sólido rojo */
 }
 
 .git-github-card .tooltip-card::after {
-    border-top: 10px solid #C43C3C; /* Color del triángulo */
+    border-top: 10px solid #C43C3C;
+    /* Color del triángulo */
 }
 
 .tech-card {
-    position: relative; /* Necesario para posicionar el tooltip */
+    position: relative;
+    /* Necesario para posicionar el tooltip */
 }
 
 .tech-card.selected .tooltip-card {
-    display: block; /* Muestra el tooltip cuando la tarjeta está seleccionada */
+    display: block;
+    /* Muestra el tooltip cuando la tarjeta está seleccionada */
 }
 
 /*--------Estilos para NUESTROS VALORES FUNDAMENTALES---------*/
 
-.valores-title h1{
+.valores-title h1 {
     font-size: 3rem;
 }
+
 .valores-container {
     display: flex;
-    justify-content:space-around; /* Distribuye los elementos uniformemente */
-    align-items: flex-start; /* Alinea los elementos verticalmente en el centro */
-    margin-top: 35px; /* Añade un margen superior para separar del título */
+    justify-content: space-around;
+    /* Distribuye los elementos uniformemente */
+    align-items: flex-start;
+    /* Alinea los elementos verticalmente en el centro */
+    margin-top: 35px;
+    /* Añade un margen superior para separar del título */
     gap: 75px;
 }
 
-.valor-title h2{
+.valor-title h2 {
     font-family: "Oswald", sans-serif;
     font-size: 3rem;
-    margin-bottom: 10px; /* Añade un margen inferior para separar del icono */
+    margin-bottom: 10px;
+    /* Añade un margen inferior para separar del icono */
 }
 
 .valor-icon {
-    margin-top: 30px; /* Añade un margen superior para separar del título */
+    margin-top: 30px;
+    /* Añade un margen superior para separar del título */
     margin-right: 45px;
-    width: 150px; /* Ajusta el tamaño del icono según sea necesario */
-    height: auto; /* Mantiene la proporción del icono */
+    width: 150px;
+    /* Ajusta el tamaño del icono según sea necesario */
+    height: auto;
+    /* Mantiene la proporción del icono */
 }
+
 .responsabilidad-icon {
-    position: relative; 
-    right: -23px; 
+    position: relative;
+    right: -23px;
 }
 
 /* Ajuste específico para inglés en responsabilidad-icon */
@@ -2300,31 +2567,39 @@ a.red-social-footer:hover {
     .lang-eng .responsabilidad-icon {
         right: -47px !important;
     }
+
     .lang-eng .respeto-icon {
         right: 0px !important;
     }
+
     .lang-eng .honestidad-icon {
         left: 10px;
     }
+
     .lang-eng .calidad-icon {
         left: 4px;
     }
-    .lang-jpn .about-header-text{
+
+    .lang-jpn .about-header-text {
         left: 33%;
     }
 }
-.honestidad-icon{
-    position: relative; 
-    right: -30px; 
+
+.honestidad-icon {
+    position: relative;
+    right: -30px;
 }
-.respeto-icon{
-    position: relative; 
-    right: -30px; 
+
+.respeto-icon {
+    position: relative;
+    right: -30px;
 }
-.calidad-icon{
-    position: relative; 
-    right: -30px; 
+
+.calidad-icon {
+    position: relative;
+    right: -30px;
 }
+
 .mision-vision-container {
     display: flex;
     justify-content: space-between;
@@ -2335,16 +2610,21 @@ a.red-social-footer:hover {
 
 .mision-card,
 .vision-card {
-    background-color: #1C1F3D; /* Fondo oscuro */
-    color: white; /* Texto blanco */
+    background-color: #1C1F3D;
+    /* Fondo oscuro */
+    color: white;
+    /* Texto blanco */
     padding: 20px;
     border-radius: 10px;
-    width: 45%; /* Ajusta el ancho de las tarjetas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar las tarjetas */
+    width: 45%;
+    /* Ajusta el ancho de las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra para resaltar las tarjetas */
     flex: 1;
 
 }
-.mision-card{
+
+.mision-card {
     height: 265px;
 }
 
@@ -2353,7 +2633,8 @@ a.red-social-footer:hover {
     font-family: "Oswald", sans-serif;
     font-size: 2rem;
     margin-bottom: 15px;
-    color: white; /* Color del título */
+    color: white;
+    /* Color del título */
 }
 
 .mision-card p,
@@ -2368,13 +2649,13 @@ a.red-social-footer:hover {
 .desarrollo-web-header {
     position: relative;
     background: url('../img/header_desarollo_web.jpg') no-repeat center center/cover;
-    height: 95vh; 
+    height: 95vh;
     width: 100%;
-    color: white; 
+    color: white;
     display: flex;
     align-items: center;
-    justify-content: flex-end; 
-    padding: 20px; 
+    justify-content: flex-end;
+    padding: 20px;
     padding-top: 113px;
 }
 
@@ -2388,64 +2669,70 @@ a.red-social-footer:hover {
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
+
 .header-content {
     position: relative;
-    z-index: 2; /* Asegura que el texto esté por encima de la capa oscura */
+    z-index: 2;
+    /* Asegura que el texto esté por encima de la capa oscura */
     display: flex;
-    justify-content: space-between; 
-    width: 100%; 
+    justify-content: space-between;
+    width: 100%;
 }
 
 .text-left {
-    max-width: 50%; /* Limita el ancho del texto a la izquierda */
-    text-align: left; /* Alinea el texto a la izquierda */
+    max-width: 50%;
+    /* Limita el ancho del texto a la izquierda */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
     padding-left: 30px;
 }
 
 .text-right {
-    max-width: 50%; 
-    text-align: justify; 
-    align-self: flex-end; 
+    max-width: 50%;
+    text-align: justify;
+    align-self: flex-end;
     padding-right: 60px;
 }
 
 .text-left h1 {
-    font-family: "Revamped";
+    font-family: "Oswald", sans-serif;
     font-size: 5rem;
 }
 
 .text-left p {
-    font-family: "Revamped";
+    font-family: "Oswald", sans-serif;
     font-size: 2.3rem;
     margin: 5px 0;
 }
 
 .text-left h2 {
-    font-family: "Racing_Hard";
+    font-family: "Oswald", sans-serif;
     font-size: 4rem;
     margin-top: 0;
     margin-bottom: 20px;
     color: #C49C3C;
 }
 
-.text-right ul  {
-    font-family:"Racing_Hard";
+.text-right ul {
+    font-family: "Oswald", sans-serif;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 
-.text-right ul li  {
+.text-right ul li {
     font-size: 1.5rem;
     margin-bottom: 10px;
     line-height: 1.5;
-    position: relative; /* Permite posicionar el ícono de manera relativa */
-    padding-left: 25px; /* Añade espacio a la izquierda para el ícono */
+    position: relative;
+    /* Permite posicionar el ícono de manera relativa */
+    padding-left: 25px;
+    /* Añade espacio a la izquierda para el ícono */
 }
 
 .text-right ul li .svg-inline--fa.fa-check {
-    padding-right: 10px; 
+    padding-right: 10px;
 }
 
 /*Cards - Nuestros Paquetes*/
@@ -2462,30 +2749,34 @@ a.red-social-footer:hover {
     margin: 0 90px 20px 90px;
     margin-top: 50px;
 }
+
 .pricing-card img {
     width: 100%;
     height: auto;
 }
+
 .pricing-card h2 {
-    font-family: "Racing_Hard";
-    font-size: 3.5rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
     color: #2c2c54;
     margin-top: 24px;
 }
 
 .pricing-card .price {
-    font-family: "Racing_Hard";
+    font-family: "Oswald", sans-serif;
     background: #1f2333;
     color: #fff;
     font-size: 3rem;
     padding: 34px;
     margin: 20px 0;
 }
+
 .pricing-card ul {
     list-style: none;
     padding: 0;
     text-align: left;
 }
+
 .pricing-card ul li {
     font-size: 1.5rem;
     padding: 8px 0;
@@ -2495,15 +2786,17 @@ a.red-social-footer:hover {
     justify-content: center;
     text-align: center;
 }
+
 .pricing-card ul li .icon {
     font-size: 1.2rem;
 }
+
 .pricing-card .cta-button {
     display: block;
-    font-family: "Racing_Hard";
+    font-family: "Oswald", sans-serif;
     font-size: 4.5vh;
     width: 70%;
-    background-color:#343a40 ;
+    background-color: #343a40;
     padding: 12px;
     color: #fff;
     text-decoration: none;
@@ -2511,107 +2804,199 @@ a.red-social-footer:hover {
     margin-top: 15px auto 0 auto;
     transition: all 0.3s ease;
 }
+
 .btn-centro {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 22px;
 }
+
 .pricing-card .cta-button:hover {
     background: #C49C3C;
     color: #343a40;
     transform: scale(1.05);
 }
-.separator-container{
+
+.separator-container {
     border-top: 6px solid #C49C3C;
     padding-top: 10px
 }
 
 /* SISTEMA ANTIGUO - Solo para elementos SIN d-flex (compatibilidad) */
 li:not(.d-flex) .icon-check {
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
-    margin-left: 51px; 
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 51px;
 }
-li:not(.d-flex) .icon-check-hospedaje{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-hospedaje {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 26px;
 }
-li:not(.d-flex) .icon-check-empgrandes-hospedaje{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-empgrandes-hospedaje {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 2px;
 }
-li:not(.d-flex) .icon-check-mdnpequeña{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-mdnpequeña {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 50px;
 }
-li:not(.d-flex) .icon-check-mdnfuncional{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-mdnfuncional {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 50px;
 }
-li:not(.d-flex) .icon-check-multibilingue{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-multibilingue {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 50px;
 }
-li:not(.d-flex) .icon-check-info{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-info {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 20px;
 }
 
 /* CARD DE EMPRESAS MEDIANAS */
-#empresas-medianas h2{
+#empresas-medianas h2 {
     font-size: 3rem;
 }
 
 /* CARD DE EMPRESAS GRANDES O CORPORATIVOS */
-li:not(.d-flex) .icon-check-empgrandes{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+li:not(.d-flex) .icon-check-empgrandes {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 66px;
 }
-li:not(.d-flex) .icon-check-empgrandes-bilingue{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-empgrandes-bilingue {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 140px;
 }
-li:not(.d-flex) .icon-check-empgrnd{
-    width: 40px; 
-    height: auto; 
-    vertical-align: middle; 
+
+li:not(.d-flex) .icon-check-empgrnd {
+    width: 40px;
+    height: auto;
+    vertical-align: middle;
     margin-left: 20px;
 }
-#empresas-grandes{
+
+#empresas-grandes {
     width: 800px;
 }
-#empresas-grandes h2{
+
+#empresas-grandes h2 {
     font-size: 3rem;
 }
-#empresas-grandes .price{
+
+#empresas-grandes .price {
     font-size: 3.5rem;
 }
-#empresas-grandes li{
+
+#empresas-grandes li {
     font-size: 2.0rem;
 }
-#empresas-grandes li:not(.d-flex) .icon-check-hospedaje{
+
+#empresas-grandes li:not(.d-flex) .icon-check-hospedaje {
     margin-left: 17px;
 }
-#empresas-grandes .cta-button{
- font-size: 3.2rem;
+
+#empresas-grandes .cta-button {
+    font-size: 3.2rem;
+}
+
+/* Estilos responsivos específicos para pricing-cards en tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .pricing-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+    /* Ajustes de tipografía para pricing-cards en tablets */
+    .pricing-card h2 {
+        font-size: 2rem;
+    }
+
+    #empresas-medianas h2 {
+        font-size: 2rem;
+    }
+
+    #empresas-grandes h2 {
+        font-size: 2.3rem;
+    }
+
+    .pricing-card .price {
+        font-size: 2.3rem;
+    }
+
+    #empresas-grandes .price {
+        font-size: 2rem;
+    }
+
+    .pricing-card .cta-button {
+        font-size: 2rem;
+    }
+
+    #empresas-grandes .cta-button {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 993px) {
+    .pricing-card {
+        width: 100%;
+        max-width: 420px;
+        margin: 30px auto;
+    }
+
+    /* Ajustes de tipografía para pricing-cards en tablets grandes */
+    .pricing-card h2 {
+        font-size: 2rem;
+    }
+
+    #empresas-medianas h2 {
+        font-size: 2rem;
+    }
+
+    #empresas-grandes h2 {
+        font-size: 2.3rem;
+    }
+
+    .pricing-card .price {
+        font-size: 2.3rem;
+    }
+
+    #empresas-grandes .price {
+        font-size: 2rem;
+    }
+
+    .pricing-card .cta-button {
+        font-size: 2rem;
+    }
+
+    #empresas-grandes .cta-button {
+        font-size: 2rem;
+    }
 }
 
 /* SISTEMA NUEVO - Flexbox para elementos con d-flex */
@@ -2708,12 +3093,12 @@ li:not(.d-flex) .icon-check-empgrnd{
     .pricing-card ul li.d-flex .feature-text-container {
         min-height: 45px;
     }
-    
+
     .pricing-card ul li.d-flex {
         min-height: 45px;
         padding: 6px 0;
     }
-    
+
     .pricing-card ul li.d-flex img[class*="icon-check"] {
         padding-right: 12px;
     }
@@ -2723,56 +3108,59 @@ li:not(.d-flex) .icon-check-empgrnd{
     .pricing-card ul li.d-flex .feature-text-container {
         min-height: 40px;
     }
-    
+
     .pricing-card ul li.d-flex .feature-text-container span {
         font-size: 0.9em;
         line-height: 1.3;
     }
-    
+
     .pricing-card ul li.d-flex {
         min-height: 40px;
         padding: 5px 0;
     }
-    
+
     .pricing-card ul li.d-flex img[class*="icon-check"] {
         padding-right: 10px;
     }
-    
+
     .pricing-card ul li.d-flex.hosting-highlight {
         padding: 6px 0px 6px 12px;
     }
-    
+
     .pricing-card ul li.d-flex.hosting-highlight .feature-text-container {
         padding-right: 12px;
     }
-    
+
     .pricing-card ul li.d-flex.hosting-highlight img[class*="icon-check"] {
         padding-right: 10px;
     }
-    
+
     .pricing-card ul li.d-flex.hosting-highlight .hosting-text {
         font-size: 15px;
     }
 }
+
 /*--------PORTAFOLIO WEB--------*/
-.a-color{
+.a-color {
     color: #000;
 }
+
 .portafolio-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
-    font-family: "Racing_Hard"; 
+    font-family: "Oswald", sans-serif;
     gap: 90px;
 }
 
 .portafolio-title {
     position: relative;
-    margin: 20px; 
+    margin: 20px;
     text-align: center;
 }
+
 /**ESTILOS DE PAISES PORTAFOLIO WEB */
 .country-hover .number {
     font-size: 5rem;
@@ -2781,6 +3169,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     z-index: 2;
     display: inline-block;
 }
+
 .flag {
     width: 40px;
     height: 40px;
@@ -2793,61 +3182,67 @@ li:not(.d-flex) .icon-check-empgrnd{
     pointer-events: none;
     z-index: 1;
 }
+
 /* Aparecen desde diferentes ángulos */
 .country-hover.active .flag-usa {
     top: -12px;
     left: 63px;
     opacity: 1;
     animation: animate__slideInDown 0.6s ease-in-out;
-  }
-  
-  .country-hover.active .flag-venezuela {
+}
+
+.country-hover.active .flag-venezuela {
     top: 38px;
     left: 74px;
     opacity: 1;
     animation: animate__slideInLeft 0.7s ease-in-out;
-  }
-  
-  .country-hover.active .flag-mexico {
+}
+
+.country-hover.active .flag-mexico {
     left: 14px;
     top: -13px;
     opacity: 1;
     animation: animate__slideInUp 0.8s ease-in-out;
-  }
-  
-  .country-hover.active .flag-japan {
+}
+
+.country-hover.active .flag-japan {
     bottom: 0;
     right: 34px;
     top: 39px;
     left: -40px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
-  }
-  .country-hover.active .flag-esp {
+}
+
+.country-hover.active .flag-esp {
     bottom: 0;
     right: 34px;
     top: -44px;
     left: 17px;
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
-  }
-  .country-hover h3 {
+}
+
+.country-hover h3 {
     margin-top: 10px;
     font-size: 2rem;
 }
+
 /***ESTILOS DE IDIOMAS PORTAFOLIO WEB**/
 .idioma-hover {
     position: relative;
     text-align: center;
-  }
-  .idioma-hover .number {
+}
+
+.idioma-hover .number {
     font-size: 5rem;
     font-weight: bold;
     position: relative;
     z-index: 2;
     display: inline-block;
-  }
-  .idioma-flag {
+}
+
+.idioma-flag {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -2858,41 +3253,46 @@ li:not(.d-flex) .icon-check-empgrnd{
     transition: all 0.6s ease-in-out;
     pointer-events: none;
     z-index: 1;
-  }
-  .idioma-hover.active .flag-esp {
+}
+
+.idioma-hover.active .flag-esp {
     top: 40px;
     left: -40px;
     opacity: 1;
     animation: animate__fadeInLeft 0.6s ease-in-out;
-  }
-  .idioma-hover.active .flag-eng {
+}
+
+.idioma-hover.active .flag-eng {
     top: -15px;
     left: 50%;
     opacity: 1;
     animation: animate__fadeInDown 0.7s ease-in-out;
-  }
-  
-  .idioma-hover.active .flag-jpn {
+}
+
+.idioma-hover.active .flag-jpn {
     top: 41px;
     left: 71px;
     opacity: 1;
     animation: animate__fadeInRight 0.8s ease-in-out;
-  }
+}
 
 .portafolio-title h2 {
     margin: 0;
-    font-size: 4rem; 
+    font-size: 4rem;
 }
 
 .portafolio-title h3 {
     margin: 0;
-    font-size: 2.5rem; /* Ajusta el tamaño según sea necesario */
+    font-size: 2.5rem;
+    /* Ajusta el tamaño según sea necesario */
 }
+
 /**** CLIENTES ******/
 .clientes-hover {
     position: relative;
     text-align: center;
-  }
+}
+
 /* Animaciones para clientes-hover */
 .clientes-hover .flag {
     width: 40px;
@@ -2943,6 +3343,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
+
 .clientes-hover.active .flag-arg {
     bottom: 0;
     top: -38px;
@@ -2950,6 +3351,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
+
 .clientes-hover.active .flag-brazil {
     bottom: 0;
     top: -84px;
@@ -2957,6 +3359,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
+
 .clientes-hover.active .flag-australia {
     bottom: 0;
     top: 2px;
@@ -2964,6 +3367,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
+
 .clientes-hover.active .flag-italia {
     bottom: 0;
     top: -39px;
@@ -2971,6 +3375,7 @@ li:not(.d-flex) .icon-check-empgrnd{
     opacity: 1;
     animation: animate__slideInRight 0.6s ease-in-out;
 }
+
 .clientes-hover.active .flag-canada {
     bottom: 0;
     top: -85px;
@@ -2981,167 +3386,173 @@ li:not(.d-flex) .icon-check-empgrnd{
 
 /* ESTILOS ESPECÍFICOS PARA BANDERAS DE CLIENTES EN MOBILE - INGLÉS Y JAPONÉS */
 @media (max-width: 768px) {
+
     /* Banderas para INGLÉS en móvil */
     .lang-eng .clientes-hover.active .flag-usa {
         top: 35px !important;
-        left: 25vh !important; 
+        left: 25vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-venezuela {
         top: 81px !important;
-        left: 29vh !important; 
+        left: 29vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-mexico {
         top: 38px !important;
-        left: -7vh !important; 
+        left: -7vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-japan {
         top: 84px !important;
-        left: -10vh !important; 
+        left: -10vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-esp {
         top: -8px !important;
-        left: -3vh !important; 
+        left: -3vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-arg {
         top: -50px !important;
-        left: 2vh !important; 
+        left: 2vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-brazil {
         top: -91px !important;
         left: 6vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-australia {
         top: -6px !important;
-        left: 21vh !important; 
+        left: 21vh !important;
     }
-    
+
     .lang-eng .clientes-hover.active .flag-italia {
         top: -49px !important;
-        left: 17vh !important; 
+        left: 17vh !important;
     }
-     .lang-eng .clientes-hover.active .flag-canada {
+
+    .lang-eng .clientes-hover.active .flag-canada {
         top: -93px !important;
-        left: 13vh !important; 
+        left: 13vh !important;
     }
-    
+
     /* Banderas para JAPONÉS en móvil */
     .lang-jpn .clientes-hover.active .flag-usa {
         top: 36px !important;
-        left: 30vh !important; 
+        left: 30vh !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-venezuela {
         top: 81px !important;
-        left: 33vh !important; 
+        left: 33vh !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-mexico {
         top: 40px !important;
-        left: -1vh !important; 
+        left: -1vh !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-japan {
         top: 86px !important;
-        left: -5vh !important; 
+        left: -5vh !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-esp {
         top: -3px !important;
-        left: 4vh !important; 
+        left: 4vh !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-arg {
         top: -45px !important;
-        left: 7vh !important; 
+        left: 7vh !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-brazil {
         top: -88px !important;
-        left: 66px !important; 
+        left: 66px !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-australia {
         top: -4px !important;
         left: 26vh !important;
     }
-    
+
     .lang-jpn .clientes-hover.active .flag-italia {
         top: -44px !important;
         left: 21vh !important;
     }
+
     .lang-jpn .clientes-hover.active .flag-canada {
-     top: -89px !important;
-     left: 18vh !important;
+        top: -89px !important;
+        left: 18vh !important;
     }
-    
+
 }
 
 /* ESTILOS ESPECÍFICOS PARA JAPONÉS EN DESKTOP - Solo posiciones de banderas */
 
 /* Banderas para CLIENTES (clientes-hover) en japonés desktop */
 .lang-jpn .clientes-hover.active .flag-usa {
-    top: 48px; 
+    top: 48px;
     left: 37vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-venezuela {
-    top: 94px; 
+    top: 94px;
     left: 41vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-mexico {
-    top: 48px; 
+    top: 48px;
     left: 2vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-japan {
-    top: 96px; 
+    top: 96px;
     left: -3vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-esp {
-    top: 1px; 
+    top: 1px;
     left: 7vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-arg {
-    top: -38px; 
+    top: -38px;
     left: 12vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-brazil {
-    top: -79px; 
+    top: -79px;
     left: 16vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-australia {
-    top: 3px; 
+    top: 3px;
     left: 31vh;
 }
 
 .lang-jpn .clientes-hover.active .flag-italia {
-    top: -38px; 
+    top: -38px;
     left: 26vh;
 }
+
 .lang-jpn .clientes-hover.active .flag-canada {
-    top: -80px; 
+    top: -80px;
     left: 23vh;
 }
 
 /* Responsive específico para japonés en móvil */
 @media (max-width: 768px) {
+
     /* ESTILOS ESPECÍFICOS PARA IDIOMA JAPONÉS - SOLO EN MÓVIL */
     .lang-jpn .portafolio-container {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 90px !important; /* Más espacio en móvil */
+        gap: 90px !important;
+        /* Más espacio en móvil */
         flex-wrap: nowrap !important;
         padding: 20px 0 !important;
     }
@@ -3149,7 +3560,8 @@ li:not(.d-flex) .icon-check-empgrnd{
     .lang-jpn .portafolio-title {
         width: 100% !important;
         max-width: 180px !important;
-        margin: 20px auto !important; /* Más margen en móvil */
+        margin: 20px auto !important;
+        /* Más margen en móvil */
         min-height: 100px !important;
         display: flex !important;
         flex-direction: column !important;
@@ -3176,12 +3588,12 @@ li:not(.d-flex) .icon-check-empgrnd{
         margin: 3px !important;
         display: inline-block !important;
     }
-    
+
     .lang-jpn .portafolio-title h2 {
         font-size: 3rem !important;
         margin-bottom: 10px !important;
     }
-    
+
     .lang-jpn .portafolio-title h3 {
         font-size: 1.8rem !important;
         line-height: 1.2 !important;
@@ -3193,17 +3605,17 @@ li:not(.d-flex) .icon-check-empgrnd{
 .portfolio {
     padding: 2px 0;
     padding-bottom: 20px;
-  }
-  
-  .portfolio-filters {
+}
+
+.portfolio-filters {
     list-style: none;
     padding: 0;
     text-align: center;
     margin-bottom: 45px;
-  }
-  
-  .portfolio-filters li {
-    font-family: "Racing_Hard";
+}
+
+.portfolio-filters li {
+    font-family: "Oswald", sans-serif;
     font-size: 4vh;
     display: inline-block;
     padding: 10px 15px;
@@ -3211,15 +3623,15 @@ li:not(.d-flex) .icon-check-empgrnd{
     color: #444;
     transition: 0.3s;
     border: 2px solid transparent;
-  }
-  
-  .portfolio-filters .filter-active {
+}
+
+.portfolio-filters .filter-active {
     color: #fff;
     background: #C49C3C;
     border-radius: 5px;
-  }
-  
-  .portfolio-item {
+}
+
+.portfolio-item {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -3227,23 +3639,27 @@ li:not(.d-flex) .icon-check-empgrnd{
     flex-direction: column;
     justify-content: center;
 }
-  
-  .portfolio-item img {
+
+.portfolio-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
-  }
-  .portfolio-info {
+}
+
+.portfolio-info {
     position: absolute;
     left: 30px;
     right: 30px;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    background: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco semitransparente */
     padding: 15px;
     text-align: left;
-    opacity: 0; /* Oculto inicialmente */
-    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animaciones suaves */
+    opacity: 0;
+    /* Oculto inicialmente */
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* Animaciones suaves */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -3253,13 +3669,14 @@ li:not(.d-flex) .icon-check-empgrnd{
 /* Mostrar la info al hacer hover */
 .portfolio-item:hover .portfolio-info {
     opacity: 1;
-    bottom: 20px; /* Mover hacia arriba */
+    bottom: 20px;
+    /* Mover hacia arriba */
 }
 
 /* Ocultar nuevamente con animación inversa */
 .portfolio-item:not(:hover) .portfolio-info {
     opacity: 0;
-    bottom: 0; 
+    bottom: 0;
 }
 
 /* Estilo del título del portafolio */
@@ -3284,7 +3701,7 @@ li:not(.d-flex) .icon-check-empgrnd{
 }
 
 .portfolio-icons a:hover {
-    color: #C49C3C; 
+    color: #C49C3C;
 }
 
 /* Espaciado entre elementos */
@@ -3298,23 +3715,30 @@ li:not(.d-flex) .icon-check-empgrnd{
 
 /* Pantallas pequeñas (teléfonos) */
 @media (max-width: 576px) {
+
     /*---------ESTILOS INDEX---------*/
     .about-alineacion {
-        font-size: 1.5rem; /* Ajusta según sea necesario */
+        font-size: 1.5rem;
+        /* Ajusta según sea necesario */
     }
+
     .header-container {
-        flex-direction: row; /* Cambia la dirección del contenedor a columna */
-        align-items: center; /* Centra los elementos horizontalmente */
+        flex-direction: row;
+        /* Cambia la dirección del contenedor a columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
         justify-content: center;
     }
 
     .header-social-links {
-        margin-bottom: 10px; /* Añade margen inferior a los iconos sociales */
+        margin-bottom: 10px;
+        /* Añade margen inferior a los iconos sociales */
         text-align: center;
     }
 
     .btn-cambio-idioma {
-        margin-left: 0; /* Elimina el margen izquierdo */
+        margin-left: 0;
+        /* Elimina el margen izquierdo */
         display: block;
         margin: 10px auto;
     }
@@ -3345,13 +3769,16 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
 
     .dropdown-content {
-        bottom: 100%; /* Posiciona el dropdown hacia arriba */
-        transform: translateY(-10px); /* Ajusta la posición del dropdown */
+        bottom: 100%;
+        /* Posiciona el dropdown hacia arriba */
+        transform: translateY(-10px);
+        /* Ajusta la posición del dropdown */
     }
 }
 
 /* Media query adicional para pantallas extra pequeñas */
 @media (max-width: 400px) {
+
     /* Ajustes específicos para el botón de modo oscuro en pantallas muy pequeñas */
     #toggle-dark-mode {
         padding: 6px 10px;
@@ -3374,42 +3801,58 @@ li:not(.d-flex) .icon-check-empgrnd{
 
 /* Continuación de estilos para pantallas pequeñas (576px) */
 @media (max-width: 576px) {
+
     .carousel-control-prev-icon svg,
     .carousel-control-next-icon svg {
         display: none;
     }
 
     .carousel-indicators [data-bs-target] {
-        width: 30px; 
+        width: 30px;
     }
+
     .carousel-item img {
-        height: 45vh; /* Hace que la imagen ocupe toda la altura del carrusel */
+        height: 45vh;
+        /* Hace que la imagen ocupe toda la altura del carrusel */
         width: 100%;
-        object-fit: cover; /* Hace que la imagen se ajuste al contenedor sin recortarse */
+        object-fit: cover;
+        /* Hace que la imagen se ajuste al contenedor sin recortarse */
     }
-    .card-title{
+
+    .service-card .card-title {
         margin-top: 0px;
+        margin-left: 0rem;
+        font-size: 1.8rem;
     }
-    
+
     .service-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Transición suave para el efecto */
     }
-    .service-card img{
+
+    .service-card img {
         height: 270px;
     }
+
     .service-card:hover {
-        transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aplica una sombra */
+        transform: translateY(-10px);
+        /* Mueve la tarjeta hacia arriba */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        /* Aplica una sombra */
     }
 
     .client-logo {
-        flex: 1 1 120px; /* Ajusta el tamaño mínimo de los logos para pantallas pequeñas */
-        max-width: 120px; /* Ajusta el tamaño máximo de los logos para pantallas pequeñas */
+        flex: 1 1 120px;
+        /* Ajusta el tamaño mínimo de los logos para pantallas pequeñas */
+        max-width: 120px;
+        /* Ajusta el tamaño máximo de los logos para pantallas pequeñas */
     }
+
     .footer-bottom {
         flex-direction: column;
         justify-content: space-between;
-        padding: 10px 40px; /* Añade padding adicional para pantallas más grandes */
+        padding: 10px 40px;
+        /* Añade padding adicional para pantallas más grandes */
     }
 
     .footer-bottom .footer-contact,
@@ -3418,71 +3861,93 @@ li:not(.d-flex) .icon-check-empgrnd{
         padding-right: 0;
         padding-left: 0;
     }
-    
+
     /* Responsivo para WhatsApp en móviles */
     .whatsapp-contact {
         padding: 6px 12px;
         font-size: 0.85rem;
     }
-    
+
     .whatsapp-contact i {
         font-size: 1rem;
     }
-    
+
     .whatsapp-text {
         font-size: 0.8rem;
     }
+
     .footer-links {
         align-items: center;
-        flex-direction:row;
+        flex-direction: row;
         gap: 20px;
         margin-bottom: 10px;
     }
+
     /*------FIN DE ESTILOS INDEX--------*/
 
     /*---------------ESTILOS ABOUT-----------*/
     .about-header-container {
-        height: 50vh; /* Ajusta la altura del contenedor para pantallas pequeñas */
+        height: 50vh;
+        /* Ajusta la altura del contenedor para pantallas pequeñas */
     }
 
-    .about-header-text{
-        top:45%;
-        left:10%;
-        padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    .about-header-text {
+        top: 45%;
+        left: 10%;
+        padding: 10px;
+        /* Ajusta el padding para pantallas pequeñas */
     }
 
     /* Ajuste específico para japonés en about-header-text */
     .lang-jpn .about-header-text {
         left: 22% !important;
     }
+
     /*-------NUESTROS VALORES---------*/
     .valores-container {
-        flex-direction: column; /* Cambia a una disposición vertical */
-        align-items: center; /* Centra los elementos */
-        gap: 20px; /* Reduce el espacio entre los valores */
+        flex-direction: column;
+        /* Cambia a una disposición vertical */
+        align-items: center;
+        /* Centra los elementos */
+        gap: 20px;
+        /* Reduce el espacio entre los valores */
     }
+
     .valores-title h1 {
-        font-size: 3rem; /* Reduce el tamaño de los títulos */
-        text-align: center; /* Centra los títulos */
+        font-size: 3rem;
+        /* Reduce el tamaño de los títulos */
+        text-align: center;
+        /* Centra los títulos */
     }
+
     .valor-title h2 {
-        font-size: 2rem; /* Reduce el tamaño de los títulos */
-        text-align: center; /* Centra los títulos */
+        font-size: 2rem;
+        /* Reduce el tamaño de los títulos */
+        text-align: center;
+        /* Centra los títulos */
     }
 
     .valor-icon {
-        width: 100px; /* Reduce el tamaño de los íconos */
-        margin: 0 auto; /* Centra los íconos */
-        right: -8px;
+        width: 100px;
+        /* Reduce el tamaño de los íconos */
+        margin: 0 auto;
+        /* Centra los íconos */
+        right: -2px;
     }
-    .honestidad-icon{
-        width: 100px; /* Reduce el tamaño de los íconos */
-        margin: 0 auto; /* Centra los íconos */
-        right: -23px;
+
+    .honestidad-icon {
+        width: 100px;
+        /* Reduce el tamaño de los íconos */
+        margin: 0 auto;
+        /* Centra los íconos */
+        right: -19px;
     }
+
     .responsabilidad-icon {
-        position: relative; /* Permite ajustar la posición del icono */
-        right: -64px; /* Ajusta la posición horizontal del icono */
+        position: relative;
+        /* Permite ajustar la posición del icono */
+        right: -56px;
+        /* Ajusta la posición horizontal del icono */
     }
 
     /* Ajuste específico para japonés en responsabilidad-icon */
@@ -3491,113 +3956,135 @@ li:not(.d-flex) .icon-check-empgrnd{
     }
 
     .mision-vision-container {
-        flex-direction: column; /* Cambia a una disposición vertical */
-        gap: 20px; /* Espacio entre las tarjetas */
+        flex-direction: column;
+        /* Cambia a una disposición vertical */
+        gap: 20px;
+        /* Espacio entre las tarjetas */
     }
 
     .mision-card,
     .vision-card {
-        width: 90%; /* Haz que las tarjetas ocupen casi todo el ancho */
-        margin: 0 auto; /* Centra las tarjetas */
+        width: 90%;
+        /* Haz que las tarjetas ocupen casi todo el ancho */
+        margin: 0 auto;
+        /* Centra las tarjetas */
     }
 
     .mision-card h2,
     .vision-card h2 {
-        font-size: 1.5rem; /* Reduce el tamaño de los títulos */
+        font-size: 1.5rem;
+        /* Reduce el tamaño de los títulos */
     }
 
     .mision-card p,
     .vision-card p {
-        font-size: 1rem; /* Ajusta el tamaño del texto */
-        line-height: 1.4; /* Mejora la legibilidad */
+        font-size: 1rem;
+        /* Ajusta el tamaño del texto */
+        line-height: 1.4;
+        /* Mejora la legibilidad */
     }
+
     /* Ajustes específicos para japonés en tablets */
     .usage-section {
         right: 19px !important;
     }
-    
+
     .brand-icons {
         margin-top: 44px !important;
     }
+
     /*-----------FIN ESTILOS ABOUT US  -----------*/
-    
+
     /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
-    .desarrollo-web-header{
+    .desarrollo-web-header {
         height: 90vh;
     }
-    .desarrollo-web-header .header-content{
+
+    .desarrollo-web-header .header-content {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         justify-content: center;
     }
-    .text-left{
+
+    .text-left {
         max-width: none;
     }
-    .text-left h1{
+
+    .text-left h1 {
         text-align: center;
         padding-left: 0px;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
-    .text-left p{
+
+    .text-left p {
         text-align: center;
         padding-left: 0px;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-    .text-left h2{
+
+    .text-left h2 {
         text-align: center;
         padding-left: 0px;
-        font-size: 3rem;
+        font-size: 2rem;
     }
-    .text-right{
+
+    .text-right {
         max-width: none;
         align-self: end;
         padding-right: 10px;
 
     }
-    .text-right ul li{
+
+    .text-right ul li {
         font-size: 1rem;
         padding-left: 10px;
     }
+
     .pricing-card {
         width: 100%;
-        margin: 10px 0; 
-        padding: 15px; 
+        margin: 10px 0;
+        padding: 15px;
     }
+
     .pricing-card .price {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 20px;
     }
 
     .pricing-card ul {
         list-style: none;
         padding: 0;
-        text-align: left; /* Asegura que el texto quede alineado a la izquierda */
+        text-align: left;
+        /* Asegura que el texto quede alineado a la izquierda */
     }
-    
+
     .pricing-card ul li {
         display: flex;
-        align-items: center; /* Alinea verticalmente el texto e ícono */
+        align-items: center;
+        /* Alinea verticalmente el texto e ícono */
         justify-content: center;
-        padding: 10px 0; /* Espaciado entre elementos */
+        padding: 10px 0;
+        /* Espaciado entre elementos */
         font-weight: bold;
         font-size: 1.2rem;
     }
-    
+
     /* Asegurar que los iconos se posicionen correctamente */
     .pricing-card ul li img {
-        width: 30px; /* Tamaño uniforme del icono */
+        width: 30px;
+        /* Tamaño uniforme del icono */
         height: auto;
     }
-    
+
     /* Separador con espacio */
     .separator-container {
         border-top: 4px solid #C49C3C;
         margin: 15px 0;
         padding-top: 10px;
     }
-    
+
     /* Ajuste del botón */
     .pricing-card .cta-button {
         display: block;
@@ -3610,359 +4097,461 @@ li:not(.d-flex) .icon-check-empgrnd{
         border-radius: 5px;
         margin-top: 2px;
     }
+
     .portafolio-title {
-        margin: 28px; 
+        margin: 28px;
     }
-    #negocios-pequeños .icon-check-mdnpequeña{
+
+    #negocios-pequeños .icon-check-mdnpequeña {
         margin-left: 30px;
     }
-    #negocios-pequeños h2{
-        font-size: 2.3rem;
+
+    #negocios-pequeños h2 {
+        font-size: 1.7rem;
     }
-    #empresas-medianas h2{
+
+    #empresas-medianas h2 {
         font-size: 2rem;
     }
-    #empresas-medianas .icon-check{
+
+    #empresas-medianas .icon-check {
         margin-left: 24px;
     }
+
     #empresas-grandes {
         width: 100%;
     }
-    #empresas-grandes .price{
-        font-size: 2rem;
+
+    #empresas-grandes .price {
+        font-size: 1.7rem;
     }
-    #empresas-grandes h2{
-        font-size: 2.3rem;
+
+    #empresas-grandes h2 {
+        font-size: 1.7rem;
     }
-    #empresas-medianas h2{
-        font-size: 2.3rem;
+
+    #empresas-medianas h2 {
+        font-size: 1.7rem;
     }
-    #empresas-grandes li{
+
+    #empresas-grandes li {
         font-size: 1.2rem;
     }
-    #empresas-grandes .cta-button{
+
+    #empresas-grandes .cta-button {
         font-size: 1.9rem;
     }
-    #empresas-grandes .icon-check-empgrnd{
+
+    #empresas-grandes .icon-check-empgrnd {
         margin-left: 25px;
     }
-    li .icon-check-hospedaje{
+
+    li .icon-check-hospedaje {
         margin-left: 9px;
     }
-    li .icon-check-multibilingue{
+
+    li .icon-check-multibilingue {
         margin-left: 29px;
     }
-    li .icon-check-moderna{
+
+    li .icon-check-moderna {
         margin-left: 37px;
     }
-    li .icon-check-mdnfuncional{
+
+    li .icon-check-mdnfuncional {
         margin-left: 28px;
     }
-    li .icon-check-empmedianas{
+
+    li .icon-check-empmedianas {
         margin-right: 35px;
     }
-    li .icon-check-bilingue{
+
+    li .icon-check-bilingue {
         margin-right: 34px;
         margin-left: 7px;
     }
-    li .icon-check-empgrnd{
+
+    li .icon-check-empgrnd {
         margin-right: 3px;
         margin-left: 20px;
     }
-    .portafolio-container{
+
+    .portafolio-container {
         gap: 90px;
     }
 
 }
+
 /* Pantallas medianas (tabletas) */
 @media (min-width: 577px) and (max-width: 768px) {
+
     /*---------ESTILOS INDEX---------*/
     .client-logo {
-        flex: 1 1 120px; /* Ajusta el tamaño mínimo de los logos para pantallas medianas */
-        max-width: 120px; /* Ajusta el tamaño máximo de los logos para pantallas medianas */
+        flex: 1 1 120px;
+        /* Ajusta el tamaño mínimo de los logos para pantallas medianas */
+        max-width: 120px;
+        /* Ajusta el tamaño máximo de los logos para pantallas medianas */
     }
+
     .navbar-nav {
-        text-align: center; /* Centra los elementos del menú */
+        text-align: center;
+        /* Centra los elementos del menú */
     }
 
     .navbar-nav .nav-link {
-        padding: 10px 15px; /* Ajusta el padding de los enlaces */
+        padding: 10px 15px;
+        /* Ajusta el padding de los enlaces */
     }
 
     .header-social-links {
-        margin-top: 10px; /* Añade margen superior a los iconos sociales */
-        text-align: center; /* Centra los iconos sociales */
+        margin-top: 10px;
+        /* Añade margen superior a los iconos sociales */
+        text-align: center;
+        /* Centra los iconos sociales */
     }
 
     .btn-cambio-idioma {
-        display: block; /* Asegura que el botón de cambio de idioma sea visible */
-        margin: 10px auto; /* Centra el botón de cambio de idioma */
+        display: block;
+        /* Asegura que el botón de cambio de idioma sea visible */
+        margin: 10px auto;
+        /* Centra el botón de cambio de idioma */
     }
+
     .dropdown-content {
-        bottom: 100%; /* Posiciona el dropdown hacia arriba */
-        transform: translateY(-10px); /* Ajusta la posición del dropdown */
+        bottom: 100%;
+        /* Posiciona el dropdown hacia arriba */
+        transform: translateY(-10px);
+        /* Ajusta la posición del dropdown */
     }
 
     .carousel-control-prev-icon svg,
     .carousel-control-next-icon svg {
-        width: 3rem; 
-        height: 3rem; 
+        width: 3rem;
+        height: 3rem;
     }
 
     .carousel-indicators [data-bs-target] {
-        width: 50px; 
+        width: 50px;
     }
-    
+
     .service-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Transición suave para el efecto */
     }
-    .service-card img{
+
+    .service-card img {
         height: 230px;
         object-fit: cover;
     }
-    .service-card .card-title{
-    font-size: 1.5rem;
-    margin-left: 0px;
+
+    .service-card .card-title {
+        font-size: 1.3rem;
+        margin-left: 0px;
 
     }
 
     .service-card:hover {
-        transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Aplica una sombra */
+        transform: translateY(-10px);
+        /* Mueve la tarjeta hacia arriba */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        /* Aplica una sombra */
     }
-    
+
     /*---------FIN ESTILOS INDEX---------*/
 
     /*---------------ESTILOS ABOUT-----------*/
     .about-header-container {
-        height: 70vh; /* Ajusta la altura del contenedor para pantallas medianas */
+        height: 70vh;
+        /* Ajusta la altura del contenedor para pantallas medianas */
     }
 
     .about-header-text {
         top: 62%;
         left: 19%;
-        padding: 15px; /* Ajusta el padding para pantallas medianas */
+        padding: 15px;
+        /* Ajusta el padding para pantallas medianas */
     }
-    .lang-jpn .about-header-text{
+
+    .lang-jpn .about-header-text {
         left: 32%;
     }
+
     /*----NUESTROS VALORES----*/
     .valores-container {
-        flex-direction: row; /* Mantén los valores en fila */
-        flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si es necesario */
-        justify-content: center; /* Centra los elementos */
-        gap: 40px; /* Espacio entre los valores */
+        flex-direction: row;
+        /* Mantén los valores en fila */
+        flex-wrap: wrap;
+        /* Permite que los elementos pasen a la siguiente línea si es necesario */
+        justify-content: center;
+        /* Centra los elementos */
+        gap: 40px;
+        /* Espacio entre los valores */
     }
-    .lang-jpn .valores-container{
+
+    .lang-jpn .valores-container {
         gap: 14px;
     }
 
     .valor-title h2 {
-        font-size: 2.5rem; /* Ajusta el tamaño de los títulos */
+        font-size: 2.5rem;
+        /* Ajusta el tamaño de los títulos */
     }
 
     .valor-icon {
-        width: 120px; /* Ajusta el tamaño de los íconos */
+        width: 120px;
+        /* Ajusta el tamaño de los íconos */
     }
-    .lang-jpn .responsabilidad-icon{
+
+    .lang-jpn .responsabilidad-icon {
         right: -23px !important;
     }
-    .responsabilidad-icon{
+
+    .responsabilidad-icon {
         right: -60px !important;
     }
 
     .mision-vision-container {
-        flex-direction: row; /* Mantén las tarjetas en fila */
-        gap: 30px; /* Espacio entre las tarjetas */
+        flex-direction: row;
+        /* Mantén las tarjetas en fila */
+        gap: 30px;
+        /* Espacio entre las tarjetas */
     }
 
     .mision-card,
     .vision-card {
-        width: 45%; /* Ajusta el ancho de las tarjetas */
+        width: 45%;
+        /* Ajusta el ancho de las tarjetas */
     }
+
     /*-----------FIN ESTILOS ABOUT US -----------*/
     /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
-    
+
 
 }
 
 /* Pantallas grandes (escritorios) */
 @media (min-width: 769px) and (max-width: 993px) {
+
     /*---------ESTILOS INDEX---------*/
     .client-logo {
-        flex: 1 1 120px; /* Ajusta el tamaño mínimo de los logos para pantallas grandes */
-        max-width: 120px; /* Ajusta el tamaño máximo de los logos para pantallas grandes */
+        flex: 1 1 120px;
+        /* Ajusta el tamaño mínimo de los logos para pantallas grandes */
+        max-width: 120px;
+        /* Ajusta el tamaño máximo de los logos para pantallas grandes */
     }
+
     .navbar-nav {
-        text-align: left; /* Alinea los elementos del menú a la izquierda */
+        text-align: left;
+        /* Alinea los elementos del menú a la izquierda */
     }
 
     .navbar-nav .nav-link {
-        padding: 10px 20px; /* Ajusta el padding de los enlaces */
+        padding: 10px 20px;
+        /* Ajusta el padding de los enlaces */
     }
 
     .header-social-links {
-        margin-top: 0; /* Elimina el margen superior de los iconos sociales */
-        text-align: right; /* Alinea los iconos sociales a la derecha */
+        margin-top: 0;
+        /* Elimina el margen superior de los iconos sociales */
+        text-align: right;
+        /* Alinea los iconos sociales a la derecha */
     }
 
     .btn-cambio-idioma {
-        display: inline-block; /* Asegura que el botón de cambio de idioma sea visible */
-        margin-left: 10px; /* Añade margen izquierdo al botón de cambio de idioma */
+        display: inline-block;
+        /* Asegura que el botón de cambio de idioma sea visible */
+        margin-left: 10px;
+        /* Añade margen izquierdo al botón de cambio de idioma */
     }
+
     .dropdown-content {
-        top: 100%; /* Posiciona el dropdown hacia abajo */
-        transform: translateY(0); /* Ajusta la posición del dropdown */
+        top: 100%;
+        /* Posiciona el dropdown hacia abajo */
+        transform: translateY(0);
+        /* Ajusta la posición del dropdown */
     }
+
     .carousel-control-prev-icon svg,
     .carousel-control-next-icon svg {
-        width: 4rem; 
-        height: 4rem; 
+        width: 4rem;
+        height: 4rem;
     }
 
     .carousel-indicators [data-bs-target] {
-        width: 70px; 
+        width: 70px;
     }
+
     /*---------FIN ESTILOS INDEX---------*/
 
     /*---------------ESTILOS ABOUT-----------*/
     .about-header-container {
-        height: 72vh; /* Ajusta la altura del contenedor para pantallas grandes */
+        height: 72vh;
+        /* Ajusta la altura del contenedor para pantallas grandes */
     }
 
     .about-header-text {
-        top:45%;
-        left:10%;
-        padding: 20px; /* Ajusta el padding para pantallas grandes */
+        top: 45%;
+        left: 10%;
+        padding: 20px;
+        /* Ajusta el padding para pantallas grandes */
     }
 
     /*-----NUESTROS VALORES-----*/
     .valores-container {
-        flex-direction: row; /* Mantén los valores en fila */
-        justify-content: space-evenly; /* Espacio uniforme entre los valores */
-        gap: 50px; /* Espacio entre los valores */
+        flex-direction: row;
+        /* Mantén los valores en fila */
+        justify-content: space-evenly;
+        /* Espacio uniforme entre los valores */
+        gap: 50px;
+        /* Espacio entre los valores */
     }
 
     .valor-title h2 {
-        font-size: 3rem; /* Mantén los títulos grandes */
+        font-size: 3rem;
+        /* Mantén los títulos grandes */
     }
 
     .valor-icon {
-        width: 140px; /* Ajusta el tamaño de los íconos */
+        width: 140px;
+        /* Ajusta el tamaño de los íconos */
     }
 
     .mision-vision-container {
-        flex-direction: row; /* Mantén las tarjetas en fila */
-        gap: 50px; /* Espacio entre las tarjetas */
+        flex-direction: row;
+        /* Mantén las tarjetas en fila */
+        gap: 50px;
+        /* Espacio entre las tarjetas */
     }
 
     .mision-card,
     .vision-card {
-        width: 40%; /* Ajusta el ancho de las tarjetas */
+        width: 40%;
+        /* Ajusta el ancho de las tarjetas */
     }
+
     /*-----------FIN ESTILOS ABOUT US  -----------*/
-    /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
     
+    /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
+
 }
 
 /* Pantallas extra grandes (escritorios grandes) */
 @media (min-width: 993px) {
+
     /*---------ESTILOS INDEX---------*/
     .client-logo {
-        flex: 1 1 150px; /* Ajusta el tamaño mínimo de los logos para pantallas extra grandes */
-        max-width: 150px; /* Ajusta el tamaño máximo de los logos para pantallas extra grandes */
+        flex: 1 1 150px;
+        /* Ajusta el tamaño mínimo de los logos para pantallas extra grandes */
+        max-width: 150px;
+        /* Ajusta el tamaño máximo de los logos para pantallas extra grandes */
     }
+
     .navbar-nav {
-        text-align: left; /* Alinea los elementos del menú a la izquierda */
+        text-align: left;
+        /* Alinea los elementos del menú a la izquierda */
     }
 
     .navbar-nav .nav-link {
-        padding: 10px 20px; 
+        padding: 10px 20px;
         font-size: 21px;
     }
 
     .header-social-links {
-        margin-top: 0; /* Elimina el margen superior de los iconos sociales */
-        text-align: right; /* Alinea los iconos sociales a la derecha */
+        margin-top: 0;
+        /* Elimina el margen superior de los iconos sociales */
+        text-align: right;
+        /* Alinea los iconos sociales a la derecha */
     }
 
     .btn-cambio-idioma {
-        display: flex; /* Asegura que el botón de cambio de idioma sea visible */
-        margin-left: 2px; /* Añade margen izquierdo al botón de cambio de idioma */
+        display: flex;
+        /* Asegura que el botón de cambio de idioma sea visible */
+        margin-left: 2px;
+        /* Añade margen izquierdo al botón de cambio de idioma */
     }
+
     .carousel-control-prev-icon svg,
     .carousel-control-next-icon svg {
-        width: 5rem; 
-        height: 5rem; 
+        width: 5rem;
+        height: 5rem;
     }
 
     .carousel-indicators [data-bs-target] {
-        width: 90px; 
+        width: 90px;
     }
+
     /*---------FIN ESTILOS INDEX---------*/
-    
+
     /*---------------ESTILOS ABOUT-----------*/
     /*-----NUESTROS VALORES--------*/
     .valores-container {
-        justify-content: space-around; /* Mantén los valores distribuidos uniformemente */
+        justify-content: space-around;
+        /* Mantén los valores distribuidos uniformemente */
     }
 
     .valor-title h2 {
-        font-size: 2rem; /* Aumenta ligeramente el tamaño de los títulos */
+        font-size: 2rem;
+        /* Aumenta ligeramente el tamaño de los títulos */
         text-align: center;
     }
 
     .valor-icon {
-        width: 150px; /* Mantén el tamaño de los íconos más grande */
+        width: 150px;
+        /* Mantén el tamaño de los íconos más grande */
     }
 
     .mision-card,
     .vision-card {
-        width: 35%; /* Haz que las tarjetas ocupen menos espacio */
+        width: 35%;
+        /* Haz que las tarjetas ocupen menos espacio */
     }
 
     .mision-card h2,
     .vision-card h2 {
-        font-size: 2rem; /* Aumenta ligeramente el tamaño de los títulos */
+        font-size: 2rem;
+        /* Aumenta ligeramente el tamaño de los títulos */
     }
 
     .mision-card p,
     .vision-card p {
-        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+        font-size: 1.2rem;
+        /* Ajusta el tamaño del texto */
     }
+
     /*-----------FIN ESTILOS ABOUT US  -----------*/
     /*-----------ESTILOS SERVICE DESAROLLO WEB -----------*/
 }
 
 /* Media Queries para portátiles/laptops (hasta 1023px) - Ajustes de navbar para idiomas */
 @media (max-width: 1023px) {
+
     /* Reducir font-size general del navbar para pantallas de portátil */
     .estilos-navbar {
         font-size: 24px !important;
     }
-    
+
     /* Ajustes específicos para inglés en portátiles */
     .lang-eng .estilos-navbar {
         font-size: 20px !important;
     }
-    
+
     .lang-eng .navbar-nav {
         font-size: 20px !important;
     }
-    
+
     .lang-eng .nav-link {
         font-size: 1em !important;
     }
-    
+
     .lang-eng .dropdown-item {
         font-size: 0.85em !important;
     }
-    
+
     /* Ajustes específicos para español en portátiles */
     .lang-spa .estilos-navbar {
         font-size: 22px !important;
     }
-    
+
     .lang-spa .navbar-nav {
         font-size: 22px !important;
     }
@@ -3970,12 +4559,12 @@ li:not(.d-flex) .icon-check-empgrnd{
     .lang-spa .dropdown-item {
         font-size: 1em !important;
     }
-    
+
     /* Reducir espacio entre elementos del navbar */
     .nav-item {
         margin-right: 15px !important;
     }
-    
+
     /* Ajustar el logo para portátiles */
     .gisea-logo {
         width: 21vh !important;
@@ -3984,77 +4573,78 @@ li:not(.d-flex) .icon-check-empgrnd{
 
 /* Media Query específica para portátiles de 1024px */
 @media (min-width: 1024px) and (max-width: 1366px) {
+
     /* Ajustes específicos para el rango de portátiles 1024px-1366px */
     .estilos-navbar {
         font-size: 22px !important;
     }
-    
+
     /* Para inglés */
     .lang-eng .estilos-navbar {
         font-size: 18px !important;
     }
-    
+
     .lang-eng .navbar-nav {
         font-size: 18px !important;
     }
-    
+
     .lang-eng .nav-link {
         font-size: 0.85em !important;
         padding: 8px 12px !important;
     }
-    
+
     .lang-eng .dropdown-item {
         font-size: 0.8em !important;
     }
-    
+
     /* Para español */
     .lang-spa .estilos-navbar {
         font-size: 20px !important;
     }
-    
+
     .lang-spa .navbar-nav {
         font-size: 20px !important;
     }
-    
+
     .lang-spa .nav-link {
         font-size: 0.9em !important;
         padding: 8px 12px !important;
     }
-    
+
     .lang-spa .dropdown-item {
         font-size: 0.90em !important;
     }
-    
+
     /* Para japonés */
     .lang-jpn .estilos-navbar {
         font-size: 16px !important;
     }
-    
+
     .lang-jpn .navbar-nav {
         font-size: 16px !important;
     }
-    
+
     .lang-jpn .nav-link {
         font-size: 0.8em !important;
         padding: 8px 10px !important;
     }
-    
+
     /* Reducir margen entre elementos */
     .nav-item {
         margin-right: 12px !important;
     }
-    
+
     /* Ajustar logo */
     .gisea-logo {
         width: 17vh !important;
     }
-    
+
     /* Ajustar botón de idioma */
     .btn-cambio-idioma {
         font-size: 20px !important;
         padding: 6px 10px !important;
     }
-    
+
     /* Ajustar iconos sociales */
     .header-social-links .red-social i {
         font-size: 1.2rem !important;
@@ -4063,188 +4653,195 @@ li:not(.d-flex) .icon-check-empgrnd{
 
 /* Media Query ultra específica para pantallas de 1024px */
 @media (min-width: 1020px) and (max-width: 1024px) {
-    .header-social-wrapper{
+    .header-social-wrapper {
         margin-left: -9px;
     }
+
     /* Ajustes ultra específicos para 1024px */
     .estilos-navbar {
         font-size: 20px !important;
     }
-    
+
     .lang-eng .estilos-navbar {
         font-size: 16px !important;
     }
-    
+
     .lang-eng .navbar-nav {
         font-size: 16px !important;
     }
-    
+
     .lang-eng .nav-link {
         font-size: 1em !important;
         padding: 6px 10px !important;
     }
-    
+
     .lang-spa .estilos-navbar {
         font-size: 18px !important;
     }
-    
+
     .lang-spa .navbar-nav {
         font-size: 15px !important;
     }
-    
+
     .lang-spa .nav-link {
         font-size: 1em !important;
         padding: 6px 10px !important;
     }
-    
+
     .lang-jpn .estilos-navbar {
         font-size: 14px !important;
     }
-    
+
     .lang-jpn .navbar-nav {
         font-size: 14px !important;
     }
-    
+
     .lang-jpn .nav-link {
         font-size: 1em !important;
         padding: 6px 8px !important;
     }
-    
+
     .nav-item {
         margin-right: 8px !important;
     }
-    
+
     .gisea-logo {
         width: 16vh !important;
     }
-    
+
     /* Asegurar que el dropdown de servicios no se salga */
     .dropdown-menu {
         font-size: 16px !important;
     }
-    
+
     .lang-eng .dropdown-menu {
         font-size: 14px !important;
     }
-    
+
     .lang-spa .dropdown-menu {
         font-size: 15px !important;
     }
-    
+
     /* Ajustes específicos para about-header-text en 1024px */
     .about-header-text {
         top: 69%;
         left: 22%;
     }
 }
+
 /* MODO OSCURO */
 body.dark-mode {
-  background-color: #0C0C2B;
-  color: #f0f0f0;
+    background-color: #0C0C2B;
+    color: #f0f0f0;
 }
 
 /* Navbar */
 body.dark-mode .estilos-navbar {
-  background-color: #0C0C2B;
-  --bs-navbar-color: #f0f0f0;
-  --bs-navbar-hover-color: #C49C3C;
+    background-color: #0C0C2B;
+    --bs-navbar-color: #f0f0f0;
+    --bs-navbar-hover-color: #C49C3C;
 }
 
 /* Cards */
 body.dark-mode .card {
-  background-color: #222;
-  color: #f0f0f0;
-  border-color: #444;
+    background-color: #222;
+    color: #f0f0f0;
+    border-color: #444;
 }
+
 body.dark-mode .card-title,
 body.dark-mode .card-text {
-  color: #f0f0f0;
+    color: #f0f0f0;
 }
 
 /* Secciones */
 body.dark-mode section {
-  background-color: #0C0C2B;
+    background-color: #0C0C2B;
 }
+
 body.dark-mode .section-title h1 {
-  color: #f0f0f0;
+    color: #f0f0f0;
 }
 
 /* Footer */
 body.dark-mode .footer {
-  background-color: #0C0C2B;
-  color: #f0f0f0;
+    background-color: #0C0C2B;
+    color: #f0f0f0;
 }
+
 body.dark-mode .footer a {
-  color: #C49C3C;
+    color: #C49C3C;
 }
+
 body.dark-mode .footer a:hover {
-  color: #f0f0f0;
+    color: #f0f0f0;
 }
 
 /* Botón modo oscuro */
 body.dark-mode #toggle-dark-mode,
 body.dark-mode .btn-cambio-idioma {
-  background-color: transparent;
-  color: #f0f0f0;
-  border-color: #f0f0f0;
+    background-color: transparent;
+    color: #f0f0f0;
+    border-color: #f0f0f0;
 }
 
 /* Dropdown */
 body.dark-mode .dropdown-content {
-  background-color: #0C0C2B;
-  color: #f0f0f0;
+    background-color: #0C0C2B;
+    color: #f0f0f0;
 }
+
 body.dark-mode .dropdown-content a:hover {
-  background-color: #2e2760;
+    background-color: #2e2760;
 }
 
 /* Dropdown menu de Bootstrap */
 body.dark-mode .dropdown-menu {
-  --bs-dropdown-bg: #0C0C2B !important;
-  background-color: #0C0C2B !important;
+    --bs-dropdown-bg: #0C0C2B !important;
+    background-color: #0C0C2B !important;
 }
 
 /* Hover y selección en dropdown items modo oscuro */
 body.dark-mode .dropdown-item {
-  color: #f0f0f0 !important;
-  background-color: transparent !important;
-  border-bottom: 2px solid transparent !important;
-  transition: all 0.3s ease !important;
+    color: #f0f0f0 !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
 }
 
 body.dark-mode .dropdown-item:hover,
 body.dark-mode .dropdown-item:focus {
-  background-color: rgba(196, 156, 60, 0.1) !important;
-  color: #C49C3C !important;
-  border-bottom: 2px solid #C49C3C !important;
+    background-color: rgba(196, 156, 60, 0.1) !important;
+    color: #C49C3C !important;
+    border-bottom: 2px solid #C49C3C !important;
 }
 
 /* Social Icons */
 body.dark-mode a.red-social,
 body.dark-mode a.red-social-footer {
-  color: #C49C3C;
+    color: #C49C3C;
 }
 
 /* Estilos para WhatsApp en modo oscuro */
 body.dark-mode .whatsapp-contact {
-  color: #25D366 !important;
-  background: rgba(37, 211, 102, 0.15);
-  border: 1px solid rgba(37, 211, 102, 0.4);
+    color: #25D366 !important;
+    background: rgba(37, 211, 102, 0.15);
+    border: 1px solid rgba(37, 211, 102, 0.4);
 }
 
 body.dark-mode .whatsapp-contact:hover {
-  background: rgba(37, 211, 102, 0.25);
-  color: #34E877 !important;
+    background: rgba(37, 211, 102, 0.25);
+    color: #34E877 !important;
 }
 
 body.dark-mode .whatsapp-text {
-  color: #25D366 !important;
+    color: #25D366 !important;
 }
 
 /* Estilos generales para texto blanco en modo oscuro */
 body.dark-mode,
 body.dark-mode * {
-  color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
 }
 
 /* Excepciones para elementos que deben mantener sus colores específicos */
@@ -4253,62 +4850,62 @@ body.dark-mode a.red-social-footer,
 body.dark-mode .footer-contact,
 body.dark-mode .footer-links a:hover,
 body.dark-mode a:hover {
-  color: #C49C3C !important;
+    color: #C49C3C !important;
 }
 
 /* Mantener colores específicos de navegación */
 body.dark-mode .navbar-nav .nav-link:hover {
-  color: #C49C3C !important;
-  border-bottom: 2px solid #C49C3C !important;
-  transition: all 0.3s ease !important;
+    color: #C49C3C !important;
+    border-bottom: 2px solid #C49C3C !important;
+    transition: all 0.3s ease !important;
 }
 
 /* Subrayado para nav-link activo en modo oscuro */
 body.dark-mode .navbar-nav .nav-link.active {
-  color: #C49C3C !important;
-  border-bottom: 2px solid #C49C3C !important;
+    color: #C49C3C !important;
+    border-bottom: 2px solid #C49C3C !important;
 }
 
 /* Asegurar que los enlaces normales no tengan borde por defecto */
 body.dark-mode .navbar-nav .nav-link {
-  border-bottom: 2px solid transparent !important;
-  transition: all 0.3s ease !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.3s ease !important;
 }
 
 /* Mantener colores de botones activos */
 body.dark-mode .portfolio-filters .filter-active {
-  color: #fff !important;
-  background: #C49C3C !important;
+    color: #fff !important;
+    background: #C49C3C !important;
 }
 
 /* Ajustes específicos para las tech cards */
 body.dark-mode .tech-card {
-  background-color: #222 !important;
-  color: #f0f0f0 !important;
+    background-color: #222 !important;
+    color: #f0f0f0 !important;
 }
 
 body.dark-mode .section-title-card-tech {
-  color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
 }
 
 /* Texto de porcentaje en las cards de tecnología - Negro en modo oscuro */
 body.dark-mode .usage-text {
-  color: #000000 !important;
+    color: #000000 !important;
 }
 
 /* Pricing cards en modo oscuro */
 body.dark-mode .pricing-card {
-  background-color: #222 !important;
-  color: #f0f0f0 !important;
+    background-color: #222 !important;
+    color: #f0f0f0 !important;
 }
 
 body.dark-mode .pricing-card h2 {
-  color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
 }
 
 body.dark-mode .pricing-card .price {
-  background: #1C1F3D !important;
-  color: #fff !important;
+    background: #1C1F3D !important;
+    color: #fff !important;
 }
 
 body.dark-mode .pricing-card ul li.d-flex.hosting-highlight {
@@ -4337,8 +4934,8 @@ body.dark-mode .features-list li.hosting-highlight:hover {
 
 /* Service cards en modo oscuro */
 body.dark-mode .service-card .card-body {
-  background-color: #0C0C2B !important;
-  color: #fff !important;
+    background-color: #0C0C2B !important;
+    color: #fff !important;
 }
 
 /* Portafolio y textos generales */
@@ -4347,44 +4944,44 @@ body.dark-mode .portafolio-title h3,
 body.dark-mode .about-alineacion,
 body.dark-mode .valores-title h1,
 body.dark-mode .valor-title h2 {
-  color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
 }
 
 /* Footer específico */
 body.dark-mode .footer-top {
-  background-color: #0C0C2B!important;
+    background-color: #0C0C2B !important;
 }
 
 body.dark-mode .footer-bottom {
-  background-color: #0C0C2B !important;
+    background-color: #0C0C2B !important;
 }
 
 /* Enlaces normales en modo oscuro */
 body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button) {
-  color: #C49C3C !important;
+    color: #C49C3C !important;
 }
 
 /* Asegurar que los iconos de Font Awesome mantengan su color */
 body.dark-mode .fa-brands,
 body.dark-mode .fa-solid,
 body.dark-mode .fa-regular {
-  color: inherit !important;
+    color: inherit !important;
 }
 
 /* Ajustes específicos para clases con colores oscuros */
 body.dark-mode .about-alineacion {
-  color: #f0f0f0 !important;
-  font-family: "Roboto", sans-serif !important;
-  font-weight: 400 !important;
+    color: #f0f0f0 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
 }
 
 body.dark-mode .section-title-card-tech {
-  color: #f0f0f0 !important;
-  font-weight: bold;
+    color: #f0f0f0 !important;
+    font-weight: bold;
 }
 
 body.dark-mode .a-color {
-  color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
 }
 
 /* Asegurar que todos los párrafos, títulos y textos sean blancos */
@@ -4398,7 +4995,7 @@ body.dark-mode h6,
 body.dark-mode span,
 body.dark-mode div,
 body.dark-mode li {
-  color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
 }
 
 /* Excepciones para elementos que deben mantener colores específicos */
@@ -4406,7 +5003,7 @@ body.dark-mode .service-card .card-body *,
 body.dark-mode .mision-card *,
 body.dark-mode .vision-card *,
 body.dark-mode .footer-bottom * {
-  color: #c49c3c !important;
+    color: #c49c3c !important;
 }
 
 /* Estilos específicos para texto de misión y visión en modo oscuro */
@@ -4414,88 +5011,88 @@ body.dark-mode .mision-card h2,
 body.dark-mode .vision-card h2,
 body.dark-mode .mision-card p,
 body.dark-mode .vision-card p {
-  color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 /* Asegurar que los elementos de portfolio mantengan la estructura correcta */
 body.dark-mode .portfolio-filters li {
-  color: #f0f0f0 !important;
+    color: #f0f0f0 !important;
 }
 
 body.dark-mode .portfolio-info h4,
 body.dark-mode .portfolio-info p {
-  color: #fff !important;
+    color: #fff !important;
 }
 
 /* Drop-shadow sutil para imágenes de clientes en modo oscuro */
 body.dark-mode .client-logo img {
-  border: none !important;
-  background-color: transparent !important;
-  transition: all 0.3s ease !important;
+    border: none !important;
+    background-color: transparent !important;
+    transition: all 0.3s ease !important;
 }
 
 body.dark-mode .client-logo img:hover {
-  background-color: transparent !important;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)) !important;
-  transform: scale(1.1) !important;
+    background-color: transparent !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)) !important;
+    transform: scale(1.1) !important;
 }
 
 /* Drop-shadow para el logo de Gisea en modo oscuro */
 body.dark-mode .gisea-logo {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
-  transition: all 0.3s ease !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
+    transition: all 0.3s ease !important;
 }
 
 body.dark-mode .gisea-logo:hover {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
-  transform: scale(1.02) !important;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
+    transform: scale(1.02) !important;
 }
 
 /* Drop-shadow para el logo del footer en modo oscuro */
 body.dark-mode .footer-logo {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
-  transition: all 0.3s ease !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
+    transition: all 0.3s ease !important;
 }
 
 body.dark-mode .footer-logo:hover {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
-  transform: scale(1.02) !important;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
+    transform: scale(1.02) !important;
 }
 
 /* Drop-shadow para los íconos de valores en modo oscuro */
 body.dark-mode .valor-icon {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
-  transition: all 0.3s ease !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)) !important;
+    transition: all 0.3s ease !important;
 }
 
 body.dark-mode .valor-icon:hover {
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
-  transform: scale(1.05) !important;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
+    transform: scale(1.05) !important;
 }
 
 /* Drop-shadow para los íconos de marcas en las tech cards en modo oscuro */
 body.dark-mode .brand-icon {
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)) !important;
-  transition: all 0.3s ease !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4)) !important;
+    transition: all 0.3s ease !important;
 }
 
 /* Botones CTA en modo oscuro */
 body.dark-mode .cta-button {
-  background-color: #1C1F3D !important;
-  color: #ffffff !important;
-  transition: all 0.3s ease !important;
+    background-color: #1C1F3D !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
 }
 
 body.dark-mode .cta-button:hover {
-  background-color: #C49C3C !important;
-  color: #1C1F3D !important;
-  transform: scale(1.05) !important;
+    background-color: #C49C3C !important;
+    color: #1C1F3D !important;
+    transform: scale(1.05) !important;
 }
 
 /* Quitar outline adicional */
 body.dark-mode .clients-container .client-logo img {
-  outline: none !important;
-  outline-offset: 0 !important;
+    outline: none !important;
+    outline-offset: 0 !important;
 }
 
 /* Estilos modo oscuro para profile cards del equipo */
@@ -4655,19 +5252,36 @@ body.dark-mode .media-logo:hover {
     filter: brightness(1.2) grayscale(0%);
 }
 
+/* Dark mode para tech badges */
+body.dark-mode .tech-badge {
+    background: linear-gradient(135deg, #C49C3C 0%, #b8902e 100%);
+    color: #1a1a1a;
+}
+
+body.dark-mode .tech-badge:hover {
+    background: linear-gradient(135deg, #b8902e 0%, #C49C3C 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(196, 156, 60, 0.3);
+}
+
+/* Dark mode para english icon */
+body.dark-mode .english-icon {
+    filter: brightness(1.1);
+}
+
 /* Iconos del portafolio en modo oscuro - mantener color negro */
 body.dark-mode .portfolio-icons a {
-  color: #000000 !important;
+    color: #000000 !important;
 }
 
 body.dark-mode .portfolio-icons a:hover {
-  color: #C49C3C !important;
+    color: #C49C3C !important;
 }
 
 /* Iconos específicos de Bootstrap en el portafolio */
 body.dark-mode .portfolio-icons .bi-zoom-in,
 body.dark-mode .portfolio-icons .bi-link-45deg {
-  color: #000000 !important;
+    color: #000000 !important;
 }
 
 /* Estilos específicos para texto japonés en carousel */
@@ -4675,60 +5289,63 @@ body.lang-jpn .gisea-subtitle,
 body.lang-jpn .web-dev-subtitle,
 body.lang-jpn .developer-training-subtitle,
 body.lang-jpn .human-resources-subtitle {
-  font-size: 1.8rem !important;
-  line-height: 1.3 !important;
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
 }
 
 /* Estilos responsivos para japonés en tablets */
 @media (max-width: 768px) {
-  body.lang-jpn .gisea-subtitle,
-  body.lang-jpn .web-dev-subtitle,
-  body.lang-jpn .developer-training-subtitle,
-  body.lang-jpn .human-resources-subtitle {
-    font-size: 1.4rem !important;
-  }
-  
-  body.lang-jpn .gisea-title,
-  body.lang-jpn .web-dev-title,
-  body.lang-jpn .developer-training-title,
-  body.lang-jpn .human-resources-title {
-    font-size: 2.5rem !important;
-  }
+
+    body.lang-jpn .gisea-subtitle,
+    body.lang-jpn .web-dev-subtitle,
+    body.lang-jpn .developer-training-subtitle,
+    body.lang-jpn .human-resources-subtitle {
+        font-size: 1.4rem !important;
+    }
+
+    body.lang-jpn .gisea-title,
+    body.lang-jpn .web-dev-title,
+    body.lang-jpn .developer-training-title,
+    body.lang-jpn .human-resources-title {
+        font-size: 2.5rem !important;
+    }
 }
 
 /* Estilos responsivos para japonés en móviles */
 @media (max-width: 480px) {
-  body.lang-jpn .gisea-subtitle,
-  body.lang-jpn .web-dev-subtitle,
-  body.lang-jpn .developer-training-subtitle,
-  body.lang-jpn .human-resources-subtitle {
-    font-size: 1rem !important;
-    line-height: 1.2 !important;
-  }
-  
-  body.lang-jpn .gisea-title,
-  body.lang-jpn .web-dev-title,
-  body.lang-jpn .developer-training-title,
-  body.lang-jpn .human-resources-title {
-    font-size: 1.6rem !important;
-  }
+
+    body.lang-jpn .gisea-subtitle,
+    body.lang-jpn .web-dev-subtitle,
+    body.lang-jpn .developer-training-subtitle,
+    body.lang-jpn .human-resources-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+    }
+
+    body.lang-jpn .gisea-title,
+    body.lang-jpn .web-dev-title,
+    body.lang-jpn .developer-training-title,
+    body.lang-jpn .human-resources-title {
+        font-size: 1.6rem !important;
+    }
 }
 
 /* Estilos responsivos para japonés en dispositivos muy pequeños */
 @media (max-width: 360px) {
-  body.lang-jpn .gisea-subtitle,
-  body.lang-jpn .web-dev-subtitle,
-  body.lang-jpn .developer-training-subtitle,
-  body.lang-jpn .human-resources-subtitle {
-    font-size: 0.9rem !important;
-  }
-  
-  body.lang-jpn .gisea-title,
-  body.lang-jpn .web-dev-title,
-  body.lang-jpn .developer-training-title,
-  body.lang-jpn .human-resources-title {
-    font-size: 1.2rem !important;
-  }
+
+    body.lang-jpn .gisea-subtitle,
+    body.lang-jpn .web-dev-subtitle,
+    body.lang-jpn .developer-training-subtitle,
+    body.lang-jpn .human-resources-subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    body.lang-jpn .gisea-title,
+    body.lang-jpn .web-dev-title,
+    body.lang-jpn .developer-training-title,
+    body.lang-jpn .human-resources-title {
+        font-size: 1.2rem !important;
+    }
 }
 
 /* ================================================= */
@@ -4762,10 +5379,11 @@ body.lang-jpn .human-resources-subtitle {
     bottom: -1px;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     color: white;
     padding: 20px;
-    transform: translateY(0); /* Siempre visible */
+    transform: translateY(0);
+    /* Siempre visible */
     transition: transform 0.3s ease;
     display: flex;
     align-items: center;
@@ -4780,11 +5398,11 @@ body.lang-jpn .human-resources-subtitle {
 
 /* Estilos del título en el overlay */
 .package-text h4 {
-    font-family: "Racing Hard";
+    font-family: "Oswald", sans-serif;
     color: #fff;
     font-size: 2rem;
     margin: 0;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* === RESPONSIVE DESIGN PARA PAQUETES === */
@@ -4794,6 +5412,7 @@ body.lang-jpn .human-resources-subtitle {
     .package-text h4 {
         font-size: 1.3rem;
     }
+
     .package-overlay {
         padding: 15px;
     }
@@ -4804,10 +5423,11 @@ body.lang-jpn .human-resources-subtitle {
     .package-text h4 {
         font-size: 1.3rem;
     }
+
     .package-overlay {
         padding: 12px;
     }
-    
+
     .package-card:hover {
         transform: translateY(-3px);
     }
@@ -4877,7 +5497,7 @@ body.lang-jpn .human-resources-subtitle {
         right: 20px;
         font-size: 20px;
     }
-    
+
     .scroll-to-top.in-footer {
         top: 15px;
         right: 20px;
@@ -4892,7 +5512,7 @@ body.lang-jpn .human-resources-subtitle {
         right: 15px;
         font-size: 18px;
     }
-    
+
     .scroll-to-top.in-footer {
         top: 20px;
         right: 15px;
@@ -4905,7 +5525,7 @@ body.lang-jpn .human-resources-subtitle {
     color: #ffffff;
     border: none;
     border-radius: 10px;
-    font-family: "Racing_Hard", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -4963,9 +5583,12 @@ body.lang-jpn .human-resources-subtitle {
 }
 
 @keyframes subtle-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 4px 15px rgba(28, 31, 61, 0.3);
     }
+
     50% {
         box-shadow: 0 4px 20px rgba(28, 31, 61, 0.4);
     }

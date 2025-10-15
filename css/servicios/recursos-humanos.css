@@ -6,6 +6,8 @@
    SECCIÓN RECLUTAMOS Y ASESORAMOS
    ================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 /* Estilos específicos para el container de la sección Reclutamos y Asesoramos */
 section:has(.recursos-humanos-title) .container-lg {
     margin-top: 6rem;
@@ -22,7 +24,7 @@ section:has(.recursos-humanos-title) .container-lg {
 }
 
 .btn-puesto {
-    font-family: "Gotham Black", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 0.9rem;
     padding: 12px 45px;
     border: none;
@@ -231,8 +233,9 @@ section:has(.recursos-humanos-title) .container-lg {
 @media (max-width: 768px) {
     .btn-puesto {
         font-size: 1rem;
+        font-weight: 300;
         padding: 10px 16px;
-        max-width: 200px;
+        max-width: 240px;
         letter-spacing: 1px;
         gap: 10px;
     }
@@ -280,7 +283,8 @@ section:has(.recursos-humanos-title) .container-lg {
 }
 
 .puesto-section-title {
-    font-family: "Gotham Black", sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-weight: 800;
     font-size: 3rem;
     color: #1c1f3d;
     text-transform: uppercase;
@@ -290,6 +294,7 @@ section:has(.recursos-humanos-title) .container-lg {
 }
 
 .puesto-section-subtitle {
+    font-family: "Oswald", sans-serif;
     font-size: 1.2rem;
     color: #64748b;
     text-align: center;
@@ -499,7 +504,7 @@ section:has(.recursos-humanos-title) .container-lg {
 }
 
 .tech-header h3 {
-    font-family: "Gotham Black", sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 1.5rem;
     color: #1e293b;
     text-transform: uppercase;
@@ -519,7 +524,7 @@ section:has(.recursos-humanos-title) .container-lg {
 }
 
 .tech-stack h4 {
-   font-family: "Gotham Black", sans-serif;
+   font-family: "Oswald", sans-serif;
     font-size: 1.1rem;
     color: #1c1f3d;
     text-transform: uppercase;
@@ -534,12 +539,13 @@ section:has(.recursos-humanos-title) .container-lg {
 }
 
 .tech-badge {
+    font-family: "Oswald", sans-serif;
     background: linear-gradient(135deg, #23379a 0%, #09133c 100%);
     color: white;
     padding: 8px 15px;
     border-radius: 25px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 300;
     display: inline-flex;
     align-items: center;
     gap: 8px;
