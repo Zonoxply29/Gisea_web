@@ -453,7 +453,7 @@
 
 /* Estilos para la imagen del logo del Becario Project Manager */
 .becario-pm-logo-img {
-    width: 17rem;
+    width: 13rem;
     height: auto;
     object-fit: contain;
     transition: all 0.3s ease;
