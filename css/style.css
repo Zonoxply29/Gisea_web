@@ -1363,7 +1363,7 @@ div.section-title {
 }
 
 /* Tech Stack Badges */
-.tech-stack {
+.tech-stack-hgcard {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -1371,7 +1371,7 @@ div.section-title {
     justify-content: center;
 }
 
-.tech-badge {
+.tech-badge-hgcard {
     background: linear-gradient(135deg, #1C1F3D 0%, #2a2d4e 100%);
     color: white;
     padding: 4px 12px;
@@ -1387,13 +1387,13 @@ div.section-title {
     gap: 6px;
 }
 
-.tech-icon {
+.tech-icon-hgcard {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
 }
 
-.tech-badge:hover {
+.tech-badge-hgcard:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(28, 31, 61, 0.3);
     background: linear-gradient(135deg, #2a2d4e 0%, #1C1F3D 100%);
@@ -5253,12 +5253,11 @@ body.dark-mode .media-logo:hover {
 }
 
 /* Dark mode para tech badges */
-body.dark-mode .tech-badge {
-    background: linear-gradient(135deg, #C49C3C 0%, #b8902e 100%);
-    color: #1a1a1a;
+body.dark-mode .tech-badge-hgcard {
+    background: linear-gradient(135deg, #23379a 0%, #09133c 100%);
 }
 
-body.dark-mode .tech-badge:hover {
+body.dark-mode .tech-badge-hgcard:hover {
     background: linear-gradient(135deg, #b8902e 0%, #C49C3C 100%);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(196, 156, 60, 0.3);

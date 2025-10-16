@@ -1,0 +1,1190 @@
+/* ==============================================
+   ESTILOS PARA PÁGINA DE EMPLEOS
+   ============================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@font-face {
+    font-family: "Gotham Black";
+    src: url("../../fonts/Gotham-Black.otf") format("opentype");
+    font-display: swap;
+}
+
+/* ===================================
+   BOTONES DE PUESTOS DE TRABAJO
+   ================================== */
+
+.btn-puesto {
+}
+
+/* Específico para el botón de PHP/Laravel - permitir saltos de línea */
+.btn-php-laravel {
+    background: linear-gradient(180deg, #23379a,#09133c);
+    white-space: normal; /* Permite saltos de línea */
+    line-height: 1.3; /* Mejor espaciado entre líneas */
+    text-align: center; /* Centrar el texto */
+}
+
+.btn-php-laravel span {
+    display: block; /* Hace que el span respete los saltos de línea */
+    line-height: 1.2;
+}
+
+.btn-puesto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-puesto:active {
+    transform: translateY(-1px);
+}
+
+/* Estado activo para mantener el hover después del clic */
+.btn-puesto.clicked {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Estados activos para cada tipo de botón */
+.btn-php-laravel.clicked {
+    background: linear-gradient(135deg, #FF2D20 0%, #E53E3E 100%);
+}
+
+.btn-maquetador.clicked {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 100%);
+}
+
+.btn-comunicologo.clicked {
+    background: linear-gradient(135deg, #48BB78 0%, #38A169 100%);
+}
+
+.btn-maestro-ingles.clicked {
+    background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
+}
+
+/* Icono del botón */
+.btn-puesto i {
+    font-size: 1.6rem;
+    margin-right: 0px;
+    width: 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* Texto del botón */
+.btn-puesto {
+    gap: 15px;
+}
+
+/* Gradientes específicos para cada puesto */
+.btn-php-laravel {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-php-laravel:hover {
+    background: linear-gradient(135deg, #FF2D20 0%, #E53E3E 100%);
+}
+
+.btn-maquetador {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-maquetador:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 100%);
+}
+
+.btn-comunicologo {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-comunicologo:hover {
+    background: linear-gradient(135deg, #48BB78 0%, #38A169 100%);
+}
+
+.btn-maestro-ingles {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-maestro-ingles:hover {
+    background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
+}
+
+.btn-becario-pm {
+    background: linear-gradient(180deg, #23379a,#09133c);
+}
+
+.btn-becario-pm:hover {
+    background: linear-gradient(135deg, #9F7AEA 0%, #805AD5 100%);
+}
+.fa-brands fa-laravel{
+    height: 2em !important;
+}
+/* ===================================
+   RESPONSIVE DESIGN
+   ================================== */
+
+/* Responsive para botones de puestos */
+@media (max-width: 1024px) and (min-width: 993px) {
+    .btn-php-laravel {
+        max-width: 280px;
+        font-size: 1rem;
+        padding: 10px 20px;
+        white-space: normal;
+        line-height: 1.2;
+        min-height: 50px;
+        align-items: center;
+    }
+    
+    .btn-php-laravel .btn-text {
+        text-align: center;
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 992px) {
+    .btn-puesto {
+        font-size: 1.2rem;
+        padding: 10px 18px;
+        gap: 12px;
+    }
+    
+    .btn-puesto i {
+        font-size: 1.4rem;
+        margin-right: 0px;
+        width: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-puesto {
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 10px 16px;
+        max-width: 240px;
+        letter-spacing: 1px;
+        gap: 10px;
+    }
+    
+    .btn-puesto i {
+        font-size: 1.3rem;
+        margin-right: 0px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-lg .section-title .recursos-humanos-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn-puesto {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+        max-width: 180px;
+        letter-spacing: 0.5px;
+        gap: 3px;
+    }
+    
+    .btn-puesto i {
+        font-size: 1.2rem;
+        margin-right: 0px;
+        width: 28px;
+        padding: 4px;
+    }
+}
+
+/* ===================================
+   ESTILOS PARA CARD DE VACANTE
+   ================================== */
+
+/* Estilos para cards horizontales de empleos */
+.tech-card-horizontal {
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    min-height: 300px;
+    position: relative;
+}
+
+.tech-card-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección del logo (20%) */
+.tech-logo-section {
+    flex: 0 0 20%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Background específico para PHP/Laravel */
+.tech-logo-section.php-laravel {
+    background: linear-gradient(135deg, #FF2D20 0%, #E53E3E 50%, #B91C1C 100%);
+}
+
+/* Background específico para Maquetador */
+.tech-logo-section.maquetador {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 50%, #553c9a 100%);
+}
+
+/* Background específico para Comunicólogo */
+.tech-logo-section.comunicologo {
+    background: linear-gradient(135deg, #48BB78 0%, #38A169 50%, #2F855A 100%);
+}
+
+/* Background específico para Maestro de Inglés */
+.tech-logo-section.maestro-ingles {
+    background: linear-gradient(135deg, #ED8936 0%, #DD6B20 50%, #C05621 100%);
+}
+
+/* Background específico para Becario Project Manager */
+.tech-logo-section.becario-pm {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 50%, #0000CC 100%);
+}
+
+.tech-logo-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.tech-logo-container svg {
+    filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Sección del contenido (80%) */
+.tech-content-section {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tech-header h3 {
+    margin-bottom: 0.5rem;
+}
+
+.tech-name{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+    font-family: "Oswald", sans-serif;
+}
+
+.tech-category {
+    background: linear-gradient(135deg, #FF2D20 0%, #E53E3E 100%);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Categorías específicas para cada puesto */
+#maquetador-section .tech-category {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 100%);
+}
+
+#comunicologo-section .tech-category {
+    background: linear-gradient(135deg, #48BB78 0%, #38A169 100%);
+}
+
+#maestro-ingles-section .tech-category {
+    background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
+}
+
+.tech-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Layout específico para secciones con muchas labores */
+#maquetador-section .tech-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#maquetador-section .usage-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.8rem;
+}
+
+#maquetador-section .stat-item {
+    background: rgba(90, 103, 216, 0.05);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border-left: 3px solid #5a67d8;
+}
+
+/* Estilos específicos para Comunicólogo */
+#comunicologo-section .usage-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.8rem;
+}
+
+#comunicologo-section .stat-item {
+    background: rgba(72, 187, 120, 0.05);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border-left: 3px solid #48BB78;
+}
+
+/* ESTILOS ESPECÍFICOS PARA BECARIO PROJECT MANAGER */
+#becario-pm-section .usage-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.8rem;
+}
+
+#becario-pm-section .stat-item {
+    background: rgba(107, 115, 255, 0.05);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border-left: 3px solid #6B73FF;
+}
+
+/* Estilos específicos para beneficios del Becario PM */
+.companies-logos.becario-pm-beneficios {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.becario-pm-beneficio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(107, 115, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    min-height: 100px;
+    justify-content: center;
+    flex: 1;
+    min-width: 140px;
+    border: 2px solid rgba(107, 115, 255, 0.2);
+}
+
+.becario-pm-beneficio-item:hover {
+    background: rgba(107, 115, 255, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(107, 115, 255, 0.2);
+}
+
+.becario-pm-beneficio-item .company-name {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Company logo específico para beneficios del Becario PM */
+.becario-pm-beneficio-item.company-logo {
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: 12px;
+}
+
+.becario-pm-beneficio-item .company-logo {
+    width: auto;
+    height: auto;
+    background: transparent;
+}
+
+/* Estilos para la imagen del logo del Comunicólogo */
+.comunicologo-logo-img {
+    width: 16rem;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para la imagen del logo del Maquetador */
+.maquetador-logo-img {
+    width: 15rem;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para la imagen del logo del Maestro de Inglés */
+.maestro-ingles-logo-img {
+    width: 13rem;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para la imagen del logo del Becario Project Manager */
+.becario-pm-logo-img {
+    width: 13rem;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.tech-importance {
+    grid-column: 1 / -1;
+}
+
+.tech-importance h4,
+.tech-usage h4,
+.tech-companies h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    font-family: "Oswald", sans-serif;
+}
+
+.tech-importance p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.usage-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-number {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #09133c;
+    font-family: "Oswald", sans-serif;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.companies-logos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.company-logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.company-logo:hover {
+    transform: scale(1.1);
+}
+
+.tech-action {
+    margin-top: auto;
+}
+
+.tech-whatsapp-btn {
+    background: linear-gradient(135deg, #FF2D20 0%, #E53E3E 100%);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 45, 32, 0.3);
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.tech-whatsapp-btn:hover {
+    background: linear-gradient(135deg, #E53E3E 0%, #FF2D20 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 45, 32, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* Botones específicos para cada puesto */
+#maquetador-section .tech-whatsapp-btn {
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 100%);
+    box-shadow: 0 4px 15px rgba(90, 103, 216, 0.3);
+}
+
+#maquetador-section .tech-whatsapp-btn:hover {
+    background: linear-gradient(135deg, #6b46a0 0%, #5a67d8 100%);
+    box-shadow: 0 6px 20px rgba(90, 103, 216, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+#comunicologo-section .tech-whatsapp-btn {
+    background: linear-gradient(135deg, #48BB78 0%, #38A169 100%);
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+}
+
+#comunicologo-section .tech-whatsapp-btn:hover {
+    background: linear-gradient(135deg, #38A169 0%, #48BB78 100%);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+#maestro-ingles-section .tech-whatsapp-btn {
+    background: linear-gradient(135deg, #ED8936 0%, #DD6B20 100%);
+    box-shadow: 0 4px 15px rgba(237, 137, 54, 0.3);
+}
+
+#maestro-ingles-section .tech-whatsapp-btn:hover {
+    background: linear-gradient(135deg, #DD6B20 0%, #ED8936 100%);
+    box-shadow: 0 6px 20px rgba(237, 137, 54, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN PARA CARDS
+   ================================== */
+
+@media (max-width: 768px) {
+    .tech-card-horizontal {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .tech-logo-section {
+        flex: 0 0 auto;
+        padding: 2rem;
+        min-height: 150px;
+    }
+    
+    .tech-logo-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .tech-content-section {
+        padding: 1.5rem;
+    }
+    
+    .tech-name {
+        font-size: 1.5rem;
+    }
+    
+    .tech-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .companies-logos {
+        gap: 0.5rem;
+    }
+    
+    .company-logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .tech-whatsapp-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-content-section {
+        padding: 1rem;
+    }
+    
+    .tech-name {
+        font-size: 1.3rem;
+    }
+    
+    .tech-category {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+    
+    .tech-logo-section {
+        padding: 1.5rem;
+        min-height: 120px;
+    }
+    
+    .tech-logo-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .companies-logos {
+        gap: 0.3rem;
+    }
+    
+    .company-logo {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .company-logo i {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* ===================================
+   ESTILOS ESPECÍFICOS PARA MAQUETADOR
+   ================================== */
+
+/* Responsive adicional para maquetador con muchas labores */
+@media (max-width: 992px) {
+    #maquetador-section .usage-stats {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #maquetador-section .usage-stats {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    #maquetador-section .stat-item {
+        padding: 0.6rem;
+    }
+    
+    #maquetador-section .stat-number {
+        font-size: 1rem;
+    }
+    
+    #maquetador-section .stat-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===================================
+   ESTILOS ESPECÍFICOS PARA COMUNICÓLOGO
+   ================================== */
+
+/* Responsive adicional para comunicólogo con muchas labores */
+@media (max-width: 992px) {
+    #comunicologo-section .usage-stats {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.7rem;
+    }
+    
+    .comunicologo-logo-img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #comunicologo-section .usage-stats {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+    
+    #comunicologo-section .stat-item {
+        padding: 0.6rem;
+    }
+    
+    #comunicologo-section .stat-number {
+        font-size: 1rem;
+    }
+    
+    #comunicologo-section .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .comunicologo-logo-img {
+        width: 12rem;
+        height: auto;
+    }
+}
+
+/* Responsive para pantallas muy pequeñas */
+@media (max-width: 576px) {
+    .comunicologo-logo-img {
+        width: 8rem;
+        height: auto;
+    }
+}
+
+/* ===================================
+   ESTILOS ESPECÍFICOS PARA MAQUETADOR
+   ================================== */
+
+/* Responsive para maquetador logo */
+@media (max-width: 992px) {
+    .maquetador-logo-img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .maquetador-logo-img {
+        width: 14rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .maquetador-logo-img {
+        width: 9rem;
+    }
+}
+
+/* ===================================
+   ESTILOS ESPECÍFICOS PARA MAESTRO DE INGLÉS
+   ================================== */
+
+/* Responsive para maestro de inglés logo */
+@media (max-width: 992px) {
+    .maestro-ingles-logo-img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .maestro-ingles-logo-img {
+        width: 11rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .maestro-ingles-logo-img {
+        width: 8rem;
+    }
+}
+
+/* ===================================
+   ESTILOS ESPECÍFICOS PARA BECARIO PROJECT MANAGER
+   ================================== */
+
+/* Responsive para becario project manager logo */
+@media (max-width: 992px) {
+    .becario-pm-logo-img {
+        width: 100px;
+    }
+    
+    #becario-pm-section .usage-stats {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.7rem;
+    }
+    
+    .companies-logos.becario-pm-beneficios {
+        gap: 0.8rem;
+    }
+    
+    .becario-pm-beneficio-item {
+        padding: 0.9rem;
+        min-height: 90px;
+        min-width: 120px;
+    }
+    
+    .becario-pm-beneficio-item.company-logo,
+    .becario-pm-beneficio-item .company-logo {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .becario-pm-logo-img {
+        width: 12rem;
+    }
+    
+    #becario-pm-section .usage-stats {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.6rem;
+    }
+    
+    #becario-pm-section .stat-item {
+        padding: 0.6rem;
+    }
+    
+    .companies-logos.becario-pm-beneficios {
+        gap: 0.6rem;
+    }
+    
+    .becario-pm-beneficio-item {
+        padding: 0.8rem;
+        min-height: 80px;
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .becario-pm-beneficio-item .company-name {
+        font-size: 0.85rem;
+        margin-top: 0.6rem;
+    }
+    
+    .becario-pm-beneficio-item.company-logo,
+    .becario-pm-beneficio-item .company-logo {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .becario-pm-logo-img {
+        width: 8rem;
+    }
+    
+    #becario-pm-section .usage-stats {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .companies-logos.becario-pm-beneficios {
+        gap: 0.5rem;
+    }
+    
+    .becario-pm-beneficio-item {
+        padding: 0.7rem;
+        min-height: 70px;
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .becario-pm-beneficio-item .company-name {
+        font-size: 0.8rem;
+        margin-top: 0.4rem;
+        line-height: 1.3;
+    }
+    
+    .becario-pm-beneficio-item i {
+        font-size: 1.2rem !important;
+    }
+    
+    .becario-pm-beneficio-item.company-logo,
+    .becario-pm-beneficio-item .company-logo {
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Estilos para logos de certificaciones */
+.certificacion-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    background: white;
+    padding: 5px;
+}
+
+/* Contenedor específico para certificaciones */
+.companies-logos.certificaciones-container {
+    margin-top: 3rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Items específicos de certificaciones */
+.certificacion-item {
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.certificacion-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive para logos de certificaciones */
+@media (max-width: 768px) {
+    .certificacion-logo-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .companies-logos.certificaciones-container {
+        gap: 1.5rem;
+    }
+    
+    .certificacion-item {
+        min-width: 100px;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .certificacion-logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .companies-logos.certificaciones-container {
+        gap: 2rem;
+    }
+    
+    .certificacion-item {
+        min-width: 90px;
+        padding: 0.6rem;
+        width: 100%;
+        max-width: 150px;
+    }
+}
+
+/* Estilos para SVG en botones */
+.btn-puesto svg {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 8px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive para cards de empleo */
+@media (max-width: 768px) {
+    .tech-card-horizontal {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .tech-logo-section {
+        flex: 0 0 auto;
+        padding: 2rem;
+        min-height: 150px;
+    }
+    
+    .tech-logo-container {
+        width: 115px;
+        height: 118px;
+    }
+    
+    .tech-content-section {
+        padding: 1.5rem;
+    }
+    
+    .tech-name {
+        font-size: 1.5rem;
+    }
+    
+    .tech-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .companies-logos {
+        gap: 0.5rem;
+    }
+    
+    .company-logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .tech-whatsapp-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .tech-content-section {
+        padding: 1rem;
+    }
+    
+    .tech-name {
+        font-size: 1.3rem;
+    }
+    
+    .tech-category {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+    
+    .tech-logo-section {
+        padding: 1.5rem;
+        min-height: 120px;
+    }
+    
+    .tech-logo-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .companies-logos {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .company-logo {
+        width: 2rem;
+        height: auto;
+    }
+    
+    .company-logo i {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* ===================================
+   ESTILOS MODO OSCURO PARA EMPLEOS
+   ================================== */
+
+/* Cards principales */
+body.dark-mode .tech-card-horizontal {
+    background: #1a1a2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .tech-card-horizontal:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Textos principales */
+body.dark-mode .tech-name {
+    color: #f0f0f0;
+}
+
+body.dark-mode .tech-importance h4,
+body.dark-mode .tech-usage h4,
+body.dark-mode .tech-companies h4 {
+    color: #f0f0f0;
+}
+
+body.dark-mode .tech-importance p {
+    color: #b0b0b0;
+}
+
+/* Estadísticas y labores */
+body.dark-mode .stat-number {
+    color: #f0f0f0;
+}
+
+body.dark-mode .stat-label {
+    color: #a0a0a0;
+}
+
+/* Items específicos para cada sección */
+body.dark-mode #maquetador-section .stat-item {
+    background: rgba(90, 103, 216, 0.1);
+    border-left: 3px solid #5a67d8;
+}
+
+body.dark-mode #comunicologo-section .stat-item {
+    background: rgba(72, 187, 120, 0.1);
+    border-left: 3px solid #48BB78;
+}
+
+/* Títulos de sección */
+body.dark-mode .puesto-section-title {
+    color: #f0f0f0;
+}
+
+body.dark-mode .recursos-humanos-title {
+    color: #f0f0f0;
+}
+
+/* Botones de aplicar */
+body.dark-mode .tech-whatsapp-btn {
+    color: #f0f0f0;
+}
+
+body.dark-mode .tech-whatsapp-btn:hover {
+    color: #f0f0f0;
+}
+
+/* Header de empleos */
+body.dark-mode .desarrollo-web-header {
+    background-blend-mode: overlay;
+    background-color: rgba(12, 12, 43, 0.7);
+}
+
+body.dark-mode .header-title-rh,
+body.dark-mode .header-subtitle-rh {
+    color: #f0f0f0;
+}
+
+body.dark-mode .header-list-rh span {
+    color: #e0e0e0;
+}
+
+body.dark-mode .header-list-rh i {
+    color: #C49C3C;
+}
+
+/* Botones de puestos */
+body.dark-mode .btn-puesto {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn-puesto:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Filtro para hacer el ícono de GitHub blanco en modo oscuro */
+body.dark-mode .company-logo svg g[fill="#181616"] {
+    filter: brightness(0) invert(1);
+}
+
+body.dark-mode .company-logo svg g[fill="#181616"] path {
+    fill: #ffffff;
+}
