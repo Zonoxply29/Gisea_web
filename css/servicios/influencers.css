@@ -141,6 +141,627 @@
 }
 
 
+/* ========================
+   SECCIÓN PERFIL INFLUENCER
+   ======================== */
+
+.influencer-profile {
+    position: relative;
+}
+
+.influencer-card {
+    background: linear-gradient(90deg, #f7048a,#ed4984,#e06884);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Modo oscuro para la tarjeta */
+body.dark-mode .influencer-card {
+    background: linear-gradient(90deg, #f7048a,#ed4984,#e06884);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(196, 156, 60, 0.2);
+}
+
+.influencer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(196, 156, 60, 0.2);
+}
+
+/* Contenedor de la imagen de perfil */
+.influencer-avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    width: clamp(120px, 25vw, 200px);
+    margin: 0 auto;
+}
+
+.influencer-avatar-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: instagramStory 3s ease-in-out infinite;
+}
+
+/* Animación de historia de Instagram */
+@keyframes instagramStory {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.influencer-avatar {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    aspect-ratio: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 0.25rem solid #ffffff;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Modo oscuro para el avatar */
+body.dark-mode .influencer-avatar {
+    border: 0.25rem solid #ffffff;
+}
+
+.influencer-avatar:hover {
+    transform: scale(1.05);
+}
+
+/* Nombre del influencer */
+.influencer-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Modo oscuro para el nombre */
+body.dark-mode .influencer-title {
+    color: #C49C3C;
+}
+
+/* Descripción del influencer */
+.influencer-description {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1rem;
+    color: #ffff;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Modo oscuro para la descripción */
+body.dark-mode .influencer-description {
+    color: #b8b8b8;
+}
+
+/* ========================
+   REDES SOCIALES INFLUENCER
+   ======================== */
+
+.influencer-social-media {
+    margin-top: 2rem;
+}
+
+.social-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Modo oscuro para el título social */
+body.dark-mode .social-title {
+    color: #C49C3C;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #495057;
+}
+
+/* Modo oscuro para enlaces sociales */
+body.dark-mode .social-link {
+    background: linear-gradient(135deg, #444444 0%, #555555 100%);
+    color: #e9ecef;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Iconos personalizados para redes sociales */
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.social-link:hover i,
+.social-link:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Estilos específicos por red social */
+.instagram-link:hover {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    border-color: #833ab4;
+}
+
+
+.tiktok-link:hover {
+    background: linear-gradient(135deg, #000000, #ff0050);
+    color: white;
+    border-color: #ff0050;
+}
+
+.tiktok-link:hover .social-icon {
+    filter: brightness(1.5);
+}
+
+/* ========================
+   RESPONSIVE DESIGN PARA REDES SOCIALES
+   ======================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .social-links {
+        gap: 0.8rem;
+    }
+    
+    .social-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .social-link i {
+        font-size: 1.1rem;
+    }
+    
+    .social-icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    .influencer-social-media {
+        margin-top: 1.5rem;
+    }
+    
+    .social-title {
+        font-size: 1.2rem;
+    }
+    
+    .social-links {
+        gap: 0.6rem;
+    }
+    
+    .social-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .social-link i {
+        font-size: 1rem;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .social-links {
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-link {
+        min-width: 150px;
+        justify-content: center;
+        padding: 0.6rem 1rem;
+    }
+    
+    .social-title {
+        font-size: 1.1rem;
+    }
+    
+    .social-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+   ======================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .influencer-card {
+        padding: 2rem;
+    }
+    
+    .influencer-avatar-wrapper {
+        width: clamp(100px, 22vw, 180px);
+    }
+    
+    .influencer-title {
+        font-size: 2rem;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    .influencer-profile {
+        padding: 3rem 0;
+    }
+    
+    .influencer-card {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .influencer-avatar-wrapper {
+        width: clamp(90px, 28vw, 160px);
+    }
+    
+    .influencer-title {
+        font-size: 1.8rem;
+    }
+    
+    .influencer-description {
+        font-size: 1rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .influencer-card {
+        padding: 1.2rem;
+        border-radius: 15px;
+    }
+    
+    .influencer-avatar-wrapper {
+        width: clamp(80px, 35vw, 140px);
+    }
+    
+    .influencer-avatar-wrapper::before {
+        top: -0.3rem;
+        left: -0.3rem;
+        right: -0.3rem;
+        bottom: -0.3rem;
+    }
+    
+    .influencer-avatar {
+        border: 0.2rem solid #ffffff;
+    }
+    
+    body.dark-mode .influencer-avatar {
+        border: 0.2rem solid #ffffff;
+    }
+    
+    .influencer-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .influencer-description {
+        font-size: 0.95rem;
+    }
+}
+
+/**========PRECIOS UNITARIOS SECTION===========**/
+
+.titulo-precios {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.8rem;
+}
+
+.subtitulo-precios {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.tipo-servicio {
+  background: #ff4c6d;
+  color: #fff;
+  padding: 15px 12px;
+  border-radius: 25px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.precio-servicio {
+font-family: "Oswald", sans-serif; 
+  margin-top: -88px;
+  font-size: 1.4rem;
+}
+/* Ajustes solo para pantallas entre 1024px y 1440px */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .video-container {
+    top: 2.5%;
+    border-radius: 22px;
+  }
+}
+/******* PRECIOS Y PAQUETES CARDS **************/
+.titulo-paquetes {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.8rem;
+}
+
+.subtitulo-paquetes {
+  font-size: 1rem;
+  color: #555;
+}
+
+.paquete-card {
+  background-color: #fdf4f7;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 15px;
+}
+
+.paquete-titulo {
+ font-family: "Oswald", sans-serif;
+  background-color: #ff4c6d;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  padding: 10px;
+  color: #FFF;
+}
+
+.card-body{
+    font-family: "Oswald", sans-serif;
+}
+.icono-red {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+/* ========== MARCO DEL TELÉFONO Y VIDEO ========== */
+.phone-frame {
+  position: relative;
+  max-width: 325px;
+  width: 100%;  /* Aseguramos que el ancho sea relativo al contenedor */
+  aspect-ratio: 11/25.5; /* ESTE ASPECT RATIO SE SOBRESCRIBE CON LA LIBRERIA plyr */
+  margin: 0 auto;
+  margin-bottom: 0; /* Eliminar margen inferior adicional */
+}
+
+.phone-image {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 96%;
+  height: 73%;
+  z-index: 2;
+  pointer-events: none; /* para que no interfiera al hacer clic */
+}
+
+.video-container {
+  position: absolute;
+  top: 1.2%;
+  left: 2.5%;
+  width: 89%;
+  height: 72%;
+  border-radius: 32px;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 1;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* ========== MARCO DEL TELÉFONO Y VIDEO PARA TABLETS ========== */
+@media (max-width: 1024px) {
+  .phone-frame {
+    max-width: 280px; /* Tamaño ajustado para tablet */
+    aspect-ratio: 11/25.5; /* ESTE ASPECT RATIO SE SOBRESCRIBE CON LA LIBRERIA plyr */
+  }
+
+  .phone-image {
+    position: absolute;
+    top: 8px;
+    left: 5%;
+    width: 90%;
+    height: 72%;
+  }
+
+  .video-container {
+    position: absolute;
+    top: 2%;
+    left: 7%;
+    width: 84%;
+    height: 71%;
+    border-radius: 30px;
+  }
+}
+
+/* ========== MARCO DEL TELÉFONO Y VIDEO PARA MÓVILES ========== */
+@media (max-width: 576px) {
+  .phone-frame {
+    max-width: 230px; /* Tamaño ajustado para móvil */
+    aspect-ratio: 9/19.5; /* ESTE ASPECT RATIO SE SOBRESCRIBE CON LA LIBRERIA plyr */
+  }
+
+  .phone-image {
+    position: absolute;
+    top: 4px;
+    left: 3%;
+    width: 94%;
+    height: 80%;
+  }
+
+  .video-container {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    width: 88%;
+    height: 78%;
+    border-radius: 20px;
+  }
+}
+/* ========== PERSONALIZACIÓN DE PLYR VIDEO PLAYER ========== */
+/* Personalizacion de los elementos de PLYR */
+.plyr {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Personalizar el color principal de Plyr */
+.plyr--audio .plyr__control.plyr__tab-focus, 
+.plyr--audio .plyr__control:hover, 
+.plyr--audio .plyr__control[aria-expanded=true] {
+  background: #ff6e84;
+}
+
+.plyr__control--overlaid {
+  background: rgba(255, 110, 132, 0.9);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.plyr__control--overlaid:hover {
+  background: rgba(255, 110, 132, 1);
+}
+
+/* Personalizar la barra de progreso */
+.plyr__progress input[type=range] {
+  color: #ff6e84;
+}
+
+.plyr__progress input[type=range]::-webkit-slider-thumb {
+  background: #ff6e84;
+  border: 0;
+  border-radius: 100%;
+  height: 13px;
+  position: relative;
+  width: 13px;
+}
+
+.plyr__progress input[type=range]::-moz-range-thumb {
+  background: #ff6e84;
+  border: 0;
+  border-radius: 100%;
+  height: 13px;
+  position: relative;
+  width: 13px;
+}
+
+/* Personalizar los controles */
+.plyr__controls {
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.7));
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+  padding: 10px;
+}
+.plyr__control:hover {
+  background: rgba(255, 110, 132, 0.8);
+}
+
+.plyr__control[aria-pressed=true] {
+  background: #ff6e84;
+  color: #fff;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+  .plyr__controls {
+    padding: 8px;
+  }
+  
+  .plyr__time {
+    font-size: 11px;
+  }
+}
+
+/* ========================
+   ANIMACIONES
+   ======================== */
+
+@keyframes profileFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.influencer-card {
+    animation: profileFadeIn 0.8s ease-out;
+}
+
+
 body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button) {
     color: #FFFFFF !important;
 }
