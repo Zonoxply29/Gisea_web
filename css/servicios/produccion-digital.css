@@ -1,0 +1,191 @@
+/* =============================
+   Producción Digital - Community Management
+   Estilos específicos, modernos y elegantes
+   ============================= */
+
+.community-management {
+  position: relative;
+}
+
+/* Títulos y textos */
+.community-management .cm-title {
+  font-family: "Oswald", sans-serif;
+  color: #1C1F3D;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
+  margin-bottom: .25rem;
+}
+
+.community-management .cm-subtitle {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #1C1F3D; /* gris elegante */
+  font-size: clamp(0.95rem, 0.85rem + .3vw, 1.05rem);
+}
+
+/* Mini cards de features */
+.cm-feature-card {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: linear-gradient(180deg, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 100%);
+  box-shadow: 0 6px 22px rgba(0,0,0,.06);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.cm-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+  border-color: rgba(0,0,0,.14);
+}
+
+.cm-feature-card .icon-wrap {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #3d159f,#e10d63,#f78b0b);
+  color: #ffff;
+}
+
+.cm-feature-card .icon-wrap i {
+  font-size: 1.05rem;
+}
+
+.cm-feature-card .content h3 {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Imágenes como cards */
+.cm-image-card {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.cm-image-card .cm-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+
+.cm-image-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.cm-image-card:hover img {
+  transform: scale(1.03);
+}
+
+.cm-image-card figcaption {
+  padding: .9rem 1rem 1.1rem;
+  border-top: 1px solid rgba(0,0,0,.06);
+  text-align: center;
+}
+
+/* Imagen reducida para secciones con video */
+.cm-image-sm {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cm-image-card .cm-card-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.05rem, .95rem + .4vw, 1.25rem);
+  margin: 0 0 .25rem 0;
+  color: #0C0C2B;
+}
+
+.cm-image-card .cm-card-subtitle {
+  display: block;
+  color: #6b7280;
+  font-size: .95rem;
+}
+
+/* Responsive refinements */
+@media (min-width: 992px) {
+  .cm-feature-card { padding: 1.05rem 1.2rem; }
+  /* Invertir columnas en sección de edición de video: features izquierda, video derecha */
+  .edicion-video-section .col-12.col-lg-6:first-child { order: 2; }
+  .edicion-video-section .col-12.col-lg-6:last-child { order: 1; }
+}
+
+/* Modo oscuro: integrarse con tema */
+body.dark-mode .community-management { background-color: #0C0C2B; }
+
+body.dark-mode .community-management .cm-title { color: #f0f0f0; }
+
+body.dark-mode .community-management .cm-subtitle,
+body.dark-mode .cm-image-card figcaption { color: #b9c0c7; }
+
+body.dark-mode .cm-feature-card {
+  background: linear-gradient(135deg, #23379a 0%, #09133c 100%);
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 6px 22px rgba(0,0,0,.25);
+}
+
+body.dark-mode .cm-feature-card:hover {
+  border-color: rgba(255,255,255,.16);
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+body.dark-mode .cm-image-card {
+  background: #15151d;
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+
+body.dark-mode .cm-image-card figcaption {
+ background: linear-gradient(90deg, #3d159f,#e10d63,#f78b0b);
+  border-top-color: rgba(255,255,255,.08);
+}
+
+body.dark-mode .cm-image-card .cm-card-title { color: #f0f0f0; }
+
+/* Video card (mismo look & feel) */
+.cm-video-card {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  background: #000;
+}
+
+.cm-video-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.cm-video-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body.dark-mode .cm-video-card {
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+  background: #000;
+}
