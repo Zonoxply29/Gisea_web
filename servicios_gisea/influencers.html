@@ -33,14 +33,20 @@
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/fontawesome/all.min.css">
     <link rel="stylesheet" href="../css/aos/aos.css">
+    <!--Plyr Video Player-->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link rel="stylesheet" href="../css/glightbox/glightbox.min.css">
     <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../css/servicios/influencers.css">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Archivo principal de estilos - debe ir al final para mayor especificidad -->
     <link rel="stylesheet" href="../css/style.css">
+    <!--ESTILOS DEL PORTAFOLIO DE LIA-
+    <link rel="stylesheet" href="../influncer_portafolio/css/style.css">
+-->
 </head>
 
 <body>
@@ -188,220 +194,197 @@
         </div>
     </section>
 
-    <!-- SECCIÓN EN CONSTRUCCIÓN - INFLUENCERS -->
-    <section>
-        <div class="container-lg">
-            <div class="en-construccion-section" data-aos="fade-up">
-                <div class="construccion-content">
-                    <div class="construccion-icon">
-                        <i class="fa-solid fa-megaphone fa-5x"></i>
-                    </div>
-                    <h2 class="construccion-title">¡Estamos Creando Conexiones Increíbles!</h2>
-                    <p class="construccion-subtitle">Nuestra plataforma de Influencer Marketing está en desarrollo</p>
-                    <div class="construccion-features">
-                        <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
-                            <i class="fa-brands fa-instagram"></i>
-                            <span>Campañas Instagram</span>
+    <div class="container-lg">
+        <div class="section-title">
+            <h1>Conoce Nuestros Influencers</h1>
+        </div>
+    </div>
+
+    <!-- SECCIÓN PERFIL INFLUENCER -->
+    <section class="influencer-profile py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="influencer-card text-center" data-aos="fade-up" data-aos-duration="800">
+                        <!-- Imagen de perfil del influencer -->
+                        <div class="influencer-avatar-wrapper mb-4">
+                            <img src="../img/influencers/lia_garrido2.PNG" alt="Perfil del Influencer"
+                                class="influencer-avatar">
                         </div>
-                        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fa-brands fa-tiktok"></i>
-                            <span>Marketing TikTok</span>
+
+                        <!-- Nombre del influencer -->
+                        <h2 class="influencer-title mb-3">LIA GARRIDO</h2>
+
+                        <!-- Placeholder para contenido adicional -->
+                        <div class="influencer-content">
+                            <p class="influencer-description mb-4">
+                                Soy Lía Garrido, me gusta llamarme “petfluencer” pues me dedico a la creación de
+                                contenido sobre etología canina y felina, con el fin de ayudar a todos los amantes de
+                                los animales a entender el lenguaje de nuestras mascotas para una sana convivencia.
+                                También, hago contenido sobre estilo de vida para conocernos un poco más.
+                            </p>
+
+                            <!-- Redes sociales del influencer -->
+                            <div class="influencer-social-media">
+                                <h3 class="social-title mb-3">Sígueme en mis redes</h3>
+                                <div class="social-links d-flex justify-content-center gap-3 flex-wrap">
+                                    <!-- Instagram -->
+                                    <a href="https://www.instagram.com/soyliagarrido/" class="social-link instagram-link" target="_blank"
+                                        aria-label="Instagram de Lia Garrido">
+                                        <img src="../img/influencers/icons/instagram.png" alt="Instagram"
+                                            class="social-icon">
+                                        <span class="social-text">Instagram</span>
+                                    </a>
+
+                                    <!-- TikTok -->
+                                    <a href="https://www.tiktok.com/@soyliagarrido?is_from_webapp=1&sender_device=pc" class="social-link tiktok-link" target="_blank"
+                                        aria-label="TikTok de Lia Garrido">
+                                        <img src="../img/influencers/icons/tiktok.png" alt="TikTok" class="social-icon">
+                                        <span class="social-text">TikTok</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="feature-item" data-aos="fade-left" data-aos-delay="300">
-                            <i class="fa-brands fa-youtube"></i>
-                            <span>Colaboraciones YouTube</span>
-                        </div>
-                    </div>
-                    <div class="construccion-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <span class="progress-text">85% Completado</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <style>
-        .en-construccion-section {
-            background: #1C1F3D;
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            color: white;
-            margin: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
+    <!--SECCION DE SERVICIOS -->
+    <section class="precios-section py-5" id="precios">
+        <div class="container">
+            <h2 class="text-center mb-1 titulo-precios">Precios Unitarios</h2>
+            <p class="text-center subtitulo-precios mb-5">* Representados en MXN</p>
+            <div class="row gy-5 justify-content-center text-center">
 
-        .en-construccion-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(45deg,
-                    transparent,
-                    transparent 10px,
-                    rgba(255, 255, 255, 0.05) 10px,
-                    rgba(255, 255, 255, 0.05) 20px);
-            animation: construccionPattern 20s linear infinite;
-        }
+                <!-- Precio 1 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-center">
+                    <h5 class="mb-3 tipo-servicio">TIKTOK HISTORIA</h5>
+                    <div class="phone-frame">
+                        <img src="../img/influencers/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <div class="video-container">
+                            <video class="plyr-video" muted>
+                                <source src="../influncer_portafolio/media/historia_tiktok_momo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <p class="precio-servicio">$3,800</p>
+                </div>
 
-        @keyframes construccionPattern {
-            0% {
-                transform: translateX(-20px) translateY(-20px);
-            }
+                <!-- Precio 2 -->
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-center">
+                    <h5 class="mb-3 tipo-servicio">TIKTOK VIDEO</h5>
+                    <div class="phone-frame">
+                        <img src="../img/influencers/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <div class="video-container">
+                            <video class="plyr-video" muted>
+                                <source src="../influncer_portafolio/media/video_tiktok_loreal.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <p class="precio-servicio">$5,800</p>
+                </div>
 
-            100% {
-                transform: translateX(20px) translateY(20px);
-            }
-        }
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-center">
+                    <h5 class="mb-3 tipo-servicio">INSTAGRAM HISTORY</h5>
+                    <div class="phone-frame">
+                        <img src="../img/influencers/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <div class="video-container">
+                            <video class="plyr-video" muted>
+                                <source src="../influncer_portafolio/media/historia_instagram_beerfest.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <p class="precio-servicio">$1,200</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column align-items-center">
+                    <h5 class="mb-3 tipo-servicio">INSTAGRAM REEL</h5>
+                    <div class="phone-frame">
+                        <img src="../img/influencers/iphone_contorno.PNG" alt="iPhone Frame" class="phone-image">
+                        <div class="video-container">
+                            <video class="plyr-video" muted>
+                                <source src="../influncer_portafolio/media/video_instagram_reel_garnier.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <p class="precio-servicio">$2500</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .construccion-content {
-            position: relative;
-            z-index: 2;
-        }
+    <!--PRECIOS Y PAQUETES-->
+    <section class="py-5" id="paquetes">
+        <div class="container">
+            <h2 class="text-center mb-2 titulo-paquetes">PRECIOS Y PAQUETES</h2>
+            <p class="text-center subtitulo-paquetes">• PRECIOS REPRESENTADOS EN MXN</p>
 
-        .construccion-icon {
-            position: relative;
-            margin-bottom: 30px;
-        }
+            <div class="row justify-content-center gy-4 mt-4">
 
-        .construccion-icon .fa-megaphone {
-            color: #FFFFFF;
-            animation: bounce 2s infinite;
-        }
+                <!-- Paquete 1 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 1</div>
+                        <div class="card-body">
+                            <p><img src="../img/influencers/icons/tiktok.png" class="icono-red"> 1 TIKTOK</p>
+                            <p><img src="../img/influencers/icons/instagram.png" class="icono-red"> 1 HISTORIA</p>
+                            <p><img src="../img/influencers/icons/instagram.png" class="icono-red"> 1 REEL</p>
+                            <hr>
+                            <p><b>Sin Paquete : $4,750</b></p>
+                            <p>En Paquete: $3,950</p>
+                        </div>
+                    </div>
+                </div>
 
-        @keyframes bounce {
+                <!-- Paquete 2 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 2</div>
+                        <div class="card-body">
+                            <p><img src="../img/influencers/icons/instagram.png" class="icono-red"> SET 5 HISTORIAS</p>
+                            <p><img src="../img/influencers/icons/tiktok.png" class="icono-red"> 1 TIKTOK</p>
+                            <p>+ CONT. PAUTADO <br> (20–30 DÍAS)</p>
+                            <hr>
+                            <p><b>Sin Paquete : $4,900</b></p>
+                            <p>En Paquete: $4,100 </p>
+                        </div>
+                    </div>
+                </div>
 
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translateY(0);
-            }
+                <!-- Paquete 3 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 3</div>
+                        <div class="card-body">
+                            <p><img src="../img/influencers/icons/tiktok.png" class="icono-red"> 2 TIKTOK</p>
+                            <p>+ EXCLUSIVIDAD <br> (20–30 DÍAS)</p>
+                            <hr>
+                            <p><b>Sin Paquete : $6,050</b></p>
+                            <p>En Paquete: $5,000</p>
+                        </div>
+                    </div>
+                </div>
 
-            40% {
-                transform: translateY(-10px);
-            }
+                <!-- Paquete 4 -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card paquete-card h-100 text-center">
+                        <div class="card-header paquete-titulo">PAQUETE 4</div>
+                        <div class="card-body">
+                            <p><img src="../img/influencers/icons/tiktok.png" class="icono-red"> 1 TIKTOK</p>
+                            <p><img src="../img/influencers/icons/instagram.png" class="icono-red"> 1 REEL</p>
+                            <p><img src="../img/influencers/icons/instagram.png" class="icono-red"> SET 5 HISTORIAS</p>
+                            <p>+ CONT. PAUTADO + EXCLUSIVIDAD <br> (20–30 DÍAS)</p>
+                            <hr>
+                            <p><b>Sin Paquete : $7,650</b></p>
+                            <p>En Paquete: $6,100</p>
+                        </div>
+                    </div>
+                </div>
 
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        .construccion-title {
-            font-family: "Gotham Black", sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .construccion-subtitle {
-            font-family: "Gotham Black", sans-serif;
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-weight: 700;
-        }
-
-        .construccion-features {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .feature-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: transform 0.3s ease;
-            font-family: "Gotham Black", sans-serif;
-            font-weight: 700;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.25);
-        }
-
-        .feature-item i {
-            font-size: 2rem;
-            color: #FFFFFF;
-        }
-
-        .construccion-progress {
-            margin-bottom: 30px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            max-width: 400px;
-            height: 12px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            margin: 0 auto 10px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .progress-fill {
-            width: 85%;
-            height: 100%;
-            background: linear-gradient(90deg, #FFFFFF, rgba(255, 255, 255, 0.8));
-            border-radius: 12px;
-            animation: progressGlow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes progressGlow {
-            from {
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            }
-
-            to {
-                box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 35px rgba(255, 255, 255, 0.6);
-            }
-        }
-
-        .progress-text {
-            font-family: "Gotham Black", sans-serif;
-            font-weight: 900;
-            font-size: 1.1rem;
-        }
-
-        @media (max-width: 768px) {
-            .en-construccion-section {
-                padding: 40px 20px;
-                margin: 40px 0;
-            }
-
-            .construccion-title {
-                font-size: 2rem;
-            }
-
-            .construccion-features {
-                gap: 20px;
-            }
-
-            .feature-item {
-                min-width: 120px;
-            }
-        }
-    </style>
-
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -461,6 +444,8 @@
     <script src="../js/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../js/waypoints/noframework.waypoints.js"></script>
     <script src="../js/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="../influncer_portafolio/js/plyr-config.js"></script>
     <script src="../js/theme.js"></script>
     <script>
         AOS.init();
