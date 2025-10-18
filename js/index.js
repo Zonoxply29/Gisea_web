@@ -113,7 +113,7 @@ const translations = {
         navSobreNosotros: "Sobre Nosotros",
         navServicios: "Servicios",
         navContacto: "Contacto",
-        navTrabaja: "Trabaja con <br>Nosotros",
+        navTrabaja: "Empleo",
         navBlog: "BLOG",
         // Dropdown servicios
         dropdownDesarrollo: "Desarollo Web",
@@ -226,7 +226,7 @@ const translations = {
         navSobreNosotros: "About Us",
         navServicios: "Services",
         navContacto: "Contact",
-        navTrabaja: "Work with <br>Us",
+        navTrabaja: "Careers",
         navBlog: "BLOG",
         // Dropdown servicios
         dropdownDesarrollo: "Web Development",
@@ -338,7 +338,7 @@ const translations = {
         navSobreNosotros: "私たちについて",
         navServicios: "サービス",
         navContacto: "お問い合わせ",
-        navTrabaja: "私たちと<br>働く",
+        navTrabaja: "採用情報",
         navBlog: "ブログ",
         // Dropdown servicios
         dropdownDesarrollo: "ウェブ開発",
