@@ -4995,7 +4995,7 @@ body.dark-mode .footer-bottom {
 }
 
 /* Enlaces normales en modo oscuro */
-body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button) {
+body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button):not(.btn-follow) {
     color: #C49C3C !important;
 }
 

@@ -1101,6 +1101,7 @@ font-family: "Oswald", sans-serif;
   }
 }
 
+
 /* ========================
    ANIMACIONES
    ======================== */
@@ -1121,6 +1122,15 @@ font-family: "Oswald", sans-serif;
 }
 
 
-body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button) {
+body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button){
     color: #FFFFFF !important;
+}
+
+body.dark-mode .stats-card {
+  background-color: #1a1b1e;
+  border-color: #1a1b1e;
+}
+
+body.dark-mode .stats-section .text-pink {
+    color: #ff6e84 !important;
 }
