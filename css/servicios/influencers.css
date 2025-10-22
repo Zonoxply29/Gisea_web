@@ -662,6 +662,9 @@ font-family: "Oswald", sans-serif;
     height: 78%;
     border-radius: 20px;
   }
+  .titulo-precios {
+      font-size: 2rem;
+  }
 }
 /* ========== PERSONALIZACIÓN DE PLYR VIDEO PLAYER ========== */
 /* Personalizacion de los elementos de PLYR */
