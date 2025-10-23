@@ -142,9 +142,137 @@ document.addEventListener("DOMContentLoaded", function () {
     assignPaginationEvents();
     showPage(currentPage);
     updatePaginationButtons();
+    hideStatus();
 
 
 });
+// ⭐ SISTEMA DE CALIFICACIÓN CON ESTRELLAS (versión de prueba)
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("rating-stars");
+    const ratingCountText = document.getElementById("rating-count-text");
+    let status = document.querySelector('#rating-status');
+    if (!status) {
+        status = document.createElement('span');
+        status.id = 'rating-status';
+        status.className = 'rating-status';
+        status.setAttribute('aria-live', 'polite');
+        ratingCountText.insertAdjacentElement('afterend', status);
+    }
+    const STORAGE_KEY = "blog_user_rating";
+    if (!container || !ratingCountText) return;
+
+    const stars = Array.from(container.querySelectorAll(".star"));
+
+    // Métricas BASE (simulan venir del backend y NO incluyen al usuario actual)
+    const BASE_VOTES = 15;
+    const BASE_AVG = 4.2;
+
+    // Voto del usuario (persistente)
+    let userVote = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+    if (Number.isNaN(userVote) || userVote < 1 || userVote > 5) userVote = 0;
+
+    // Selección activa para pintar UI
+    let selectedRating = userVote;
+
+    // Render inicial
+    paint(selectedRating);
+    renderMetrics(userVote);
+
+    // Click: alterna voto (poner/quitar) y no infla votos
+    container.addEventListener("click", function (e) {
+        const target = e.target.closest(".star");
+        if (!target) return;
+
+        const val = parseInt(target.dataset.value, 10);
+
+        if (userVote === val) {
+            // Quitar voto
+            userVote = 0;
+            selectedRating = 0;
+            localStorage.removeItem(STORAGE_KEY);
+            paint(0);
+            renderMetrics(0);
+            showOnce("rating-removed", " Voto eliminado.");
+        } else {
+            // Nuevo voto o actualización de voto (reemplaza, NO suma votos extra)
+            userVote = val;
+            selectedRating = val;
+            localStorage.setItem(STORAGE_KEY, String(val));
+            paint(val);
+            renderMetrics(val);
+            showOnce("rating-thanks", " ¡Gracias por tu calificación!");
+        }
+    });
+
+    // Hover: mostrar preview del promedio que resultaría con esa calificación
+    let hoverVal = 0;
+
+    container.addEventListener("mouseover", function (e) {
+        const target = e.target.closest(".star");
+        if (!target) return;
+        const val = parseInt(target.dataset.value, 10);
+        if (val !== hoverVal) {
+            hoverVal = val;
+            paint(hoverVal);
+            renderMetrics(hoverVal);   // muestra valor/hint en hover
+        }
+    });
+
+    container.addEventListener("mouseleave", function () {
+        hoverVal = 0;
+        paint(selectedRating);       // vuelve a tu selección
+        renderMetrics(userVote);     // y al texto acorde a tu voto
+    });
+
+    // Al salir: volver al estado actual del usuario
+    container.addEventListener("mouseleave", function () {
+        paint(selectedRating);
+        renderMetrics(userVote);
+    });
+
+    // Muestra el valor de las estrellas + votos (sin promedio)
+    function renderMetrics(valOrZero) {
+        const hasVal = !!valOrZero;
+        // Mantiene la lógica actual: suma +1 cuando hay selección/hover
+        const votes = BASE_VOTES + (hasVal ? 1 : 0);
+        const text = hasVal ? `${valOrZero}/5` : 'Elige tu calificación';
+        ratingCountText.textContent = `${text} / ${votes} votos`;
+    }
+
+    // Pinta estrellas con Font Awesome v6 (fa-regular/fa-solid)
+    function paint(value) {
+        stars.forEach((star) => {
+            const v = parseInt(star.dataset.value, 10);
+            star.classList.remove("fa-regular", "fa-solid", "active");
+            if (!star.classList.contains("fa-star")) {
+                star.classList.add("fa-star");
+            }
+            if (v <= value) {
+                star.classList.add("fa-solid", "active");
+            } else {
+                star.classList.add("fa-regular");
+            }
+        });
+    }
+
+    // Mensaje simple, evitando duplicados por clase
+    function showOnce(cls, msg) {
+        // Reemplaza cualquier mensaje previo y evita acumular nodos
+        status.classList.remove('rating-thanks', 'rating-removed', 'visible');
+        status.classList.add(cls); // 'rating-thanks' o 'rating-removed'
+        status.textContent = msg;
+
+        // Anima solo opacidad (sin cambiar ancho)
+        requestAnimationFrame(() => status.classList.add('visible'));
+    }
+
+});
+
+// Opcional: para ocultar el mensaje en algún punto (por ejemplo, al mouseleave si lo prefieres)
+    function hideStatus() {
+        status.classList.remove('visible');
+    }
+
 
 
 
