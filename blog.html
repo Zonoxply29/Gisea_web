@@ -186,8 +186,7 @@
     <section class="featured-articles py-5">
         <div class="container-lg">
             <div class="section-title mb-5 text-center">
-                <h1>Featured Articles</h1>
-                <p>Los artículos más destacados de nuestro blog</p>
+                <h1>Artículos Destacados</h1>
             </div>
 
             <div class="row g-4">
@@ -200,7 +199,7 @@
                         <div class="featured-card-body">
                             <p class="article-date">22 Oct 2025</p>
                             <h5 class="article-title">
-                                <a href="#">Var Vs Let in JavaScript</a>
+                                <a href="./blog_paginas/pagina1.html">Var Vs Let in JavaScript</a>
                             </h5>
                             <p class="article-desc">
                                 In Javascript, you can declare a variable using “Var” or “let” BUT there is an
@@ -266,7 +265,7 @@
 
             <!-- Botón Ver más -->
             <div class="text-center mt-4" data-aos="fade-up">
-                <a href="#categorias-articulos" class="btn-more">Ver más artículos</a>
+                <a href="#listado-articulos" class="btn-more">Ver más artículos</a>
             </div>
         </div>
     </section>
@@ -281,20 +280,223 @@
         <div class="blog-subnav-container">
             <div class="container-lg"> <!-- NUEVO CONTENEDOR -->
                 <div class="d-flex gap-3 blog-subnav">
-                    <a href="#figma" class="blog-tag active">Desarrollo Web</a>
-                    <a href="#css" class="blog-tag">JavaScript</a>
-                    <a href="#accesibility" class="blog-tag">HTML5</a>
-                    <a href="#ux" class="blog-tag">CSS</a>
-                    <a href="#figma" class="blog-tag">Frameworks</a>
-                    <a href="#javascript" class="blog-tag">Vue</a>
-                    <a href="#performance" class="blog-tag">Astro</a>
-                    <a href="#design" class="blog-tag">AI</a>
+                    <a href="#fdesarolloweb" class="blog-tag active">Desarrollo Web</a>
+                    <a href="#javascript" class="blog-tag">JavaScript</a>
+                    <a href="#HTML5" class="blog-tag">HTML5</a>
+                    <a href="#css" class="blog-tag">CSS</a>
+                    <a href="#SEO" class="blog-tag">SEO</a>
+                    <a href="#Vue" class="blog-tag">Vue</a>
+                    <a href="#Astro" class="blog-tag">Astro</a>
+                    <a href="#AI" class="blog-tag">AI</a>
                 </div>
             </div>
         </div>
     </section>
+    <section id="listado-articulos" class="py-3">
+        <div class="container-lg">
+            <div class="row g-4">
+                <!-- Paginación Superior -->
+                <div class="pagination-container d-flex justify-content-center mb-4">
+                    <nav aria-label="Page navigation top">
+                        <ul class="pagination custom-pagination top-pagination">
+                            <li class="page-item prev-page disabled">
+                                <a class="page-link" href="#">Anterior</a>
+                            </li>
+                            <!-- Los números se insertarán dinámicamente -->
+                            <li class="page-item next-page">
+                                <a class="page-link" href="#">Siguiente</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- CARD 1 -->
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article1.jpg" alt="Artículo 1">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">05 Feb 2025</p>
+                            <h5 class="article-title">
+                                <a href="#">Cómo estructurar un proyecto web moderno con Bootstrap y JS</a>
+                            </h5>
+                            <p class="article-desc">
+                                Te explicamos paso a paso cómo iniciar un proyecto responsivo utilizando buenas
+                                prácticas.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">Desarrollo Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- CARD 2 -->
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article2.jpg" alt="Artículo 2">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">20 Ene 2025</p>
+                            <h5 class="article-title">
+                                <a href="#">Mejores prácticas en SEO para mejorar el ranking web</a>
+                            </h5>
+                            <p class="article-desc">
+                                Aprende cómo optimizar meta tags, estructura y contenido para motores de búsqueda.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">SEO</span>
+                                <span class="tag">Marketing Digital</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- CARD 3 -->
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article3.jpg" alt="Artículo 3">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">15 Dic 2024</p>
+                            <h5 class="article-title">
+                                <a href="#">Introducción a Vue.js: conceptos esenciales para principiantes</a>
+                            </h5>
+                            <p class="article-desc">
+                                Te mostramos qué es Vue.js, cómo funciona y por qué es ideal para interfaces web
+                                modernas.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">Vue</span>
+                                <span class="tag">Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article4.jpg" alt="Artículo 4">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">28 Nov 2024</p>
+                            <h5 class="article-title">
+                                <a href="#">CSS Grid vs Flexbox: ¿cuándo usar cada uno?</a>
+                            </h5>
+                            <p class="article-desc">
+                                Comparación clara entre los sistemas de diseño más populares en CSS moderno.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">CSS</span>
+                                <span class="tag">Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article5.jpg" alt="Artículo 5">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">10 Nov 2024</p>
+                            <h5 class="article-title">
+                                <a href="#">¿Qué es Astro y por qué es uno de los frameworks más rápidos?</a>
+                            </h5>
+                            <p class="article-desc">
+                                Conoce por qué Astro está revolucionando la forma de construir sitios web estáticos.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">Astro</span>
+                                <span class="tag">Framework</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article6.jpg" alt="Artículo 6">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">25 Oct 2024</p>
+                            <h5 class="article-title">
+                                <a href="#">Cómo integrar inteligencia artificial en aplicaciones web</a>
+                            </h5>
+                            <p class="article-desc">
+                                Descubre herramientas y APIs que facilitan la implementación de IA en proyectos web.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">AI</span>
+                                <span class="tag">Innovación</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article7.jpg" alt="Artículo 7">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">02 Feb 2025</p>
+                            <h5 class="article-title">
+                                <a href="#">Nuevas tendencias de diseño UI para 2025</a>
+                            </h5>
+                            <p class="article-desc">
+                                Qué estilos visuales dominarán este año y cómo aplicarlos correctamente.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ✅ COPIA 2 -->
+                <div class="col-lg-4 col-md-6 col-12 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="img/article8.jpg" alt="Artículo 8">
+                        </div>
+                        <div class="featured-card-body">
+                            <p class="article-date">28 Ene 2025</p>
+                            <h5 class="article-title">
+                                <a href="#">Cómo estructurar un backend para un blog profesional</a>
+                            </h5>
+                            <p class="article-desc">
+                                Conceptos clave para crear un backend limpio, escalable y bien organizado.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">Backend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Paginación Inferior -->
+        <div class="pagination-container d-flex justify-content-center mt-5">
+            <nav aria-label="Page navigation">
+                <ul class="pagination custom-pagination">
+                    <li class="page-item prev-page disabled"><a class="page-link" href="#">Anterior</a></li>
+                    <!-- Números generados dinámicamente luego -->
+                    <li class="page-item next-page"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 
     <script src="js/index.js"></script>
     <script src="js/portafolio.js"></script>

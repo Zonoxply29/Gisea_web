@@ -1,0 +1,722 @@
+/* Importación de la tipografía del cuerpo del blog */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* FUENTE DOMINE PARA TEXTO */
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+/* ===========================
+   VARIABLES GLOBALES (COLORES Y FUENTES)
+   =========================== */
+:root {
+    --gisea-blue: #1C1F3D;
+    --gisea-gold: #C49C3C;
+    --gisea-text-dark: #333333;
+    --gisea-text-light: #6c757d;
+    --gisea-bg-light: #f8f9fa;
+    --font-titles: "Oswald", sans-serif;
+    --font-body: "Inter", "Roboto", sans-serif;
+    --font-body-blog: 'Domine', serif;
+}
+
+/* ===========================
+   CONTENEDOR GENERAL DEL BLOG
+   =========================== */
+.blog-post {
+    padding-top: 16vh;
+}
+
+.comment-form .btn-primary {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    border-radius: 30px;
+    /* Bordes redondeados estilo pill */
+    font-weight: 600;
+    background-color: #1C1F3D;
+    /* Azul GISEA */
+    color: #fff;
+    border: 2px solid #1C1F3D;
+    transition: all 0.3s ease-in-out;
+}
+
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content li,
+.post-quote {
+    font-family: var(--font-body-blog);
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* ===========================
+   HEADER DEL POST
+   =========================== */
+.post-header .post-title {
+    font-family: var(--font-titles);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--gisea-blue);
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.author-name {
+    font-family: var(--font-titles);
+    color: var(--gisea-blue);
+}
+
+.post-date {
+    font-size: 0.95rem;
+    color: var(--gisea-text-light);
+}
+
+/* ===========================
+   IMAGEN DESTACADA
+   =========================== */
+/* Mantener bootstrap row para el layout horizontal */
+.post-feature-section {
+    margin-bottom: 2rem;
+}
+
+/* Ajuste natural */
+.post-cover {
+    margin: 0;
+    /* Se alinea dentro de la columna */
+    text-align: center;
+    /* Opcional si quieres centrar en mobile */
+}
+
+.post-cover img {
+    width: 100%;
+    /* Deja que la columna limite tamaño */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    padding-bottom: 2rem;
+}
+
+/* ===========================
+   CONTENIDO DEL ARTÍCULO
+   =========================== */
+.post-content h2,
+.post-content h3 {
+    font-family: var(--font-titles);
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--gisea-blue);
+    font-size: 1.25rem;
+}
+
+.post-content p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content ul,
+.post-content ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.post-content li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+}
+
+/* Imágenes dentro del artículo */
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+/* Imagen flotada a la derecha */
+.post-content .img-right {
+    float: right;
+    width: 45%;
+    max-width: 300px;
+    margin: 0 0 1.5rem 1.5rem;
+}
+
+/* Imagen flotada a la izquierda */
+.post-content .img-left {
+    float: left;
+    width: 45%;
+    max-width: 300px;
+    margin: 0 1.5rem 1.5rem 0;
+}
+
+/* Blockquote */
+.post-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--gisea-blue);
+    border-left: 4px solid var(--gisea-gold);
+    padding: 1rem 1.5rem;
+    background-color: rgba(196, 156, 60, 0.1);
+    border-radius: 6px;
+    margin: 2rem 0;
+    font-family: var(--font-body-blog);
+}
+
+/* ===========================
+   ARTÍCULOS RELACIONADOS
+   =========================== */
+.related-posts h3 {
+    font-family: var(--font-titles);
+    color: var(--gisea-blue);
+    margin-bottom: 1.5rem;
+}
+
+/* Sección más compacta */
+.related-posts .featured-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.related-posts .featured-card-image img {
+    height: 160px;
+    /* más pequeño para esta sección */
+    object-fit: cover;
+}
+
+.section-title-related {
+    font-family: var(--font-titles);
+    color: var(--gisea-blue);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.related-posts .featured-card-body {
+    flex: 1;
+}
+
+.related-posts .article-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   PAGINACIÓN DE RELACIONADOS
+   =========================== */
+.related-pagination .page-link {
+    color: var(--gisea-blue);
+    font-family: var(--font-body);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.related-pagination .page-item.active .page-link {
+    background-color: var(--gisea-blue);
+    color: #fff;
+    border-color: var(--gisea-blue);
+}
+
+.related-pagination .page-link:hover {
+    background-color: var(--gisea-gold);
+    color: white;
+}
+
+/* ===========================
+   COMENTARIOS
+   =========================== */
+.post-comments h3 {
+    font-family: var(--font-titles);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--gisea-blue);
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.comment-box {
+    background-color: #f7f7f9;
+    /* Fondo suave */
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* Destacar nombre */
+.comment-box .fw-bold {
+    color: var(--gisea-blue);
+}
+
+/* ===========================
+   FORMULARIO DE COMENTARIOS
+   =========================== */
+.comment-form h3 {
+    font-family: var(--font-titles);
+    font-size: 1.8rem;
+    color: var(--gisea-blue);
+    margin-bottom: 1.5rem;
+}
+
+.comment-form button {
+    background-color: var(--gisea-blue);
+    border: none;
+}
+
+.comment-form button:hover {
+    background-color: var(--gisea-gold);
+}
+/* ===========================
+   Calificacion de usuario
+   =========================== */
+.rating-container {
+    font-family: "Oswald", sans-serif;
+    font-size: 1rem;
+}
+
+.stars {
+    display: flex;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.star {
+    font-size: 1.3rem;
+    color: #C49C3C;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+.star.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none !important;
+}
+
+.star.filled {
+    color: #C49C3C;
+}
+
+.rating-count {
+    font-family: "Domine", serif;
+    color: #555;
+}
+
+/* ======================================================
+   📱 RESPONSIVE DESIGN
+   ====================================================== */
+
+/* 📍 Tablets y pantallas medianas (<=1024px) */
+@media (max-width: 1024px) {
+    .blog-post {
+        padding-top: 18vh;
+    }
+
+    .post-cover img {
+        max-width: 80%;
+    }
+
+    .post-title {
+        font-size: 2.2rem;
+    }
+
+    .post-header .post-title {
+        font-size: 1.8rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .post-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .post-quote {
+        font-size: 1.15rem;
+    }
+
+    .post-feature-section .col-md-4 .post-cover img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* 📍 Tablets verticales (<=768px) */
+@media (max-width: 768px) {
+    .blog-post {
+        padding-top: 14vh;
+    }
+
+    .post-title {
+        font-size: 2rem;
+    }
+
+    .author-avatar {
+        width: 45px;
+        height: 45px;
+    }
+
+    .post-cover img {
+        max-width: 85%;
+    }
+
+    .post-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .post-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .post-content p {
+        font-size: 1rem;
+    }
+
+    .post-header .post-title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .post-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .post-quote {
+        font-size: 1.1rem;
+    }
+
+    .section-title-related {
+        font-size: 1.6rem;
+    }
+
+    .post-content {
+        flex: 2;
+    }
+
+    /* La imagen vuelve arriba del contenido */
+    .post-feature-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-feature-section .col-md-4 {
+        order: -1;
+        /* Mueve imagen arriba del contenido */
+        text-align: center;
+    }
+
+    /* Ajuste visual de imagen */
+    .post-feature-section .post-cover img {
+        width: 80%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+}
+
+/* 📍 Móviles grandes y medianos (<=576px) */
+@media (max-width: 576px) {
+    .post-header {
+        text-align: center;
+    }
+
+    .post-meta {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .author-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .post-cover img {
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    .post-title {
+        font-size: 1.8rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .related-posts h3,
+    .post-comments h3,
+    .comment-form h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .post-header .post-title {
+        font-size: 1.5rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .post-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .post-quote {
+        font-size: 1.05rem;
+    }
+
+    .comment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .comment-avatar {
+        margin-bottom: 10px;
+    }
+
+    .related-posts .featured-card-image img {
+        height: 130px;
+    }
+
+    .related-posts .article-title {
+        font-size: 1rem;
+    }
+
+    .section-title-related {
+        font-size: 1.4rem;
+    }
+
+    .post-content .img-right,
+    .post-content .img-left {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+
+    .post-content p,
+    .post-content li {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* 📍 Móviles pequeños (<=400px) */
+@media (max-width: 400px) {
+    .post-title {
+        font-size: 1.6rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .post-quote {
+        font-size: 1.05rem;
+        padding: 1rem;
+    }
+
+    .post-header .post-title {
+        font-size: 1.4rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .post-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .post-quote {
+        font-size: 1rem;
+    }
+
+    .post-feature-section .post-cover img {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* ===========================
+   🌙 MODO OSCURO - BLOG
+=========================== */
+
+/* Contenedores como el post */
+body.dark-mode .blog-post,
+body.dark-mode .post-content,
+body.dark-mode .comment-box,
+body.dark-mode .featured-card {
+    color: #E6E6E6;
+}
+
+/* Titulares */
+body.dark-mode .post-title,
+body.dark-mode .post-content h2,
+body.dark-mode .post-content h3,
+body.dark-mode .section-title-related,
+body.dark-mode .post-comments h3 {
+    color: #C49C3C;
+    /* Dorado elegante en encabezados */
+}
+
+/* Texto secundario */
+body.dark-mode .post-meta p,
+body.dark-mode .text-muted,
+body.dark-mode .article-date {
+    color: #AAAAAA;
+}
+
+/* Bloque de cita */
+body.dark-mode .post-quote {
+    background-color: #2A2A2A;
+    border-left: 5px solid #C49C3C;
+    color: #E6E6E6;
+}
+
+/* Enlaces */
+body.dark-mode a {
+    color: #C49C3C;
+}
+
+body.dark-mode a:hover {
+    color: #E6E6E6;
+}
+
+/* Paginación */
+body.dark-mode .pagination .page-link {
+    background-color: #1E1E1E;
+    color: #E6E6E6;
+    border-color: #333333;
+}
+
+body.dark-mode .pagination .page-item.active .page-link {
+    color: #121212;
+    border-color: #C49C3C;
+}
+
+/* Comentarios */
+body.dark-mode .comment-box {
+    border: 1px solid #333333;
+}
+
+/* Cards relacionadas */
+body.dark-mode .featured-card:hover {
+    box-shadow: 0 6px 12px rgba(196, 156, 60, 0.25);
+}
+
+/* ===========================
+   🌙 MODO OSCURO - Inputs, botones y comentarios
+=========================== */
+
+/* Inputs, textarea */
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #1E1E1E;
+    border: 1px solid #333;
+    color: #E6E6E6;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #777;
+}
+
+/* Inputs al enfocar */
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    background-color: #262626;
+    border-color: #C49C3C;
+    color: #FFFFFF;
+    box-shadow: 0 0 5px rgba(196, 156, 60, 0.5);
+}
+
+/* Caja de comentarios */
+body.dark-mode .comment-box {
+    background-color: #1E1E1E;
+    border: 1px solid #333333;
+    color: #E6E6E6;
+}
+
+/* Texto del autor en comentario */
+body.dark-mode .comment-box p.fw-bold {
+    color: #C49C3C;
+}
+
+/* Cards relacionadas */
+body.dark-mode .featured-card {
+    background-color: #1E1E1E;
+    border: 1px solid #333333;
+    color: #E6E6E6;
+}
+
+/* Títulos dentro de tarjetas relacionadas */
+body.dark-mode .featured-card .article-title a {
+    color: #C49C3C;
+}
+
+body.dark-mode .featured-card .article-title a:hover {
+    color: #E6E6E6;
+}
+
+/* Descripción en las cards */
+body.dark-mode .featured-card .article-desc {
+    color: #E6E6E6;
+}
+
+/* ✨ Hover en modo claro BTN DE ENVIAR COMENTARIO */
+.blog-post .comment-form .btn-primary:hover {
+    background-color: transparent;
+    color: #1C1F3D;
+    border-color: #1C1F3D;
+}
+
+/* 🌙 Modo oscuro - botón */
+body.dark-mode .blog-post .comment-form .btn-primary {
+    background-color: #C49C3C;
+    /* Dorado GISEA */
+    color: #121212;
+    border-color: #C49C3C;
+}
+
+/* 🌙 Hover en modo oscuro */
+body.dark-mode .blog-post .comment-form .btn-primary:hover {
+    background-color: transparent;
+    color: #C49C3C;
+    border-color: #C49C3C;
+}
+
+/* ===========================
+   Calificacion de usuario
+   =========================== */
+/* Modo oscuro */
+body.dark-mode .star {
+    color: #E0C676;
+}
+body.dark-mode .rating-count {
+    color: #ccc;
+}
