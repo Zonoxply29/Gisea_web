@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Segundo Post - Etiquetas Meta en Seo</title>
+    <!---
+    <meta name="description"
+        content="Desarrollo web profesional con amplio portafolio internacional. Sitios modernos y funcionales para empresas de todo el mundo. Paquetes desde $3,000 MXN. ¡Contáctanos hoy!">
+
+    <meta property="og:title" content="Desarrollo Web Profesional - Agencia Digital Internacional | GISEA Agency">
+    <meta property="og:description"
+        content="Desarrollo web profesional con amplio portafolio internacional. Sitios modernos y funcionales para empresas de todo el mundo. Paquetes desde $3,000 MXN.">
+    <meta property="og:image" content="img/header_desarollo_web.jpg">
+    <meta property="og:url" content="https://giseamex.com/service_desarollo_web.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Desarrollo Web Profesional - Agencia Digital Internacional | GISEA Agency">
+    <meta name="twitter:description"
+        content="Desarrollo web profesional con amplio portafolio internacional. Sitios modernos y funcionales para empresas de todo el mundo.">
+    <meta name="twitter:image" content="img/header_desarollo_web.jpg">
+    -->
+    <!-- === FAVICON === -->
+    <!-- Icono para pestaña del navegador -->
+    <link rel="icon" type="image/png" href="../img/logo_GISEA.png">
+    <link rel="shortcut icon" type="image/png" href="../img/logo_GISEA.png">
+    <!-- Icono para Apple devices -->
+    <link rel="apple-touch-icon" href="../img/logo_GISEA.png">
+
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/aos/aos.css">
+    <link rel="stylesheet" href="../css/glightbox/glightbox.min.css">
+    <link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Archivo principal de estilos - debe ir al final para mayor especificidad -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/servicios/blog.css">
+    <link rel="stylesheet" href="../css/servicios/blog_paginas.css">
+    <link rel="stylesheet" href="../css/prism/prism.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg estilos-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo_final.png" alt="Gisea" class="gisea-logo">
+                </a>
+                <!--MENU DE HAMBURGESA-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
+                    <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                    <svg class="icon-close hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
+                    </svg>
+                </button>
+                <!--NAVBAR-->
+                <div class="collapse navbar-collapse estilos-navbar" id="navbarNav">
+                    <ul class="navbar-nav estilos-navbar nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html" data-translate="navInicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about.html" data-translate="navSobreNosotros">Sobre
+                                Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" data-translate="navServicios">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../service_desarollo_web.html"
+                                        data-translate="dropdownDesarrollo">Desarollo Web</a></li>
+                                <li><a class="dropdown-item" href="../servicios_gisea/recursos_humanos.html"
+                                        data-translate="dropdownRecursos">Recursos
+                                        Humanos</a></li>
+                                <li><a class="dropdown-item" href="../servicios_gisea/capacitacion_it.html"
+                                        data-translate="dropdownCapacitacion">Capacitacion
+                                        IT</a></li>
+                                <li><a class="dropdown-item" href="../servicios_gisea/influencers.html"
+                                        data-translate="dropdownInfluencers">Influencers</a></li>
+                                <li><a class="dropdown-item" href="../servicios_gisea/produccion_digital.html"
+                                        data-translate="dropdownAudiovisual">Audio Visual</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-translate="navContacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./servicios_gisea/empleos.html"
+                                data-translate="navTrabaja">Empleo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../blog.html" data-translate="navBlog">BLOG</a>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center gap-3">
+                                <!--Dropdown btn de idioma-->
+                                <div class="dropdown me-2">
+                                    <button id="languageButton" class="btn-cambio-idioma">
+                                        <img src="../icons/bandera_mex.png" alt="Idioma" id="languageIcon"
+                                            style="width: 40px; margin-right: 8px;">
+                                        <span id="selectedLanguage">SPA</span>
+                                        <i id="dropdownIcon" class="fa-solid fa-angle-down"></i>
+                                    </button>
+                                    <div id="languageDropdown" class="dropdown-content">
+                                        <a href="#" data-lang="SPA" data-flag="../icons/bandera_mex.png">
+                                            <img src="../icons/bandera_mex.png" alt="SPA"
+                                                style="width: 40px; height:40px;">
+                                            SPA
+                                        </a>
+                                        <a href="#" data-lang="ENG" data-flag="../icons/bandera_usa.png">
+                                            <img src="../icons/bandera_usa.png" alt="SPA"
+                                                style="width: 40px; height:40px;">
+                                            ENG</a>
+                                        <a href="#" data-lang="JPN" data-flag="../icons/bandera_jpn.png">
+                                            <img src="../icons/bandera_jpn.png" alt="JPN"
+                                                style="width: 40px; height:40px;">
+                                            JPN</a>
+                                    </div>
+                                </div>
+                        </li>
+                        <li>
+                            <div class="d-flex align-items-center gap-3 header-social-wrapper">
+                                <div class="header-social-links d-flex gap-2 align-items-center">
+                                    <a href="" alt="instagram" class="red-social instagram">
+                                        <i class="fa-brands fa-instagram fa-xl"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank"
+                                        alt="linkedin" class="red-social linkedin">
+                                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook"
+                                        class="red-social facebook">
+                                        <i class="fa-brands fa-facebook fa-xl"></i>
+                                    </a>
+                                    <a href="https://youtube.com/@giseasc?si=ooZEjGHzvetXvs3D" target="_blank"
+                                        alt="youtube" class="red-social youtube">
+                                        <i class="fa-brands fa-youtube fa-xl"></i>
+                                    </a>
+                                </div>
+                                <button id="toggle-dark-mode" class="btn-cambio-idioma" title="Cambiar tema">
+                                    <span id="icon-theme">
+                                        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                            width="20" height="20">
+                                            <path
+                                                d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+                                        </svg>
+                                        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                            width="20" height="20" style="display:none;">
+                                            <path
+                                                d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="blog-post container-lg">
+
+        <!-- HEADER DEL ARTÍCULO -->
+        <header class="post-header mb-4">
+            <h1 class="post-title">Mejores Prácticas en SEO para mejorar el ranking web</h1>
+            <div class="post-meta d-flex align-items-center gap-3 mt-3">
+                <img src="../img/team/hugo_gustavo_sin_fondo.PNG" alt="Autor" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name fw-bold mb-0">Hugo Gustavo</p>
+                    <p class="post-date text-muted mb-0">Publicado el 10 de Octubre, 2025</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECCIÓN DESTACADA: TEXTO + IMAGEN -->
+        <div class="row align-items-center post-feature-section g-4 my-3">
+            <!-- Columna de texto -->
+            <div class="col-md-8">
+                <article class="post-content">
+
+                    <p>Si tienes una página web, blog o tienda en línea, seguramente te has preguntado:
+                        <strong>¿cómo puedo hacer que Google me muestre en los primeros resultados?</strong>
+                        La respuesta está en aplicar buenas prácticas de SEO (Search Engine Optimization),
+                        es decir, optimización para motores de búsqueda.
+                    </p>
+                    <img src="../img/blog/post_img/seo_blog_img.jpg" alt="Imagen centrada">
+                    <p>En este artículo aprenderás qué es el SEO, cuáles son sus componentes principales
+                        y cómo aplicar tácticas como la optimización de meta tags, estructura de contenido y
+                        mejora de autoridad para escalar posiciones en Google.</p>
+
+                    <h2>¿Qué es el SEO y por qué es importante?</h2>
+                    <p>El SEO es un conjunto de estrategias que ayudan a que una página web mejore su
+                        visibilidad en los resultados orgánicos de buscadores como Google o Bing.
+                        A diferencia del SEM (publicidad pagada), el SEO genera tráfico de forma
+                        sostenible a largo plazo sin pagar por cada clic.</p>
+
+                    <blockquote class="post-quote">
+                        “Estar en la primera página de Google aumenta hasta un 90% las posibilidades
+                        de recibir visitas orgánicas.”
+                    </blockquote>
+
+                    <h2>¿Qué son los Meta Tags y cómo ayudan al SEO?</h2>
+                    <p>Los <strong>meta tags</strong> son fragmentos de código HTML que proporcionan
+                        información sobre una página web a los motores de búsqueda. Aunque el usuario no
+                        los ve directamente dentro del contenido, son fundamentales para que Google
+                        entienda el tema del sitio y lo muestre en resultados relevantes.</p>
+
+                    <h3>Meta tags más importantes:</h3>
+                    <ul>
+                        <li><strong>Meta Title:</strong> Título visible en los resultados de Google.
+                            Debe incluir la palabra clave principal.</li>
+                        <li><strong>Meta Description:</strong> Breve resumen descriptivo. No afecta
+                            directamente al ranking, pero sí influye en la tasa de clics (CTR).</li>
+                        <li><strong>Meta Robots:</strong> Indica si Google puede indexar la página
+                            y seguir los enlaces. Ejemplo: <code>index, follow</code>.</li>
+                        <li><strong>Meta Keywords (obsoleto):</strong> Ya no es tomado en cuenta por Google
+                            para posicionamiento.</li>
+                    </ul>
+
+                    <p>📌 <strong>Optimizar meta tags mejora la visibilidad y aumenta la probabilidad de
+                            atraer clics desde los resultados de búsqueda.</strong></p>
+
+                    <h2>SEO On Page vs SEO Off Page</h2>
+                    <p>Las estrategias SEO se dividen en dos grandes categorías: lo que optimizamos dentro
+                        del sitio (On Page) y lo que influye desde fuentes externas (Off Page).</p>
+
+                    <h3>✅ SEO On Page</h3>
+                    <p>Incluye todas las acciones internas que mejoran la relevancia del contenido para los
+                        motores de búsqueda.</p>
+                    <ul>
+                        <li>Uso estratégico de palabras clave</li>
+                        <li>Meta tags optimizados</li>
+                        <li>Estructura del contenido (H1, H2, H3)</li>
+                        <li>URLs amigables</li>
+                        <li>Imágenes con atributo ALT</li>
+                        <li>Tiempo de carga optimizado</li>
+                        <li>Diseño responsive</li>
+                        <li>Enlaces internos para conectar contenido</li>
+                    </ul>
+
+                    <h3>✅ SEO Off Page</h3>
+                    <p>Trabaja en la autoridad y reputación del sitio mediante señales externas.</p>
+                    <ul>
+                        <li>Backlinks (enlaces desde otras webs hacia la tuya)</li>
+                        <li>Menciones en redes sociales</li>
+                        <li>Colaboraciones con otros blogs</li>
+                        <li>Guest posting</li>
+                        <li>Reseñas y presencia en directorios</li>
+                    </ul>
+
+                    <blockquote class="post-quote">
+                        “El SEO On Page dice de qué trata tu contenido. El SEO Off Page le dice a Google
+                        qué tan confiable es.”
+                    </blockquote>
+
+                    <h2>Mejores prácticas de SEO On Page</h2>
+                    <h3>1. Usa palabras clave de forma estratégica</h3>
+                    <p>La palabra clave principal debe aparecer en el título, primer párrafo,
+                        subtítulos y ocasionalmente en el contenido.</p>
+
+                    <h3>2. Estructura tu contenido con títulos jerárquicos</h3>
+                    <ul>
+                        <li><strong>H1:</strong> Título principal (solo uno por página)</li>
+                        <li><strong>H2:</strong> Secciones importantes</li>
+                        <li><strong>H3:</strong> Subtemas dentro de los H2</li>
+                    </ul>
+
+                    <h3>3. Optimiza imágenes</h3>
+                    <p>Usa nombres descriptivos y agrega <br> <code class="language-html">alt="palabra clave descriptiva"</code>.</p>
+
+                    <h3>4. Asegura una lectura clara</h3>
+                    <p>Emplea párrafos cortos, viñetas y negritas para mejorar la experiencia de usuario.</p>
+
+                    <h2>Estrategias de SEO Off Page para mejorar autoridad</h2>
+                    <ul>
+                        <li>Colabora con otros sitios para obtener backlinks de calidad.</li>
+                        <li>Comparte contenido valioso en redes sociales.</li>
+                        <li>Participa en podcasts, blogs y comunidades.</li>
+                    </ul>
+
+                    <h2>Conclusión</h2>
+                    <p>El SEO no se trata solo de palabras clave, sino de construir una web estructurada,
+                        relevante y confiable. Al combinar buenas prácticas de <strong>SEO On Page</strong>
+                        con estrategias de <strong>SEO Off Page</strong>, tu sitio tendrá mayores posibilidades
+                        de escalar posiciones en Google y atraer tráfico orgánico de manera constante.</p>
+
+                    <blockquote class="post-quote">
+                        “Una web optimizada es una web visible, y una web visible es una web que crece.”
+                    </blockquote>
+
+
+                </article>
+            </div>
+
+            <!-- Columna de imagen -->
+            <div class="col-md-4 align-self-start">
+                <figure class="post-cover">
+                    <img src="../img/blog/etiquetas_meta_seo_blog.png" alt="Imagen del artículo"
+                        class="img-fluid rounded">
+                </figure>
+            </div>
+        </div>
+
+
+        <!-- ARTÍCULOS RELACIONADOS -->
+        <section class="related-posts mt-5">
+            <h3 class="section-title-related">Artículos Relacionados</h3>
+            <div class="row g-4 related-container">
+                <!-- Ejemplo de cards (luego se pueden generar dinámicamente) -->
+                <div class="col-md-4 col-sm-6 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="../img/blog/mito_fullstack.png" alt="Artículo relacionado">
+                        </div>
+                        <div class="featured-card-body">
+                            <h4 class="article-title"><a href="post_ejemplo.html">El Mito del Fullstack
+                                    Developer</a>
+                            </h4>
+                            <p class="article-desc">Descubre por qué el término está sobreexplotado y qué significa
+                                realmente...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="../img/blog/astro_js_blog.png" alt="Artículo relacionado">
+                        </div>
+                        <div class="featured-card-body">
+                            <h4 class="article-title"><a href="post_ejemplo.html">¿Vale la pena aprender Astro?</a>
+                            </h4>
+                            <p class="article-desc">Un análisis rápido del framework más rápido del mercado...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 blog-card-item">
+                    <div class="featured-card">
+                        <div class="featured-card-image">
+                            <img src="../img/blog/etiquetas_meta_seo_blog.png" alt="Artículo relacionado">
+                        </div>
+                        <div class="featured-card-body">
+                            <h4 class="article-title"><a href="pagina2.html">Mejores prácticas en SEO para mejorar
+                                    el ranking web</a></h4>
+                            <p class="article-desc">Aprende cómo optimizar meta tags, estructura y contenido para
+                                motores de búsqueda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paginación Inferior -->
+            <div class="pagination-container d-flex justify-content-center mt-5">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination custom-pagination">
+                        <li class="page-item prev-page disabled"><a class="page-link" href="#">Anterior</a></li>
+                        <!-- Números generados dinámicamente luego -->
+                        <li class="page-item next-page"><a class="page-link" href="#">Siguiente</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+
+        <!-- COMENTARIOS -->
+        <section class="post-comments mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-3">
+                <h3 class="mb-0">Comentarios (2)</h3>
+
+                <!-- ⭐ Calificación -->
+                <div class="rating-container d-flex align-items-center gap-2">
+                    <div class="stars" id="rating-stars">
+                        <i class="fa-regular fa-star star" data-value="1"></i>
+                        <i class="fa-regular fa-star star" data-value="2"></i>
+                        <i class="fa-regular fa-star star" data-value="3"></i>
+                        <i class="fa-regular fa-star star" data-value="4"></i>
+                        <i class="fa-regular fa-star star" data-value="5"></i>
+                    </div>
+                    <span class="rating-count" id="rating-count-text">4.2 / 15 votos</span>
+                </div>
+            </div>
+
+            <!-- Resto de comentarios -->
+            <div class="comment d-flex gap-3 mb-4">
+                <img src="../img/blog/img_perfil.png" class="comment-avatar" alt="Juan Pérez">
+                <div class="comment-box">
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold mb-1">Juan Pérez</p>
+                        <span class="text-muted small">hace 2 días</span>
+                    </div>
+                    <p class="mb-0">¡Excelente artículo! Muy de acuerdo con que la IA es una herramienta para potenciar
+                        nuestras habilidades, no para reemplazarnos. El futuro es colaborativo.</p>
+                </div>
+            </div>
+
+            <div class="comment d-flex gap-3 mb-4">
+                <img src="../img/blog/img_perfil.png" class="comment-avatar" alt="Ana Gómez">
+                <div class="comment-box">
+                    <div class="d-flex justify-content-between">
+                        <p class="fw-bold mb-1">Ana Gómez</p>
+                        <span class="text-muted small">hace 1 día</span>
+                    </div>
+                    <p class="mb-0">Muy buen análisis del impacto en el SDLC. Me gustaría ver un futuro post
+                        profundizando en las herramientas específicas para cada etapa. ¡Gracias por compartir!</p>
+                </div>
+            </div>
+        </section>
+        <!-- FORMULARIO DE NUEVO COMENTARIO -->
+        <section class="comment-form mt-5">
+            <h3>Deja un comentario</h3>
+            <form>
+                <textarea class="form-control mb-3" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Tu nombre">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Tu email">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Enviar Comentario</button>
+            </form>
+        </section>
+
+    </section>
+
+
+    <footer class="footer">
+        <div class="container-fluid p-0">
+            <div class="footer-top text-center" data-aos="fade-right">
+                <img src="../img/logo_final.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="footer-bottom d-flex justify-content-between align-items-center">
+                <div class="footer-contact">
+                    <a href="https://wa.me/5561856627" target="_blank" alt="whatsapp"
+                        class="red-social-footer whatsapp-contact">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                        <span class="whatsapp-text">WhatsApp</span>
+                    </a>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-translate="footerInicio">Inicio</a></li>
+                    <li><a href="about.html" data-translate="footerSobreNosotros">Sobre Nosotros</a></li>
+                    <li><a href="#servicios" data-translate="footerServicios">Servicios</a></li>
+                    <li><a href="#clientes" data-translate="footerContacto">Contacto</a></li>
+                    <li><a href="#contacto" data-translate="footerCarrers">Carrers</a></li>
+                    <li><a href="#contacto" data-translate="footerBlog">Blog</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="" alt="instagram" class="red-social-footer">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ricardo-garrido-a2a1b167/" target="_blank" alt="linkedin"
+                        class="red-social-footer">
+                        <i class="fa-brands fa-linkedin fa-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/grupogisea" target="_blank" alt="facebook"
+                        class="red-social-footer">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                    <a href="https://youtube.com/@giseasc?si=ooZEjGHzvetXvs3D" target="_blank" alt="youtube"
+                        class="red-social-footer">
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/aos/aos.js"></script>
+    <script src="../js/prism/prism.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/glightbox/glightbox.min.js"></script>
+    <script src="../js/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../js/waypoints/noframework.waypoints.js"></script>
+    <script src="../js/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/blog.js"></script>
+    <script> AOS.init(); </script>
+</body>
+
+</html>

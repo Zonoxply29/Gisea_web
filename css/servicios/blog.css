@@ -299,3 +299,88 @@
     opacity: 0;
     transform: translateX(-30px);
 }
+/* ===========================
+   Modo oscuro — Cards Blog
+   =========================== */
+body.dark-mode .featured-card {
+  background-color: #1E1E1E;
+  border: 1px solid #333333;
+  color: #E6E6E6;
+}
+
+body.dark-mode .featured-card:hover {
+  box-shadow: 0 6px 12px rgba(196, 156, 60, 0.25); /* dorado GISEA suave */
+}
+
+body.dark-mode .featured-card-image {
+  background: #151515; /* placeholder oscuro si la imagen no carga */
+}
+
+body.dark-mode .featured-card-image img {
+  /* sin filtros para no “apagar” imágenes; ajusta si lo necesitas */
+  object-fit: cover;
+  object-position: center;
+}
+
+body.dark-mode .featured-card-body {
+  color: #E6E6E6;
+}
+
+body.dark-mode .article-title a {
+  color: #C49C3C;
+}
+body.dark-mode .article-title a:hover {
+  color: #EAD08A; /* dorado más claro al hover */
+}
+
+body.dark-mode .article-desc {
+  color: #E6E6E6;
+}
+
+body.dark-mode .article-date {
+  color: #AAAAAA;
+}
+
+/* Tags de artículos destacados */
+body.dark-mode .tag {
+  background-color: #2A2A2A;
+  color: #E6E6E6;
+}
+body.dark-mode .tag:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+/* Subnavbar de categorías */
+body.dark-mode .blog-tag {
+  background-color: #2A2A2A;
+  color: #E6E6E6;
+}
+body.dark-mode .blog-tag:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+body.dark-mode .blog-tag.active {
+  background-color: #C49C3C;
+  color: #121212;
+}
+
+/* Paginación del listado principal */
+body.dark-mode .custom-pagination .page-link {
+  background-color: #1E1E1E;
+  color: #E6E6E6;
+  border-color: #333333;
+}
+body.dark-mode .custom-pagination .page-link:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+body.dark-mode .custom-pagination .active .page-link {
+  color: #121212;
+  border-color: #C49C3C;
+}
+body.dark-mode .custom-pagination .disabled .page-link {
+  color: #777;
+  background-color: #161616;
+  border-color: #2A2A2A;
+}
