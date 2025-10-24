@@ -4996,7 +4996,7 @@ body.dark-mode .footer-bottom {
 
 /* Enlaces normales en modo oscuro */
 body.dark-mode a:not(.red-social):not(.red-social-footer):not(.footer-links a):not(.cta-button):not(.btn-follow) {
-    color: #C49C3C !important;
+    color: #C49C3C;
 }
 
 /* Asegurar que los iconos de Font Awesome mantengan su color */
@@ -5009,7 +5009,7 @@ body.dark-mode .fa-regular {
 /* Ajustes específicos para clases con colores oscuros */
 body.dark-mode .about-alineacion {
     color: #f0f0f0 !important;
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Oswald", sans-serif;
     font-weight: 400 !important;
 }
 

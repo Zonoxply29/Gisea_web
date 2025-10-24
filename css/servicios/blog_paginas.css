@@ -168,7 +168,43 @@
     margin: 2rem 0;
     font-family: var(--font-body-blog);
 }
+/* ===========================
+   BLOQUES DE CÓDIGO
+   =========================== */
+.code-block {
+    background: #f4f4f4; /* fondo claro estilo VSCode */
+    border-left: 5px solid var(--gisea-blue);
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+    font-family: "Courier New", Consolas, monospace;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
 
+.code-block code {
+    display: block;
+    white-space: pre;
+}
+
+/* Hover ligero para hacerlo más dinámico */
+.code-block:hover {
+    background: #eaeaea;
+    transition: background 0.3s;
+}
+
+/* Modo oscuro compatible */
+body.dark-mode .code-block {
+    background: #1E1E1E;
+    border-left-color: #C49C3C; /* Dorado en modo oscuro */
+    color: #f5f5f5;
+}
+
+body.dark-mode .code-block:hover {
+    background: #2a2a2a;
+}
 /* ===========================
    ARTÍCULOS RELACIONADOS
    =========================== */
@@ -186,7 +222,7 @@
 }
 
 .related-posts .featured-card-image img {
-    height: 160px;
+    height: 15rem;
     /* más pequeño para esta sección */
     object-fit: cover;
 }
@@ -283,51 +319,76 @@
 .comment-form button:hover {
     background-color: var(--gisea-gold);
 }
+
 /* ===========================
    Calificacion de usuario
    =========================== */
 .rating-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    /* evita saltos en desktop */
+    white-space: nowrap;
+    /* no partir el texto */
     font-family: "Oswald", sans-serif;
     font-size: 1rem;
 }
 
-.stars {
+.rating-container .stars {
     display: flex;
-    cursor: pointer;
     gap: 5px;
-}
-
-.star {
-    font-size: 1.3rem;
-    color: #C49C3C;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
 }
 
-.star:hover {
+.rating-container .star {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    transition: transform .2s ease-in-out, color .2s ease-in-out;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.rating-container .star:hover {
     transform: scale(1.2);
 }
 
-.star.disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-    transform: none !important;
+.rating-container .star.active {
+    color: var(--gisea-gold) !important;
+    /* dorado GISEA al estar activa */
 }
 
-.star.filled {
-    color: #C49C3C;
-}
-
+/* Texto con ancho reservado para que no “brinque” */
 .rating-count {
+    display: inline-block;
+    min-width: 220px;
+    /* ajusta según tu diseño */
+    white-space: nowrap;
     font-family: "Domine", serif;
     color: #555;
 }
 
+/* Contenedor persistente para mensajes (gracias/eliminado) */
+.rating-status {
+    display: inline-block;
+    min-width: 200px;
+    /* reserva espacio del mensaje */
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity .2s ease;
+    color: var(--gisea-gold);
+    margin-left: 10px;
+}
+
+.rating-status.visible {
+    opacity: 1;
+}
+
 /* ======================================================
-   📱 RESPONSIVE DESIGN
+   RESPONSIVE DESIGN
    ====================================================== */
 
-/* 📍 Tablets y pantallas medianas (<=1024px) */
+/*  Tablets y pantallas medianas (<=1024px) */
 @media (max-width: 1024px) {
     .blog-post {
         padding-top: 18vh;
@@ -363,7 +424,7 @@
     }
 }
 
-/* 📍 Tablets verticales (<=768px) */
+/* Tablets verticales (<=768px) */
 @media (max-width: 768px) {
     .blog-post {
         padding-top: 14vh;
@@ -436,7 +497,7 @@
 
 }
 
-/* 📍 Móviles grandes y medianos (<=576px) */
+/* Móviles grandes y medianos (<=576px) */
 @media (max-width: 576px) {
     .post-header {
         text-align: center;
@@ -498,7 +559,7 @@
     }
 
     .related-posts .featured-card-image img {
-        height: 130px;
+        height: 15rem;
     }
 
     .related-posts .article-title {
@@ -523,9 +584,27 @@
         font-size: 1rem;
         line-height: 1.6;
     }
+
+    .rating-container {
+        flex-wrap: wrap;
+        white-space: normal;
+    }
+
+    .rating-container .stars {
+        order: 1;
+        flex: 0 0 auto;
+    }
+
+    .rating-count,
+    .rating-status {
+        order: 2;
+        flex-basis: 100%;
+        min-width: 0;
+        margin-top: 6px;
+    }
 }
 
-/* 📍 Móviles pequeños (<=400px) */
+/* Móviles pequeños (<=400px) */
 @media (max-width: 400px) {
     .post-title {
         font-size: 1.6rem;
@@ -563,7 +642,7 @@
 }
 
 /* ===========================
-   🌙 MODO OSCURO - BLOG
+   MODO OSCURO - BLOG
 =========================== */
 
 /* Contenedores como el post */
@@ -630,7 +709,7 @@ body.dark-mode .featured-card:hover {
 }
 
 /* ===========================
-   🌙 MODO OSCURO - Inputs, botones y comentarios
+   MODO OSCURO - Inputs, botones y comentarios
 =========================== */
 
 /* Inputs, textarea */
@@ -688,14 +767,14 @@ body.dark-mode .featured-card .article-desc {
     color: #E6E6E6;
 }
 
-/* ✨ Hover en modo claro BTN DE ENVIAR COMENTARIO */
+/*  Hover en modo claro BTN DE ENVIAR COMENTARIO */
 .blog-post .comment-form .btn-primary:hover {
     background-color: transparent;
     color: #1C1F3D;
     border-color: #1C1F3D;
 }
 
-/* 🌙 Modo oscuro - botón */
+/* Modo oscuro - botón */
 body.dark-mode .blog-post .comment-form .btn-primary {
     background-color: #C49C3C;
     /* Dorado GISEA */
@@ -703,7 +782,7 @@ body.dark-mode .blog-post .comment-form .btn-primary {
     border-color: #C49C3C;
 }
 
-/* 🌙 Hover en modo oscuro */
+/*  Hover en modo oscuro */
 body.dark-mode .blog-post .comment-form .btn-primary:hover {
     background-color: transparent;
     color: #C49C3C;
@@ -713,10 +792,7 @@ body.dark-mode .blog-post .comment-form .btn-primary:hover {
 /* ===========================
    Calificacion de usuario
    =========================== */
-/* Modo oscuro */
-body.dark-mode .star {
-    color: #E0C676;
-}
+
 body.dark-mode .rating-count {
     color: #ccc;
 }
