@@ -143,6 +143,7 @@ const translations = {
         // About page específicos
         aboutHeaderTitle1: "Sobre Nosotros",
         aboutHeaderTitle2: "Conoce nuestro stack de Tecnologias",
+        techTitle:"Tecnologías que Usamos",
         techCardUsage: "Uso Mundial",
         techCardUsedIn: "Usado en:",
         techCardCss3Sass: "CSS3 Y SASS",
@@ -160,6 +161,7 @@ const translations = {
         // Equipo
         equipoTitle: "Nuestro Equipo",
         portfolioButton: "Portafolio",
+
         // Footer
         footerInicio: "Inicio",
         footerSobreNosotros: "Sobre Nosotros",
@@ -255,6 +257,7 @@ const translations = {
         // About page específicos
         aboutHeaderTitle1: "About Us",
         aboutHeaderTitle2: "Discover our Technology Stack",
+        techTitle:"Technologies We Use",
         techCardUsage: "Global Usage",
         techCardUsedIn: "Used in:",
         techCardCss3Sass: "CSS3 AND SASS",
@@ -272,6 +275,8 @@ const translations = {
         // Equipo
         equipoTitle: "Our Team",
         portfolioButton: "Portfolio",
+
+
         // Footer
         footerInicio: "Home",
         footerSobreNosotros: "About Us",
@@ -369,6 +374,7 @@ const translations = {
         aboutHeaderTitle2: "技術スタックを発見",
         techCardUsage: "世界的な使用",
         techCardUsedIn: "使用されている:",
+        techTitle:"使用している技術",
         techCardCss3Sass: "CSS3とSASS",
         techCardGitGithub: "GitとGithub",
         techCardLaravel: "LaravelとMySQLとPHP",
@@ -445,6 +451,405 @@ const translations = {
         }
     }
 };
+
+// Traducciones específicas para las cards del equipo (ESP/ENG/JPN)
+const teamTranslations = {
+    SPA: {
+        tabs: {
+            about: 'SOBRE MÍ',
+            experience: 'EXPERIENCIA',
+            contact: 'CONTACTO',
+            collaborations: 'COLABORACIONES'
+        },
+        members: {
+            lia: {
+                jobTitle: 'Directora de Desarrollo Visual',
+                aboutHtml: `Soy licenciada en ciencias de la comunicación, especializada en producción y postproducción audiovisual. Me he concentrado en realizar contenidos para medios digitales, desde animación basada en <strong>Adobe After Effects</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Adobe After Effects" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin: 0 4px;">
+                        <title>Adobe After Effects - Software de composición digital y efectos visuales</title>
+                        <path fill="#1F0740" d="M6.5 6.5h115v115H6.5z" />
+                        <path fill="#D490C5" d="M0 0v128h128V0H0zm121.5 121.5H6.5V6.5h115v115z" />
+                        <path fill="#D490C5" d="M103.5 59.2s-.6-14.6-16.5-14.6c-16 0-17.3 22-17.3 22v4.7S72.5 89.6 86 89.6s14.8-2.6 14.8-2.6v-8.1s-19.3 9.2-21.2-10h24v-9.7zm-9 2.4h-15s0-8.3 7.5-9.2c8.2 0 7.5 9.2 7.5 9.2zM50.5 29.9H38.4v3.8l-16 54.9h9.4l4.4-16.1H53l4.5 16.1h10.3L50.5 29.9zM38.2 63.1l6.4-24.5L51 63.1H38.2z" />
+                    </svg>
+                    y edición profesional en <strong>Adobe Premiere Pro</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Adobe Premiere Pro" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin: 0 4px;">
+                        <title>Adobe Premiere Pro - Software de edición de video profesional</title>
+                        <path fill="#2A0634" d="M0 0h128v128H0z"/>
+                        <path fill="#E976B9" d="M0 0v128h128V0H0zm123 123H5V5h118v118z"/>
+                        <path fill="#E976B9" d="M69 47.1c-.1-9.4-7.8-16.9-17.2-16.8H33.3v58.5h9.6V67.5h8.3C61 67.4 69 59.3 69 49.4v-2.3zm-9.6 3c0 5-4.1 9.1-9.1 9.1h-7.4V38.5h7.4c5 0 9.1 4.1 9.1 9.1v2.5zM77.1 88.8V48.9s10.2-5.1 20.2-3.8v8.3s-7 0-10.1 1.3v34.2H77.1z"/>
+                    </svg>, hasta postproducciones estéticamente atractivas y enérgicas para medios digitales.`,
+                experience: [
+                    {
+                        title: 'Medios de Comunicación Tradicionales',
+                        text: 'Colaborando en <b>MVS Radio y TV Azteca</b>, participando en proyectos audiovisuales y de comunicación.'
+                    },
+                    {
+                        title: 'Colaboraciones Digitales',
+                        text: 'Trabajando con creadores y canales digitales como <b>Exa FM, Desansiedad y SandVox Media</b>, realizando también labores de locución.'
+                    },
+                    {
+                        title: 'Creadora de Contenido',
+                        text: 'Creadora de contenido en redes sociales con más de medio millón de seguidores en <b>TikTok</b> y más de <b>40 mil</b> en Instagram.'
+                    }
+                ],
+                contactSubtitle: 'COLABORACIONES',
+                location: 'México y todo el Mundo',
+                cta: 'TRABAJEMOS JUNTOS'
+            },
+            rick: {
+                jobTitle: 'Software Engineer',
+                aboutText:
+                    'Ingeniero de software especializado en desarrollo full‑stack y arquitectura de sistemas. ' +
+                    'Experto en tecnologías modernas y metodologías ágiles.',
+                experience: [
+                    {
+                        title: 'Fundador de GISEA',
+                        text: 'Director de tecnologías de la información, desarrollando soluciones innovadoras y liderando el crecimiento de la empresa desde sus inicios.'
+                    },
+                    {
+                        title: 'Profesor en SUPERPROF.mx',
+                        text: 'Profesor #1 en <b>Programación</b> en la plataforma SUPERPROF.mx, brindando educación de alta calidad en tecnologías de desarrollo web y programación.'
+                    },
+                    {
+                        title: 'Desarrollo Web y Tecnología',
+                        text: '<b>Senior Frontend Developer</b> especialista en <b>desarrollo web moderno</b>, con experiencia en frameworks avanzados y arquitectura de sistemas escalables.'
+                    }
+                ],
+                contactSubtitle: 'CONTACTO',
+                location: 'Cuernavaca, Morelos',
+                cta: 'COLABOREMOS'
+            },
+            hugo: {
+                jobTitle: 'Frontend Developer',
+                aboutText:
+                    'Desarrollador frontend especializado en interfaces de usuario modernas y experiencias interactivas. ' +
+                    'Experto en optimización y diseño responsivo.',
+                experience: [
+                    {
+                        title: 'Frontend Developer Junior',
+                        text: 'Cuento con <b>un año de experiencia</b> como desarrollador web frontend con <b>tecnologías modernas</b>.'
+                    },
+                    {
+                        title: 'A punto de Egresar de Ingeniería en Software',
+                        text: 'Estudiante avanzado de <b>Ingeniería en Software</b>, próximo a egresar con sólidos conocimientos en desarrollo de aplicaciones, metodologías ágiles y arquitectura de sistemas.'
+                    },
+                    {
+                        title: 'Experiencia Internacional y Nivel de Inglés B1',
+                        text: 'Durante mi formación profesional, realicé una estadía en <b>British Columbia, Canadá</b>. ' +
+                              'Cuento con <b>nivel de inglés B1</b>, lo que me permite comunicarme efectivamente y colaborar con equipos internacionales.'
+                    }
+                ],
+                contactSubtitle: 'CONTACTO',
+                location: 'Estado de México, Ecatepec',
+                cta: 'CONECTEMOS'
+            }
+        }
+    },
+    ENG: {
+        tabs: {
+            about: 'ABOUT ME',
+            experience: 'EXPERIENCE',
+            contact: 'CONTACT',
+            collaborations: 'COLLABORATIONS'
+        },
+        members: {
+            lia: {
+                jobTitle: 'Audiovisual Director',
+                aboutHtml: `I hold a Bachelor’s degree in Communication Sciences, specializing in audiovisual production and post‑production. I focus on creating content for digital media, from motion‑graphics animation in <strong>Adobe After Effects</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Adobe After Effects" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin: 0 4px;">
+                        <title>Adobe After Effects - Digital compositing and visual effects software</title>
+                        <path fill="#1F0740" d="M6.5 6.5h115v115H6.5z" />
+                        <path fill="#D490C5" d="M0 0v128h128V0H0zm121.5 121.5H6.5V6.5h115v115z" />
+                        <path fill="#D490C5" d="M103.5 59.2s-.6-14.6-16.5-14.6c-16 0-17.3 22-17.3 22v4.7S72.5 89.6 86 89.6s14.8-2.6 14.8-2.6v-8.1s-19.3 9.2-21.2-10h24v-9.7zm-9 2.4h-15s0-8.3 7.5-9.2c8.2 0 7.5 9.2 7.5 9.2zM50.5 29.9H38.4v3.8l-16 54.9h9.4l4.4-16.1H53l4.5 16.1h10.3L50.5 29.9zM38.2 63.1l6.4-24.5L51 63.1H38.2z" />
+                    </svg>
+                    and professional editing in <strong>Adobe Premiere Pro</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Adobe Premiere Pro" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin: 0 4px;">
+                        <title>Adobe Premiere Pro - Professional video editing software</title>
+                        <path fill="#2A0634" d="M0 0h128v128H0z"/>
+                        <path fill="#E976B9" d="M0 0v128h128V0H0zm123 123H5V5h118v118z"/>
+                        <path fill="#E976B9" d="M69 47.1c-.1-9.4-7.8-16.9-17.2-16.8H33.3v58.5h9.6V67.5h8.3C61 67.4 69 59.3 69 49.4v-2.3zm-9.6 3c0 5-4.1 9.1-9.1 9.1h-7.4V38.5h7.4c5 0 9.1 4.1 9.1 9.1v2.5zM77.1 88.8V48.9s10.2-5.1 20.2-3.8v8.3s-7 0-10.1 1.3v34.2H77.1z"/>
+                    </svg>, delivering aesthetically appealing and energetic post‑productions for digital platforms.`,
+                experience: [
+                    {
+                        title: 'Traditional Media',
+                        text: 'Collaborating with <b>MVS Radio and TV Azteca</b>, taking part in audiovisual and communication projects.'
+                    },
+                    {
+                        title: 'Digital Collaborations',
+                        text: 'Working with creators and digital channels such as <b>Exa FM, Desansiedad and SandVox Media</b>, also doing voice‑over work.'
+                    },
+                    {
+                        title: 'Content Creator',
+                        text: 'Social media creator with over half a million followers on <b>TikTok</b> and more than <b>40k</b> on Instagram.'
+                    }
+                ],
+                contactSubtitle: 'COLLABORATIONS',
+                location: 'Mexico and worldwide',
+                cta: 'LET’S WORK TOGETHER'
+            },
+            rick: {
+                jobTitle: 'Software Engineer',
+                aboutText:
+                    'Software engineer specialized in full‑stack development and systems architecture. ' +
+                    'Expert in modern technologies and agile methodologies.',
+                experience: [
+                    {
+                        title: 'Founder of GISEA',
+                        text: 'Head of Information Technologies, developing innovative solutions and leading the company’s growth since its inception.'
+                    },
+                    {
+                        title: 'Teacher at SUPERPROF.mx',
+                        text: '#1 <b>Programming</b> teacher on the SUPERPROF.mx platform, providing high‑quality education in web development and programming technologies.'
+                    },
+                    {
+                        title: 'Web Development & Technology',
+                        text: '<b>Senior Frontend Developer</b> specializing in <b>modern web development</b>, with experience in advanced frameworks and scalable systems architecture.'
+                    }
+                ],
+                contactSubtitle: 'CONTACT',
+                location: 'Cuernavaca, Morelos',
+                cta: 'LET’S COLLABORATE'
+            },
+            hugo: {
+                jobTitle: 'Frontend Developer',
+                aboutText:
+                    'Frontend developer specialized in modern user interfaces and interactive experiences. ' +
+                    'Expert in optimization and responsive design.',
+                experience: [
+                    {
+                        title: 'Junior Frontend Developer',
+                        text: 'I have <b>one year of experience</b> as a frontend web developer using <b>modern technologies</b>.'
+                    },
+                    {
+                        title: 'About to Graduate in Software Engineering',
+                        text: 'Advanced student in <b>Software Engineering</b>, close to graduating with solid knowledge in application development, agile methodologies, and systems architecture.'
+                    },
+                    {
+                        title: 'International Experience & English Level B1',
+                        text: 'During my studies, I completed a stay in <b>British Columbia, Canada</b>. ' +
+                              'I have <b>B1 English level</b>, which allows effective communication and collaboration with international teams.'
+                    }
+                ],
+                contactSubtitle: 'CONTACT',
+                location: 'State of Mexico, Ecatepec',
+                cta: 'LET’S CONNECT'
+            }
+        }
+    },
+    JPN: {
+        tabs: {
+            about: '自己紹介',
+            experience: '経験',
+            contact: '連絡先',
+            collaborations: 'コラボレーション'
+        },
+        members: {
+            lia: {
+                jobTitle: '映像制作ディレクター',
+                aboutHtml: `私はコミュニケーション学の学士で、映像制作・ポストプロダクションを専門としています。<strong>Adobe After Effects</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Adobe After Effects" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin: 0 4px;">
+                        <title>Adobe After Effects - デジタル合成と映像効果ソフトウェア</title>
+                        <path fill="#1F0740" d="M6.5 6.5h115v115H6.5z" />
+                        <path fill="#D490C5" d="M0 0v128h128V0H0zm121.5 121.5H6.5V6.5h115v115z" />
+                        <path fill="#D490C5" d="M103.5 59.2s-.6-14.6-16.5-14.6c-16 0-17.3 22-17.3 22v4.7S72.5 89.6 86 89.6s14.8-2.6 14.8-2.6v-8.1s-19.3 9.2-21.2-10h24v-9.7zm-9 2.4h-15s0-8.3 7.5-9.2c8.2 0 7.5 9.2 7.5 9.2zM50.5 29.9H38.4v3.8l-16 54.9h9.4l4.4-16.1H53l4.5 16.1h10.3L50.5 29.9zM38.2 63.1l6.4-24.5L51 63.1H38.2z" />
+                    </svg>
+                    によるモーショングラフィックスのアニメーションや、<strong>Adobe Premiere Pro</strong>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Adobe Premiere Pro" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin: 0 4px;">
+                        <title>Adobe Premiere Pro - プロ向け動画編集ソフト</title>
+                        <path fill="#2A0634" d="M0 0h128v128H0z"/>
+                        <path fill="#E976B9" d="M0 0v128h128V0H0zm123 123H5V5h118v118z"/>
+                        <path fill="#E976B9" d="M69 47.1c-.1-9.4-7.8-16.9-17.2-16.8H33.3v58.5h9.6V67.5h8.3C61 67.4 69 59.3 69 49.4v-2.3zm-9.6 3c0 5-4.1 9.1-9.1 9.1h-7.4V38.5h7.4c5 0 9.1 4.1 9.1 9.1v2.5zM77.1 88.8V48.9s10.2-5.1 20.2-3.8v8.3s-7 0-10.1 1.3v34.2H77.1z"/>
+                    </svg>
+                    によるプロフェッショナルな編集など、デジタルプラットフォーム向けに美しくエネルギッシュなコンテンツを制作しています。`,
+                experience: [
+                    {
+                        title: '伝統的メディア',
+                        text: '<b>MVS Radio</b> と <b>TV Azteca</b> にて、映像およびコミュニケーション関連のプロジェクトに参画。'
+                    },
+                    {
+                        title: 'デジタルでのコラボレーション',
+                        text: '<b>Exa FM、Desansiedad、SandVox Media</b> などのデジタルチャンネルやクリエイターと協業し、' +
+                              'ナレーション（ボイスオーバー）も担当。'
+                    },
+                    {
+                        title: 'コンテンツクリエイター',
+                        text: 'SNS で <b>TikTok</b> に50万人以上、Instagramに <b>4万人以上</b> のフォロワーを持つコンテンツ制作者。'
+                    }
+                ],
+                contactSubtitle: 'コラボレーション',
+                location: 'メキシコおよび世界各地',
+                cta: '一緒に働きましょう'
+            },
+            rick: {
+                jobTitle: 'ソフトウェアエンジニア',
+                aboutText:
+                    'フルスタック開発とシステムアーキテクチャに特化したソフトウェアエンジニア。' +
+                    '最新技術とアジャイル手法に精通。',
+                experience: [
+                    {
+                        title: 'GISEA の創業者',
+                        text: '情報技術の責任者として、革新的なソリューションを開発し、創業時から会社の成長を牽引。'
+                    },
+                    {
+                        title: 'SUPERPROF.mx の講師',
+                        text: 'SUPERPROF.mx プラットフォームで <b>プログラミング</b> 分野のトップ講師として、' +
+                              'Web 開発およびプログラミング技術の高品質な教育を提供。'
+                    },
+                    {
+                        title: 'Web 開発とテクノロジー',
+                        text: '<b>シニア・フロントエンド・デベロッパー</b> として <b>モダンな Web 開発</b> を専門に、' +
+                              '高度なフレームワークとスケーラブルなシステム設計に経験を有する。'
+                    }
+                ],
+                contactSubtitle: '連絡先',
+                location: 'クエルナバカ（モレロス州）',
+                cta: 'コラボしましょう'
+            },
+            hugo: {
+                jobTitle: 'フロントエンド・デベロッパー',
+                aboutText:
+                    'モダンなユーザーインターフェースとインタラクティブな体験を専門とするフロントエンド開発者。' +
+                    '最適化およびレスポンシブデザインに精通。',
+                experience: [
+                    {
+                        title: 'ジュニア・フロントエンド・デベロッパー',
+                        text: '<b>1年の実務経験</b> があり、<b>最新技術</b> を用いたフロントエンド開発に従事。'
+                    },
+                    {
+                        title: 'ソフトウェア工学の卒業見込み',
+                        text: '<b>ソフトウェア工学</b> を専攻する上級生で、アプリ開発、アジャイル手法、システムアーキテクチャに関する確かな知識を有する。'
+                    },
+                    {
+                        title: '海外経験 ＆ 英語レベル B1',
+                        text: '<b>カナダ・ブリティッシュコロンビア州</b> での滞在経験あり。<b>B1 レベルの英語力</b> を有し、国際的なチームとの円滑なコミュニケーションと協業が可能。'
+                    }
+                ],
+                contactSubtitle: '連絡先',
+                location: 'メキシコ州・エカテペック',
+                cta: 'つながりましょう'
+            }
+        }
+    }
+};
+
+// Aplica las traducciones a las cards del equipo
+function updateTeamCards(lang) {
+    const t = teamTranslations[lang];
+    if (!t) return;
+
+    // Utilidades locales
+    const setText = (selector, text) => {
+        const el = document.querySelector(selector);
+        if (el && typeof text === 'string') el.textContent = text;
+    };
+    const setHTML = (selector, html) => {
+        const el = document.querySelector(selector);
+        if (el && typeof html === 'string') el.innerHTML = html;
+    };
+
+    // Obtener la card del miembro sin depender del data-state actual
+    const getMemberCard = (memberId) => {
+        const aboutEl = document.querySelector(`#about-${memberId}`);
+        if (aboutEl) return aboutEl.closest('.profile-card');
+        const expEl = document.querySelector(`#experience-${memberId}`);
+        if (expEl) return expEl.closest('.profile-card');
+        const contactEl = document.querySelector(`#contact-${memberId}`);
+        if (contactEl) return contactEl.closest('.profile-card');
+        return null;
+    };
+
+    // Tabs (botones inferiores) por card
+    const applyTabsLabels = (memberId, contactLabelOverride) => {
+        const card = getMemberCard(memberId);
+        if (!card) return;
+        const buttons = card.querySelectorAll('.profile-card-buttons button');
+        buttons.forEach(btn => {
+            const section = btn.getAttribute('data-section');
+            if (section === `#about-${memberId}`) btn.textContent = t.tabs.about;
+            else if (section === `#experience-${memberId}`) btn.textContent = t.tabs.experience;
+            else if (section === `#contact-${memberId}`) btn.textContent = contactLabelOverride || t.tabs.contact;
+        });
+    };
+
+    // Subtítulos de sección por card
+    const applySectionSubtitles = (memberId, customContactSubtitle) => {
+        setText(`#about-${memberId} .profile-card-subtitle`, t.tabs.about);
+        setText(`#experience-${memberId} .profile-card-subtitle`, t.tabs.experience);
+        setText(`#contact-${memberId} .profile-card-subtitle`, customContactSubtitle || t.tabs.contact);
+    };
+
+    // Localización (texto junto al ícono) en sección de contacto
+    const setContactLocation = (memberId, location) => {
+        const locDiv = document.querySelector(`#contact-${memberId} .profile-card-contact`);
+        if (locDiv) {
+            const icon = locDiv.querySelector('svg');
+            const iconHTML = icon ? icon.outerHTML : '';
+            locDiv.innerHTML = `${iconHTML} ${location}`;
+        }
+    };
+
+    // Botón CTA de contacto
+    const setContactCTA = (memberId, cta) => {
+        const card = getMemberCard(memberId);
+        if (!card) return;
+        const btn = card.querySelector('.profile-contact-me');
+        if (btn && typeof cta === 'string') btn.textContent = cta;
+    };
+
+    // Experiencia: títulos y párrafos sin tocar los logos/iconos
+    const setExperienceItems = (memberId, items) => {
+        const expItems = document.querySelectorAll(`#experience-${memberId} .experience-item`);
+        items.forEach((it, idx) => {
+            const container = expItems[idx];
+            if (!container) return;
+            const h4 = container.querySelector('h4');
+            const p = container.querySelector('p');
+            if (h4) h4.textContent = it.title;
+            if (p) p.innerHTML = it.text;
+        });
+    };
+
+    // Job title (para miembros sin data-translate en el H2)
+    const setJobTitle = (memberId, title) => {
+        const card = getMemberCard(memberId);
+        if (!card) return;
+        const h2 = card.querySelector('.profile-card-jobtitle');
+        if (h2 && typeof title === 'string') h2.textContent = title;
+    };
+
+    // LIA
+    if (t.members?.lia) {
+        applyTabsLabels('lia', t.members.lia.contactSubtitle);
+        applySectionSubtitles('lia', t.members.lia.contactSubtitle);
+        setHTML('#about-lia .profile-card-desc', t.members.lia.aboutHtml);
+        setExperienceItems('lia', t.members.lia.experience);
+        setContactLocation('lia', t.members.lia.location);
+        setContactCTA('lia', t.members.lia.cta);
+        setJobTitle('lia', t.members.lia.jobTitle);
+    }
+
+    // RICK
+    if (t.members?.rick) {
+        applyTabsLabels('rick');
+        applySectionSubtitles('rick', t.members.rick.contactSubtitle);
+        setText('#about-rick .profile-card-desc', t.members.rick.aboutText);
+        setExperienceItems('rick', t.members.rick.experience);
+        setContactLocation('rick', t.members.rick.location);
+        setContactCTA('rick', t.members.rick.cta);
+        setJobTitle('rick', t.members.rick.jobTitle);
+    }
+
+    // HUGO
+    if (t.members?.hugo) {
+        applyTabsLabels('hugo');
+        applySectionSubtitles('hugo', t.members.hugo.contactSubtitle);
+        setText('#about-hugo .profile-card-desc', t.members.hugo.aboutText);
+        setExperienceItems('hugo', t.members.hugo.experience);
+        setContactLocation('hugo', t.members.hugo.location);
+        setContactCTA('hugo', t.members.hugo.cta);
+        setJobTitle('hugo', t.members.hugo.jobTitle);
+    }
+}
 
 // Función para actualizar el estado de los elementos del menú de idiomas
 function updateLanguageMenuState(selectedLang) {
@@ -547,6 +952,11 @@ function changeLanguage(lang) {
 
     // Actualizar el título de la página dinámicamente
     updatePageTitle(lang);
+
+    // Aplicar traducciones específicas de las cards del equipo
+    if (typeof updateTeamCards === 'function') {
+        updateTeamCards(lang);
+    }
 
     // Obtener idioma anterior para tracking
     const previousLang = localStorage.getItem('selectedLanguage') || 'SPA';
