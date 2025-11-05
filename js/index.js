@@ -121,7 +121,7 @@ const translations = {
         dropdownCapacitacion: "Capacitacion IT",
         dropdownInfluencers: "Influencers",
         dropdownAudiovisual: "Audiovisuales",
-        
+
         // Secciones principales
         titleSobreNosotros: "Sobre Nosotros",
         aboutDescription: 'Somos una agencia digital internacional con presencia en <strong>México, Estados Unidos y España</strong>. <br> Nos especializamos en potenciar tu negocio a través de soluciones de <strong>desarrollo de software, desarrollo web</strong> y la producción de <strong>medios audiovisuales</strong>.<br> Además, contamos con expertos en <strong>Recursos Humanos</strong> para la <strong>capacitación de programadores</strong> y la gestión de <strong>talento de influencers</strong>, garantizando el éxito de tu estrategia digital.',
@@ -143,12 +143,21 @@ const translations = {
         // About page específicos
         aboutHeaderTitle1: "Sobre Nosotros",
         aboutHeaderTitle2: "Conoce nuestro stack de Tecnologias",
-        techTitle:"Tecnologías que Usamos",
+        techTitle: "Tecnologías que Usamos",
         techCardUsage: "Uso Mundial",
         techCardUsedIn: "Usado en:",
         techCardCss3Sass: "CSS3 Y SASS",
         techCardGitGithub: "Git y Github",
         techCardLaravel: "Laravel con MySQL y PHP",
+
+        // Tooltips de tecnologías
+        tooltipHtml: "El 100% de la Web lo domina",
+        tooltipJs: "Uso indispensable a Nivel Mundial",
+        tooltipCss: "Estiliza y hace responsive cualquier diseño profesional.",
+        tooltipBootstrap: "Acelera desarrollo con componentes prediseñados.",
+        tooltipGit: "Control de versiones indispensable para proyectos colaborativos.",
+        tooltipLaravel: "Stack robusto para aplicaciones web escalables.",
+
         aboutValoresTitle: "Nuestros Valores Fundamentales",
         valorHonestidad: "Honestidad",
         valorRespeto: "Respeto",
@@ -257,12 +266,20 @@ const translations = {
         // About page específicos
         aboutHeaderTitle1: "About Us",
         aboutHeaderTitle2: "Discover our Technology Stack",
-        techTitle:"Technologies We Use",
+        techTitle: "Technologies We Use",
         techCardUsage: "Global Usage",
         techCardUsedIn: "Used in:",
         techCardCss3Sass: "CSS3 AND SASS",
         techCardGitGithub: "Git and Github",
         techCardLaravel: "Laravel with MySQL and PHP",
+
+        tooltipHtml: "100% of the Web dominates it",
+        tooltipJs: "Indispensable use at Global Level",
+        tooltipCss: "Stylizes and makes any professional design responsive.",
+        tooltipBootstrap: "Accelerates development with pre-designed components.",
+        tooltipGit: "Version control essential for collaborative projects.",
+        tooltipLaravel: "Robust stack for scalable web applications.",
+
         aboutValoresTitle: "Our Core Values",
         valorHonestidad: "Honesty",
         valorRespeto: "Respect",
@@ -374,10 +391,18 @@ const translations = {
         aboutHeaderTitle2: "技術スタックを発見",
         techCardUsage: "世界的な使用",
         techCardUsedIn: "使用されている:",
-        techTitle:"使用している技術",
+        techTitle: "使用している技術",
         techCardCss3Sass: "CSS3とSASS",
         techCardGitGithub: "GitとGithub",
         techCardLaravel: "LaravelとMySQLとPHP",
+
+        tooltipHtml: "Web全体の100%がそれを支配している",
+        tooltipJs: "世界レベルで不可欠な使用",
+        tooltipCss: "プロフェッショナルなデザインをスタイリングしレスポンシブにします。",
+        tooltipBootstrap: "事前に設計されたコンポーネントで開発を加速。",
+        tooltipGit: "共同プロジェクトに不可欠なバージョン管理。",
+        tooltipLaravel: "スケーラブルなWebアプリケーション用の堅牢なスタック。",
+
         aboutValoresTitle: "私たちの核となる価値観",
         valorHonestidad: "誠実さ",
         valorRespeto: "尊敬",
@@ -536,7 +561,7 @@ const teamTranslations = {
                     {
                         title: 'Experiencia Internacional y Nivel de Inglés B1',
                         text: 'Durante mi formación profesional, realicé una estadía en <b>British Columbia, Canadá</b>. ' +
-                              'Cuento con <b>nivel de inglés B1</b>, lo que me permite comunicarme efectivamente y colaborar con equipos internacionales.'
+                            'Cuento con <b>nivel de inglés B1</b>, lo que me permite comunicarme efectivamente y colaborar con equipos internacionales.'
                     }
                 ],
                 contactSubtitle: 'CONTACTO',
@@ -627,7 +652,7 @@ const teamTranslations = {
                     {
                         title: 'International Experience & English Level B1',
                         text: 'During my studies, I completed a stay in <b>British Columbia, Canada</b>. ' +
-                              'I have <b>B1 English level</b>, which allows effective communication and collaboration with international teams.'
+                            'I have <b>B1 English level</b>, which allows effective communication and collaboration with international teams.'
                     }
                 ],
                 contactSubtitle: 'CONTACT',
@@ -669,7 +694,7 @@ const teamTranslations = {
                     {
                         title: 'デジタルでのコラボレーション',
                         text: '<b>Exa FM、Desansiedad、SandVox Media</b> などのデジタルチャンネルやクリエイターと協業し、' +
-                              'ナレーション（ボイスオーバー）も担当。'
+                            'ナレーション（ボイスオーバー）も担当。'
                     },
                     {
                         title: 'コンテンツクリエイター',
@@ -693,12 +718,12 @@ const teamTranslations = {
                     {
                         title: 'SUPERPROF.mx の講師',
                         text: 'SUPERPROF.mx プラットフォームで <b>プログラミング</b> 分野のトップ講師として、' +
-                              'Web 開発およびプログラミング技術の高品質な教育を提供。'
+                            'Web 開発およびプログラミング技術の高品質な教育を提供。'
                     },
                     {
                         title: 'Web 開発とテクノロジー',
                         text: '<b>シニア・フロントエンド・デベロッパー</b> として <b>モダンな Web 開発</b> を専門に、' +
-                              '高度なフレームワークとスケーラブルなシステム設計に経験を有する。'
+                            '高度なフレームワークとスケーラブルなシステム設計に経験を有する。'
                     }
                 ],
                 contactSubtitle: '連絡先',
@@ -855,7 +880,7 @@ function updateTeamCards(lang) {
 function updateLanguageMenuState(selectedLang) {
     document.querySelectorAll('#languageDropdown a').forEach(function (element) {
         const elementLang = element.getAttribute('data-lang');
-        
+
         if (elementLang === selectedLang) {
             // Deshabilitar el idioma seleccionado
             element.style.pointerEvents = 'none';
@@ -875,12 +900,12 @@ function updateLanguageMenuState(selectedLang) {
 // Función para actualizar el título de la página según el idioma
 function updatePageTitle(lang) {
     const translation = translations[lang];
-    
+
     // Determinar qué página es actualmente basándose en la URL
     const currentPath = window.location.pathname;
     const fileName = currentPath.split('/').pop() || 'index.html';
     let pageKey = '';
-    
+
     // Mapear los nombres de archivo a las claves de título
     if (fileName === '' || fileName === 'index.html' || currentPath === '/' || currentPath.endsWith('/')) {
         pageKey = 'index';
@@ -903,16 +928,16 @@ function updatePageTitle(lang) {
     } else if (fileName === 'produccion_digital.html') {
         pageKey = 'produccion_digital';
     }
-    
+
     // Actualizar el título si existe una traducción
     if (pageKey && translation.pageTitles && translation.pageTitles[pageKey]) {
         document.title = translation.pageTitles[pageKey];
         console.log('✅ Título actualizado:', fileName, '→', translation.pageTitles[pageKey], '(', lang, ')'); // Debug temporal
-        
+
         // También actualizar el meta tag lang del HTML
-        document.documentElement.lang = lang === 'SPA' ? 'es' : 
-                                      lang === 'ENG' ? 'en' : 
-                                      lang === 'JPN' ? 'ja' : 'es';
+        document.documentElement.lang = lang === 'SPA' ? 'es' :
+            lang === 'ENG' ? 'en' :
+                lang === 'JPN' ? 'ja' : 'es';
     } else {
         console.log('❌ No se encontró título para:', fileName, 'pageKey:', pageKey, 'lang:', lang); // Debug temporal
     }
@@ -1096,31 +1121,31 @@ document.getElementById('navbar-toggler').addEventListener('click', function () 
 
 // Función para cargar el idioma guardado al cargar la página
 // Función global para generar rutas dinámicas según la profundidad de carpetas
-window.getRelativePath = function(resourcePath) {
+window.getRelativePath = function (resourcePath) {
     const currentPath = window.location.pathname;
-    
+
     // Normalizar la ruta removiendo barras duplicadas y espacios
     const normalizedPath = currentPath.replace(/\/+/g, '/').trim();
-    
+
     // Dividir la ruta en partes, excluyendo elementos vacíos y archivos HTML
     const pathParts = normalizedPath.split('/').filter(part => {
-        return part !== '' && 
-               part !== '.' && 
-               part !== '..' && 
-               !part.endsWith('.html') && 
-               !part.endsWith('.htm');
+        return part !== '' &&
+            part !== '.' &&
+            part !== '..' &&
+            !part.endsWith('.html') &&
+            !part.endsWith('.htm');
     });
-    
+
     // Detectar si estamos en GitHub Pages o local
     const isGitHubPages = normalizedPath.includes('github.io') || window.location.hostname.includes('github.io');
-    
+
     // Para GitHub Pages, ajustar el conteo de niveles
     let actualLevels = pathParts.length;
     if (isGitHubPages) {
         // En GitHub Pages, el primer nivel suele ser el nombre del repositorio
         actualLevels = Math.max(0, pathParts.length - 1);
     }
-    
+
     // Si ya tiene '../' al inicio, verificar si es correcto para el nivel actual
     if (resourcePath.startsWith('../')) {
         // Si estamos en la raíz (nivel 0), remover el '../'
@@ -1130,24 +1155,24 @@ window.getRelativePath = function(resourcePath) {
         // Si no, mantener la ruta tal como está
         return resourcePath;
     }
-    
+
     // Casos especiales para rutas en la raíz
     if (normalizedPath === '/' || normalizedPath === '' || actualLevels === 0) {
         return resourcePath; // Estamos en la raíz, usar ruta directa
     }
-    
+
     // Generar '../' por cada nivel de carpeta
     const pathPrefix = '../'.repeat(actualLevels);
-    
+
     // Remover barra inicial del resourcePath si existe para evitar rutas duplicadas
     const cleanResourcePath = resourcePath.startsWith('/') ? resourcePath.slice(1) : resourcePath;
-    
+
     return pathPrefix + cleanResourcePath;
 };
 
 function loadSavedLanguage() {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'SPA';
-    
+
     // Usar la función global para generar rutas dinámicas
     const flagMap = {
         'SPA': window.getRelativePath('icons/bandera_mex.png'),
@@ -1312,11 +1337,11 @@ document.addEventListener('click', function (event) {
 /// Tooltip de Service Desarollo Web
 
 // Función para inicializar tooltips de banderas
-window.initializeTooltips = function() {
+window.initializeTooltips = function () {
     // Títulos de las banderas aqui se hace el cambio de los nombres en los tooltips
     const flagTitles = {
         'bandera_usa.png': 'Little Rock, Arkansas,<br> LA California',
-        'bandera_venezuela.png': 'Maracay', 
+        'bandera_venezuela.png': 'Maracay',
         'bandera_mex.png': 'MTY, CDMX, GDL<br>EDOMEX, Cancun, TJ',
         'bandera_jpn.png': 'Shibuya',
         'bandera_esp.png': 'Mayorca,Malaga <br> Islas Canarias',
@@ -1326,15 +1351,15 @@ window.initializeTooltips = function() {
         'bandera_italia.png': 'Milan',
         'bandera_canada.png': 'Vancouver'
     };
-    
+
     // Buscar banderas en la sección de clientes
     const clientSection = document.querySelector('.clientes-hover');
     if (clientSection) {
         const flags = clientSection.querySelectorAll('.flag');
-        
+
         flags.forEach((flag) => {
             const src = flag.getAttribute('src') || flag.src;
-            
+
             // Encontrar el título correcto basado en el src
             let correctTitle = null;
             for (const [fileName, title] of Object.entries(flagTitles)) {
@@ -1343,26 +1368,26 @@ window.initializeTooltips = function() {
                     break;
                 }
             }
-            
+
             if (correctTitle) {
                 // Limpiar clases undefined
                 const classList = flag.className.replace(/undefined/g, '').replace(/\s+/g, ' ').trim();
                 flag.className = classList;
-                
+
                 // Configurar atributos del tooltip
                 flag.setAttribute('data-bs-toggle', 'tooltip');
                 flag.setAttribute('title', correctTitle);
-                
+
                 // Crear tooltip
                 try {
                     const existingTooltip = bootstrap.Tooltip.getInstance(flag);
                     if (existingTooltip) {
                         existingTooltip.dispose();
                     }
-                    
+
                     // Detectar dispositivo móvil
                     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-                    
+
                     const tooltip = new bootstrap.Tooltip(flag, {
                         trigger: isMobile ? 'manual' : 'hover focus',
                         placement: 'top',
@@ -1373,13 +1398,13 @@ window.initializeTooltips = function() {
                         title: correctTitle,
                         template: '<div class="tooltip flag-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
                     });
-                    
+
                     if (isMobile) {
                         // Eventos para móvil
                         flag.addEventListener('click', (e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            
+
                             // Cerrar otros tooltips
                             document.querySelectorAll('.flag').forEach(otherFlag => {
                                 if (otherFlag !== flag) {
@@ -1389,7 +1414,7 @@ window.initializeTooltips = function() {
                                     }
                                 }
                             });
-                            
+
                             // Toggle tooltip actual
                             const tooltipElement = document.querySelector('.tooltip.flag-tooltip');
                             if (tooltipElement && tooltipElement.classList.contains('show')) {
@@ -1398,27 +1423,27 @@ window.initializeTooltips = function() {
                                 tooltip.show();
                             }
                         });
-                        
+
                         // Cerrar al hacer click fuera
                         document.addEventListener('click', (e) => {
                             if (!flag.contains(e.target) && !e.target.closest('.tooltip.flag-tooltip')) {
                                 tooltip.hide();
                             }
                         });
-                        
+
                         // Cerrar al hacer scroll
                         window.addEventListener('scroll', () => {
                             tooltip.hide();
                         });
                     }
-                    
+
                 } catch (error) {
                     console.error('Error creando tooltip:', error);
                 }
             }
         });
     }
-    
+
     // Inicializar otros tooltips (portafolio, etc.)
     const otherTooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]:not(.flag)');
     otherTooltips.forEach(element => {
@@ -1549,11 +1574,11 @@ document.addEventListener("DOMContentLoaded", function () {
     animateOnScroll(".country-hover", ".flag");
     animateOnScroll(".idioma-hover", ".idioma-flag");
     animateOnScroll(".clientes-hover", ".flag");
-    
+
     // Inicializar el estado del menú de idiomas y aplicar idioma guardado
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'SPA';
     updateLanguageMenuState(savedLanguage);
-    
+
     // Aplicar el idioma guardado incluyendo el título
     if (savedLanguage !== 'SPA') {
         changeLanguage(savedLanguage);
@@ -1564,16 +1589,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // === FUNCIÓN SCROLL TO TOP ===
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const scrollToTopButton = document.getElementById('scrollToTop');
     const footer = document.querySelector('.footer');
-    
+
     // Mostrar/ocultar el botón basado en el scroll y detectar footer
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const scrollPosition = window.pageYOffset;
         const windowHeight = window.innerHeight;
         const footerRect = footer.getBoundingClientRect();
-        
+
         // 1. Mostrar u ocultar el botón
         if (scrollPosition > 200) {
             scrollToTopButton.classList.add('show');
@@ -1582,10 +1607,10 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollToTopButton.classList.remove('in-footer');
             return;
         }
-        
+
         // 2. Detectar si el footer está visible en pantalla
         const footerVisible = footerRect.top < windowHeight;
-        
+
         if (footerVisible) {
             // Footer visible: mover botón al footer
             scrollToTopButton.classList.add('in-footer');
@@ -1600,17 +1625,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
+
     // Función para hacer scroll suave hacia arriba
-    scrollToTopButton.addEventListener('click', function(e) {
+    scrollToTopButton.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         // Scroll suave hacia arriba
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-        
+
         // Tracking opcional de Google Analytics
         if (typeof gtag !== 'undefined') {
             gtag('event', 'scroll_to_top', {
@@ -1623,27 +1648,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // === FUNCIONALIDAD BOTONES RECURSOS HUMANOS ===
 // JavaScript para efectos de botones y scroll suave en la página de recursos humanos
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Verificar si estamos en la página de recursos humanos
     const isRecursosHumanosPage = window.location.pathname.includes('recursos_humanos.html');
-    
+
     if (isRecursosHumanosPage) {
         // Seleccionar todos los botones de puestos
         const buttons = document.querySelectorAll('.btn-puesto');
-        
+
         buttons.forEach(button => {
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function (e) {
                 // Remover clase 'clicked' de todos los botones
                 buttons.forEach(btn => btn.classList.remove('clicked'));
-                
+
                 // Agregar clase 'clicked' al botón actual
                 this.classList.add('clicked');
-                
+
                 // Si es un enlace ancla (como #frontend-section)
                 const href = this.getAttribute('href');
                 if (href && href.startsWith('#')) {
                     e.preventDefault(); // Prevenir el comportamiento por defecto
-                    
+
                     // Esperar un momento para que se vea el efecto del clic
                     setTimeout(() => {
                         const targetSection = document.querySelector(href);
@@ -1653,7 +1678,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 behavior: 'smooth',
                                 block: 'start'
                             });
-                            
+
                             // Mantener el estado activo por más tiempo
                             setTimeout(() => {
                                 this.classList.remove('clicked');
@@ -1667,13 +1692,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 1500); // Mantener el estado por 1.5 segundos
                 }
             });
-            
+
             // Soporte táctil mejorado para móviles
-            button.addEventListener('touchstart', function() {
+            button.addEventListener('touchstart', function () {
                 this.classList.add('clicked');
             });
-            
-            button.addEventListener('touchend', function() {
+
+            button.addEventListener('touchend', function () {
                 // Mantener el estado un poco más en móviles
                 setTimeout(() => {
                     if (!this.getAttribute('href') || !this.getAttribute('href').startsWith('#')) {
@@ -1686,47 +1711,47 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ==================== PROFILE CARDS FUNCTIONALITY ====================
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Inicializar profile cards cuando el DOM esté listo
     initProfileCards();
 });
 
 function initProfileCards() {
     const profileCards = document.querySelectorAll('.profile-card');
-    
+
     profileCards.forEach(card => {
         const buttons = card.querySelectorAll('.profile-card-buttons button');
         const sections = card.querySelectorAll('.profile-card-section');
-        
+
         const handleButtonClick = (e) => {
             const targetSection = e.target.getAttribute('data-section');
             const section = card.querySelector(targetSection);
-            
+
             // Cambiar estado de la card
             if (targetSection.includes('about')) {
                 card.classList.remove('is-active');
             } else {
                 card.classList.add('is-active');
             }
-            
+
             card.setAttribute('data-state', targetSection);
-            
+
             // Remover clases activas
             sections.forEach(s => s.classList.remove('is-active'));
             buttons.forEach(b => b.classList.remove('is-active'));
-            
+
             // Agregar clases activas
             e.target.classList.add('is-active');
             if (section) {
                 section.classList.add('is-active');
             }
-            
+
             // Tracking para analytics
             if (typeof trackForeignLanguageInteraction === 'function') {
                 trackForeignLanguageInteraction('profile_card_tab_click', 'team_member');
             }
         };
-        
+
         // Agregar event listeners a los botones
         buttons.forEach(btn => {
             btn.addEventListener('click', handleButtonClick);
