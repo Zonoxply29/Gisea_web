@@ -2474,7 +2474,7 @@ body.lang-jpn .about-header-text h1 {
     display: none;
     /* Oculta el tooltip por defecto */
     position: absolute;
-    top: -73px;
+    top: -92px;
     left: 156px;
     background: linear-gradient(135deg, rgba(232, 75, 147, 0.8) 0%, rgba(0, 102, 255, 0.8) 100%);
     /* Gradiente con los colores y más transparentes */
@@ -2489,7 +2489,7 @@ body.lang-jpn .about-header-text h1 {
     content: "";
     position: absolute;
     bottom: -8px;
-    left: 5px;
+    left: 3px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -2559,6 +2559,172 @@ body.lang-jpn .about-header-text h1 {
 .tech-card.selected .tooltip-card {
     display: block;
     /* Muestra el tooltip cuando la tarjeta está seleccionada */
+}
+/* === RESPONSIVE PARA TOOLTIPS DE TECH CARDS === */
+
+/* Tablets grandes (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tooltip-card {
+        top: -59px;
+        left: 189px;
+        width: 250px;
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+    
+    .tooltip-card::after {
+        left: 8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+}
+
+/* Tablets medianas (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .tooltip-card {
+        top: -80px;
+        left: 157px;
+        width: 160px;
+        padding: 8px;
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+    
+    .tooltip-card::after {
+        left: 10px;
+        bottom: -6px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgba(232, 75, 147, 0.8);
+    }
+    
+    /* Ajustar triángulos para cada card */
+    .html-card .tooltip-card::after {
+        border-top: 8px solid rgba(196, 60, 60, 0.8);
+    }
+    
+    .js-card .tooltip-card::after {
+        border-top: 8px solid rgba(0, 0, 0, 0.8);
+    }
+    
+    .css3-card .tooltip-card::after {
+        border-top: 8px solid rgba(232, 75, 147, 0.8);
+    }
+    
+    .bootstrap-card .tooltip-card::after {
+        border-top: 8px solid #9747FF;
+    }
+    
+    .git-github-card .tooltip-card::after {
+        border-top: 8px solid #C43C3C;
+    }
+}
+
+/* Móviles (≤576px) */
+@media (max-width: 576px) {
+    .tooltip-card {
+        top: -78px;
+        left: 75%;
+        transform: translateX(-50%);
+        width: 166px;
+        max-width: 90vw;
+        padding: 12px;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        border-radius: 8px;
+    }
+    
+    .tooltip-card::after {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -6px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgba(232, 75, 147, 0.8);
+    }
+    
+    /* Ajustar triángulos para cada card en móvil */
+    .html-card .tooltip-card::after {
+        border-top: 8px solid rgba(196, 60, 60, 0.8);
+    }
+    
+    .js-card .tooltip-card::after {
+        border-top: 8px solid rgba(0, 0, 0, 0.8);
+    }
+    
+    .css3-card .tooltip-card::after {
+        border-top: 8px solid rgba(232, 75, 147, 0.8);
+    }
+    
+    .bootstrap-card .tooltip-card::after {
+        border-top: 8px solid #9747FF;
+    }
+    
+    .git-github-card .tooltip-card::after {
+        border-top: 8px solid #C43C3C;
+    }
+}
+
+/* Móviles pequeños (≤400px) */
+@media (max-width: 400px) {
+    .tooltip-card {
+        top: -81px;
+        width: 137px;
+        max-width: 85vw;
+        padding: 10px;
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .tooltip-card::after {
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid rgba(232, 75, 147, 0.8);
+    }
+    
+    /* Ajustar triángulos para cada card en móviles pequeños */
+    .html-card .tooltip-card::after {
+        border-top: 6px solid rgba(196, 60, 60, 0.8);
+    }
+    
+    .js-card .tooltip-card::after {
+        border-top: 6px solid rgba(0, 0, 0, 0.8);
+    }
+    
+    .css3-card .tooltip-card::after {
+        border-top: 6px solid rgba(232, 75, 147, 0.8);
+    }
+    
+    .bootstrap-card .tooltip-card::after {
+        border-top: 6px solid #9747FF;
+    }
+    
+    .git-github-card .tooltip-card::after {
+        border-top: 6px solid #C43C3C;
+    }
+}
+
+/* Ajustes especiales para la card de Laravel (que es más ancha) */
+@media (max-width: 768px) {
+    .laravel-card .tooltip-card {
+        top: -65px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+        max-width: 90vw;
+    }
+    
+    .laravel-card .tooltip-card::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .laravel-card .tooltip-card {
+        top: -86px;
+        width: 228px;
+    }
 }
 
 /*--------Estilos para NUESTROS VALORES FUNDAMENTALES---------*/
