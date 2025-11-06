@@ -170,6 +170,7 @@ const translations = {
         // Equipo
         equipoTitle: "Nuestro Equipo",
         portfolioButton: "Portafolio",
+        portfolioTooltip: "Da click para conocer nuestros proyectos",
 
         // Footer
         footerInicio: "Inicio",
@@ -290,8 +291,8 @@ const translations = {
         visionTitle: "VISION",
         visionText: "We want to be a recognized brand for growing our clients' brands, not only in sales but also accompanying them in the technological transformation that evolves day by day in companies of any type and at the same time be a brand recognized worldwide for it.",
         // Equipo
-        equipoTitle: "Our Team",
         portfolioButton: "Portfolio",
+        portfolioTooltip: "Click to discover our projects",
 
 
         // Footer
@@ -415,6 +416,7 @@ const translations = {
         // Equipo
         equipoTitle: "私たちのチーム",
         portfolioButton: "ポートフォリオ",
+        portfolioTooltip: "私たちのプロジェクトを見るためにクリック",
         // Footer
         footerInicio: "ホーム",
         footerSobreNosotros: "私たちについて",
@@ -975,6 +977,36 @@ function changeLanguage(lang) {
         }
     });
 
+    // Actualizar tooltips con data-translate-tooltip - MEJORADO
+    document.querySelectorAll('[data-translate-tooltip]').forEach(element => {
+        const key = element.getAttribute('data-translate-tooltip');
+        if (translation && translation[key]) {
+            // Actualizar el atributo title
+            element.setAttribute('title', translation[key]);
+
+            // Si el tooltip de Bootstrap está activo, destruirlo y recrearlo
+            if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+                try {
+                    const tooltip = bootstrap.Tooltip.getInstance(element);
+                    if (tooltip) {
+                        tooltip.dispose();
+                    }
+
+                    // Crear nuevo tooltip con el texto actualizado
+                    new bootstrap.Tooltip(element, {
+                        title: translation[key],
+                        trigger: 'hover focus',
+                        placement: 'top',
+                        animation: true,
+                        delay: { "show": 200, "hide": 100 }
+                    });
+                } catch (error) {
+                    console.error('Error actualizando tooltip:', error);
+                }
+            }
+        }
+    });
+
     // Actualizar el título de la página dinámicamente
     updatePageTitle(lang);
 
@@ -1050,6 +1082,9 @@ function changeLanguage(lang) {
             AOS.refresh();
         }, 100);
     }
+    
+    // Reinicializar todos los tooltips después del cambio de idioma
+    reinitializeTooltips();
 }
 
 // Agrega un evento de clic a cada opción del menú desplegable
@@ -1170,6 +1205,64 @@ window.getRelativePath = function (resourcePath) {
     return pathPrefix + cleanResourcePath;
 };
 
+// Función para inicializar tooltips de Bootstrap
+function initializeBootstrapTooltips() {
+    // Verificar si Bootstrap está disponible
+    if (typeof bootstrap === 'undefined' || typeof bootstrap.Tooltip === 'undefined') {
+        console.warn('Bootstrap Tooltip no está disponible');
+        return;
+    }
+
+    // Inicializar todos los tooltips con data-bs-toggle="tooltip"
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(element => {
+        try {
+            // Verificar si ya tiene un tooltip y eliminarlo
+            const existingTooltip = bootstrap.Tooltip.getInstance(element);
+            if (existingTooltip) {
+                existingTooltip.dispose();
+            }
+
+            // Obtener el texto del tooltip
+            let tooltipText = element.getAttribute('title');
+
+            // Si tiene data-translate-tooltip, usar la traducción actual
+            const translateKey = element.getAttribute('data-translate-tooltip');
+            if (translateKey) {
+                const currentLang = localStorage.getItem('selectedLanguage') || 'SPA';
+                const translation = translations[currentLang];
+                if (translation && translation[translateKey]) {
+                    tooltipText = translation[translateKey];
+                    element.setAttribute('title', tooltipText);
+                }
+            }
+
+            // Crear nuevo tooltip
+            new bootstrap.Tooltip(element, {
+                title: tooltipText,
+                trigger: 'hover focus',
+                placement: element.getAttribute('data-bs-placement') || 'top',
+                animation: true,
+                delay: { "show": 200, "hide": 100 }
+            });
+        } catch (error) {
+            console.error('Error inicializando tooltip:', error);
+        }
+    });
+}
+
+// Función para reinicializar tooltips después del cambio de idioma
+function reinitializeTooltips() {
+    // Esperar un momento para que las traducciones se apliquen
+    setTimeout(() => {
+        initializeBootstrapTooltips();
+        
+        // También reinicializar los tooltips de banderas si existen
+        if (typeof window.initializeTooltips === 'function') {
+            window.initializeTooltips();
+        }
+    }, 150);
+}
+
 function loadSavedLanguage() {
     const savedLanguage = localStorage.getItem('selectedLanguage') || 'SPA';
 
@@ -1210,6 +1303,9 @@ function loadSavedLanguage() {
 document.addEventListener('DOMContentLoaded', () => {
     // Cargar idioma guardado
     loadSavedLanguage();
+
+    // Inicializar tooltips de Bootstrap
+    initializeBootstrapTooltips();
 
     // Agregar eventos a los enlaces del dropdown de idiomas
     document.querySelectorAll('#languageDropdown a').forEach(button => {
