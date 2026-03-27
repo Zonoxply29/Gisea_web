@@ -61,9 +61,14 @@ function startForeignLanguageHeartbeat() {
                         'event_category': 'Language_Session',
                         'event_label': currentLangCheck,
                         'custom_language': currentLangCheck,
+                        // Parámetros originales (dimensión)
                         'session_duration_seconds': currentDuration,
+                        'session_duration_minutes': Math.round(currentDuration / 60),
+                        // Parámetros nuevos (métrica) para pruebas
+                        'session_duration_seconds_metric': currentDuration,
+                        'session_duration_minutes_metric': Math.round(currentDuration / 60),
                         'interactions_count': foreignLanguageInteractions,
-                        'custom_parameter_1': Math.round(currentDuration / 60) // minutos
+                        'total_interactions': foreignLanguageInteractions
                     });
 
                     // Verificar milestones de engagement
@@ -1066,8 +1071,13 @@ function changeLanguage(lang) {
                 'event_category': 'Language_Session',
                 'event_label': previousLang,
                 'custom_language': previousLang,
+                // Parámetros originales (dimensión)
                 'session_duration_seconds': sessionDuration,
                 'session_duration_minutes': Math.round(sessionDuration / 60),
+                // Parámetros nuevos (métrica) para pruebas
+                'session_duration_seconds_metric': sessionDuration,
+                'session_duration_minutes_metric': Math.round(sessionDuration / 60),
+                'total_interactions': foreignLanguageInteractions,
                 'value': sessionDuration
             });
 
@@ -1354,12 +1364,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentLang === 'ENG' || currentLang === 'JPN') {
             const startTime = sessionStorage.getItem(`${currentLang}_start_time`);
             if (startTime) {
+                // ✅ CORREGIDO: Calcular sessionDuration aquí
+                const sessionDuration = Math.round((Date.now() - parseInt(startTime)) / 1000);
+                
                 gtag('event', 'foreign_language_session_end', {
                     'event_category': 'Language_Session',
                     'event_label': currentLang,
                     'custom_language': currentLang,
+                    // Parámetros originales (dimensión)
                     'session_duration_seconds': sessionDuration,
                     'session_duration_minutes': Math.round(sessionDuration / 60),
+                    // Parámetros nuevos (métrica) para pruebas
+                    'session_duration_seconds_metric': sessionDuration,
+                    'session_duration_minutes_metric': Math.round(sessionDuration / 60),
                     'total_interactions': foreignLanguageInteractions,
                     'transport_type': 'beacon'
                 });
